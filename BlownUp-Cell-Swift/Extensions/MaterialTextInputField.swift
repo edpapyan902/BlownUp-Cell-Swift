@@ -11,8 +11,8 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFields
 
 @IBDesignable
 class MaterialTextInputField: UIView {
-    private var textField: MDCOutlinedTextField!
-
+    var textField: MDCOutlinedTextField!
+    
     @IBInspectable var text: String!
     @IBInspectable var placeHolder: String!
     @IBInspectable var hint: String!
@@ -29,6 +29,11 @@ class MaterialTextInputField: UIView {
         textField.setOutlineColor(outlineNormalColor, for: MDCTextControlState.normal)
         textField.setOutlineColor(outlineActiveColor, for: MDCTextControlState.editing)
         textField.sizeToFit()
+        
         self.addSubview(textField)
+    }
+    
+    func getText() -> String {
+        return textField.text!
     }
 }
