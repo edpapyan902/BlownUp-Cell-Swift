@@ -1,0 +1,747 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BF6F17611D0D24062E95EDE /* Pods_BlownUp_Cell_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */; };
+		56A7286AF067C6F4CF3529A2 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D7E689F93672753F703E74 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework */; };
+		9083A98A34F80F7D1D8F2779 /* Pods_BlownUp_Cell_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */; };
+		9458840C2638284000851CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458840B2638284000851CE6 /* AppDelegate.swift */; };
+		9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458840D2638284000851CE6 /* SceneDelegate.swift */; };
+		945884102638284000851CE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458840F2638284000851CE6 /* ViewController.swift */; };
+		945884132638284000851CE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945884112638284000851CE6 /* Main.storyboard */; };
+		945884152638284100851CE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 945884142638284100851CE6 /* Assets.xcassets */; };
+		945884182638284100851CE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 945884162638284100851CE6 /* LaunchScreen.storyboard */; };
+		945884232638284100851CE6 /* BlownUp_Cell_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884222638284100851CE6 /* BlownUp_Cell_SwiftTests.swift */; };
+		9458842E2638284200851CE6 /* BlownUp_Cell_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458842D2638284200851CE6 /* BlownUp_Cell_SwiftUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9458841F2638284100851CE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945884002638284000851CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945884072638284000851CE6;
+			remoteInfo = "BlownUp-Cell-Swift";
+		};
+		9458842A2638284200851CE6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 945884002638284000851CE6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 945884072638284000851CE6;
+			remoteInfo = "BlownUp-Cell-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4BCF9F9AB90C7338F89605B7 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		945884082638284000851CE6 /* BlownUp-Cell-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlownUp-Cell-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9458840B2638284000851CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9458840D2638284000851CE6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9458840F2638284000851CE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		945884122638284000851CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		945884142638284100851CE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		945884172638284100851CE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		945884192638284100851CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9458841E2638284100851CE6 /* BlownUp-Cell-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BlownUp-Cell-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		945884222638284100851CE6 /* BlownUp_Cell_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlownUp_Cell_SwiftTests.swift; sourceTree = "<group>"; };
+		945884242638284200851CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		945884292638284200851CE6 /* BlownUp-Cell-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BlownUp-Cell-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9458842D2638284200851CE6 /* BlownUp_Cell_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlownUp_Cell_SwiftUITests.swift; sourceTree = "<group>"; };
+		9458842F2638284200851CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift.debug.xcconfig"; sourceTree = "<group>"; };
+		E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEA5EFD96D55BA2E979CE5BA /* Pods-BlownUp-Cell-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-SwiftTests/Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F2DA775B3EED221DAE0FB980 /* Pods-BlownUp-Cell-Swift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift.release.xcconfig"; sourceTree = "<group>"; };
+		F7D7E689F93672753F703E74 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FD4203843CFE28E7BEDCE159 /* Pods-BlownUp-Cell-SwiftTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-SwiftTests.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-SwiftTests/Pods-BlownUp-Cell-SwiftTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		945884052638284000851CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9083A98A34F80F7D1D8F2779 /* Pods_BlownUp_Cell_Swift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9458841B2638284100851CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BF6F17611D0D24062E95EDE /* Pods_BlownUp_Cell_SwiftTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945884262638284200851CE6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56A7286AF067C6F4CF3529A2 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5A761659B498A200A851A761 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */,
+				F2DA775B3EED221DAE0FB980 /* Pods-BlownUp-Cell-Swift.release.xcconfig */,
+				4BCF9F9AB90C7338F89605B7 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig */,
+				7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */,
+				EEA5EFD96D55BA2E979CE5BA /* Pods-BlownUp-Cell-SwiftTests.debug.xcconfig */,
+				FD4203843CFE28E7BEDCE159 /* Pods-BlownUp-Cell-SwiftTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		83C28C6AB8EA12936849903B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */,
+				F7D7E689F93672753F703E74 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework */,
+				E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		945883FF2638284000851CE6 = {
+			isa = PBXGroup;
+			children = (
+				9458840A2638284000851CE6 /* BlownUp-Cell-Swift */,
+				945884212638284100851CE6 /* BlownUp-Cell-SwiftTests */,
+				9458842C2638284200851CE6 /* BlownUp-Cell-SwiftUITests */,
+				945884092638284000851CE6 /* Products */,
+				5A761659B498A200A851A761 /* Pods */,
+				83C28C6AB8EA12936849903B /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		945884092638284000851CE6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				945884082638284000851CE6 /* BlownUp-Cell-Swift.app */,
+				9458841E2638284100851CE6 /* BlownUp-Cell-SwiftTests.xctest */,
+				945884292638284200851CE6 /* BlownUp-Cell-SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9458840A2638284000851CE6 /* BlownUp-Cell-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				9458840B2638284000851CE6 /* AppDelegate.swift */,
+				9458840D2638284000851CE6 /* SceneDelegate.swift */,
+				9458840F2638284000851CE6 /* ViewController.swift */,
+				945884112638284000851CE6 /* Main.storyboard */,
+				945884142638284100851CE6 /* Assets.xcassets */,
+				945884162638284100851CE6 /* LaunchScreen.storyboard */,
+				945884192638284100851CE6 /* Info.plist */,
+			);
+			path = "BlownUp-Cell-Swift";
+			sourceTree = "<group>";
+		};
+		945884212638284100851CE6 /* BlownUp-Cell-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				945884222638284100851CE6 /* BlownUp_Cell_SwiftTests.swift */,
+				945884242638284200851CE6 /* Info.plist */,
+			);
+			path = "BlownUp-Cell-SwiftTests";
+			sourceTree = "<group>";
+		};
+		9458842C2638284200851CE6 /* BlownUp-Cell-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9458842D2638284200851CE6 /* BlownUp_Cell_SwiftUITests.swift */,
+				9458842F2638284200851CE6 /* Info.plist */,
+			);
+			path = "BlownUp-Cell-SwiftUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		945884072638284000851CE6 /* BlownUp-Cell-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945884322638284200851CE6 /* Build configuration list for PBXNativeTarget "BlownUp-Cell-Swift" */;
+			buildPhases = (
+				6DB912C4F699C54CA8B53593 /* [CP] Check Pods Manifest.lock */,
+				945884042638284000851CE6 /* Sources */,
+				945884052638284000851CE6 /* Frameworks */,
+				945884062638284000851CE6 /* Resources */,
+				554525112DBB55B48A0EEB62 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BlownUp-Cell-Swift";
+			productName = "BlownUp-Cell-Swift";
+			productReference = 945884082638284000851CE6 /* BlownUp-Cell-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9458841D2638284100851CE6 /* BlownUp-Cell-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945884352638284200851CE6 /* Build configuration list for PBXNativeTarget "BlownUp-Cell-SwiftTests" */;
+			buildPhases = (
+				E51D69B9C43686E0E0D0EAB9 /* [CP] Check Pods Manifest.lock */,
+				9458841A2638284100851CE6 /* Sources */,
+				9458841B2638284100851CE6 /* Frameworks */,
+				9458841C2638284100851CE6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				945884202638284100851CE6 /* PBXTargetDependency */,
+			);
+			name = "BlownUp-Cell-SwiftTests";
+			productName = "BlownUp-Cell-SwiftTests";
+			productReference = 9458841E2638284100851CE6 /* BlownUp-Cell-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		945884282638284200851CE6 /* BlownUp-Cell-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 945884382638284200851CE6 /* Build configuration list for PBXNativeTarget "BlownUp-Cell-SwiftUITests" */;
+			buildPhases = (
+				E7B291AB17DA46A9FE7AA308 /* [CP] Check Pods Manifest.lock */,
+				945884252638284200851CE6 /* Sources */,
+				945884262638284200851CE6 /* Frameworks */,
+				945884272638284200851CE6 /* Resources */,
+				A7F19313364F9053E84626A1 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9458842B2638284200851CE6 /* PBXTargetDependency */,
+			);
+			name = "BlownUp-Cell-SwiftUITests";
+			productName = "BlownUp-Cell-SwiftUITests";
+			productReference = 945884292638284200851CE6 /* BlownUp-Cell-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		945884002638284000851CE6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1230;
+				LastUpgradeCheck = 1230;
+				TargetAttributes = {
+					945884072638284000851CE6 = {
+						CreatedOnToolsVersion = 12.3;
+					};
+					9458841D2638284100851CE6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 945884072638284000851CE6;
+					};
+					945884282638284200851CE6 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 945884072638284000851CE6;
+					};
+				};
+			};
+			buildConfigurationList = 945884032638284000851CE6 /* Build configuration list for PBXProject "BlownUp-Cell-Swift" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 945883FF2638284000851CE6;
+			productRefGroup = 945884092638284000851CE6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				945884072638284000851CE6 /* BlownUp-Cell-Swift */,
+				9458841D2638284100851CE6 /* BlownUp-Cell-SwiftTests */,
+				945884282638284200851CE6 /* BlownUp-Cell-SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		945884062638284000851CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945884182638284100851CE6 /* LaunchScreen.storyboard in Resources */,
+				945884152638284100851CE6 /* Assets.xcassets in Resources */,
+				945884132638284000851CE6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9458841C2638284100851CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945884272638284200851CE6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		554525112DBB55B48A0EEB62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DB912C4F699C54CA8B53593 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlownUp-Cell-Swift-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7F19313364F9053E84626A1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E51D69B9C43686E0E0D0EAB9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlownUp-Cell-SwiftTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7B291AB17DA46A9FE7AA308 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		945884042638284000851CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945884102638284000851CE6 /* ViewController.swift in Sources */,
+				9458840C2638284000851CE6 /* AppDelegate.swift in Sources */,
+				9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9458841A2638284100851CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				945884232638284100851CE6 /* BlownUp_Cell_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		945884252638284200851CE6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9458842E2638284200851CE6 /* BlownUp_Cell_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		945884202638284100851CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945884072638284000851CE6 /* BlownUp-Cell-Swift */;
+			targetProxy = 9458841F2638284100851CE6 /* PBXContainerItemProxy */;
+		};
+		9458842B2638284200851CE6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 945884072638284000851CE6 /* BlownUp-Cell-Swift */;
+			targetProxy = 9458842A2638284200851CE6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		945884112638284000851CE6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945884122638284000851CE6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		945884162638284100851CE6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				945884172638284100851CE6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		945884302638284200851CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		945884312638284200851CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		945884332638284200851CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BlownUp-Cell-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlownUp.app.BlownUp-Cell-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		945884342638284200851CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2DA775B3EED221DAE0FB980 /* Pods-BlownUp-Cell-Swift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BlownUp-Cell-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlownUp.app.BlownUp-Cell-Swift";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		945884362638284200851CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEA5EFD96D55BA2E979CE5BA /* Pods-BlownUp-Cell-SwiftTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BlownUp-Cell-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlownUp.app.BlownUp-Cell-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlownUp-Cell-Swift.app/BlownUp-Cell-Swift";
+			};
+			name = Debug;
+		};
+		945884372638284200851CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD4203843CFE28E7BEDCE159 /* Pods-BlownUp-Cell-SwiftTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BlownUp-Cell-SwiftTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlownUp.app.BlownUp-Cell-SwiftTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BlownUp-Cell-Swift.app/BlownUp-Cell-Swift";
+			};
+			name = Release;
+		};
+		945884392638284200851CE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BCF9F9AB90C7338F89605B7 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BlownUp-Cell-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlownUp.app.BlownUp-Cell-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BlownUp-Cell-Swift";
+			};
+			name = Debug;
+		};
+		9458843A2638284200851CE6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BlownUp-Cell-SwiftUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.BlownUp.app.BlownUp-Cell-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "BlownUp-Cell-Swift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		945884032638284000851CE6 /* Build configuration list for PBXProject "BlownUp-Cell-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945884302638284200851CE6 /* Debug */,
+				945884312638284200851CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945884322638284200851CE6 /* Build configuration list for PBXNativeTarget "BlownUp-Cell-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945884332638284200851CE6 /* Debug */,
+				945884342638284200851CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945884352638284200851CE6 /* Build configuration list for PBXNativeTarget "BlownUp-Cell-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945884362638284200851CE6 /* Debug */,
+				945884372638284200851CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		945884382638284200851CE6 /* Build configuration list for PBXNativeTarget "BlownUp-Cell-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				945884392638284200851CE6 /* Debug */,
+				9458843A2638284200851CE6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 945884002638284000851CE6 /* Project object */;
+}
