@@ -7,9 +7,13 @@ target 'BlownUp-Cell-Swift' do
 
   # Pods for BlownUp-Cell-Swift
 
-  pod 'Alamofire', '~> 4.9.1'
+pod 'MaterialComponents/BottomNavigation'
+pod 'MaterialComponents/TextControls+OutlinedTextFields'
+pod 'MaterialComponents/Buttons'
+pod 'Alamofire', '~> 4.9.1'
   pod 'AlamofireMapper', '~> 1.0.0'
   pod 'AlamofireObjectMapper', '~> 5.2.1'
+  pod 'Kingfisher', '~> 6.1.1'
 
   target 'BlownUp-Cell-SwiftTests' do
     inherit! :search_paths

@@ -5,26 +5,128 @@ PODS:
   - AlamofireObjectMapper (5.2.1):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
+  - Kingfisher (6.1.1)
+  - MaterialComponents/AnimationTiming (124.2.0)
+  - MaterialComponents/Availability (124.2.0)
+  - MaterialComponents/BottomNavigation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/Shadow
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Buttons (124.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/Shadow
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (124.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (124.2.0)
+  - MaterialComponents/private/Application (124.2.0)
+  - MaterialComponents/private/Color (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (124.2.0)
+  - "MaterialComponents/private/TextControlsPrivate+BaseStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - "MaterialComponents/private/TextControlsPrivate+Shared (124.2.0)":
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Math
+    - "MaterialComponents/TextControls+Enums"
+  - "MaterialComponents/private/TextControlsPrivate+TextFields (124.2.0)":
+    - MaterialComponents/private/Math
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+  - MaterialComponents/Ripple (124.2.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Shadow (124.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/ShadowElevations (124.2.0)
+  - MaterialComponents/ShadowLayer (124.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (124.2.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (124.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - "MaterialComponents/TextControls+BaseTextFields (124.2.0)":
+    - "MaterialComponents/private/TextControlsPrivate+BaseStyle"
+    - "MaterialComponents/private/TextControlsPrivate+Shared"
+    - "MaterialComponents/private/TextControlsPrivate+TextFields"
+    - MDFInternationalization
+  - "MaterialComponents/TextControls+Enums (124.2.0)"
+  - "MaterialComponents/TextControls+OutlinedTextFields (124.2.0)":
+    - MaterialComponents/Availability
+    - "MaterialComponents/private/TextControlsPrivate+OutlinedStyle"
+    - "MaterialComponents/TextControls+BaseTextFields"
+  - MaterialComponents/Typography (124.2.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MDFTextAccessibility
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.1)
   - ObjectMapper (3.5.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
   - AlamofireMapper (~> 1.0.0)
   - AlamofireObjectMapper (~> 5.2.1)
+  - Kingfisher (~> 6.1.1)
+  - MaterialComponents/BottomNavigation
+  - MaterialComponents/Buttons
+  - "MaterialComponents/TextControls+OutlinedTextFields"
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireMapper
     - AlamofireObjectMapper
+    - Kingfisher
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - ObjectMapper
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireMapper: bdcd94eb53ab63ec9a12e4685bba73e3d0072f36
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
+  MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
 
-PODFILE CHECKSUM: 4bd0e5426fa638cc7c95c10360b71eba57b4cb7a
+PODFILE CHECKSUM: 72fc200f7cde6bcb3e170916b8fe6510181682b7
 
-COCOAPODS: 1.10.0
+COCOAPODS: 1.10.1
