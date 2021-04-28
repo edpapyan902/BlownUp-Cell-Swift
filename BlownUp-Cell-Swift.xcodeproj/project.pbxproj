@@ -10,6 +10,7 @@
 		3BF6F17611D0D24062E95EDE /* Pods_BlownUp_Cell_SwiftTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */; };
 		56A7286AF067C6F4CF3529A2 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D7E689F93672753F703E74 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework */; };
 		9083A98A34F80F7D1D8F2779 /* Pods_BlownUp_Cell_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */; };
+		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420DC02638FFE0005E2121 /* SignUpVC.swift */; };
 		9458840C2638284000851CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458840B2638284000851CE6 /* AppDelegate.swift */; };
 		9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458840D2638284000851CE6 /* SceneDelegate.swift */; };
@@ -49,6 +50,7 @@
 /* Begin PBXFileReference section */
 		4BCF9F9AB90C7338F89605B7 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
+		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		94420DC02638FFE0005E2121 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		945884082638284000851CE6 /* BlownUp-Cell-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlownUp-Cell-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9458840B2638284000851CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -255,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				945884E026386D3000851CE6 /* LoginRes.swift */,
+				940CA2FB26393A9900401594 /* SignUpRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -503,6 +506,7 @@
 				9458849E2638477D00851CE6 /* MaterialTextInputField.swift in Sources */,
 				94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */,
 				945884CF263868D600851CE6 /* Store.swift in Sources */,
+				940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */,
 				945884E126386D3000851CE6 /* LoginRes.swift in Sources */,
 				9458847426383A9E00851CE6 /* LoginVC.swift in Sources */,
 				945884D826386CC500851CE6 /* User.swift in Sources */,

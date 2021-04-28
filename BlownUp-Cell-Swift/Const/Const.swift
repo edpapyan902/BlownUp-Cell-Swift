@@ -16,6 +16,7 @@ let BASE_SERVER = DEV_MODE ? DEV_SERVER : PRODUCT_SERVER
 
 //  Sign In/Up
 let URL_LOGIN = "\(BASE_SERVER)/api/login"
+let URL_SIGN_UP = "\(BASE_SERVER)/api/signup"
 
 //  STORE KEYS
 let API_TOKEN = "API_TOKEN"

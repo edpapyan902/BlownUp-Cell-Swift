@@ -23,4 +23,10 @@ class API {
             completion(response)
         }
     }
+    
+    func signUp(params: [String: Any], completion: @escaping ( _ response: DataResponse<SignUpRes>) -> Void) -> Void {
+        Alamofire.request(URL_SIGN_UP, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<SignUpRes>) in
+            completion(response)
+        }
+    }
 }
