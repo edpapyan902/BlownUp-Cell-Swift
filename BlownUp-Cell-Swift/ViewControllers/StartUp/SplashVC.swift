@@ -12,8 +12,6 @@ class SplashVC: UIViewController {
 
     var loginVC: LoginVC?
     
-    var sleepCDTimer: Timer? = nil
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

@@ -22,13 +22,13 @@ class MaterialTextInputField: UIView {
     open override func awakeFromNib() {
         super.awakeFromNib()
         
-        textField = MDCOutlinedTextField(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: 50))
+        textField = MDCOutlinedTextField(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height))
         textField.text = text
         textField.placeholder = placeHolder
         textField.label.text = hint
         textField.setOutlineColor(outlineNormalColor, for: MDCTextControlState.normal)
         textField.setOutlineColor(outlineActiveColor, for: MDCTextControlState.editing)
-        textField.sizeToFit()
+        textField.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         
         self.addSubview(textField)
     }
