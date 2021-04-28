@@ -10,6 +10,7 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    @IBOutlet weak var lblSignUp: UILabel!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var swtRememberMe: UISwitch!
     @IBOutlet weak var txtPassword: MaterialTextInputField!
@@ -18,6 +19,18 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        initLayout()
+    }
+    
+    func initLayout() {
+        self.lblSignUp.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.goSignUp)))
+    }
+    
+    @objc func goSignUp() {
+        let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC
+        signUpVC!.modalPresentationStyle = .fullScreen
+        self.present(signUpVC!, animated: true, completion: nil)
     }
     
     @IBAction func login(_ sender: Any) {

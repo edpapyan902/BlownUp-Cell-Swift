@@ -16,6 +16,7 @@ class MaterialTextInputField: UIView {
     @IBInspectable var text: String!
     @IBInspectable var placeHolder: String!
     @IBInspectable var hint: String!
+    @IBInspectable var inputMode: String! = "text"
     @IBInspectable var outlineActiveColor: UIColor! = UIColor.init(named: "colorPrimary")
     @IBInspectable var outlineNormalColor: UIColor! = UIColor.init(named: "colorHeavyGrey")
     
@@ -26,6 +27,7 @@ class MaterialTextInputField: UIView {
         textField.text = text
         textField.placeholder = placeHolder
         textField.label.text = hint
+        textField.isSecureTextEntry = inputMode == "password"
         textField.setOutlineColor(outlineNormalColor, for: MDCTextControlState.normal)
         textField.setOutlineColor(outlineActiveColor, for: MDCTextControlState.editing)
         textField.autoresizingMask = [.flexibleWidth, .flexibleHeight]
