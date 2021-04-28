@@ -29,4 +29,10 @@ class API {
             completion(response)
         }
     }
+    
+    func getSubscriptionStatus(completion: @escaping ( _ response: DataResponse<SubscriptionRes>) -> Void) -> Void {
+        Alamofire.request(URL_SUBSCRIPTION_STATUS, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<SubscriptionRes>) in
+            completion(response)
+        }
+    }
 }

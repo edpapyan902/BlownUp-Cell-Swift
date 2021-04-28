@@ -17,6 +17,7 @@ let BASE_SERVER = DEV_MODE ? DEV_SERVER : PRODUCT_SERVER
 //  Sign In/Up
 let URL_LOGIN = "\(BASE_SERVER)/api/login"
 let URL_SIGN_UP = "\(BASE_SERVER)/api/signup"
+let URL_SUBSCRIPTION_STATUS = "\(BASE_SERVER)/api/subscription/status"
 
 //  STORE KEYS
 let API_TOKEN = "API_TOKEN"
@@ -30,4 +31,4 @@ let IS_SUBSCRIPTION_CANCELLED = "IS_SUBSCRIPTION_CANCELLED"
 let HEADER = [ "Content-Type": "application/json"]
 let BEARER_HEADER = [
     "Content-Type": "application/json",
-    "Authorization": "\(Store.instance.apiToken)"]
+    "Authorization": "Bearer \(Store.instance.apiToken)"]

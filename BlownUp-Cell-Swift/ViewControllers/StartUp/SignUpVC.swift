@@ -10,12 +10,13 @@ import UIKit
 
 class SignUpVC: UIViewController {
     
-    
+    @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var swtTerm: UISwitch!
     @IBOutlet weak var txtSpoofPhone: MaterialTextInputField!
     @IBOutlet weak var txtConPwd: MaterialTextInputField!
     @IBOutlet weak var txtPwd: MaterialTextInputField!
     @IBOutlet weak var txtEmail: MaterialTextInputField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -48,14 +49,24 @@ class SignUpVC: UIViewController {
             "is_social": 0
         ]
         
+        self.loadingView.isHidden = false
+        
         API.instance.signUp(params: params) { (response) in
+            self.loadingView.isHidden = true
             if response.error == nil {
-                let signUp: SignUpRes = response.result.value!
-                let data = signUp.data
+                let signUpRes: SignUpRes = response.result.value!
                 
-                Store.instance.apiToken = (data?.user?.token)!
-                Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
-                Store.instance.rememberMe = true
+                if signUpRes.success! {
+                    let data = signUpRes.data
+                    
+                    Store.instance.apiToken = (data?.user?.token)!
+                    Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
+                    Store.instance.rememberMe = true
+                    
+                    let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
+                    cardRegisterVC!.modalPresentationStyle = .fullScreen
+                    self.present(cardRegisterVC!, animated: true, completion: nil)
+                }
             }
         }
         

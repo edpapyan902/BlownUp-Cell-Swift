@@ -11,6 +11,10 @@
 		56A7286AF067C6F4CF3529A2 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D7E689F93672753F703E74 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework */; };
 		9083A98A34F80F7D1D8F2779 /* Pods_BlownUp_Cell_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
+		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
+		940CA3082639429300401594 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainVC.swift */; };
+		940CA3102639441000401594 /* SubscriptionRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA30F2639441000401594 /* SubscriptionRes.swift */; };
+		940CA3152639473C00401594 /* RecentCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3142639473C00401594 /* RecentCallVC.swift */; };
 		94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420DC02638FFE0005E2121 /* SignUpVC.swift */; };
 		9458840C2638284000851CE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458840B2638284000851CE6 /* AppDelegate.swift */; };
 		9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458840D2638284000851CE6 /* SceneDelegate.swift */; };
@@ -51,6 +55,10 @@
 		4BCF9F9AB90C7338F89605B7 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
+		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
+		940CA3072639429300401594 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		940CA30F2639441000401594 /* SubscriptionRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRes.swift; sourceTree = "<group>"; };
+		940CA3142639473C00401594 /* RecentCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallVC.swift; sourceTree = "<group>"; };
 		94420DC02638FFE0005E2121 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		945884082638284000851CE6 /* BlownUp-Cell-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BlownUp-Cell-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9458840B2638284000851CE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -134,6 +142,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		940CA3062639426100401594 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				940CA3072639429300401594 /* MainVC.swift */,
+				940CA3142639473C00401594 /* RecentCallVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		945883FF2638284000851CE6 = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +213,7 @@
 		9458847126383A1800851CE6 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				940CA3062639426100401594 /* Main */,
 				9458847226383A7300851CE6 /* StartUp */,
 			);
 			path = ViewControllers;
@@ -207,6 +225,7 @@
 				9458847326383A9E00851CE6 /* LoginVC.swift */,
 				9458847826383F1F00851CE6 /* SplashVC.swift */,
 				94420DC02638FFE0005E2121 /* SignUpVC.swift */,
+				940CA3002639422300401594 /* CardRegisterVC.swift */,
 			);
 			path = StartUp;
 			sourceTree = "<group>";
@@ -258,6 +277,7 @@
 			children = (
 				945884E026386D3000851CE6 /* LoginRes.swift */,
 				940CA2FB26393A9900401594 /* SignUpRes.swift */,
+				940CA30F2639441000401594 /* SubscriptionRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -501,6 +521,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9458847926383F1F00851CE6 /* SplashVC.swift in Sources */,
+				940CA3082639429300401594 /* MainVC.swift in Sources */,
 				945884E62638743E00851CE6 /* String.swift in Sources */,
 				9458840C2638284000851CE6 /* AppDelegate.swift in Sources */,
 				9458849E2638477D00851CE6 /* MaterialTextInputField.swift in Sources */,
@@ -509,10 +530,13 @@
 				940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */,
 				945884E126386D3000851CE6 /* LoginRes.swift in Sources */,
 				9458847426383A9E00851CE6 /* LoginVC.swift in Sources */,
+				940CA3152639473C00401594 /* RecentCallVC.swift in Sources */,
+				940CA3012639422300401594 /* CardRegisterVC.swift in Sources */,
 				945884D826386CC500851CE6 /* User.swift in Sources */,
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
 				9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */,
 				945884B026385E6100851CE6 /* Const.swift in Sources */,
+				940CA3102639441000401594 /* SubscriptionRes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

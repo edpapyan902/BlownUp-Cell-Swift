@@ -47,28 +47,37 @@ class LoginVC: UIViewController {
             self.loadingView.isHidden = true
             if response.error == nil {
                 let loginRes: LoginRes = response.result.value!
-                let data = loginRes.data
                 
-                Store.instance.apiToken = (data?.user?.token)!
-                Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
-                Store.instance.rememberMe = self.swtRememberMe.isOn
-                
-                if (data?.is_subscribed)! {
-                    if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
-                        Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
-                    }
-                    Store.instance.isSubscriptionEnded = (data?.is_ended)!
-                    Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
+                if loginRes.success! {
+                    let data = loginRes.data
                     
-                    if (data?.is_ended)! && Store.instance.subscriptionUpcomingDate != 0 {
+                    Store.instance.apiToken = (data?.user?.token)!
+                    Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
+                    Store.instance.rememberMe = self.swtRememberMe.isOn
+                    
+                    if (data?.is_subscribed)! {
+                        if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
+                            Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
+                        }
+                        Store.instance.isSubscriptionEnded = (data?.is_ended)!
+                        Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
                         
+                        if (data?.is_ended)! && Store.instance.subscriptionUpcomingDate != 0 {
+                            let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
+                            cardRegisterVC!.modalPresentationStyle = .fullScreen
+                            self.present(cardRegisterVC!, animated: true, completion: nil)
+                        }
+                        else {
+                            let recentCallVC = self.storyboard?.instantiateViewController(withIdentifier: "RecentCallVC") as? RecentCallVC
+                            recentCallVC!.modalPresentationStyle = .fullScreen
+                            self.present(recentCallVC!, animated: true, completion: nil)
+                        }
                     }
                     else {
-                        
+                        let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
+                        cardRegisterVC!.modalPresentationStyle = .fullScreen
+                        self.present(cardRegisterVC!, animated: true, completion: nil)
                     }
-                }
-                else {
-                    
                 }
             }
         }
