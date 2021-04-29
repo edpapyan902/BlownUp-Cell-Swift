@@ -7,10 +7,13 @@
 
 import Foundation
 import UIKit
+import AuthenticationServices
 
 class LoginVC: UIViewController {
 
-    @IBOutlet weak var lblSignUp: UILabel!
+    @IBOutlet weak var btnSignUp: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var appleLoginView: UIStackView!
     @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var swtRememberMe: UISwitch!
     @IBOutlet weak var txtPassword: MaterialTextInputField!
@@ -24,10 +27,15 @@ class LoginVC: UIViewController {
     }
     
     func initLayout() {
-        self.lblSignUp.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.goSignUp)))
+        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: self.btnSignUp.frame.origin.y + 50)
+        
+        //Apple Sign In Button Set
+        let authorizationButton = ASAuthorizationAppleIDButton()
+        authorizationButton.addTarget(self, action: #selector(handleAppleLogin), for: .touchUpInside)
+        self.appleLoginView.addArrangedSubview(authorizationButton)
     }
     
-    @objc func goSignUp() {
+    @IBAction func goSignUp(_ sender: Any) {
         let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC
         signUpVC!.modalPresentationStyle = .fullScreen
         self.present(signUpVC!, animated: true, completion: nil)
@@ -40,10 +48,25 @@ class LoginVC: UIViewController {
         if email.isEmpty() || password.isEmpty() {
             return
         }
+        processLogin(email: email, password: password, is_social: 0)
+    }
+    
+    @objc func handleAppleLogin() {
+        let appleIDProvider = ASAuthorizationAppleIDProvider()
+        let request = appleIDProvider.createRequest()
+        request.requestedScopes = [.fullName, .email]
         
+        let authorizationController = ASAuthorizationController(authorizationRequests: [request])
+        authorizationController.delegate = self
+        authorizationController.presentationContextProvider = self
+        authorizationController.performRequests()
+    }
+    
+    func processLogin(email: String, password: String, is_social: Int) {
         let params: [String: Any] = [
             "email": email,
-            "password": password
+            "password": password,
+            "is_social": is_social
         ]
         
         loadingView.isHidden = false
@@ -54,6 +77,8 @@ class LoginVC: UIViewController {
                 let loginRes: LoginRes = response.result.value!
                 
                 if loginRes.success! {
+                    print("************* Login Success! *************")
+                    
                     let data = loginRes.data
                     
                     Store.instance.apiToken = (data?.user?.token)!
@@ -86,5 +111,34 @@ class LoginVC: UIViewController {
                 }
             }
         }
+    }
+}
+
+extension LoginVC: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        switch authorization.credential {
+        case let appleIDCredential as ASAuthorizationAppleIDCredential:
+//            let userIdentifier = appleIDCredential.user
+//            let fullName = appleIDCredential.fullName
+            let email = appleIDCredential.email
+            
+            if email!.isEmpty() {
+                return
+            }
+            
+            processLogin(email: email!, password: "", is_social: 3)
+        default:
+            break
+        }
+    }
+    
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        // Handle error.
+    }
+}
+
+extension LoginVC: ASAuthorizationControllerPresentationContextProviding {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
+        return self.view.window!
     }
 }
