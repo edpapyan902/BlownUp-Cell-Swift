@@ -13,12 +13,7 @@ class API {
     
     static let instance = API()
     
-    func login(email: String, password: String, completion: @escaping ( _ response: DataResponse<LoginRes>) -> Void) -> Void {
-        let params: [String: Any] = [
-            "email": email,
-            "password": password
-        ]
-        
+    func login(params: [String: Any], completion: @escaping ( _ response: DataResponse<LoginRes>) -> Void) -> Void {
         Alamofire.request(URL_LOGIN, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<LoginRes>) in
             completion(response)
         }

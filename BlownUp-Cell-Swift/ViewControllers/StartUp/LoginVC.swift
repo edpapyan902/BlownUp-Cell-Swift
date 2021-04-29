@@ -41,9 +41,14 @@ class LoginVC: UIViewController {
             return
         }
         
+        let params: [String: Any] = [
+            "email": email,
+            "password": password
+        ]
+        
         loadingView.isHidden = false
         
-        API.instance.login(email: email.lowercased(), password: password) { (response) in
+        API.instance.login(params: params) { (response) in
             self.loadingView.isHidden = true
             if response.error == nil {
                 let loginRes: LoginRes = response.result.value!
