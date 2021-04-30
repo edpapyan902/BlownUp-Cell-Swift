@@ -23,7 +23,7 @@ class SignUpVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        initLayout()
+        initLayout()
     }
     
     func initLayout() {
@@ -34,9 +34,7 @@ class SignUpVC: BaseVC {
     }
     
     @IBAction func goLogin(_ sender: Any) {
-        let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
-        loginVC!.modalPresentationStyle = .fullScreen
-        self.present(loginVC!, animated: true, completion: nil)
+        self.gotoStoryBoardVC("LoginVC", true)
     }
     
     @IBAction func signUp(_ sender: Any) {
@@ -99,9 +97,7 @@ class SignUpVC: BaseVC {
                     Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
                     Store.instance.rememberMe = true
                     
-                    let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
-                    cardRegisterVC!.modalPresentationStyle = .fullScreen
-                    self.present(cardRegisterVC!, animated: true, completion: nil)
+                    self.gotoStoryBoardVC("CardRegisterVC", true)
                 }
             }
         }
