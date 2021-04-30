@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQv-Go-fyg" userLabel="mainView">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="848"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="978"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo_green" translatesAutoresizingMaskIntoConstraints="NO" id="jBM-W4-fHL">
                                                 <rect key="frame" x="20" y="30" width="388" height="150"/>
@@ -189,7 +189,7 @@
                                 <constraints>
                                     <constraint firstItem="lQv-Go-fyg" firstAttribute="leading" secondItem="UvE-qR-Byq" secondAttribute="leading" id="JEz-um-nXB"/>
                                     <constraint firstItem="lQv-Go-fyg" firstAttribute="width" secondItem="UvE-qR-Byq" secondAttribute="width" id="Mi5-U9-WgF"/>
-                                    <constraint firstItem="lQv-Go-fyg" firstAttribute="height" secondItem="UvE-qR-Byq" secondAttribute="height" id="ZJF-Sw-I6n"/>
+                                    <constraint firstItem="lQv-Go-fyg" firstAttribute="height" secondItem="UvE-qR-Byq" secondAttribute="height" constant="130" id="ZJF-Sw-I6n"/>
                                     <constraint firstAttribute="trailing" secondItem="lQv-Go-fyg" secondAttribute="trailing" id="hzU-NL-Qxp"/>
                                     <constraint firstItem="lQv-Go-fyg" firstAttribute="top" secondItem="UvE-qR-Byq" secondAttribute="top" id="m0o-q5-C85"/>
                                     <constraint firstAttribute="bottom" secondItem="lQv-Go-fyg" secondAttribute="bottom" id="z59-V7-vyZ"/>
