@@ -12,8 +12,7 @@ import AuthenticationServices
 class LoginVC: BaseVC {
 
     @IBOutlet weak var btnSignUp: UIButton!
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var appleLoginView: UIStackView!
+    @IBOutlet weak var appleAuthProviderView: UIStackView!
     @IBOutlet weak var swtRememberMe: UISwitch!
     @IBOutlet weak var txtPassword: MaterialTextInputField!
     @IBOutlet weak var txtEmail: MaterialTextInputField!
@@ -26,18 +25,14 @@ class LoginVC: BaseVC {
     }
     
     func initLayout() {
-        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: self.btnSignUp.frame.origin.y + 50)
-        
         //Apple Sign In Button Set
         let authorizationButton = ASAuthorizationAppleIDButton()
-        authorizationButton.addTarget(self, action: #selector(handleAppleLogin), for: .touchUpInside)
-        self.appleLoginView.addArrangedSubview(authorizationButton)
+        authorizationButton.addTarget(self, action: #selector(handleAppleAuth), for: .touchUpInside)
+        self.appleAuthProviderView.addArrangedSubview(authorizationButton)
     }
     
     @IBAction func goSignUp(_ sender: Any) {
-        let signUpVC = self.storyboard?.instantiateViewController(withIdentifier: "SignUpVC") as? SignUpVC
-        signUpVC!.modalPresentationStyle = .fullScreen
-        self.present(signUpVC!, animated: true, completion: nil)
+        self.gotoStoryBoardVC("SignUpVC", true)
     }
     
     @IBAction func login(_ sender: Any) {
@@ -50,7 +45,7 @@ class LoginVC: BaseVC {
         processLogin(email: email, password: password, is_social: 0)
     }
     
-    @objc func handleAppleLogin() {
+    @objc func handleAppleAuth() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
@@ -89,20 +84,14 @@ class LoginVC: BaseVC {
                         Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
                         
                         if (data?.is_ended)! && Store.instance.subscriptionUpcomingDate != 0 {
-                            let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
-                            cardRegisterVC!.modalPresentationStyle = .fullScreen
-                            self.present(cardRegisterVC!, animated: true, completion: nil)
+                            self.gotoStoryBoardVC("CardRegisterVC", true)
                         }
                         else {
-                            let recentCallVC = self.storyboard?.instantiateViewController(withIdentifier: "RecentCallVC") as? RecentCallVC
-                            recentCallVC!.modalPresentationStyle = .fullScreen
-                            self.present(recentCallVC!, animated: true, completion: nil)
+                            self.gotoStoryBoardVC("RecentCallVC", true)
                         }
                     }
                     else {
-                        let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
-                        cardRegisterVC!.modalPresentationStyle = .fullScreen
-                        self.present(cardRegisterVC!, animated: true, completion: nil)
+                        self.gotoStoryBoardVC("CardRegisterVC", true)
                     }
                 }
             }
