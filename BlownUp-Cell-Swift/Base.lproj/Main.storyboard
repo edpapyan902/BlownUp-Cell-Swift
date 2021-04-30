@@ -11,14 +11,13 @@
         <!--SplashVC-->
         <scene sceneID="Qeh-ZL-0Je">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ugn-xH-HdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SplashVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HkY-gy-gVk" customClass="SplashVC" customModule="BlownUp_Cell_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VnY-7z-fi9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="imageView:9ag-5p-uT2:image" translatesAutoresizingMaskIntoConstraints="NO" id="9ag-5p-uT2">
-                                <rect key="frame" x="104" y="279" width="206" height="179"/>
+                                <rect key="frame" x="103" y="279" width="205" height="180"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -26,6 +25,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ugn-xH-HdY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-180" y="-595"/>
         </scene>

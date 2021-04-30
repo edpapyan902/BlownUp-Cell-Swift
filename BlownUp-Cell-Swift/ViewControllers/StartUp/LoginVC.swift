@@ -11,7 +11,6 @@ import AuthenticationServices
 
 class LoginVC: BaseVC {
 
-    @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var appleAuthProviderView: UIStackView!
     @IBOutlet weak var swtRememberMe: UISwitch!
     @IBOutlet weak var txtPassword: MaterialTextInputField!
@@ -21,7 +20,7 @@ class LoginVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        initLayout()
+        initLayout()
     }
     
     func initLayout() {
@@ -119,6 +118,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
+        print("****** Apple Auth Error ******\n", error)
     }
 }
 
