@@ -11,8 +11,7 @@ import AuthenticationServices
 
 class SignUpVC: BaseVC {
     
-    @IBOutlet weak var appleLoginView: UIStackView!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var appleAuthProviderView: UIStackView!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var swtTerm: UISwitch!
     @IBOutlet weak var txtSpoofPhone: MaterialTextInputField!
@@ -24,16 +23,14 @@ class SignUpVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        initLayout()
+//        initLayout()
     }
     
     func initLayout() {
-        self.scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: self.btnLogin.frame.origin.y + 50)
-        
         //Apple Sign In Button Set
         let authorizationButton = ASAuthorizationAppleIDButton()
-        authorizationButton.addTarget(self, action: #selector(handleAppleLogin), for: .touchUpInside)
-        self.appleLoginView.addArrangedSubview(authorizationButton)
+        authorizationButton.addTarget(self, action: #selector(handleAppleAuth), for: .touchUpInside)
+        self.appleAuthProviderView.addArrangedSubview(authorizationButton)
     }
     
     @IBAction func goLogin(_ sender: Any) {
@@ -72,7 +69,7 @@ class SignUpVC: BaseVC {
         processSignUp(params: params)
     }
     
-    @objc func handleAppleLogin() {
+    @objc func handleAppleAuth() {
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]

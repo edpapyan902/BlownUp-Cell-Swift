@@ -51,5 +51,4 @@ class BaseVC : UIViewController {
         self.progressSet( styleVal: 2, backColor: UIColor.init(named: "ColorBlur")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
         KRProgressHUD.showError(withMessage: msgOn == false ? nil : msg)
     }
-
 }
