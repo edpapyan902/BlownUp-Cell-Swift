@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lQv-Go-fyg" userLabel="mainView">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="978"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="428" height="958"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo_green" translatesAutoresizingMaskIntoConstraints="NO" id="jBM-W4-fHL">
                                                 <rect key="frame" x="20" y="30" width="388" height="150"/>
@@ -45,25 +45,27 @@
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qp5-kj-LdN" userLabel="txtPwd" customClass="MaterialTextInputField" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="358" width="388" height="60"/>
+                                                <rect key="frame" x="20" y="353" width="388" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="rgi-5a-XiA"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Password"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="password"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyZ-cn-hab" userLabel="txtConPwd" customClass="MaterialTextInputField" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="438" width="388" height="60"/>
+                                                <rect key="frame" x="20" y="428" width="388" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="jai-A1-MvQ"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Retype Password"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="password"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xw-sq-XEg" userLabel="txtSpoofPhone" customClass="MaterialTextInputField" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="20" y="518" width="388" height="60"/>
+                                                <rect key="frame" x="20" y="503" width="388" height="60"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="lJx-ii-VMA"/>
                                                 </constraints>
@@ -72,7 +74,7 @@
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10e-IA-Xv1" userLabel="termsView">
-                                                <rect key="frame" x="20" y="598" width="388" height="31"/>
+                                                <rect key="frame" x="20" y="578" width="388" height="31"/>
                                                 <subviews>
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="o0l-cT-NYO" userLabel="swtTerm">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -96,7 +98,7 @@
                                                 </constraints>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhD-RY-2PY" userLabel="btnSignUp">
-                                                <rect key="frame" x="20" y="659" width="388" height="50"/>
+                                                <rect key="frame" x="20" y="639" width="388" height="50"/>
                                                 <color key="backgroundColor" name="colorPrimary"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="dka-Dy-AS8"/>
@@ -110,7 +112,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0R4-wG-FTT" userLabel="alreadyView">
-                                                <rect key="frame" x="20" y="719" width="388" height="30"/>
+                                                <rect key="frame" x="20" y="694" width="388" height="30"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Already have account?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ji5-kr-UJ1">
                                                         <rect key="frame" x="0.0" y="0.0" width="328" height="30"/>
@@ -145,7 +147,7 @@
                                                 </constraints>
                                             </view>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ICX-Pm-Kgt" userLabel="appleAuthProviderView">
-                                                <rect key="frame" x="20" y="779" width="388" height="50"/>
+                                                <rect key="frame" x="20" y="749" width="388" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="MKN-We-Mbd"/>
                                                 </constraints>
@@ -154,33 +156,33 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="NjQ-42-Exy" secondAttribute="trailing" constant="20" id="2mB-fx-W9r"/>
-                                            <constraint firstItem="ICX-Pm-Kgt" firstAttribute="top" secondItem="0R4-wG-FTT" secondAttribute="bottom" constant="30" id="70P-Ze-pHz"/>
+                                            <constraint firstItem="ICX-Pm-Kgt" firstAttribute="top" secondItem="0R4-wG-FTT" secondAttribute="bottom" constant="25" id="70P-Ze-pHz"/>
                                             <constraint firstAttribute="trailing" secondItem="jBM-W4-fHL" secondAttribute="trailing" constant="20" id="7DE-PP-bgZ"/>
                                             <constraint firstItem="ICX-Pm-Kgt" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="7Gc-Xu-ZxE"/>
                                             <constraint firstItem="NjQ-42-Exy" firstAttribute="top" secondItem="33Y-9S-xR7" secondAttribute="bottom" constant="20" id="9Ek-RS-zYZ"/>
                                             <constraint firstItem="NjQ-42-Exy" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="DPg-BE-bvb"/>
                                             <constraint firstItem="0R4-wG-FTT" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="GQa-ph-N7v"/>
-                                            <constraint firstItem="Qp5-kj-LdN" firstAttribute="top" secondItem="NjQ-42-Exy" secondAttribute="bottom" constant="20" id="K6k-2h-FJJ"/>
+                                            <constraint firstItem="Qp5-kj-LdN" firstAttribute="top" secondItem="NjQ-42-Exy" secondAttribute="bottom" constant="15" id="K6k-2h-FJJ"/>
                                             <constraint firstAttribute="trailing" secondItem="0R4-wG-FTT" secondAttribute="trailing" constant="20" id="L2d-Dz-5tG"/>
                                             <constraint firstAttribute="trailing" secondItem="jyZ-cn-hab" secondAttribute="trailing" constant="20" id="P9O-JK-KYM"/>
                                             <constraint firstItem="10e-IA-Xv1" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="RNO-1m-2Nd"/>
-                                            <constraint firstItem="5xw-sq-XEg" firstAttribute="top" secondItem="jyZ-cn-hab" secondAttribute="bottom" constant="20" id="SQn-dE-5TW"/>
+                                            <constraint firstItem="5xw-sq-XEg" firstAttribute="top" secondItem="jyZ-cn-hab" secondAttribute="bottom" constant="15" id="SQn-dE-5TW"/>
                                             <constraint firstAttribute="trailing" secondItem="Qp5-kj-LdN" secondAttribute="trailing" constant="20" id="SnU-yv-ukx"/>
                                             <constraint firstItem="33Y-9S-xR7" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="30" id="TAG-GH-mEE"/>
                                             <constraint firstItem="5xw-sq-XEg" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="TBN-b8-Usk"/>
                                             <constraint firstItem="jBM-W4-fHL" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="TO2-Sc-ljs"/>
                                             <constraint firstAttribute="trailing" secondItem="33Y-9S-xR7" secondAttribute="trailing" constant="30" id="YuX-Nf-9XV"/>
                                             <constraint firstItem="uhD-RY-2PY" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="b3f-bV-ypG"/>
-                                            <constraint firstItem="10e-IA-Xv1" firstAttribute="top" secondItem="5xw-sq-XEg" secondAttribute="bottom" constant="20" id="cea-LJ-Yh2"/>
+                                            <constraint firstItem="10e-IA-Xv1" firstAttribute="top" secondItem="5xw-sq-XEg" secondAttribute="bottom" constant="15" id="cea-LJ-Yh2"/>
                                             <constraint firstAttribute="trailing" secondItem="5xw-sq-XEg" secondAttribute="trailing" constant="20" id="cfd-N3-qlY"/>
                                             <constraint firstItem="uhD-RY-2PY" firstAttribute="top" secondItem="10e-IA-Xv1" secondAttribute="bottom" constant="30" id="dmm-wP-7n6"/>
                                             <constraint firstItem="jBM-W4-fHL" firstAttribute="top" secondItem="lQv-Go-fyg" secondAttribute="top" constant="30" id="edq-G5-H2r"/>
                                             <constraint firstItem="33Y-9S-xR7" firstAttribute="top" secondItem="jBM-W4-fHL" secondAttribute="bottom" constant="30" id="fc8-lf-qnr"/>
                                             <constraint firstItem="jyZ-cn-hab" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="hII-mc-TGg"/>
-                                            <constraint firstItem="jyZ-cn-hab" firstAttribute="top" secondItem="Qp5-kj-LdN" secondAttribute="bottom" constant="20" id="hcQ-ch-C8K"/>
+                                            <constraint firstItem="jyZ-cn-hab" firstAttribute="top" secondItem="Qp5-kj-LdN" secondAttribute="bottom" constant="15" id="hcQ-ch-C8K"/>
                                             <constraint firstItem="Qp5-kj-LdN" firstAttribute="leading" secondItem="lQv-Go-fyg" secondAttribute="leading" constant="20" id="j2k-C7-hys"/>
                                             <constraint firstAttribute="trailing" secondItem="10e-IA-Xv1" secondAttribute="trailing" constant="20" id="meL-s3-heB"/>
-                                            <constraint firstItem="0R4-wG-FTT" firstAttribute="top" secondItem="uhD-RY-2PY" secondAttribute="bottom" constant="10" id="mx2-oq-Hcg"/>
+                                            <constraint firstItem="0R4-wG-FTT" firstAttribute="top" secondItem="uhD-RY-2PY" secondAttribute="bottom" constant="5" id="mx2-oq-Hcg"/>
                                             <constraint firstAttribute="trailing" secondItem="ICX-Pm-Kgt" secondAttribute="trailing" constant="20" id="nRS-2F-fGA"/>
                                             <constraint firstAttribute="trailing" secondItem="uhD-RY-2PY" secondAttribute="trailing" constant="20" id="xMW-Vx-r1D"/>
                                         </constraints>
@@ -189,7 +191,7 @@
                                 <constraints>
                                     <constraint firstItem="lQv-Go-fyg" firstAttribute="leading" secondItem="UvE-qR-Byq" secondAttribute="leading" id="JEz-um-nXB"/>
                                     <constraint firstItem="lQv-Go-fyg" firstAttribute="width" secondItem="UvE-qR-Byq" secondAttribute="width" id="Mi5-U9-WgF"/>
-                                    <constraint firstItem="lQv-Go-fyg" firstAttribute="height" secondItem="UvE-qR-Byq" secondAttribute="height" constant="130" id="ZJF-Sw-I6n"/>
+                                    <constraint firstItem="lQv-Go-fyg" firstAttribute="height" secondItem="UvE-qR-Byq" secondAttribute="height" constant="110" id="ZJF-Sw-I6n"/>
                                     <constraint firstAttribute="trailing" secondItem="lQv-Go-fyg" secondAttribute="trailing" id="hzU-NL-Qxp"/>
                                     <constraint firstItem="lQv-Go-fyg" firstAttribute="top" secondItem="UvE-qR-Byq" secondAttribute="top" id="m0o-q5-C85"/>
                                     <constraint firstAttribute="bottom" secondItem="lQv-Go-fyg" secondAttribute="bottom" id="z59-V7-vyZ"/>

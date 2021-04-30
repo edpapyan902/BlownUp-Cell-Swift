@@ -52,7 +52,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SK3-52-Fu4" userLabel="rememberMeView">
-                                        <rect key="frame" x="20" y="468" width="388" height="31"/>
+                                        <rect key="frame" x="20" y="463" width="388" height="31"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-mQ-IuD" userLabel="swtRememberMe">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
@@ -77,7 +77,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE2-jw-sI6" userLabel="btnLogin">
-                                        <rect key="frame" x="20" y="529" width="388" height="50"/>
+                                        <rect key="frame" x="20" y="524" width="388" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fn6-sX-LJ9"/>
@@ -91,7 +91,7 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OdK-8C-ytK" userLabel="notAccountView">
-                                        <rect key="frame" x="20" y="589" width="388" height="30"/>
+                                        <rect key="frame" x="20" y="579" width="388" height="30"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not Account Yet?" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q7w-T9-t4T">
                                                 <rect key="frame" x="0.0" y="0.0" width="298" height="30"/>
@@ -129,7 +129,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wbw-Pr-58m" userLabel="appleAuthProviderView">
-                                        <rect key="frame" x="20" y="659" width="388" height="50"/>
+                                        <rect key="frame" x="20" y="634" width="388" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="NYG-4h-T8p"/>
                                         </constraints>
@@ -139,7 +139,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="4nF-ce-XwQ" secondAttribute="trailing" constant="20" id="6Jq-Lj-p8A"/>
                                     <constraint firstAttribute="trailing" secondItem="m0z-2u-a8N" secondAttribute="trailing" constant="20" id="7cs-dg-g7V"/>
-                                    <constraint firstItem="Wbw-Pr-58m" firstAttribute="top" secondItem="OdK-8C-ytK" secondAttribute="bottom" constant="40" id="9Hu-iz-AEG"/>
+                                    <constraint firstItem="Wbw-Pr-58m" firstAttribute="top" secondItem="OdK-8C-ytK" secondAttribute="bottom" constant="25" id="9Hu-iz-AEG"/>
                                     <constraint firstItem="80y-UT-8Ku" firstAttribute="leading" secondItem="gcM-Yf-3xM" secondAttribute="leading" constant="30" id="AK6-7E-wzt"/>
                                     <constraint firstItem="80y-UT-8Ku" firstAttribute="top" secondItem="qnJ-bv-MFo" secondAttribute="bottom" constant="30" id="EVP-0b-X0G"/>
                                     <constraint firstAttribute="trailing" secondItem="80y-UT-8Ku" secondAttribute="trailing" constant="30" id="I52-rX-ZTk"/>
@@ -148,12 +148,12 @@
                                     <constraint firstAttribute="trailing" secondItem="EE2-jw-sI6" secondAttribute="trailing" constant="20" id="QHb-gU-g8W"/>
                                     <constraint firstItem="EE2-jw-sI6" firstAttribute="top" secondItem="SK3-52-Fu4" secondAttribute="bottom" constant="30" id="SMl-sB-uv4"/>
                                     <constraint firstItem="4nF-ce-XwQ" firstAttribute="leading" secondItem="gcM-Yf-3xM" secondAttribute="leading" constant="20" id="Uck-QE-Jp2"/>
-                                    <constraint firstItem="SK3-52-Fu4" firstAttribute="top" secondItem="m0z-2u-a8N" secondAttribute="bottom" constant="20" id="Ufc-Ht-ES0"/>
+                                    <constraint firstItem="SK3-52-Fu4" firstAttribute="top" secondItem="m0z-2u-a8N" secondAttribute="bottom" constant="15" id="Ufc-Ht-ES0"/>
                                     <constraint firstItem="Wbw-Pr-58m" firstAttribute="leading" secondItem="gcM-Yf-3xM" secondAttribute="leading" constant="20" id="fmV-fd-0fr"/>
                                     <constraint firstItem="qnJ-bv-MFo" firstAttribute="leading" secondItem="gcM-Yf-3xM" secondAttribute="leading" constant="20" id="g6o-6V-otl"/>
                                     <constraint firstAttribute="trailing" secondItem="Wbw-Pr-58m" secondAttribute="trailing" constant="20" id="pd0-Jj-ni9"/>
                                     <constraint firstAttribute="trailing" secondItem="SK3-52-Fu4" secondAttribute="trailing" constant="20" id="qPJ-6d-ZU2"/>
-                                    <constraint firstItem="OdK-8C-ytK" firstAttribute="top" secondItem="EE2-jw-sI6" secondAttribute="bottom" constant="10" id="qoz-44-p5P"/>
+                                    <constraint firstItem="OdK-8C-ytK" firstAttribute="top" secondItem="EE2-jw-sI6" secondAttribute="bottom" constant="5" id="qoz-44-p5P"/>
                                     <constraint firstItem="qnJ-bv-MFo" firstAttribute="top" secondItem="gcM-Yf-3xM" secondAttribute="top" constant="50" id="ruv-AI-nTw"/>
                                     <constraint firstItem="SK3-52-Fu4" firstAttribute="leading" secondItem="gcM-Yf-3xM" secondAttribute="leading" constant="20" id="uE2-BS-hfq"/>
                                     <constraint firstItem="EE2-jw-sI6" firstAttribute="leading" secondItem="gcM-Yf-3xM" secondAttribute="leading" constant="20" id="vS5-64-2YF"/>
