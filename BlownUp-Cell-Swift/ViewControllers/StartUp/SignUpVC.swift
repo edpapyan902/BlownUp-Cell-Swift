@@ -70,6 +70,11 @@ class SignUpVC: BaseVC {
     }
     
     @objc func handleAppleAuth() {
+        let spoof_phone_number = txtSpoofPhone.getText()
+        if spoof_phone_number.isEmpty() {
+            return
+        }
+        
         let appleIDProvider = ASAuthorizationAppleIDProvider()
         let request = appleIDProvider.createRequest()
         request.requestedScopes = [.fullName, .email]
