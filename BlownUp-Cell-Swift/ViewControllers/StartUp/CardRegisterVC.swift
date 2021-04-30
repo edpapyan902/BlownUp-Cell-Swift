@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class CardRegisterVC: UIViewController {
+class CardRegisterVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

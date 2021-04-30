@@ -12,7 +12,7 @@
 		9083A98A34F80F7D1D8F2779 /* Pods_BlownUp_Cell_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
-		940CA3082639429300401594 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainVC.swift */; };
+		940CA3082639429300401594 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* HomeVC.swift */; };
 		940CA3102639441000401594 /* SubscriptionRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA30F2639441000401594 /* SubscriptionRes.swift */; };
 		940CA3152639473C00401594 /* RecentCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3142639473C00401594 /* RecentCallVC.swift */; };
 		94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420DC02638FFE0005E2121 /* SignUpVC.swift */; };
@@ -32,6 +32,12 @@
 		945884D826386CC500851CE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884D726386CC500851CE6 /* User.swift */; };
 		945884E126386D3000851CE6 /* LoginRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884E026386D3000851CE6 /* LoginRes.swift */; };
 		945884E62638743E00851CE6 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884E52638743E00851CE6 /* String.swift */; };
+		948CE685263B9D5300A27790 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CE684263B9D5300A27790 /* BaseVC.swift */; };
+		948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6AD263BA9DA00A27790 /* LoginVC.storyboard */; };
+		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
+		948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */; };
+		948CE6BD263BAB1C00A27790 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6BC263BAB1C00A27790 /* HomeVC.storyboard */; };
+		948CE6C2263BAB2D00A27790 /* RecentCall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6C1263BAB2D00A27790 /* RecentCall.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +62,7 @@
 		7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
-		940CA3072639429300401594 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		940CA3072639429300401594 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		940CA30F2639441000401594 /* SubscriptionRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRes.swift; sourceTree = "<group>"; };
 		940CA3142639473C00401594 /* RecentCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallVC.swift; sourceTree = "<group>"; };
 		94420DC02638FFE0005E2121 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
@@ -82,6 +88,12 @@
 		945884D726386CC500851CE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		945884E026386D3000851CE6 /* LoginRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRes.swift; sourceTree = "<group>"; };
 		945884E52638743E00851CE6 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		948CE684263B9D5300A27790 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
+		948CE6AD263BA9DA00A27790 /* LoginVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginVC.storyboard; sourceTree = "<group>"; };
+		948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpVC.storyboard; sourceTree = "<group>"; };
+		948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardRegisterVC.storyboard; sourceTree = "<group>"; };
+		948CE6BC263BAB1C00A27790 /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
+		948CE6C1263BAB2D00A27790 /* RecentCall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentCall.storyboard; sourceTree = "<group>"; };
 		948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BlownUp-Cell-Swift.entitlements"; sourceTree = "<group>"; };
 		AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,8 +158,10 @@
 		940CA3062639426100401594 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				940CA3072639429300401594 /* MainVC.swift */,
+				940CA3072639429300401594 /* HomeVC.swift */,
+				948CE6BC263BAB1C00A27790 /* HomeVC.storyboard */,
 				940CA3142639473C00401594 /* RecentCallVC.swift */,
+				948CE6C1263BAB2D00A27790 /* RecentCall.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -217,6 +231,7 @@
 			children = (
 				940CA3062639426100401594 /* Main */,
 				9458847226383A7300851CE6 /* StartUp */,
+				948CE684263B9D5300A27790 /* BaseVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -224,10 +239,13 @@
 		9458847226383A7300851CE6 /* StartUp */ = {
 			isa = PBXGroup;
 			children = (
-				9458847326383A9E00851CE6 /* LoginVC.swift */,
 				9458847826383F1F00851CE6 /* SplashVC.swift */,
+				9458847326383A9E00851CE6 /* LoginVC.swift */,
+				948CE6AD263BA9DA00A27790 /* LoginVC.storyboard */,
 				94420DC02638FFE0005E2121 /* SignUpVC.swift */,
+				948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */,
 				940CA3002639422300401594 /* CardRegisterVC.swift */,
+				948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */,
 			);
 			path = StartUp;
 			sourceTree = "<group>";
@@ -392,9 +410,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */,
+				948CE6C2263BAB2D00A27790 /* RecentCall.storyboard in Resources */,
 				945884182638284100851CE6 /* LaunchScreen.storyboard in Resources */,
+				948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */,
+				948CE6BD263BAB1C00A27790 /* HomeVC.storyboard in Resources */,
 				945884152638284100851CE6 /* Assets.xcassets in Resources */,
 				945884132638284000851CE6 /* Main.storyboard in Resources */,
+				948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -523,7 +546,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9458847926383F1F00851CE6 /* SplashVC.swift in Sources */,
-				940CA3082639429300401594 /* MainVC.swift in Sources */,
+				940CA3082639429300401594 /* HomeVC.swift in Sources */,
 				945884E62638743E00851CE6 /* String.swift in Sources */,
 				9458840C2638284000851CE6 /* AppDelegate.swift in Sources */,
 				9458849E2638477D00851CE6 /* MaterialTextInputField.swift in Sources */,
@@ -535,6 +558,7 @@
 				940CA3152639473C00401594 /* RecentCallVC.swift in Sources */,
 				940CA3012639422300401594 /* CardRegisterVC.swift in Sources */,
 				945884D826386CC500851CE6 /* User.swift in Sources */,
+				948CE685263B9D5300A27790 /* BaseVC.swift in Sources */,
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
 				9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */,
 				945884B026385E6100851CE6 /* Const.swift in Sources */,

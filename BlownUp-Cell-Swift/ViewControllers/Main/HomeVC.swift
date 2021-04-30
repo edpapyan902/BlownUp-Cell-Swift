@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class MainVC: UIViewController {
+class HomeVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()

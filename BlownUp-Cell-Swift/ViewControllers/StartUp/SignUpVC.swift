@@ -9,12 +9,11 @@ import Foundation
 import UIKit
 import AuthenticationServices
 
-class SignUpVC: UIViewController {
+class SignUpVC: BaseVC {
     
     @IBOutlet weak var appleLoginView: UIStackView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var btnLogin: UIButton!
-    @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var swtTerm: UISwitch!
     @IBOutlet weak var txtSpoofPhone: MaterialTextInputField!
     @IBOutlet weak var txtConPwd: MaterialTextInputField!
@@ -85,10 +84,7 @@ class SignUpVC: UIViewController {
     }
     
     func processSignUp(params: [String: Any]) {
-        self.loadingView.isHidden = false
-        
         API.instance.signUp(params: params) { (response) in
-            self.loadingView.isHidden = true
             if response.error == nil {
                 let signUpRes: SignUpRes = response.result.value!
                 

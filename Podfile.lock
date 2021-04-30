@@ -5,7 +5,11 @@ PODS:
   - AlamofireObjectMapper (5.2.1):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
+  - IQKeyboardManagerSwift (6.5.6)
   - Kingfisher (6.1.1)
+  - KRActivityIndicatorView (3.0.7)
+  - KRProgressHUD (3.4.7):
+    - KRActivityIndicatorView (= 3.0.7)
   - MaterialComponents/AnimationTiming (124.2.0)
   - MaterialComponents/Availability (124.2.0)
   - MaterialComponents/BottomNavigation (124.2.0):
@@ -96,37 +100,49 @@ PODS:
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.1)
   - ObjectMapper (3.5.3)
+  - SwiftyUserDefaults (5.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
   - AlamofireMapper (~> 1.0.0)
   - AlamofireObjectMapper (~> 5.2.1)
+  - IQKeyboardManagerSwift (~> 6.5.6)
   - Kingfisher (~> 6.1.1)
+  - KRProgressHUD (~> 3.4.7)
   - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
   - "MaterialComponents/TextControls+OutlinedTextFields"
+  - SwiftyUserDefaults (~> 5.3.0)
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireMapper
     - AlamofireObjectMapper
+    - IQKeyboardManagerSwift
     - Kingfisher
+    - KRActivityIndicatorView
+    - KRProgressHUD
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
     - ObjectMapper
+    - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireMapper: bdcd94eb53ab63ec9a12e4685bba73e3d0072f36
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
+  IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
   Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
+  KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
+  KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
 
-PODFILE CHECKSUM: 72fc200f7cde6bcb3e170916b8fe6510181682b7
+PODFILE CHECKSUM: 0470b9f96531c01e5703b7f28f640cf03c288e2e
 
 COCOAPODS: 1.10.1

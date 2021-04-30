@@ -9,12 +9,11 @@ import Foundation
 import UIKit
 import AuthenticationServices
 
-class LoginVC: UIViewController {
+class LoginVC: BaseVC {
 
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var appleLoginView: UIStackView!
-    @IBOutlet weak var loadingView: UIView!
     @IBOutlet weak var swtRememberMe: UISwitch!
     @IBOutlet weak var txtPassword: MaterialTextInputField!
     @IBOutlet weak var txtEmail: MaterialTextInputField!
@@ -23,7 +22,7 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        initLayout()
+//        initLayout()
     }
     
     func initLayout() {
@@ -69,10 +68,7 @@ class LoginVC: UIViewController {
             "is_social": is_social
         ]
         
-        loadingView.isHidden = false
-        
         API.instance.login(params: params) { (response) in
-            self.loadingView.isHidden = true
             if response.error == nil {
                 let loginRes: LoginRes = response.result.value!
                 

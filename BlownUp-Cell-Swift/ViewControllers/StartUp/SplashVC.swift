@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SplashVC: UIViewController {
+class SplashVC: BaseVC {
     
     var loadTimer: Timer? = nil
     
@@ -57,26 +57,18 @@ class SplashVC: UIViewController {
         
         if !apiToken.isEmpty() && rememberMe {
             if !isCancelled && upcoming_date == 0 {
-                let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
-                cardRegisterVC!.modalPresentationStyle = .fullScreen
-                self.present(cardRegisterVC!, animated: true, completion: nil)
+                self.gotoStoryBoardVC("CardRegisterVC", true)
             }
             else if isEnded && upcoming_date != 0 {
                 print("Your subscription plan ended. Please subscribe new plan.")
-                let cardRegisterVC = self.storyboard?.instantiateViewController(withIdentifier: "CardRegisterVC") as? CardRegisterVC
-                cardRegisterVC!.modalPresentationStyle = .fullScreen
-                self.present(cardRegisterVC!, animated: true, completion: nil)
+                self.gotoStoryBoardVC("CardRegisterVC", true)
             }
             else {
-                let recentCallVC = self.storyboard?.instantiateViewController(withIdentifier: "RecentCallVC") as? RecentCallVC
-                recentCallVC!.modalPresentationStyle = .fullScreen
-                self.present(recentCallVC!, animated: true, completion: nil)
+                self.gotoStoryBoardVC("RecentCallVC", true)
             }
         }
         else {
-            let loginVC = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as? LoginVC
-            loginVC!.modalPresentationStyle = .fullScreen
-            self.present(loginVC!, animated: true, completion: nil)
+            self.gotoStoryBoardVC("LoginVC", true)
         }
     }
 }
