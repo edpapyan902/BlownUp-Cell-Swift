@@ -54,20 +54,20 @@ class BaseVC : UIViewController {
         KRProgressHUD.showError(withMessage: msgOn == false ? nil : msg)
     }
     
-    func showMessage(_ title: String, _ type: Int) {
+    func showMessage(_ body: String, _ type: Int) {
         let view = MessageView.viewFromNib(layout: .cardView)
-        var body: String
+        var title: String
         if type == 0 {
             view.configureTheme(.success)
-            body = "Success"
+            title = "Success"
         }
         else if type == 1 {
             view.configureTheme(.warning)
-            body = "Warning"
+            title = "Warning"
         }
         else {
             view.configureTheme(.error)
-            body = "Error"
+            title = "Error"
         }
         
         (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10

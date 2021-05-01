@@ -44,15 +44,19 @@ class SignUpVC: BaseVC {
         let spoof_phone_number = txtSpoofPhone.getText()
         
         if email.isEmpty() {
+            self.showMessage("Please enter valid email", 1)
             return
         }
-        if password.isEmpty() {
+        if password.count < 6 {
+            self.showMessage("Password should be at least 6 characters", 1)
             return
         }
-        if conPassword.isEmpty() {
+        if conPassword != password {
+            self.showMessage("Please enter correct confirm password", 1)
             return
         }
         if spoof_phone_number.isEmpty() {
+            self.showMessage("Please enter my call to phone number", 1)
             return
         }
         
@@ -70,6 +74,7 @@ class SignUpVC: BaseVC {
     @objc func handleAppleAuth() {
         let spoof_phone_number = txtSpoofPhone.getText()
         if spoof_phone_number.isEmpty() {
+            self.showMessage("Please enter my call to phone number", 1)
             return
         }
         
@@ -89,7 +94,7 @@ class SignUpVC: BaseVC {
                 let signUpRes: SignUpRes = response.result.value!
                 
                 if signUpRes.success! {
-                    print("************* SignUp Success! *************")
+                    self.showMessage(signUpRes.message!, 0)
                     
                     let data = signUpRes.data
                     
@@ -98,6 +103,8 @@ class SignUpVC: BaseVC {
                     Store.instance.rememberMe = true
                     
                     self.gotoStoryBoardVC("CardRegisterVC", true)
+                } else {
+                    self.showMessage(signUpRes.message!, 2)
                 }
             }
         }
@@ -113,11 +120,13 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
             let email = appleIDCredential.email
             
             if email!.isEmpty() {
+                self.showMessage("This apple id can't use for sign in", 2)
                 return
             }
             
             let spoof_phone_number = txtSpoofPhone.getText()
             if spoof_phone_number.isEmpty() {
+                self.showMessage("Please enter my call to phone number", 1)
                 return
             }
             
@@ -137,6 +146,7 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
+        self.showMessage("Apple Sign Error ->" + error.localizedDescription, 2)
     }
 }
 

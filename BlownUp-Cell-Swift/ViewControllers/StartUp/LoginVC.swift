@@ -39,9 +39,14 @@ class LoginVC: BaseVC {
         let password = txtPassword.getText()
         
         if email.isEmpty() {
-            self.showMessage("Warning", "Please input valid email.", 1)
+            self.showMessage("Please enter valid email", 1)
             return
         }
+        if password.isEmpty() {
+            self.showMessage("Please enter password", 1)
+            return
+        }
+        
         processLogin(email: email, password: password, is_social: 0)
     }
     
@@ -70,6 +75,8 @@ class LoginVC: BaseVC {
                 if loginRes.success! {
                     print("************* Login Success! *************")
                     
+                    self.showMessage(loginRes.message!, 0)
+                    
                     let data = loginRes.data
                     
                     Store.instance.apiToken = (data?.user?.token)!
@@ -93,6 +100,8 @@ class LoginVC: BaseVC {
                     else {
                         self.gotoStoryBoardVC("CardRegisterVC", true)
                     }
+                } else {
+                    self.showMessage(loginRes.message!, 2)
                 }
             }
         }
@@ -108,6 +117,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
             let email = appleIDCredential.email
             
             if email!.isEmpty() {
+                self.showMessage("This apple id can't use for sign in", 2)
                 return
             }
             
@@ -119,7 +129,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-        print("****** Apple Auth Error ******\n", error)
+        self.showMessage("Apple Sign Error ->" + error.localizedDescription, 2)
     }
 }
 
