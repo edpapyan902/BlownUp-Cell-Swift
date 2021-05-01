@@ -100,7 +100,6 @@ PODS:
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.1)
   - ObjectMapper (3.5.3)
-  - SwiftyUserDefaults (5.3.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
@@ -112,7 +111,6 @@ DEPENDENCIES:
   - MaterialComponents/BottomNavigation
   - MaterialComponents/Buttons
   - "MaterialComponents/TextControls+OutlinedTextFields"
-  - SwiftyUserDefaults (~> 5.3.0)
 
 SPEC REPOS:
   trunk:
@@ -127,7 +125,6 @@ SPEC REPOS:
     - MDFInternationalization
     - MDFTextAccessibility
     - ObjectMapper
-    - SwiftyUserDefaults
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -141,8 +138,7 @@ SPEC CHECKSUMS:
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
-  SwiftyUserDefaults: 63f80248cf5bfb3458825d9a78f2eb7e1293a040
 
-PODFILE CHECKSUM: 0470b9f96531c01e5703b7f28f640cf03c288e2e
+PODFILE CHECKSUM: b2120756289f5d8f1bf6bc61107925c926bdb01c
 
 COCOAPODS: 1.10.1
