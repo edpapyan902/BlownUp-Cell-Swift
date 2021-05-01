@@ -28,8 +28,8 @@ class BaseVC : UIViewController {
     }
     
     func setProgressHUDStyle(_ style: Int,backcolor: UIColor,textcolor : UIColor, imagecolor : UIColor ) {
-        if style != 2{
-        let styles: [KRProgressHUDStyle] = [.white, .black, .custom(background: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), text: #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1), icon: #colorLiteral(red: 0.9372549057, green: 0.3490196168, blue: 0.1921568662, alpha: 1))]
+        if style != 2 {
+        let styles: [KRProgressHUDStyle] = [.white, .black, .custom(background: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), text: #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1), icon: UIColor.init(named: "colorPrimary")!)]
             KRProgressHUD.set(style: styles[style]) }
         else {
             let styles : KRProgressHUDStyle = .custom (background:backcolor,text : textcolor, icon: imagecolor )
@@ -42,9 +42,10 @@ class BaseVC : UIViewController {
         KRProgressHUD.set(activityIndicatorViewColors: [headerColor, trailColor])
     }
 
-    func progShowSuccess(_ msgOn:Bool, _ msg:String){
-        self.progressSet( styleVal: 2, backColor: UIColor.init(named: "colorPrimary")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
-        KRProgressHUD.showSuccess(withMessage: msgOn == false ? nil : msg)
+    func progShowSuccess(_ msgOn:Bool, _ msg:String) {
+        self.progressSet( styleVal: 2, backColor: .white, textColor: UIColor.init(named: "colorPrimary")!, imgcolor: UIColor.init(named: "colorPrimary")!, headerColor: UIColor.init(named: "colorPrimary")!, trailColor: UIColor.init(named: "colorPrimary")!)
+        KRProgressHUD.show(withMessage: nil)
+//        KRProgressHUD.show(withMessage: "Loading...")
     }
 
     func progShowError(_ msgOn:Bool, msg:String) {
