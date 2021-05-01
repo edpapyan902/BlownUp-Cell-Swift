@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import KRProgressHUD
+import SwiftMessages
 
 class BaseVC : UIViewController {
     
@@ -51,5 +52,32 @@ class BaseVC : UIViewController {
     func progShowError(_ msgOn:Bool, msg:String) {
         self.progressSet( styleVal: 2, backColor: UIColor.init(named: "colorPrimary")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
         KRProgressHUD.showError(withMessage: msgOn == false ? nil : msg)
+    }
+    
+    func showMessage(_ title: String, _ type: Int) {
+        let view = MessageView.viewFromNib(layout: .cardView)
+        var body: String
+        if type == 0 {
+            view.configureTheme(.success)
+            body = "Success"
+        }
+        else if type == 1 {
+            view.configureTheme(.warning)
+            body = "Warning"
+        }
+        else {
+            view.configureTheme(.error)
+            body = "Error"
+        }
+        
+        (view.backgroundView as? CornerRoundingView)?.cornerRadius = 10
+        view.configureDropShadow()
+        view.configureContent(title: title, body: body)
+        view.button?.isHidden = true
+        
+        var config = SwiftMessages.Config()
+        config.presentationStyle = .bottom
+        
+        SwiftMessages.show(config: config, view: view)
     }
 }

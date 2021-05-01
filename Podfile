@@ -16,6 +16,7 @@ pod 'AlamofireObjectMapper', '~> 5.2.1'
 pod 'Kingfisher', '~> 6.1.1'
 pod 'IQKeyboardManagerSwift', '~> 6.5.6'
 pod 'KRProgressHUD', '~> 3.4.7'
+pod 'SwiftMessages', '~> 9.0.2'
 
   target 'BlownUp-Cell-SwiftTests' do
     inherit! :search_paths
