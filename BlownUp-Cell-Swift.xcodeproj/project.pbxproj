@@ -37,7 +37,7 @@
 		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
 		948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */; };
 		948CE6BD263BAB1C00A27790 /* HomeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6BC263BAB1C00A27790 /* HomeVC.storyboard */; };
-		948CE6C2263BAB2D00A27790 /* RecentCall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6C1263BAB2D00A27790 /* RecentCall.storyboard */; };
+		948CE6C2263BAB2D00A27790 /* RecentCallVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6C1263BAB2D00A27790 /* RecentCallVC.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +93,7 @@
 		948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpVC.storyboard; sourceTree = "<group>"; };
 		948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardRegisterVC.storyboard; sourceTree = "<group>"; };
 		948CE6BC263BAB1C00A27790 /* HomeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeVC.storyboard; sourceTree = "<group>"; };
-		948CE6C1263BAB2D00A27790 /* RecentCall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentCall.storyboard; sourceTree = "<group>"; };
+		948CE6C1263BAB2D00A27790 /* RecentCallVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentCallVC.storyboard; sourceTree = "<group>"; };
 		948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BlownUp-Cell-Swift.entitlements"; sourceTree = "<group>"; };
 		AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,7 +161,7 @@
 				940CA3072639429300401594 /* HomeVC.swift */,
 				948CE6BC263BAB1C00A27790 /* HomeVC.storyboard */,
 				940CA3142639473C00401594 /* RecentCallVC.swift */,
-				948CE6C1263BAB2D00A27790 /* RecentCall.storyboard */,
+				948CE6C1263BAB2D00A27790 /* RecentCallVC.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -411,7 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */,
-				948CE6C2263BAB2D00A27790 /* RecentCall.storyboard in Resources */,
+				948CE6C2263BAB2D00A27790 /* RecentCallVC.storyboard in Resources */,
 				945884182638284100851CE6 /* LaunchScreen.storyboard in Resources */,
 				948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */,
 				948CE6BD263BAB1C00A27790 /* HomeVC.storyboard in Resources */,

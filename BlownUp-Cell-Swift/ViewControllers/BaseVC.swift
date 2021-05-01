@@ -37,18 +37,18 @@ class BaseVC : UIViewController {
         }
     }
     
-    func progressSet(styleVal: Int ,backColor: UIColor,textColor : UIColor , imgcolor: UIColor, headerColor : UIColor, trailColor : UIColor)  {
+    func progressSet(styleVal: Int ,backColor: UIColor,textColor : UIColor , imgcolor: UIColor, headerColor : UIColor, trailColor : UIColor) {
         setProgressHUDStyle(styleVal,backcolor: backColor,textcolor : textColor, imagecolor: imgcolor)
         KRProgressHUD.set(activityIndicatorViewColors: [headerColor, trailColor])
     }
 
-    func progShowSuccess(_ msgOn:Bool, msg:String){
-        self.progressSet( styleVal: 2, backColor: UIColor.init(named: "ColorBlur")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
+    func progShowSuccess(_ msgOn:Bool, _ msg:String){
+        self.progressSet( styleVal: 2, backColor: UIColor.init(named: "colorPrimary")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
         KRProgressHUD.showSuccess(withMessage: msgOn == false ? nil : msg)
     }
 
     func progShowError(_ msgOn:Bool, msg:String) {
-        self.progressSet( styleVal: 2, backColor: UIColor.init(named: "ColorBlur")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
+        self.progressSet( styleVal: 2, backColor: UIColor.init(named: "colorPrimary")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
         KRProgressHUD.showError(withMessage: msgOn == false ? nil : msg)
     }
 }
