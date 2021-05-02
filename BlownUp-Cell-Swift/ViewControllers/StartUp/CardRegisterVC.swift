@@ -63,13 +63,13 @@ class CardRegisterVC: BaseVC {
             self.hideLoading()
             
             if response.error == nil {
-                let loginRes: CardAddRes = response.result.value!
-                if loginRes.success! {
-                    self.showMessage(loginRes.message!, 0)
-                    
+                let noDataRes: NoDataRes = response.result.value!
+                
+                if noDataRes.success! {
+                    self.showMessage(noDataRes.message!, 0)
                     self.gotoStoryBoardVC("SuccessVC", true)
                 } else {
-                    self.showMessage(loginRes.message!, 2)
+                    self.showMessage(noDataRes.message!, 2)
                 }
             }
         }
