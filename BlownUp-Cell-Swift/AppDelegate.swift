@@ -7,13 +7,18 @@
 
 import UIKit
 import IQKeyboardManagerSwift
+import Stripe
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //  Keyboard avoid
         IQKeyboardManager.shared.enable = true
+        //  Stripe Init
+        StripeAPI.defaultPublishableKey = STRIPE_KEY
         
         return true
     }
