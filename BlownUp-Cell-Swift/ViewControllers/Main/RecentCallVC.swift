@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class RecentCallVC: BaseVC {
+class RecentCallVC: BaseBottomNavBarVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
