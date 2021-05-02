@@ -30,4 +30,10 @@ class API {
             completion(response)
         }
     }
+    
+    func addCard(params: [String: Any], completion: @escaping ( _ response: DataResponse<CardAddRes>) -> Void) -> Void {
+        Alamofire.request(URL_CARD_ADD, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<CardAddRes>) in
+            completion(response)
+        }
+    }
 }

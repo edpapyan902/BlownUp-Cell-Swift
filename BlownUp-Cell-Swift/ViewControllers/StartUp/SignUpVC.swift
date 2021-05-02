@@ -43,7 +43,7 @@ class SignUpVC: BaseVC {
         let conPassword = txtConPwd.getText()
         let spoof_phone_number = txtSpoofPhone.getText()
         
-        if email.isEmpty() {
+        if email.isEmpty() || !email.isValidEmail() {
             self.showMessage("Please enter valid email", 1)
             return
         }

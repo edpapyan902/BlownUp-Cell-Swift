@@ -37,3 +37,7 @@ let BEARER_HEADER = [
 let URL_LOGIN = "\(BASE_SERVER)/api/login"
 let URL_SIGN_UP = "\(BASE_SERVER)/api/signup"
 let URL_SUBSCRIPTION_STATUS = "\(BASE_SERVER)/api/subscription/status"
+
+//  Credit Card
+let URL_CARD_GET = "\(BASE_SERVER)/api/card"
+let URL_CARD_ADD = "\(BASE_SERVER)/api/card/add"

@@ -7,11 +7,71 @@
 
 import Foundation
 import UIKit
+import Stripe
 
 class CardRegisterVC: BaseVC {
 
+    @IBOutlet weak var creditCardProvider: CreditCardView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func registerCard(_ sender: Any) {
+        if !creditCardProvider.getCardView().isValid {
+            self.showMessage("Please use valid card", 2)
+            return
+        }
+        
+        let paymentMethodParams = STPPaymentMethodParams(
+            card: creditCardProvider.getCardView().cardParams,
+            billingDetails: STPPaymentMethodBillingDetails(),
+            metadata: nil
+        )
+        createPaymentMethod(paymentMethodParams: paymentMethodParams, isApplePay: false)
+    }
+    
+    func createPaymentMethod(paymentMethodParams: STPPaymentMethodParams, isApplePay: Bool) {
+        self.showLoading(self)
+        
+        STPAPIClient.shared.createPaymentMethod(
+            with: paymentMethodParams,
+            completion: { paymentMethod, error in
+                DispatchQueue.main.async {
+                    if paymentMethod != nil {
+                        self.processRegisterCard(paymentMethod: (paymentMethod?.stripeId)!, isApplePay: isApplePay)
+                    } else {
+                        self.hideLoading()
+                    }
+                }
+        })
+    }
+    
+    func processRegisterCard(paymentMethod: String, isApplePay: Bool) {
+        let creditCardView = creditCardProvider.getCardView()
+        let params: [String: Any] = [
+            "payment_method": paymentMethod,
+            "card_zip_code": creditCardView.postalCode!,
+            "card_number": creditCardView.cardNumber!,
+            "card_expire_month": creditCardView.expirationMonth,
+            "card_expire_year": creditCardView.expirationYear,
+            "card_cvv": creditCardView.cvc!,
+        ]
+        
+        API.instance.addCard(params: params) { (response) in
+            self.hideLoading()
+            
+            if response.error == nil {
+                let loginRes: CardAddRes = response.result.value!
+                if loginRes.success! {
+                    self.showMessage(loginRes.message!, 0)
+                    
+                    self.gotoStoryBoardVC("SuccessVC", true)
+                } else {
+                    self.showMessage(loginRes.message!, 2)
+                }
+            }
+        }
     }
 }

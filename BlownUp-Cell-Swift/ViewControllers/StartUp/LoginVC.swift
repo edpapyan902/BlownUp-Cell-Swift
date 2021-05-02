@@ -38,7 +38,7 @@ class LoginVC: BaseVC {
         let email = txtEmail.getText()
         let password = txtPassword.getText()
         
-        if email.isEmpty() {
+        if email.isEmpty() || !email.isValidEmail() {
             self.showMessage("Please enter valid email", 1)
             return
         }
