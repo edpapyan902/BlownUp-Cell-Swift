@@ -61,7 +61,7 @@ class SignUpVC: BaseVC {
         }
         
         let params: [String: Any] = [
-            "email": email,
+            "email": email.lowercased(),
             "password": password,
             "spoof_phone_number": spoof_phone_number,
             "term": self.swtTerm.isOn,
@@ -89,7 +89,11 @@ class SignUpVC: BaseVC {
     }
     
     func processSignUp(params: [String: Any]) {
+        self.showLoading(self)
+        
         API.instance.signUp(params: params) { (response) in
+            self.hideLoading()
+            
             if response.error == nil {
                 let signUpRes: SignUpRes = response.result.value!
                 
@@ -116,13 +120,7 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
 //            let userIdentifier = appleIDCredential.user
-//            let fullName = appleIDCredential.fullName
             let email = appleIDCredential.email
-            
-            if email!.isEmpty() {
-                self.showMessage("This apple id can't use for sign in", 2)
-                return
-            }
             
             let spoof_phone_number = txtSpoofPhone.getText()
             if spoof_phone_number.isEmpty() {
@@ -131,7 +129,8 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
             }
             
             let params: [String: Any] = [
-                "email": email!,
+//                "userIdentifier": userIdentifier,
+                "email": email!.lowercased(),
                 "password": "",
                 "spoof_phone_number": spoof_phone_number,
                 "term": self.swtTerm.isOn,

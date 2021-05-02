@@ -43,10 +43,13 @@ class BaseVC : UIViewController {
         KRProgressHUD.set(activityIndicatorViewColors: [headerColor, trailColor])
     }
 
-    func progShowSuccess(_ msgOn:Bool, _ msg:String) {
+    func showLoading(_ viewController: UIViewController) {
         self.progressSet( styleVal: 2, backColor: .white, textColor: UIColor.init(named: "colorPrimary")!, imgcolor: UIColor.init(named: "colorPrimary")!, headerColor: UIColor.init(named: "colorPrimary")!, trailColor: UIColor.init(named: "colorPrimary")!)
-        KRProgressHUD.show(withMessage: nil)
-//        KRProgressHUD.show(withMessage: "Loading...")
+        KRProgressHUD.showOn(viewController).show()
+    }
+    
+    func hideLoading() {
+        KRProgressHUD.dismiss()
     }
 
     func progShowError(_ msgOn:Bool, msg:String) {

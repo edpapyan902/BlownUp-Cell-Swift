@@ -47,7 +47,13 @@ class LoginVC: BaseVC {
             return
         }
         
-        processLogin(email: email, password: password, is_social: 0)
+        let params: [String: Any] = [
+            "email": email.lowercased(),
+            "password": password,
+            "is_social": 0
+        ]
+        
+        processLogin(params: params)
     }
     
     @objc func handleAppleAuth() {
@@ -61,20 +67,16 @@ class LoginVC: BaseVC {
         authorizationController.performRequests()
     }
     
-    func processLogin(email: String, password: String, is_social: Int) {
-        let params: [String: Any] = [
-            "email": email,
-            "password": password,
-            "is_social": is_social
-        ]
+    func processLogin(params: [String: Any]) {
+        self.showLoading(self)
         
         API.instance.login(params: params) { (response) in
+            self.hideLoading()
+            
             if response.error == nil {
                 let loginRes: LoginRes = response.result.value!
                 
                 if loginRes.success! {
-                    print("************* Login Success! *************")
-                    
                     self.showMessage(loginRes.message!, 0)
                     
                     let data = loginRes.data
@@ -113,15 +115,16 @@ extension LoginVC: ASAuthorizationControllerDelegate {
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
 //            let userIdentifier = appleIDCredential.user
-//            let fullName = appleIDCredential.fullName
             let email = appleIDCredential.email
             
-            if email!.isEmpty() {
-                self.showMessage("This apple id can't use for sign in", 2)
-                return
-            }
+            let params: [String: Any] = [
+//                "userIdentifier": userIdentifier,
+                "email": email!.lowercased(),
+                "password": "",
+                "is_social": 3
+            ]
             
-            processLogin(email: email!, password: "", is_social: 3)
+            processLogin(params: params)
         default:
             break
         }

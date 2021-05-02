@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,9 +14,25 @@
                     <view key="view" contentMode="scaleToFill" id="zOq-em-yXF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="2Eh-bx-dTI"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WMe-Vj-tPA" userLabel="bottomTabBar">
+                                <rect key="frame" x="0.0" y="826" width="414" height="70"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Kwg-P3-D1i"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="WMe-Vj-tPA" secondAttribute="bottom" id="FKg-dg-J4m"/>
+                            <constraint firstAttribute="trailing" secondItem="WMe-Vj-tPA" secondAttribute="trailing" id="G9z-O1-T3r"/>
+                            <constraint firstItem="WMe-Vj-tPA" firstAttribute="leading" secondItem="zOq-em-yXF" secondAttribute="leading" id="xG8-y4-FEE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomTabView" destination="WMe-Vj-tPA" id="R0l-Tp-KnG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WiY-Ts-hN6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -8,7 +8,7 @@
 import Foundation
 
 //  API URLS
-let DEV_MODE = true
+let DEV_MODE = false
 let PUBLISH_MODE = false
 let DEV_SERVER = "http://192.168.109.72"
 let PRODUCT_SERVER = PUBLISH_MODE ? "https://panel.blownup.co" : "http://dev-panel.blownup.co"
