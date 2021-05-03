@@ -656,6 +656,7 @@ PODS:
     - MotionInterchange (~> 3.0)
   - MotionInterchange (3.0.0)
   - ObjectMapper (3.5.3)
+  - SDDownloadManager (1.1.0)
   - Stripe (21.4.0):
     - Stripe/Stripe3DS2 (= 21.4.0)
   - Stripe/Stripe3DS2 (21.4.0)
@@ -671,6 +672,7 @@ DEPENDENCIES:
   - Kingfisher (~> 6.1.1)
   - KRProgressHUD (~> 3.4.7)
   - MaterialComponents (~> 124.2.0)
+  - SDDownloadManager (~> 1.1.0)
   - Stripe (~> 21.4.0)
   - SwiftMessages (~> 9.0.2)
 
@@ -689,6 +691,7 @@ SPEC REPOS:
     - MotionAnimator
     - MotionInterchange
     - ObjectMapper
+    - SDDownloadManager
     - Stripe
     - SwiftMessages
 
@@ -706,9 +709,10 @@ SPEC CHECKSUMS:
   MotionAnimator: 5f99d7c9592928c0f28a66283eda9c3b657dc480
   MotionInterchange: 13adae439b377e31d1674cc165539d50e1d1566a
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
+  SDDownloadManager: 62a9339c03ea27606effefd9aa1800e4127e3a52
   Stripe: 7c594b943abb65cf7bc28e37fd5124e65db3ce9e
   SwiftMessages: 77b847d1405f99046ffbd0d856bc7d73e6892686
 
-PODFILE CHECKSUM: 1aeced649068855ac6cd0c124731b8bb731ba660
+PODFILE CHECKSUM: 904dd72f09c50fc5f5faec24a770bda2d75fe76e
 
 COCOAPODS: 1.10.1

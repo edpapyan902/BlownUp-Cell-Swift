@@ -16,6 +16,7 @@ pod 'IQKeyboardManagerSwift', '~> 6.5.6'
 pod 'KRProgressHUD', '~> 3.4.7'
 pod 'SwiftMessages', '~> 9.0.2'
 pod 'Stripe', '~> 21.4.0'
+pod 'SDDownloadManager', '~> 1.1.0'
 
   target 'BlownUp-Cell-SwiftTests' do
     inherit! :search_paths

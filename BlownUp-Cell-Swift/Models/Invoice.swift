@@ -8,12 +8,12 @@
 import Foundation
 
 struct Invoice: Codable {
-    let id : String?
-    let created : Int?
-    let status : String?
-    let total : Int?
-    let invoice_pdf : String?
-    let number : String?
+    let id : String
+    let created : Int64
+    let status : String
+    let total : Int
+    let invoice_pdf : String
+    let number : String
     let local_file_path : String?
     
     enum CodingKeys: String, CodingKey {
@@ -28,12 +28,12 @@ struct Invoice: Codable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        id = try values.decodeIfPresent(String.self, forKey: .id)
-        created = try values.decodeIfPresent(Int.self, forKey: .created)
-        status = try values.decodeIfPresent(String.self, forKey: .status)
-        total = try values.decodeIfPresent(Int.self, forKey: .total)
-        invoice_pdf = try values.decodeIfPresent(String.self, forKey: .invoice_pdf)
-        number = try values.decodeIfPresent(String.self, forKey: .number)
+        id = try values.decodeIfPresent(String.self, forKey: .id)!
+        created = try values.decodeIfPresent(Int64.self, forKey: .created)!
+        status = try values.decodeIfPresent(String.self, forKey: .status)!
+        total = try values.decodeIfPresent(Int.self, forKey: .total)!
+        invoice_pdf = try values.decodeIfPresent(String.self, forKey: .invoice_pdf)!
+        number = try values.decodeIfPresent(String.self, forKey: .number)!
         local_file_path = try values.decodeIfPresent(String.self, forKey: .local_file_path)
     }
 }
