@@ -16,6 +16,6 @@ class SuccessVC: BaseVC {
     }
     
     @IBAction func goHome(_ sender: Any) {
-        self.gotoStoryBoardVC("RecentCallVC")
+        self.gotoMainVC(0)
     }
 }

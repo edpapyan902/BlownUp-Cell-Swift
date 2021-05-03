@@ -10,7 +10,7 @@ import UIKit
 import MaterialComponents.MaterialTextControls_OutlinedTextFields
 
 @IBDesignable
-class MaterialTextInputField: UIStackView {
+class TextInput: UIStackView {
     var textField: MDCOutlinedTextField!
     
     @IBInspectable var text: String!

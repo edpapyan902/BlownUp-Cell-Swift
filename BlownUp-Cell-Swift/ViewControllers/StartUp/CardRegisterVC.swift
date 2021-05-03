@@ -67,7 +67,7 @@ class CardRegisterVC: BaseVC {
                 
                 if noDataRes.success! {
                     self.showSuccess(noDataRes.message!)
-                    self.gotoStoryBoardVC("SuccessVC")
+                    self.gotoVC("SuccessVC")
                 } else {
                     self.showWarning(noDataRes.message!)
                 }

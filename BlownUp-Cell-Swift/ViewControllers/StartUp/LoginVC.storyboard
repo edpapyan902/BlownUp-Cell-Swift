@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,26 +13,26 @@
             <objects>
                 <viewController storyboardIdentifier="LoginVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9bI-bV-sF7" customClass="LoginVC" customModule="BlownUp_Cell_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y1q-Sk-i7A">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gcM-Yf-3xM" userLabel="mainView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_green" translatesAutoresizingMaskIntoConstraints="NO" id="qnJ-bv-MFo">
-                                        <rect key="frame" x="20" y="50" width="374" height="160"/>
+                                        <rect key="frame" x="20" y="50" width="560" height="160"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="160" id="o1K-7O-Zjm"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The First Fully Automated Way to Ring Your Own Phone" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="80y-UT-8Ku">
-                                        <rect key="frame" x="30" y="240" width="354" height="48"/>
+                                        <rect key="frame" x="30" y="240" width="540" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" name="colorGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nF-ce-XwQ" userLabel="txtEmail" customClass="MaterialTextInputField" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="308" width="374" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4nF-ce-XwQ" userLabel="txtEmail" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="284" width="560" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="lrI-Wr-fbQ"/>
                                         </constraints>
@@ -41,8 +40,8 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Email"/>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0z-2u-a8N" userLabel="txtPassword" customClass="MaterialTextInputField" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="383" width="374" height="60"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0z-2u-a8N" userLabel="txtPassword" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="359" width="560" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="5lg-Gd-UOv"/>
                                         </constraints>
@@ -52,13 +51,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SK3-52-Fu4" userLabel="rememberMeView">
-                                        <rect key="frame" x="20" y="458" width="374" height="31"/>
+                                        <rect key="frame" x="20" y="434" width="560" height="31"/>
                                         <subviews>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-mQ-IuD" userLabel="swtRememberMe">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Remember Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s9u-Oo-XWo">
-                                                <rect key="frame" x="69" y="0.0" width="305" height="31"/>
+                                                <rect key="frame" x="69" y="0.0" width="491" height="31"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -77,7 +76,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EE2-jw-sI6" userLabel="btnLogin">
-                                        <rect key="frame" x="20" y="519" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="495" width="560" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="fn6-sX-LJ9"/>
@@ -91,16 +90,16 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Not account yet?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8V0-5e-Rhf">
-                                        <rect key="frame" x="20" y="579" width="374" height="19.333333333333371"/>
+                                        <rect key="frame" x="20" y="555" width="560" height="19.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-jr-JzU">
-                                        <rect key="frame" x="20" y="603.33333333333337" width="374" height="25"/>
+                                        <rect key="frame" x="20" y="579.5" width="560" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lqk-ts-h5X">
-                                                <rect key="frame" x="158" y="0.0" width="60" height="33"/>
+                                                <rect key="frame" x="251" y="-0.5" width="60" height="33"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Sign Up">
@@ -117,7 +116,7 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5FN-a4-SfZ" userLabel="appleAuthProviderView">
-                                        <rect key="frame" x="20" y="653.33333333333337" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="629.5" width="560" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="UJC-Jo-D6S"/>
                                         </constraints>

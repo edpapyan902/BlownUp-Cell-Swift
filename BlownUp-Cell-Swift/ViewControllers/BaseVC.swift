@@ -19,9 +19,19 @@ class BaseVC : UIViewController {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .portrait
     }
     
-    func gotoStoryBoardVC(_ name: String) {
+    func gotoVC(_ name: String) {
         let storyboad = UIStoryboard(name: name, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: name)
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = targetVC
+        UIApplication.shared.keyWindow?.rootViewController = targetVC
+    }
+    
+    func gotoMainVC(_ type: Int) {
+        let storyboad = UIStoryboard(name: "MainTabVC", bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
+        targetVC.type = type
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = targetVC

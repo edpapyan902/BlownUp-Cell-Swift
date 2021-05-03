@@ -34,7 +34,7 @@
 		9458842E2638284200851CE6 /* BlownUp_Cell_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458842D2638284200851CE6 /* BlownUp_Cell_SwiftUITests.swift */; };
 		9458847426383A9E00851CE6 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458847326383A9E00851CE6 /* LoginVC.swift */; };
 		9458847926383F1F00851CE6 /* SplashVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458847826383F1F00851CE6 /* SplashVC.swift */; };
-		9458849E2638477D00851CE6 /* MaterialTextInputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458849D2638477D00851CE6 /* MaterialTextInputField.swift */; };
+		9458849E2638477D00851CE6 /* TextInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9458849D2638477D00851CE6 /* TextInput.swift */; };
 		945884AA26385E2600851CE6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884A926385E2600851CE6 /* API.swift */; };
 		945884B026385E6100851CE6 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884AF26385E6100851CE6 /* Const.swift */; };
 		945884CF263868D600851CE6 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884CE263868D600851CE6 /* Store.swift */; };
@@ -101,7 +101,7 @@
 		9458842F2638284200851CE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9458847326383A9E00851CE6 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		9458847826383F1F00851CE6 /* SplashVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashVC.swift; sourceTree = "<group>"; };
-		9458849D2638477D00851CE6 /* MaterialTextInputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTextInputField.swift; sourceTree = "<group>"; };
+		9458849D2638477D00851CE6 /* TextInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextInput.swift; sourceTree = "<group>"; };
 		945884A926385E2600851CE6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		945884AF26385E6100851CE6 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		945884CE263868D600851CE6 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
@@ -292,7 +292,7 @@
 		94588499263846CC00851CE6 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				9458849D2638477D00851CE6 /* MaterialTextInputField.swift */,
+				9458849D2638477D00851CE6 /* TextInput.swift */,
 				945884E52638743E00851CE6 /* String.swift */,
 				947E5A54263EE908008A0008 /* CreditCardView.swift */,
 			);
@@ -591,7 +591,7 @@
 				940CA3082639429300401594 /* MainTabVC.swift in Sources */,
 				945884E62638743E00851CE6 /* String.swift in Sources */,
 				9458840C2638284000851CE6 /* AppDelegate.swift in Sources */,
-				9458849E2638477D00851CE6 /* MaterialTextInputField.swift in Sources */,
+				9458849E2638477D00851CE6 /* TextInput.swift in Sources */,
 				94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */,
 				945884CF263868D600851CE6 /* Store.swift in Sources */,
 				940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */,

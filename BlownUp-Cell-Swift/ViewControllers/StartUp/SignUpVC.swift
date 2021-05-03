@@ -14,10 +14,10 @@ class SignUpVC: BaseVC {
     @IBOutlet weak var appleAuthProviderView: UIStackView!
     @IBOutlet weak var btnLogin: UIButton!
     @IBOutlet weak var swtTerm: UISwitch!
-    @IBOutlet weak var txtSpoofPhone: MaterialTextInputField!
-    @IBOutlet weak var txtConPwd: MaterialTextInputField!
-    @IBOutlet weak var txtPwd: MaterialTextInputField!
-    @IBOutlet weak var txtEmail: MaterialTextInputField!
+    @IBOutlet weak var txtSpoofPhone: TextInput!
+    @IBOutlet weak var txtConPwd: TextInput!
+    @IBOutlet weak var txtPwd: TextInput!
+    @IBOutlet weak var txtEmail: TextInput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +34,7 @@ class SignUpVC: BaseVC {
     }
     
     @IBAction func goLogin(_ sender: Any) {
-        self.gotoStoryBoardVC("LoginVC")
+        self.gotoVC("LoginVC")
     }
     
     @IBAction func signUp(_ sender: Any) {
@@ -106,7 +106,7 @@ class SignUpVC: BaseVC {
                     Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
                     Store.instance.rememberMe = true
                     
-                    self.gotoStoryBoardVC("CardRegisterVC")
+                    self.gotoVC("CardRegisterVC")
                 } else {
                     self.showError(signUpRes.message!)
                 }

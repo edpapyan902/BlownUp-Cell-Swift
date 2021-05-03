@@ -16,12 +16,14 @@ class RecentCallVC: BaseVC {
     }
     
     @IBAction func goAddSchedule(_ sender: Any) {
-        self.gotoStoryBoardVC("MainTabVC")
+        self.gotoMainVC(1)
     }
     
     @IBAction func goScheduleList(_ sender: Any) {
+        self.gotoMainVC(2)
     }
     
     @IBAction func goMyAccount(_ sender: Any) {
+        self.gotoMainVC(3)
     }
 }

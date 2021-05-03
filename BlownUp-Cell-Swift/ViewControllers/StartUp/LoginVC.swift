@@ -13,8 +13,8 @@ class LoginVC: BaseVC {
 
     @IBOutlet weak var appleAuthProviderView: UIStackView!
     @IBOutlet weak var swtRememberMe: UISwitch!
-    @IBOutlet weak var txtPassword: MaterialTextInputField!
-    @IBOutlet weak var txtEmail: MaterialTextInputField!
+    @IBOutlet weak var txtPassword: TextInput!
+    @IBOutlet weak var txtEmail: TextInput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +31,7 @@ class LoginVC: BaseVC {
     }
     
     @IBAction func goSignUp(_ sender: Any) {
-        self.gotoStoryBoardVC("SignUpVC")
+        self.gotoVC("SignUpVC")
     }
     
     @IBAction func login(_ sender: Any) {
@@ -93,14 +93,14 @@ class LoginVC: BaseVC {
                         Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
                         
                         if (data?.is_ended)! && Store.instance.subscriptionUpcomingDate != 0 {
-                            self.gotoStoryBoardVC("CardRegisterVC")
+                            self.gotoVC("CardRegisterVC")
                         }
                         else {
-                            self.gotoStoryBoardVC("RecentCallVC")
+                            self.gotoVC("RecentCallVC")
                         }
                     }
                     else {
-                        self.gotoStoryBoardVC("CardRegisterVC")
+                        self.gotoVC("CardRegisterVC")
                     }
                 } else {
                     self.showError(loginRes.message!)
