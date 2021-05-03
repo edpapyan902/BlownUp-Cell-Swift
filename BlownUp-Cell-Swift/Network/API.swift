@@ -36,4 +36,10 @@ class API {
             completion(response)
         }
     }
+    
+    func getBillingHistory(completion: @escaping ( _ response: DataResponse<InvoiceRes>) -> Void) -> Void {
+        Alamofire.request(URL_BILLING_HISTORY, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<InvoiceRes>) in
+            completion(response)
+        }
+    }
 }

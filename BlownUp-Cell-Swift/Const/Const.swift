@@ -43,3 +43,6 @@ let URL_SUBSCRIPTION_STATUS = "\(BASE_SERVER)/api/subscription/status"
 //  Credit Card
 let URL_CARD_GET = "\(BASE_SERVER)/api/card"
 let URL_CARD_ADD = "\(BASE_SERVER)/api/card/add"
+
+//Billing History
+let URL_BILLING_HISTORY = "\(BASE_SERVER)/api/invoice/all"
