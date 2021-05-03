@@ -1,21 +1,17 @@
 //
-//  SuccessVC.swift
+//  SettingVC.swift
 //  BlownUp-Cell-Swift
 //
-//  Created by Dove on 02/05/2021.
+//  Created by Dove on 03/05/2021.
 //
 
 import Foundation
 import UIKit
 
-class SuccessVC: BaseVC {
+class SettingVC: BaseVC {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    @IBAction func goHome(_ sender: Any) {
-        self.gotoStoryBoardVC("RecentCallVC")
     }
 }

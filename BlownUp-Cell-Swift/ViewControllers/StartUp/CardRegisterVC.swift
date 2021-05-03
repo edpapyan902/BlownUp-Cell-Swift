@@ -20,7 +20,7 @@ class CardRegisterVC: BaseVC {
     
     @IBAction func registerCard(_ sender: Any) {
         if !creditCardProvider.getCardView().isValid {
-            self.showMessage("Please use valid card", 2)
+            self.showWarning("Please enter valid card infomation")
             return
         }
         
@@ -66,10 +66,10 @@ class CardRegisterVC: BaseVC {
                 let noDataRes: NoDataRes = response.result.value!
                 
                 if noDataRes.success! {
-                    self.showMessage(noDataRes.message!, 0)
-                    self.gotoStoryBoardVC("SuccessVC", true)
+                    self.showSuccess(noDataRes.message!)
+                    self.gotoStoryBoardVC("SuccessVC")
                 } else {
-                    self.showMessage(noDataRes.message!, 2)
+                    self.showWarning(noDataRes.message!)
                 }
             }
         }

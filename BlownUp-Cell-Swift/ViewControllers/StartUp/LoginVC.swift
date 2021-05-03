@@ -31,7 +31,7 @@ class LoginVC: BaseVC {
     }
     
     @IBAction func goSignUp(_ sender: Any) {
-        self.gotoStoryBoardVC("SignUpVC", true)
+        self.gotoStoryBoardVC("SignUpVC")
     }
     
     @IBAction func login(_ sender: Any) {
@@ -39,11 +39,11 @@ class LoginVC: BaseVC {
         let password = txtPassword.getText()
         
         if email.isEmpty() || !email.isValidEmail() {
-            self.showMessage("Please enter valid email", 1)
+            self.showWarning("Please enter valid email")
             return
         }
         if password.isEmpty() {
-            self.showMessage("Please enter password", 1)
+            self.showWarning("Please enter password")
             return
         }
         
@@ -77,7 +77,7 @@ class LoginVC: BaseVC {
                 let loginRes: LoginRes = response.result.value!
                 
                 if loginRes.success! {
-                    self.showMessage(loginRes.message!, 0)
+                    self.showSuccess(loginRes.message!)
                     
                     let data = loginRes.data
                     
@@ -93,17 +93,17 @@ class LoginVC: BaseVC {
                         Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
                         
                         if (data?.is_ended)! && Store.instance.subscriptionUpcomingDate != 0 {
-                            self.gotoStoryBoardVC("CardRegisterVC", true)
+                            self.gotoStoryBoardVC("CardRegisterVC")
                         }
                         else {
-                            self.gotoStoryBoardVC("RecentCallVC", true)
+                            self.gotoStoryBoardVC("RecentCallVC")
                         }
                     }
                     else {
-                        self.gotoStoryBoardVC("CardRegisterVC", true)
+                        self.gotoStoryBoardVC("CardRegisterVC")
                     }
                 } else {
-                    self.showMessage(loginRes.message!, 2)
+                    self.showError(loginRes.message!)
                 }
             }
         }
@@ -114,12 +114,14 @@ extension LoginVC: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
-//            let userIdentifier = appleIDCredential.user
-            let email = appleIDCredential.email
+            let userIdentifier = appleIDCredential.user
+            if Store.instance.appleUserId != userIdentifier {
+                Store.instance.appleUserId = userIdentifier
+                Store.instance.appleUserEmail = appleIDCredential.email!
+            }
             
             let params: [String: Any] = [
-//                "userIdentifier": userIdentifier,
-                "email": email!.lowercased(),
+                "email": Store.instance.appleUserEmail.lowercased(),
                 "password": "",
                 "is_social": 3
             ]
@@ -132,7 +134,7 @@ extension LoginVC: ASAuthorizationControllerDelegate {
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-        self.showMessage("Apple Sign Error ->" + error.localizedDescription, 2)
+        self.showError("Apple Sign Error ->" + error.localizedDescription)
     }
 }
 

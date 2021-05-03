@@ -19,42 +19,25 @@ class BaseVC : UIViewController {
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .portrait
     }
     
-    func gotoStoryBoardVC(_ name: String, _ fullscreen: Bool) {
+    func gotoStoryBoardVC(_ name: String) {
         let storyboad = UIStoryboard(name: name, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: name)
-        if fullscreen {
-            targetVC.modalPresentationStyle = .fullScreen
-        }
-        self.present(targetVC, animated: false, completion: nil)
-    }
-    
-    func setProgressHUDStyle(_ style: Int,backcolor: UIColor,textcolor : UIColor, imagecolor : UIColor ) {
-        if style != 2 {
-        let styles: [KRProgressHUDStyle] = [.white, .black, .custom(background: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1), text: #colorLiteral(red: 0.1294117719, green: 0.2156862766, blue: 0.06666667014, alpha: 1), icon: UIColor.init(named: "colorPrimary")!)]
-            KRProgressHUD.set(style: styles[style]) }
-        else {
-            let styles : KRProgressHUDStyle = .custom (background:backcolor,text : textcolor, icon: imagecolor )
-             KRProgressHUD.set(style: styles)
-        }
-    }
-    
-    func progressSet(styleVal: Int ,backColor: UIColor,textColor : UIColor , imgcolor: UIColor, headerColor : UIColor, trailColor : UIColor) {
-        setProgressHUDStyle(styleVal,backcolor: backColor,textcolor : textColor, imagecolor: imgcolor)
-        KRProgressHUD.set(activityIndicatorViewColors: [headerColor, trailColor])
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = targetVC
+        UIApplication.shared.keyWindow?.rootViewController = targetVC
     }
 
     func showLoading(_ viewController: UIViewController) {
-        self.progressSet( styleVal: 2, backColor: .white, textColor: UIColor.init(named: "colorPrimary")!, imgcolor: UIColor.init(named: "colorPrimary")!, headerColor: UIColor.init(named: "colorPrimary")!, trailColor: UIColor.init(named: "colorPrimary")!)
+        let primaryColor = UIColor.init(named: "colorPrimary")
+        let styles : KRProgressHUDStyle = .custom (background: .white,text : primaryColor!, icon: primaryColor! )
+        KRProgressHUD.set(style: styles)
+        KRProgressHUD.set(activityIndicatorViewColors: [primaryColor!, primaryColor!])
         KRProgressHUD.showOn(viewController).show()
     }
     
     func hideLoading() {
         KRProgressHUD.dismiss()
-    }
-
-    func progShowError(_ msgOn:Bool, msg:String) {
-        self.progressSet( styleVal: 2, backColor: UIColor.init(named: "colorPrimary")!, textColor: .white, imgcolor: .red, headerColor: .red, trailColor: .yellow)
-        KRProgressHUD.showError(withMessage: msgOn == false ? nil : msg)
     }
     
     func showMessage(_ body: String, _ type: Int) {
@@ -82,5 +65,17 @@ class BaseVC : UIViewController {
         config.presentationStyle = .bottom
         
         SwiftMessages.show(config: config, view: view)
+    }
+    
+    func showSuccess(_ message: String) {
+        showMessage(message, 0)
+    }
+    
+    func showWarning(_ message: String) {
+        showMessage(message, 1)
+    }
+    
+    func showError(_ message: String) {
+        showMessage(message, 2)
     }
 }

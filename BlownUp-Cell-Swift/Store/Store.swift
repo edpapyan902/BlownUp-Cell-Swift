@@ -85,4 +85,22 @@ class Store {
             defaults.set(newValue, forKey: IS_SUBSCRIPTION_CANCELLED)
         }
     }
+    
+    var appleUserId: String {
+        get {
+            return defaults.value(forKey: APPLE_USER_ID) as? String ?? ""
+        }
+        set {
+            defaults.set(newValue, forKey: APPLE_USER_ID)
+        }
+    }
+    
+    var appleUserEmail: String {
+        get {
+            return defaults.value(forKey: APPLE_USER_EMAIL) as? String ?? ""
+        }
+        set {
+            defaults.set(newValue, forKey: APPLE_USER_EMAIL)
+        }
+    }
 }

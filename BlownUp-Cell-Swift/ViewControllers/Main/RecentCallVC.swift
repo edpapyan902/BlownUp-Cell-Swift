@@ -14,4 +14,14 @@ class RecentCallVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func goAddSchedule(_ sender: Any) {
+        self.gotoStoryBoardVC("MainTabVC")
+    }
+    
+    @IBAction func goScheduleList(_ sender: Any) {
+    }
+    
+    @IBAction func goMyAccount(_ sender: Any) {
+    }
 }

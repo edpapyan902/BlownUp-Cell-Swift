@@ -34,7 +34,7 @@ class SignUpVC: BaseVC {
     }
     
     @IBAction func goLogin(_ sender: Any) {
-        self.gotoStoryBoardVC("LoginVC", true)
+        self.gotoStoryBoardVC("LoginVC")
     }
     
     @IBAction func signUp(_ sender: Any) {
@@ -44,19 +44,19 @@ class SignUpVC: BaseVC {
         let spoof_phone_number = txtSpoofPhone.getText()
         
         if email.isEmpty() || !email.isValidEmail() {
-            self.showMessage("Please enter valid email", 1)
+            self.showWarning("Please enter valid email")
             return
         }
         if password.count < 6 {
-            self.showMessage("Password should be at least 6 characters", 1)
+            self.showWarning("Password should be at least 6 characters")
             return
         }
         if conPassword != password {
-            self.showMessage("Please enter correct confirm password", 1)
+            self.showWarning("Please enter correct confirm password")
             return
         }
         if spoof_phone_number.isEmpty() {
-            self.showMessage("Please enter my call to phone number", 1)
+            self.showWarning("Please enter my call to phone number")
             return
         }
         
@@ -74,7 +74,7 @@ class SignUpVC: BaseVC {
     @objc func handleAppleAuth() {
         let spoof_phone_number = txtSpoofPhone.getText()
         if spoof_phone_number.isEmpty() {
-            self.showMessage("Please enter my call to phone number", 1)
+            self.showWarning("Please enter my call to phone number")
             return
         }
         
@@ -98,7 +98,7 @@ class SignUpVC: BaseVC {
                 let signUpRes: SignUpRes = response.result.value!
                 
                 if signUpRes.success! {
-                    self.showMessage(signUpRes.message!, 0)
+                    self.showSuccess(signUpRes.message!)
                     
                     let data = signUpRes.data
                     
@@ -106,9 +106,9 @@ class SignUpVC: BaseVC {
                     Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
                     Store.instance.rememberMe = true
                     
-                    self.gotoStoryBoardVC("CardRegisterVC", true)
+                    self.gotoStoryBoardVC("CardRegisterVC")
                 } else {
-                    self.showMessage(signUpRes.message!, 2)
+                    self.showError(signUpRes.message!)
                 }
             }
         }
@@ -119,18 +119,20 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         switch authorization.credential {
         case let appleIDCredential as ASAuthorizationAppleIDCredential:
-//            let userIdentifier = appleIDCredential.user
-            let email = appleIDCredential.email
+            let userIdentifier = appleIDCredential.user
+            if Store.instance.appleUserId != userIdentifier {
+                Store.instance.appleUserId = userIdentifier
+                Store.instance.appleUserEmail = appleIDCredential.email!
+            }
             
             let spoof_phone_number = txtSpoofPhone.getText()
             if spoof_phone_number.isEmpty() {
-                self.showMessage("Please enter my call to phone number", 1)
+                self.showWarning("Please enter my call to phone number")
                 return
             }
             
             let params: [String: Any] = [
-//                "userIdentifier": userIdentifier,
-                "email": email!.lowercased(),
+                "email": Store.instance.appleUserEmail.lowercased(),
                 "password": "",
                 "spoof_phone_number": spoof_phone_number,
                 "term": self.swtTerm.isOn,
@@ -145,7 +147,7 @@ extension SignUpVC: ASAuthorizationControllerDelegate {
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
         // Handle error.
-        self.showMessage("Apple Sign Error ->" + error.localizedDescription, 2)
+        self.showError("Apple Sign Error ->" + error.localizedDescription)
     }
 }
 

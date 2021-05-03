@@ -57,18 +57,18 @@ class SplashVC: BaseVC {
         
         if !apiToken.isEmpty() && rememberMe {
             if !isCancelled && upcoming_date == 0 {
-                self.gotoStoryBoardVC("CardRegisterVC", true)
+                self.gotoStoryBoardVC("CardRegisterVC")
             }
             else if isEnded && upcoming_date != 0 {
-                print("Your subscription plan ended. Please subscribe new plan.")
-                self.gotoStoryBoardVC("CardRegisterVC", true)
+                self.showWarning("Your subscription plan ended. Please subscribe new plan.")
+                self.gotoStoryBoardVC("CardRegisterVC")
             }
             else {
-                self.gotoStoryBoardVC("RecentCallVC", true)
+                self.gotoStoryBoardVC("RecentCallVC")
             }
         }
         else {
-            self.gotoStoryBoardVC("LoginVC", true)
+            self.gotoStoryBoardVC("LoginVC")
         }
     }
 }
