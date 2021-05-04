@@ -138,8 +138,10 @@ class SettingVC: BaseVC {
             self.present(readerController, animated: false, completion: nil)
         } else {
             sender.isHidden = true
-            SDDownloadManager.shared.downloadFile(withRequest: URLRequest(url:URL(string: invoice.invoice_pdf)!), inDirectory: APP_INVOICE_DIR.path, withName: invoice.file_name!, shouldDownloadInBackground: true, onProgress: nil) {(error, filepath) in
+            
+            let _ = SDDownloadManager.shared.downloadFile(withRequest: URLRequest(url:URL(string: invoice.invoice_pdf)!), inDirectory: APP_INVOICE_DIR.path, withName: invoice.file_name!, shouldDownloadInBackground: true, onProgress: nil) {(error, filepath) in
                 sender.isHidden = false
+                
                 if error == nil {
                     if !FileManager.default.fileExists(atPath: self.APP_INVOICE_DIR.path) {
                         do {
@@ -157,7 +159,7 @@ class SettingVC: BaseVC {
                     }
                 }
                 else {
-                    print("download error", error)
+                    print("download as Any error", error!)
                 }
             }
         }
