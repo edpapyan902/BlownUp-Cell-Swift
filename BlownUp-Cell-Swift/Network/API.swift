@@ -54,4 +54,10 @@ class API {
             completion(response)
         }
     }
+    
+    func getRecentCall(completion: @escaping ( _ response: DataResponse<RecentCallRes>) -> Void) -> Void {
+        Alamofire.request(URL_RECENT_CALL_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<RecentCallRes>) in
+            completion(response)
+        }
+    }
 }

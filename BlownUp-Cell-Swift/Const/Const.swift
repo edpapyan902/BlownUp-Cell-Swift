@@ -63,3 +63,8 @@ let URL_SUBSCRIPTION_STATUS = "\(BASE_SERVER)/api/subscription/status"
 let URL_BILLING_HISTORY = "\(BASE_SERVER)/api/invoice/all"
 let URL_SUBSCRIPTION_CANCEL = "\(BASE_SERVER)/api/subscription/cancel"
 let URL_SUBSCRIPTION_RESUME = "\(BASE_SERVER)/api/subscription/resume"
+
+//  Recent Call
+let URL_RECENT_CALL_GET = "\(BASE_SERVER)/api/recent_call"
+let URL_RECENT_CALL_ADD = "\(BASE_SERVER)/api/recent_call/add"
+

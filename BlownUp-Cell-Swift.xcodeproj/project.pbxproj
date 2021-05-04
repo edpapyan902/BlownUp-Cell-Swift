@@ -16,6 +16,9 @@
 		940CA3102639441000401594 /* SubscriptionRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA30F2639441000401594 /* SubscriptionRes.swift */; };
 		940CA3152639473C00401594 /* RecentCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3142639473C00401594 /* RecentCallVC.swift */; };
 		940F6EED2641808D00BC07DC /* ScheduleAddVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */; };
+		940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6EFD264197AB00BC07DC /* RecentCallRes.swift */; };
+		940F6F03264197CD00BC07DC /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6F02264197CD00BC07DC /* Schedule.swift */; };
+		940F6F082641991D00BC07DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6F072641991D00BC07DC /* Contact.swift */; };
 		94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420DC02638FFE0005E2121 /* SignUpVC.swift */; };
 		94587E97263FED62004B0BCC /* MainTabVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E96263FED62004B0BCC /* MainTabVC.storyboard */; };
 		94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */; };
@@ -81,6 +84,9 @@
 		940CA30F2639441000401594 /* SubscriptionRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRes.swift; sourceTree = "<group>"; };
 		940CA3142639473C00401594 /* RecentCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallVC.swift; sourceTree = "<group>"; };
 		940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleAddVC.storyboard; sourceTree = "<group>"; };
+		940F6EFD264197AB00BC07DC /* RecentCallRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallRes.swift; sourceTree = "<group>"; };
+		940F6F02264197CD00BC07DC /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
+		940F6F072641991D00BC07DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		94420DC02638FFE0005E2121 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		94587E96263FED62004B0BCC /* MainTabVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabVC.storyboard; sourceTree = "<group>"; };
 		94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentCallVC.storyboard; sourceTree = "<group>"; };
@@ -338,7 +344,9 @@
 			children = (
 				945884DF26386D0F00851CE6 /* Response */,
 				945884D726386CC500851CE6 /* User.swift */,
+				940F6F072641991D00BC07DC /* Contact.swift */,
 				945B249626405B65004C12D7 /* Invoice.swift */,
+				940F6F02264197CD00BC07DC /* Schedule.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -351,6 +359,7 @@
 				940CA30F2639441000401594 /* SubscriptionRes.swift */,
 				947E5A59263EFDBA008A0008 /* NoDataRes.swift */,
 				945B246D264059FC004C12D7 /* InvoiceRes.swift */,
+				940F6EFD264197AB00BC07DC /* RecentCallRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -602,6 +611,7 @@
 			files = (
 				9458847926383F1F00851CE6 /* SplashVC.swift in Sources */,
 				940CA3082639429300401594 /* MainTabVC.swift in Sources */,
+				940F6F082641991D00BC07DC /* Contact.swift in Sources */,
 				945884E62638743E00851CE6 /* String.swift in Sources */,
 				9458840C2638284000851CE6 /* AppDelegate.swift in Sources */,
 				9458849E2638477D00851CE6 /* TextInput.swift in Sources */,
@@ -621,8 +631,10 @@
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
 				945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */,
 				947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */,
+				940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */,
 				94587EB1263FF5A2004B0BCC /* ContactAddVC.swift in Sources */,
 				9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */,
+				940F6F03264197CD00BC07DC /* Schedule.swift in Sources */,
 				945884B026385E6100851CE6 /* Const.swift in Sources */,
 				940CA3102639441000401594 /* SubscriptionRes.swift in Sources */,
 				94587EAF263FF589004B0BCC /* ScheduleListVC.swift in Sources */,

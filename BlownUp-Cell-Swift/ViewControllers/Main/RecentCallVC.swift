@@ -15,6 +15,8 @@ class RecentCallVC: BaseVC {
         // Do any additional setup after loading the view.
         
         self.setStatusBarStyle(true)
+        
+        self.initData()
     }
     
     @IBAction func goAddSchedule(_ sender: Any) {
@@ -27,5 +29,21 @@ class RecentCallVC: BaseVC {
     
     @IBAction func goMyAccount(_ sender: Any) {
         self.gotoMainVC(3)
+    }
+    
+    func initData() {
+        self.showLoading(self)
+        
+        API.instance.getRecentCall() {(response) in
+            self.hideLoading()
+            
+            if response.error == nil {
+                let recentCallRes: RecentCallRes = response.result.value!
+                
+                if recentCallRes.success {
+                    
+                }
+            }
+        }
     }
 }
