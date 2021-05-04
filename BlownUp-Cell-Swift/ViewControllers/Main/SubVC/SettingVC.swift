@@ -12,6 +12,7 @@ import PDFReader
 
 class SettingVC: BaseVC {
 
+    @IBOutlet weak var imgHeaderScheduleAdd: UIImageView!
     @IBOutlet weak var btnCancelSubscription: UIButton!
     @IBOutlet weak var tblInvoice: UITableView!
     @IBOutlet weak var lblRenew: UILabel!
@@ -24,13 +25,21 @@ class SettingVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        self.tblInvoice.delegate = self
-        self.tblInvoice.dataSource = self
-        self.tblInvoice.reloadData()
-        self.tblInvoice.backgroundColor = UIColor.clear
-        
+        initLayout()
         checkSubscriptionStatus()
         initHistoryData()
+    }
+    
+    func initLayout() {
+        self.tblInvoice.delegate = self
+        self.tblInvoice.dataSource = self
+        self.tblInvoice.backgroundColor = UIColor.clear
+        
+        self.imgHeaderScheduleAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.gotoScheduleAdd)))
+    }
+    
+    @objc func gotoScheduleAdd() {
+        self.gotoModalVC(VC_SCHEDULE_ADD, true)
     }
     
     func initHistoryData() {
@@ -113,7 +122,7 @@ class SettingVC: BaseVC {
             
             if Store.instance.isSubscriptionEnded {
                 self.showWarning("Your subscription ended. To use app, You must purchase new plan.")
-                self.gotoVC(VC_CARD_REGISTER)
+                self.gotoPageVC(VC_CARD_REGISTER)
             }
         }
     }

@@ -13,6 +13,8 @@ class RecentCallVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.setStatusBarStyle(true)
     }
     
     @IBAction func goAddSchedule(_ sender: Any) {

@@ -17,15 +17,33 @@ class BaseVC : UIViewController {
         
         //Rotate Restict
         (UIApplication.shared.delegate as! AppDelegate).restrictRotation = .portrait
+        setStatusBarStyle(false)
     }
     
-    func gotoVC(_ name: String) {
+    func setStatusBarStyle(_ isLightMode: Bool) {
+        if isLightMode {
+            UIApplication.shared.statusBarStyle = .lightContent
+        } else {
+            UIApplication.shared.statusBarStyle = .darkContent
+        }
+    }
+    
+    func gotoPageVC(_ name: String) {
         let storyboad = UIStoryboard(name: name, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: name)
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = targetVC
         UIApplication.shared.keyWindow?.rootViewController = targetVC
+    }
+    
+    func gotoModalVC(_ name: String, _ isFullScreen: Bool) {
+        let storyboad = UIStoryboard(name: name, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: name)
+        if isFullScreen {
+            targetVC.modalPresentationStyle = .fullScreen
+        }
+        self.present(targetVC, animated: false, completion: nil)
     }
     
     func gotoMainVC(_ type: Int) {

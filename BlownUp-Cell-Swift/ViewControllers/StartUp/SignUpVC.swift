@@ -34,7 +34,7 @@ class SignUpVC: BaseVC {
     }
     
     @IBAction func goLogin(_ sender: Any) {
-        self.gotoVC(VC_LOGIN)
+        self.gotoPageVC(VC_LOGIN)
     }
     
     @IBAction func signUp(_ sender: Any) {
@@ -106,7 +106,7 @@ class SignUpVC: BaseVC {
                     Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
                     Store.instance.rememberMe = true
                     
-                    self.gotoVC(VC_CARD_REGISTER)
+                    self.gotoPageVC(VC_CARD_REGISTER)
                 } else {
                     self.showError(signUpRes.message!)
                 }

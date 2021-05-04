@@ -15,6 +15,7 @@
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
 		940CA3102639441000401594 /* SubscriptionRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA30F2639441000401594 /* SubscriptionRes.swift */; };
 		940CA3152639473C00401594 /* RecentCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3142639473C00401594 /* RecentCallVC.swift */; };
+		940F6EED2641808D00BC07DC /* ScheduleAddVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */; };
 		94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420DC02638FFE0005E2121 /* SignUpVC.swift */; };
 		94587E97263FED62004B0BCC /* MainTabVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E96263FED62004B0BCC /* MainTabVC.storyboard */; };
 		94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */; };
@@ -79,6 +80,7 @@
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
 		940CA30F2639441000401594 /* SubscriptionRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRes.swift; sourceTree = "<group>"; };
 		940CA3142639473C00401594 /* RecentCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallVC.swift; sourceTree = "<group>"; };
+		940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleAddVC.storyboard; sourceTree = "<group>"; };
 		94420DC02638FFE0005E2121 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		94587E96263FED62004B0BCC /* MainTabVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabVC.storyboard; sourceTree = "<group>"; };
 		94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentCallVC.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				94587EA9263FF575004B0BCC /* ScheduleAddVC.swift */,
+				940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */,
 				94587EAE263FF589004B0BCC /* ScheduleListVC.swift */,
 				94587EB0263FF5A2004B0BCC /* ContactAddVC.swift */,
 				94587EB5263FF5B8004B0BCC /* ContactListVC.swift */,
@@ -468,6 +471,7 @@
 				945884152638284100851CE6 /* Assets.xcassets in Resources */,
 				945884132638284000851CE6 /* Main.storyboard in Resources */,
 				94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */,
+				940F6EED2641808D00BC07DC /* ScheduleAddVC.storyboard in Resources */,
 				948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

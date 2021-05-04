@@ -200,7 +200,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GZ5-aK-Mty"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GZ5-aK-Mty" firstAttribute="bottom" secondItem="ORm-vq-rlz" secondAttribute="bottom" id="5IW-os-cX2"/>
                             <constraint firstItem="ORm-vq-rlz" firstAttribute="leading" secondItem="GZ5-aK-Mty" secondAttribute="leading" id="Lnx-Ez-esP"/>

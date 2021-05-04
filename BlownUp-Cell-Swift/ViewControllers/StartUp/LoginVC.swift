@@ -31,7 +31,7 @@ class LoginVC: BaseVC {
     }
     
     @IBAction func goSignUp(_ sender: Any) {
-        self.gotoVC(VC_SIGN_UP)
+        self.gotoPageVC(VC_SIGN_UP)
     }
     
     @IBAction func login(_ sender: Any) {
@@ -93,14 +93,14 @@ class LoginVC: BaseVC {
                         Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
                         
                         if (data?.is_ended)! && Store.instance.subscriptionUpcomingDate != 0 {
-                            self.gotoVC(VC_CARD_REGISTER)
+                            self.gotoPageVC(VC_CARD_REGISTER)
                         }
                         else {
-                            self.gotoVC(VC_RECENT_CALL)
+                            self.gotoPageVC(VC_RECENT_CALL)
                         }
                     }
                     else {
-                        self.gotoVC(VC_CARD_REGISTER)
+                        self.gotoPageVC(VC_CARD_REGISTER)
                     }
                 } else {
                     self.showError(loginRes.message!)
