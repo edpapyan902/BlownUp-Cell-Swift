@@ -18,7 +18,7 @@ class SettingVC: BaseVC {
     @IBOutlet weak var lblDescription: UILabel!
     var m_Invoices = [Invoice]()
     
-    let APP_INVOICE_DIR: URL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
+    let APP_INVOICE_DIR: URL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!.appendingPathComponent("BlownUp/Invoices")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +29,7 @@ class SettingVC: BaseVC {
         self.tblInvoice.reloadData()
         self.tblInvoice.backgroundColor = UIColor.clear
         
-        initSubscriptionStatus()
+        checkSubscriptionStatus()
         initHistoryData()
     }
     
@@ -53,7 +53,7 @@ class SettingVC: BaseVC {
     }
     
     func checkSubscriptionStatus() {
-        if !Store.instance.isSubscriptionCancelled {
+        if Store.instance.isSubscriptionCancelled {
             self.lblDescription.text = "Your Subscription Ended On:"
             self.btnCancelSubscription.setTitle("RESUME SUBSCRIPTION", for: .normal)
             let endDay = (Date().int2date(milliseconds: Store.instance.subscriptionUpcomingDate)).addDay(-1)
@@ -74,11 +74,59 @@ class SettingVC: BaseVC {
     }
     
     func resumeSubscription() {
+        self.showLoading(self)
         
+        API.instance.resumeSubscription() {(response) in
+            self.hideLoading()
+            
+            if response.error == nil {
+                let subscriptionRes: SubscriptionRes = response.result.value!
+                
+                if subscriptionRes.success! {
+                    let data = subscriptionRes.data
+                    
+                    if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
+                        Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
+                    }
+                    Store.instance.isSubscriptionEnded = (data?.is_ended)!
+                    Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
+                    
+                    self.checkSubscriptionStatus()
+                    
+                    if Store.instance.isSubscriptionEnded {
+                        self.gotoVC("CardRegisterVC")
+                    }
+                }
+            }
+        }
     }
     
     func cancelSubscription() {
-        API
+        self.showLoading(self)
+        
+        API.instance.cancelSubscription() {(response) in
+            self.hideLoading()
+            
+            if response.error == nil {
+                let subscriptionRes: SubscriptionRes = response.result.value!
+                
+                if subscriptionRes.success! {
+                    let data = subscriptionRes.data
+                    
+                    if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
+                        Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
+                    }
+                    Store.instance.isSubscriptionEnded = (data?.is_ended)!
+                    Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
+                    
+                    self.checkSubscriptionStatus()
+                    
+                    if Store.instance.isSubscriptionEnded {
+                        self.gotoVC("CardRegisterVC")
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func downloadPdf(_ sender: UIButton) {
@@ -93,6 +141,14 @@ class SettingVC: BaseVC {
             SDDownloadManager.shared.downloadFile(withRequest: URLRequest(url:URL(string: invoice.invoice_pdf)!), inDirectory: APP_INVOICE_DIR.path, withName: invoice.file_name!, shouldDownloadInBackground: true, onProgress: nil) {(error, filepath) in
                 sender.isHidden = false
                 if error == nil {
+                    if !FileManager.default.fileExists(atPath: self.APP_INVOICE_DIR.path) {
+                        do {
+                            try FileManager.default.createDirectory(at: self.APP_INVOICE_DIR, withIntermediateDirectories: true, attributes: nil)
+                        } catch  {
+                            return
+                        }
+                    }
+                    
                     do {
                         try FileManager.default.moveItem(at: filepath!, to: invoice.local_file_path!)
                         sender.setBackgroundImage(UIImage.init(named: "ic_pdf_open"), for: .normal)

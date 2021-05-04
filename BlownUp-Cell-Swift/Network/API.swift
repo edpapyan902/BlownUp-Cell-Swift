@@ -42,4 +42,16 @@ class API {
             completion(response)
         }
     }
+    
+    func cancelSubscription(completion: @escaping ( _ response: DataResponse<SubscriptionRes>) -> Void) -> Void {
+        Alamofire.request(URL_SUBSCRIPTION_CANCEL, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<SubscriptionRes>) in
+            completion(response)
+        }
+    }
+    
+    func resumeSubscription(completion: @escaping ( _ response: DataResponse<SubscriptionRes>) -> Void) -> Void {
+        Alamofire.request(URL_SUBSCRIPTION_RESUME, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<SubscriptionRes>) in
+            completion(response)
+        }
+    }
 }
