@@ -220,6 +220,8 @@ extension SettingVC: UITableViewDataSource, UITableViewDelegate {
         
         if self.existFile(invoice.local_file_path!.path) {
             cell.btnDownload.setBackgroundImage(UIImage.init(named: "ic_pdf_open"), for: .normal)
+        } else {
+            cell.btnDownload.setBackgroundImage(UIImage.init(named: "ic_download"), for: .normal)
         }
         
         cell.btnDownload.tag = indexPath.row
