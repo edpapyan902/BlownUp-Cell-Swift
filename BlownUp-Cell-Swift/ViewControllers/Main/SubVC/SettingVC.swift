@@ -15,6 +15,8 @@ class SettingVC: BaseVC {
     @IBOutlet weak var imgHeaderScheduleAdd: UIImageView!
     @IBOutlet weak var btnCancelSubscription: UIButton!
     @IBOutlet weak var tblInvoice: UITableView!
+    var refreshControl : UIRefreshControl!
+    
     @IBOutlet weak var lblRenew: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     var m_Invoices = [Invoice]()
@@ -27,6 +29,8 @@ class SettingVC: BaseVC {
         
         initLayout()
         checkSubscriptionStatus()
+        
+        self.showLoading(self)
         initHistoryData()
     }
     
@@ -35,7 +39,20 @@ class SettingVC: BaseVC {
         self.tblInvoice.dataSource = self
         self.tblInvoice.backgroundColor = UIColor.clear
         
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.backgroundColor = UIColor.clear
+        self.refreshControl.tintColor = UIColor.init(named: "colorPrimary")
+
+        self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
+
+        self.tblInvoice.addSubview(self.refreshControl)
+
         self.imgHeaderScheduleAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.gotoScheduleAdd)))
+    }
+    
+    @objc func onRefresh(_ refreshControl: UIRefreshControl) {
+        self.refreshControl?.beginRefreshing()
+        initHistoryData()
     }
     
     @objc func gotoScheduleAdd() {
@@ -43,10 +60,12 @@ class SettingVC: BaseVC {
     }
     
     func initHistoryData() {
-        self.showLoading(self)
+        self.m_Invoices.removeAll()
+        self.tblInvoice.reloadData()
         
         API.instance.getBillingHistory() { (response) in
             self.hideLoading()
+            self.refreshControl?.endRefreshing()
             
             if response.error == nil {
                 let invoiceRes: InvoiceRes = response.result.value!

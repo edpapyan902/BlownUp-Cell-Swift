@@ -10,13 +10,41 @@ import UIKit
 
 class RecentCallVC: BaseVC {
 
+    @IBOutlet weak var tblRecentCall: UITableView!
+    var refreshControl : UIRefreshControl!
+    
+    var m_Schedules = [Schedule]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        initLayout()
+        
+        self.showLoading(self)
+        
+        initData()
+    }
+    
+    func initLayout() {
         self.setStatusBarStyle(true)
         
-        self.initData()
+        self.tblRecentCall.delegate = self
+        self.tblRecentCall.dataSource = self
+        self.tblRecentCall.backgroundColor = UIColor.clear
+        
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.backgroundColor = UIColor.clear
+        self.refreshControl.tintColor = UIColor.white
+
+        self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
+
+        self.tblRecentCall.addSubview(self.refreshControl)
+    }
+    
+    @objc func onRefresh(_ refreshControl: UIRefreshControl) {
+        self.refreshControl?.beginRefreshing()
+        initData()
     }
     
     @IBAction func goAddSchedule(_ sender: Any) {
@@ -32,18 +60,62 @@ class RecentCallVC: BaseVC {
     }
     
     func initData() {
-        self.showLoading(self)
+        self.m_Schedules.removeAll()
+        self.tblRecentCall.reloadData()
         
         API.instance.getRecentCall() {(response) in
             self.hideLoading()
+            self.refreshControl?.endRefreshing()
             
             if response.error == nil {
                 let recentCallRes: RecentCallRes = response.result.value!
                 
                 if recentCallRes.success {
-                    
+                    self.m_Schedules = recentCallRes.data.schedules!
+                    if self.m_Schedules.count > 0 {
+                        self.tblRecentCall.reloadData()
+                    }
                 }
             }
         }
     }
 }
+
+class RecentCallTableViewCell: UITableViewCell {
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var lblTime: UILabel!
+    @IBOutlet weak var lblNumber: UILabel!
+}
+
+extension RecentCallVC: UITableViewDataSource, UITableViewDelegate {
+ 
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.m_Schedules.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecentCallItemID", for: indexPath) as! RecentCallTableViewCell
+        let rowIndex = indexPath.row
+        let schedule = self.m_Schedules[rowIndex]
+        
+        let dateResult = schedule.scheduled_at.splite(" ")
+        let timeResult = dateResult[1].splite(":")
+        
+        cell.lblNumber.text = schedule.contact != nil ? schedule.contact?.number : schedule.number
+        cell.lblTime.text = dateResult[0]
+        cell.lblDate.text = timeResult[0] + ":" + timeResult[1]
+        
+        cell.backgroundColor = UIColor.clear
+        cell.isOpaque = false
+        
+        return cell
+    }
+}
+
