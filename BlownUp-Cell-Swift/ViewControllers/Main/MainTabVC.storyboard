@@ -293,8 +293,17 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yvS-Pg-0pV">
                                                             <rect key="frame" x="344" y="10" width="20" height="20"/>
                                                             <subviews>
+                                                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vw3-J1-5ap">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="20" id="43c-Rq-7do"/>
+                                                                        <constraint firstAttribute="height" constant="20" id="g2X-Rg-Cxw"/>
+                                                                    </constraints>
+                                                                    <color key="color" name="colorBlue"/>
+                                                                </activityIndicatorView>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ccw-L7-VB8">
                                                                     <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="width" constant="20" id="jev-Mc-Z3N"/>
                                                                         <constraint firstAttribute="height" constant="20" id="vlr-gO-92M"/>
@@ -304,14 +313,6 @@
                                                                         <action selector="downloadPdf:" destination="Imc-XW-dJy" eventType="touchUpInside" id="xjI-W3-wbi"/>
                                                                     </connections>
                                                                 </button>
-                                                                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="vw3-J1-5ap">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="20" id="43c-Rq-7do"/>
-                                                                        <constraint firstAttribute="height" constant="20" id="g2X-Rg-Cxw"/>
-                                                                    </constraints>
-                                                                    <color key="color" name="colorBlue"/>
-                                                                </activityIndicatorView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <constraints>
@@ -392,6 +393,7 @@
                     <tabBarItem key="tabBarItem" title="Setting" image="ic_setting_off" id="7eS-sd-dcI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btnCancelSubscription" destination="2fr-pa-xvT" id="yn2-nS-ezF"/>
                         <outlet property="lblDescription" destination="pku-EN-AWM" id="rL1-QU-Wbe"/>
                         <outlet property="lblRenew" destination="O93-vL-4NS" id="sca-qd-cdV"/>
                         <outlet property="tblInvoice" destination="pSK-G7-OOn" id="jOR-hy-3bT"/>

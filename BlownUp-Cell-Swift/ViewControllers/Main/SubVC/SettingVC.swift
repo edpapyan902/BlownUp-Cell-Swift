@@ -7,14 +7,19 @@
 
 import Foundation
 import UIKit
+import SDDownloadManager
+import PDFReader
 
 class SettingVC: BaseVC {
 
+    @IBOutlet weak var btnCancelSubscription: UIButton!
     @IBOutlet weak var tblInvoice: UITableView!
     @IBOutlet weak var lblRenew: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     var m_Invoices = [Invoice]()
     
+    let APP_INVOICE_DIR: URL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -24,10 +29,11 @@ class SettingVC: BaseVC {
         self.tblInvoice.reloadData()
         self.tblInvoice.backgroundColor = UIColor.clear
         
-        initData()
+        initSubscriptionStatus()
+        initHistoryData()
     }
     
-    func initData() {
+    func initHistoryData() {
         self.showLoading(self)
         
         API.instance.getBillingHistory() { (response) in
@@ -46,16 +52,63 @@ class SettingVC: BaseVC {
         }
     }
     
+    func checkSubscriptionStatus() {
+        if !Store.instance.isSubscriptionCancelled {
+            self.lblDescription.text = "Your Subscription Ended On:"
+            self.btnCancelSubscription.setTitle("RESUME SUBSCRIPTION", for: .normal)
+            let endDay = (Date().int2date(milliseconds: Store.instance.subscriptionUpcomingDate)).addDay(-1)
+            self.lblRenew.text = endDay.toString("MM.dd.yyyy")
+        } else {
+            self.lblDescription.text = "Your Subscription Renews On:"
+            self.btnCancelSubscription.setTitle("CANCEL SUBSCRIPTION", for: .normal)
+            self.lblRenew.text = (Date().int2date(milliseconds: Store.instance.subscriptionUpcomingDate)).toString("MM.dd.yyyy")
+        }
+    }
+    
     @IBAction func cancelresumeSubscription(_ sender: Any) {
+        if (Store.instance.isSubscriptionCancelled) {
+            resumeSubscription()
+        } else {
+            cancelSubscription()
+        }
+    }
+    
+    func resumeSubscription() {
+        
+    }
+    
+    func cancelSubscription() {
+        API
     }
     
     @IBAction func downloadPdf(_ sender: UIButton) {
         let invoice = self.m_Invoices[sender.tag]
-        downloadPdf(url: invoice.invoice_pdf)
+        let invoice_file_url = (invoice.local_file_path?.path)!
+        if existFile(invoice_file_url) {
+            let document = PDFDocument(url: invoice.local_file_path!)!
+            let readerController = PDFViewController.createNew(with: document)
+            self.present(readerController, animated: false, completion: nil)
+        } else {
+            sender.isHidden = true
+            SDDownloadManager.shared.downloadFile(withRequest: URLRequest(url:URL(string: invoice.invoice_pdf)!), inDirectory: APP_INVOICE_DIR.path, withName: invoice.file_name!, shouldDownloadInBackground: true, onProgress: nil) {(error, filepath) in
+                sender.isHidden = false
+                if error == nil {
+                    do {
+                        try FileManager.default.moveItem(at: filepath!, to: invoice.local_file_path!)
+                        sender.setBackgroundImage(UIImage.init(named: "ic_pdf_open"), for: .normal)
+                    } catch {
+                        print("file move error")
+                    }
+                }
+                else {
+                    print("download error", error)
+                }
+            }
+        }
     }
     
-    func downloadPdf(url: String) {
-        
+    func existFile(_ name: String)-> Bool {
+        return FileManager.default.fileExists(atPath: name)
     }
 }
 
@@ -82,7 +135,16 @@ extension SettingVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InvoiceItemID", for: indexPath) as! InvoiceTableViewCell
-        let invoice = self.m_Invoices[indexPath.row]
+        let rowIndex = indexPath.row
+        
+        self.m_Invoices[rowIndex].file_name = self.m_Invoices[rowIndex].number + ".pdf"
+        self.m_Invoices[rowIndex].local_file_path = APP_INVOICE_DIR.appendingPathComponent(self.m_Invoices[rowIndex].file_name!)
+        
+        let invoice = self.m_Invoices[rowIndex]
+        
+        if self.existFile(invoice.local_file_path!.path) {
+            cell.btnDownload.setBackgroundImage(UIImage.init(named: "ic_pdf_open"), for: .normal)
+        }
         
         cell.btnDownload.tag = indexPath.row
         cell.lblDate.text = (Date().int2date(milliseconds: invoice.created)).toString("MM.dd.yyyy")

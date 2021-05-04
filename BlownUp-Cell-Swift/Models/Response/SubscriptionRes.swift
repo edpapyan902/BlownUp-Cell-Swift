@@ -28,7 +28,7 @@ struct SubscriptionRes : Codable {
     struct Data: Codable {
         let is_ended: Bool?
         let is_cancelled: Bool?
-        let upcoming_invoice: Int?
+        let upcoming_invoice: Int64?
         
         enum CodingKeys: String, CodingKey {
             case is_ended = "is_ended"
@@ -40,7 +40,7 @@ struct SubscriptionRes : Codable {
             let values = try decoder.container(keyedBy: CodingKeys.self)
             is_ended = try values.decodeIfPresent(Bool.self, forKey: .is_ended)
             is_cancelled = try values.decodeIfPresent(Bool.self, forKey: .is_cancelled)
-            upcoming_invoice = try values.decodeIfPresent(Int.self, forKey: .upcoming_invoice)
+            upcoming_invoice = try values.decodeIfPresent(Int64.self, forKey: .upcoming_invoice)
         }
     }
 }

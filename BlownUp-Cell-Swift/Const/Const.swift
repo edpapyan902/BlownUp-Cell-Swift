@@ -38,11 +38,13 @@ let BEARER_HEADER = [
 //  Sign In/Up
 let URL_LOGIN = "\(BASE_SERVER)/api/login"
 let URL_SIGN_UP = "\(BASE_SERVER)/api/signup"
-let URL_SUBSCRIPTION_STATUS = "\(BASE_SERVER)/api/subscription/status"
 
 //  Credit Card
 let URL_CARD_GET = "\(BASE_SERVER)/api/card"
 let URL_CARD_ADD = "\(BASE_SERVER)/api/card/add"
 
-//Billing History
+//  Subscription
+let URL_SUBSCRIPTION_STATUS = "\(BASE_SERVER)/api/subscription/status"
 let URL_BILLING_HISTORY = "\(BASE_SERVER)/api/invoice/all"
+let URL_SUBSCRIPTION_CANCEL = "\(BASE_SERVER)/api/subscription/cancel"
+let URL_SUBSCRIPTION_RESUME = "\(BASE_SERVER)/api/subscription/resume"

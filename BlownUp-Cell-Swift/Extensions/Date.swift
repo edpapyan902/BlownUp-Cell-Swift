@@ -15,6 +15,10 @@ extension Date {
         return dateFormatter.string(for: self)!
     }
     
+    func addDay(_ value: Int = 1) -> Date {
+        return Calendar.current.date(byAdding: .day, value: value, to: self)!
+    }
+    
     func int2date(milliseconds: Int64) -> Date {
         return Date(timeIntervalSince1970: TimeInterval(milliseconds))
     }

@@ -59,9 +59,9 @@ class Store {
         }
     }
     
-    var subscriptionUpcomingDate: Int {
+    var subscriptionUpcomingDate: Int64 {
         get {
-            return defaults.value(forKey: SUBSCRIPTION_UPCOMING_DATE) as? Int ?? 0
+            return defaults.value(forKey: SUBSCRIPTION_UPCOMING_DATE) as? Int64 ?? 0
         }
         set {
             defaults.set(newValue, forKey: SUBSCRIPTION_UPCOMING_DATE)

@@ -30,7 +30,7 @@ struct LoginRes : Codable {
         let is_subscribed: Bool?
         let is_ended: Bool?
         let is_cancelled: Bool?
-        let upcoming_invoice: Int?
+        let upcoming_invoice: Int64?
         
         enum CodingKeys: String, CodingKey {
             case user = "user"
@@ -46,7 +46,7 @@ struct LoginRes : Codable {
             is_subscribed = try values.decodeIfPresent(Bool.self, forKey: .is_subscribed)
             is_ended = try values.decodeIfPresent(Bool.self, forKey: .is_ended)
             is_cancelled = try values.decodeIfPresent(Bool.self, forKey: .is_cancelled)
-            upcoming_invoice = try values.decodeIfPresent(Int.self, forKey: .upcoming_invoice)
+            upcoming_invoice = try values.decodeIfPresent(Int64.self, forKey: .upcoming_invoice)
         }
     }
 }
