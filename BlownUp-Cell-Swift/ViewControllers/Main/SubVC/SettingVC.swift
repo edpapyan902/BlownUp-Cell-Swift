@@ -80,23 +80,7 @@ class SettingVC: BaseVC {
             self.hideLoading()
             
             if response.error == nil {
-                let subscriptionRes: SubscriptionRes = response.result.value!
-                
-                if subscriptionRes.success! {
-                    let data = subscriptionRes.data
-                    
-                    if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
-                        Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
-                    }
-                    Store.instance.isSubscriptionEnded = (data?.is_ended)!
-                    Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
-                    
-                    self.checkSubscriptionStatus()
-                    
-                    if Store.instance.isSubscriptionEnded {
-                        self.gotoVC("CardRegisterVC")
-                    }
-                }
+                self.subscriptionResult(subscriptionRes: response.result.value!)
             }
         }
     }
@@ -108,23 +92,28 @@ class SettingVC: BaseVC {
             self.hideLoading()
             
             if response.error == nil {
-                let subscriptionRes: SubscriptionRes = response.result.value!
-                
-                if subscriptionRes.success! {
-                    let data = subscriptionRes.data
-                    
-                    if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
-                        Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
-                    }
-                    Store.instance.isSubscriptionEnded = (data?.is_ended)!
-                    Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
-                    
-                    self.checkSubscriptionStatus()
-                    
-                    if Store.instance.isSubscriptionEnded {
-                        self.gotoVC("CardRegisterVC")
-                    }
-                }
+                self.subscriptionResult(subscriptionRes: response.result.value!)
+            }
+        }
+    }
+    
+    func subscriptionResult(subscriptionRes: SubscriptionRes) {
+        if subscriptionRes.success! {
+            self.showSuccess(subscriptionRes.message!)
+            
+            let data = subscriptionRes.data
+            
+            if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
+                Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
+            }
+            Store.instance.isSubscriptionEnded = (data?.is_ended)!
+            Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
+            
+            self.checkSubscriptionStatus()
+            
+            if Store.instance.isSubscriptionEnded {
+                self.showWarning("Your subscription ended. To use app, You must purchase new plan.")
+                self.gotoVC(VC_CARD_REGISTER)
             }
         }
     }
@@ -147,6 +136,7 @@ class SettingVC: BaseVC {
                         do {
                             try FileManager.default.createDirectory(at: self.APP_INVOICE_DIR, withIntermediateDirectories: true, attributes: nil)
                         } catch  {
+                            print("create dir error")
                             return
                         }
                     }
@@ -159,7 +149,7 @@ class SettingVC: BaseVC {
                     }
                 }
                 else {
-                    print("download as Any error", error!)
+                    print("download error", error!)
                 }
             }
         }

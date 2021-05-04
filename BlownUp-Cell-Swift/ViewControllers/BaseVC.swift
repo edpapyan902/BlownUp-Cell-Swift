@@ -29,8 +29,8 @@ class BaseVC : UIViewController {
     }
     
     func gotoMainVC(_ type: Int) {
-        let storyboad = UIStoryboard(name: "MainTabVC", bundle: nil)
-        let targetVC = storyboad.instantiateViewController(withIdentifier: "MainTabVC") as! MainTabVC
+        let storyboad = UIStoryboard(name: VC_MAIN_TAB, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_MAIN_TAB) as! MainTabVC
         targetVC.type = type
 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -51,6 +51,10 @@ class BaseVC : UIViewController {
     }
     
     func showMessage(_ body: String, _ type: Int) {
+        if body.isEmpty() {
+            return
+        }
+        
         let view = MessageView.viewFromNib(layout: .cardView)
         var title: String
         if type == 0 {

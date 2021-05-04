@@ -24,8 +24,6 @@ struct Invoice: Codable {
         case total = "total"
         case invoice_pdf = "invoice_pdf"
         case number = "number"
-        case local_file_path = "local_file_path"
-        case file_name = "file_name"
     }
 
     init(from decoder: Decoder) throws {
@@ -36,7 +34,5 @@ struct Invoice: Codable {
         total = try values.decodeIfPresent(Int.self, forKey: .total)!
         invoice_pdf = try values.decodeIfPresent(String.self, forKey: .invoice_pdf)!
         number = try values.decodeIfPresent(String.self, forKey: .number)!
-        local_file_path = try values.decodeIfPresent(URL.self, forKey: .local_file_path)
-        file_name = try values.decodeIfPresent(String.self, forKey: .file_name)
     }
 }

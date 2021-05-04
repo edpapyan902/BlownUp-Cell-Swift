@@ -29,6 +29,21 @@ let IS_SUBSCRIPTION_CANCELLED = "IS_SUBSCRIPTION_CANCELLED"
 let APPLE_USER_ID = "APPLE_USER_ID"
 let APPLE_USER_EMAIL = "APPLE_USER_EMAIL"
 
+//  ViewControllers
+let VC_LOGIN = "LoginVC"
+let VC_SIGN_UP = "SignUpVC"
+let VC_CARD_REGISTER = "CardRegisterVC"
+let VC_SUCCESS = "SuccessVC"
+let VC_RECENT_CALL = "RecentCallVC"
+let VC_MAIN_TAB = "MainTabVC"
+let VC_SCHEDULE_ADD = "ScheduleAddVC"
+let VC_SCHEDULE_LIST = "ScheduleListVC"
+let VC_CONTACT_ADD = "ContactAddVC"
+let VC_CONTACT_LIST = "ContactListVC"
+let VC_SETTING = "SettingVC"
+let VC_HELP = "HelpVC"
+let VC_ACCOUNT = "AccountVC"
+
 //  API REQUEST HEADER
 let HEADER = [ "Content-Type": "application/json"]
 let BEARER_HEADER = [
