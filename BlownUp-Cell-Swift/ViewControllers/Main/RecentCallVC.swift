@@ -21,9 +21,9 @@ class RecentCallVC: BaseVC {
         
         initLayout()
         
-        self.showLoading(self)
+//        self.showLoading(self)
         
-        initData()
+//        initData()
     }
     
     func initLayout() {

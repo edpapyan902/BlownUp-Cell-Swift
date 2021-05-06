@@ -26,15 +26,15 @@ struct NoDataRes : Codable {
     }
     
     struct Data: Codable {
-        let swiftonly: String?
+        let any: String?
         
         enum CodingKeys: String, CodingKey {
-            case swiftonly = "swiftonly"
+            case any = "any"
         }
         
         init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
-            swiftonly = try values.decodeIfPresent(String.self, forKey: .swiftonly)
+            any = try values.decodeIfPresent(String.self, forKey: .any)
         }
     }
 }

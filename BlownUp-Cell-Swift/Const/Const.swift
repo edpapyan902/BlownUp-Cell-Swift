@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Alamofire
 
 //  API URLS
 let DEV_MODE = false
@@ -47,9 +48,11 @@ let VC_ACCOUNT = "AccountVC"
 
 //  API REQUEST HEADER
 let HEADER = [ "Content-Type": "application/json"]
-let BEARER_HEADER = [
-    "Content-Type": "application/json",
-    "Authorization": "Bearer \(Store.instance.apiToken)"]
+func BEARER_HEADER() -> HTTPHeaders {
+    return [
+        "Content-Type": "application/json",
+        "Authorization": "Bearer \(Store.instance.apiToken)"]
+}
 
 //  Sign In/Up
 let URL_LOGIN = "\(BASE_SERVER)/api/login"
