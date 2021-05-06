@@ -10,6 +10,7 @@ import Foundation
 //  API URLS
 let DEV_MODE = false
 let PUBLISH_MODE = false
+let LIVE_PAYMENT = false
 let DEV_SERVER = "http://192.168.109.72"
 let PRODUCT_SERVER = PUBLISH_MODE ? "https://panel.blownup.co" : "http://dev-panel.blownup.co"
 let BASE_SERVER = DEV_MODE ? DEV_SERVER : PRODUCT_SERVER
@@ -17,7 +18,7 @@ let BASE_SERVER = DEV_MODE ? DEV_SERVER : PRODUCT_SERVER
 //  STRIPE PUBLISHABLE KEY
 let STRIPE_PK_TEST = "pk_test_51IVQTuFmwQHroLNotyVUdfmRP83uYbtaecmidNUa1JdtnLUpySuEx5mzhF1E4fm46VG038uvsLBWBkaDYV72WZfV00vRbnMLv0"
 let STRIPE_PK_LIVE = "pk_live_51IVQTuFmwQHroLNo5y9JhLuPnnbpMC2aG0PKGiNqAiuVjN5B4SCzURwetu4ZFNZzix6SV5XLTfp4O3THStK7OyGo002pHFXAxT"
-let STRIPE_KEY = PUBLISH_MODE ? STRIPE_PK_LIVE : STRIPE_PK_TEST
+let STRIPE_KEY = LIVE_PAYMENT ? STRIPE_PK_LIVE : STRIPE_PK_TEST
 
 //  STORE KEYS
 let API_TOKEN = "API_TOKEN"
@@ -68,3 +69,8 @@ let URL_SUBSCRIPTION_RESUME = "\(BASE_SERVER)/api/subscription/resume"
 let URL_RECENT_CALL_GET = "\(BASE_SERVER)/api/recent_call"
 let URL_RECENT_CALL_ADD = "\(BASE_SERVER)/api/recent_call/add"
 
+//  Schedule
+let URL_SCHEDULE_GET = "\(BASE_SERVER)/api/schedule"
+let URL_SCHEDULE_ADD_GET = "\(BASE_SERVER)/api/schedule/add"
+let URL_SCHEDULE_UPDATE_GET = "\(BASE_SERVER)/api/schedule/update"
+let URL_SCHEDULE_DELETE_GET = "\(BASE_SERVER)/api/schedule/delete"

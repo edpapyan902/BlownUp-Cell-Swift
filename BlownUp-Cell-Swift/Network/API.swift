@@ -55,8 +55,14 @@ class API {
         }
     }
     
-    func getRecentCall(completion: @escaping ( _ response: DataResponse<RecentCallRes>) -> Void) -> Void {
+    func getAllRecentCall(completion: @escaping ( _ response: DataResponse<RecentCallRes>) -> Void) -> Void {
         Alamofire.request(URL_RECENT_CALL_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<RecentCallRes>) in
+            completion(response)
+        }
+    }
+    
+    func getAllSchedule(completion: @escaping ( _ response: DataResponse<ScheduleAllRes>) -> Void) -> Void {
+        Alamofire.request(URL_SCHEDULE_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseObject { (response: DataResponse<ScheduleAllRes>) in
             completion(response)
         }
     }

@@ -56,6 +56,7 @@
 		948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6AD263BA9DA00A27790 /* LoginVC.storyboard */; };
 		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
 		948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */; };
+		9497837F264371690048580C /* ScheduleAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9497837E264371690048580C /* ScheduleAllRes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +132,7 @@
 		948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpVC.storyboard; sourceTree = "<group>"; };
 		948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardRegisterVC.storyboard; sourceTree = "<group>"; };
 		948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BlownUp-Cell-Swift.entitlements"; sourceTree = "<group>"; };
+		9497837E264371690048580C /* ScheduleAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAllRes.swift; sourceTree = "<group>"; };
 		AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5EFD96D55BA2E979CE5BA /* Pods-BlownUp-Cell-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-SwiftTests/Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -360,6 +362,7 @@
 				947E5A59263EFDBA008A0008 /* NoDataRes.swift */,
 				945B246D264059FC004C12D7 /* InvoiceRes.swift */,
 				940F6EFD264197AB00BC07DC /* RecentCallRes.swift */,
+				9497837E264371690048580C /* ScheduleAllRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 				948CE685263B9D5300A27790 /* BaseVC.swift in Sources */,
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
+				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
 				945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */,
 				947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */,
 				940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */,

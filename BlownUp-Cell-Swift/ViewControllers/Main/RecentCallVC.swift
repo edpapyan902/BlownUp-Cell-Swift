@@ -63,7 +63,7 @@ class RecentCallVC: BaseVC {
         self.m_Schedules.removeAll()
         self.tblRecentCall.reloadData()
         
-        API.instance.getRecentCall() {(response) in
+        API.instance.getAllRecentCall() {(response) in
             self.hideLoading()
             self.refreshControl?.endRefreshing()
             
@@ -118,4 +118,3 @@ extension RecentCallVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
-
