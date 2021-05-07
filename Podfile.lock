@@ -664,6 +664,7 @@ PODS:
   - SwiftMessages (9.0.2):
     - SwiftMessages/App (= 9.0.2)
   - SwiftMessages/App (9.0.2)
+  - VACalendar (1.3)
 
 DEPENDENCIES:
   - Alamofire (~> 4.9.1)
@@ -677,6 +678,7 @@ DEPENDENCIES:
   - SDDownloadManager (~> 1.1.0)
   - Stripe (~> 21.4.0)
   - SwiftMessages (~> 9.0.2)
+  - VACalendar
 
 SPEC REPOS:
   trunk:
@@ -697,6 +699,7 @@ SPEC REPOS:
     - SDDownloadManager
     - Stripe
     - SwiftMessages
+    - VACalendar
 
 SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
@@ -716,7 +719,8 @@ SPEC CHECKSUMS:
   SDDownloadManager: 62a9339c03ea27606effefd9aa1800e4127e3a52
   Stripe: 7c594b943abb65cf7bc28e37fd5124e65db3ce9e
   SwiftMessages: 77b847d1405f99046ffbd0d856bc7d73e6892686
+  VACalendar: 3e5a001cbf437ebed2bcfc747f3187e555d65175
 
-PODFILE CHECKSUM: 684ab38d60ed507dd75e01a4d8b681c1f80bc046
+PODFILE CHECKSUM: 41a95ddf6b53b6a70584ccc6e5abf093bd24a005
 
 COCOAPODS: 1.10.1

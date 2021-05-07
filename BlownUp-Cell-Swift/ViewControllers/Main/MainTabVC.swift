@@ -28,9 +28,9 @@ class MainTabVC: UITabBarController {
     @objc func gotoScheduleAdd() {
         self.tm_schedule?.invalidate()
         
-//        let storyboad = UIStoryboard(name: VC_SCHEDULE_ADD, bundle: nil)
-//        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD)
-//        targetVC.modalPresentationStyle = .fullScreen
-//        self.present(targetVC, animated: false, completion: nil)
+        let storyboad = UIStoryboard(name: VC_SCHEDULE_ADD, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD)
+        targetVC.modalPresentationStyle = .fullScreen
+        self.present(targetVC, animated: false, completion: nil)
     }
 }

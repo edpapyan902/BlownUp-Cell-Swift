@@ -192,6 +192,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDDownloadManager/SDDownloadManager.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/VACalendar/VACalendar.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework"
@@ -211,6 +212,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/SDDownloadManager/SDDownloadManager.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Stripe/Stripe.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftMessages/SwiftMessages.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/VACalendar/VACalendar.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

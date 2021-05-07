@@ -18,6 +18,7 @@ pod 'SwiftMessages', '~> 9.0.2'
 pod 'Stripe', '~> 21.4.0'
 pod 'SDDownloadManager', '~> 1.1.0'
 pod 'PDFReader'
+pod 'VACalendar'
 
   target 'BlownUp-Cell-SwiftTests' do
     inherit! :search_paths
