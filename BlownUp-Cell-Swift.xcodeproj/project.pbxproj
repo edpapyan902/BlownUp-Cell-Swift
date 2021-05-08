@@ -57,6 +57,9 @@
 		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
 		948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */; };
 		9497837F264371690048580C /* ScheduleAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9497837E264371690048580C /* ScheduleAllRes.swift */; };
+		94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BE82646734B00C800D2 /* DialogContactVC.swift */; };
+		94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */; };
+		94DB9BF6264674B300C800D2 /* ContactAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BF5264674B300C800D2 /* ContactAllRes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +136,9 @@
 		948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardRegisterVC.storyboard; sourceTree = "<group>"; };
 		948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BlownUp-Cell-Swift.entitlements"; sourceTree = "<group>"; };
 		9497837E264371690048580C /* ScheduleAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAllRes.swift; sourceTree = "<group>"; };
+		94DB9BE82646734B00C800D2 /* DialogContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogContactVC.swift; sourceTree = "<group>"; };
+		94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DialogContactVC.storyboard; sourceTree = "<group>"; };
+		94DB9BF5264674B300C800D2 /* ContactAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAllRes.swift; sourceTree = "<group>"; };
 		AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5EFD96D55BA2E979CE5BA /* Pods-BlownUp-Cell-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-SwiftTests/Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -210,6 +216,7 @@
 		94587EC6263FF60D004B0BCC /* SubVC */ = {
 			isa = PBXGroup;
 			children = (
+				94DB9BE4264672A000C800D2 /* Dialog */,
 				94587EA9263FF575004B0BCC /* ScheduleAddVC.swift */,
 				940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */,
 				94587EAE263FF589004B0BCC /* ScheduleListVC.swift */,
@@ -363,8 +370,18 @@
 				945B246D264059FC004C12D7 /* InvoiceRes.swift */,
 				940F6EFD264197AB00BC07DC /* RecentCallRes.swift */,
 				9497837E264371690048580C /* ScheduleAllRes.swift */,
+				94DB9BF5264674B300C800D2 /* ContactAllRes.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		94DB9BE4264672A000C800D2 /* Dialog */ = {
+			isa = PBXGroup;
+			children = (
+				94DB9BE82646734B00C800D2 /* DialogContactVC.swift */,
+				94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */,
+			);
+			path = Dialog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -484,6 +501,7 @@
 				945884132638284000851CE6 /* Main.storyboard in Resources */,
 				94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */,
 				940F6EED2641808D00BC07DC /* ScheduleAddVC.storyboard in Resources */,
+				94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */,
 				948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -620,6 +638,7 @@
 				9458849E2638477D00851CE6 /* TextInput.swift in Sources */,
 				94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */,
 				945884CF263868D600851CE6 /* Store.swift in Sources */,
+				94DB9BF6264674B300C800D2 /* ContactAllRes.swift in Sources */,
 				945B249726405B65004C12D7 /* Invoice.swift in Sources */,
 				940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */,
 				945884E126386D3000851CE6 /* LoginRes.swift in Sources */,
@@ -645,6 +664,7 @@
 				94587EC2263FF5EE004B0BCC /* AccountVC.swift in Sources */,
 				945B24AF264088A3004C12D7 /* Date.swift in Sources */,
 				94587EBD263FF5E1004B0BCC /* HelpVC.swift in Sources */,
+				94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */,
 				94587EB6263FF5B8004B0BCC /* ContactListVC.swift in Sources */,
 				94587EBB263FF5D5004B0BCC /* SettingVC.swift in Sources */,
 			);

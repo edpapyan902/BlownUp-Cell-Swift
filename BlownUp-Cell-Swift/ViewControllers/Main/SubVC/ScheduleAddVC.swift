@@ -7,73 +7,42 @@
 
 import Foundation
 import UIKit
-import VACalendar
+import DatePicker
 
-class ScheduleAddVC: BaseVC, VAMonthHeaderViewDelegate, VADayViewAppearanceDelegate, VAMonthViewAppearanceDelegate, VACalendarViewDelegate {
-    func didTapNextMonth() {
-        
-    }
+class ScheduleAddVC: BaseVC {
     
-    func didTapPreviousMonth() {
-        
-    }
-
-    let defaultCalendar: Calendar = {
-        var calendar = Calendar.current
-        calendar.firstWeekday = 1
-        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
-        return calendar
-    }()
+    @IBOutlet weak var btnPickDate: UIButton!
+    @IBOutlet weak var btnAdd: UIButton!
+    @IBOutlet weak var imgContact: UIImageView!
+    @IBOutlet weak var txtNumber: TextInput!
     
-    @IBOutlet weak var monthHeaderView: VAMonthHeaderView! {
-        didSet {
-            let appereance = VAMonthHeaderViewAppearance(
-                previousButtonImage: UIImage(named:"ic_arrow_left")!,
-                nextButtonImage: UIImage(named:"ic_arrow_left")!,
-                dateFormatter: DateFormatter()
-            )
-            monthHeaderView.delegate = self
-            monthHeaderView.appearance = appereance
-        }
-    }
-    
-    @IBOutlet weak var weekDaysView: VAWeekDaysView! {
-        didSet {
-            let appereance = VAWeekDaysViewAppearance(symbolsType: .veryShort, calendar: defaultCalendar)
-            weekDaysView.appearance = appereance
-        }
-    }
-    
-    var calendarView: VACalendarView!
-
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        let calendar = VACalendar(calendar: defaultCalendar)
-        calendarView = VACalendarView(frame: .zero, calendar: calendar)
-        calendarView.showDaysOut = true
-        calendarView.selectionStyle = .multi
-        calendarView.monthDelegate = monthHeaderView
-        calendarView.dayViewAppearanceDelegate = self
-        calendarView.monthViewAppearanceDelegate = self
-        calendarView.calendarDelegate = self
-        calendarView.scrollDirection = .horizontal
-        calendarView.tintColor = UIColor.init(named: "colorPrimary")
-        view.addSubview(calendarView)
     }
     
-    override func viewDidLayoutSubviews() {
-            super.viewDidLayoutSubviews()
-            
-            if calendarView.frame == .zero {
-                calendarView.frame = CGRect(
-                    x: 0,
-                    y: weekDaysView.frame.maxY,
-                    width: view.frame.width,
-                    height: view.frame.height * 0.6
-                )
-                calendarView.setup()
+    func initLayout() {
+        self.imgContact.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.showContactDialog)))
+    }
+    
+    @objc func showContactDialog() {
+        
+    }
+    
+    @IBAction func pickDate(_ sender: UIButton) {
+        let minDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 1990)!
+        let maxDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 2030)!
+        let today = Date()
+        let datePicker = DatePicker()
+        datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
+            if selected, let selectedDate = date {
+                self.btnPickDate.setTitle(selectedDate.string(), for: .normal)
             }
         }
+        datePicker.show(in: self)
+    }
+    
+    @IBAction func addupdateSchedule(_ sender: Any) {
+        
+    }
 }
