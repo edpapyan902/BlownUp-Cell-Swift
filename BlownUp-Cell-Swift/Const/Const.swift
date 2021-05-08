@@ -74,6 +74,12 @@ let URL_RECENT_CALL_ADD = "\(BASE_SERVER)/api/recent_call/add"
 
 //  Schedule
 let URL_SCHEDULE_GET = "\(BASE_SERVER)/api/schedule"
-let URL_SCHEDULE_ADD_GET = "\(BASE_SERVER)/api/schedule/add"
-let URL_SCHEDULE_UPDATE_GET = "\(BASE_SERVER)/api/schedule/update"
-let URL_SCHEDULE_DELETE_GET = "\(BASE_SERVER)/api/schedule/delete"
+let URL_SCHEDULE_ADD = "\(BASE_SERVER)/api/schedule/add"
+let URL_SCHEDULE_UPDATE = "\(BASE_SERVER)/api/schedule/update"
+let URL_SCHEDULE_DELETE = "\(BASE_SERVER)/api/schedule/delete"
+
+//  Contact
+let URL_CONTACT_GET = "\(BASE_SERVER)/api/contact"
+let URL_CONTACT_ADD = "\(BASE_SERVER)/api/contact/add"
+let URL_CONTACT_UPDATE = "\(BASE_SERVER)/api/contact/update"
+let URL_CONTACT_DELETE = "\(BASE_SERVER)/api/contact/delete"

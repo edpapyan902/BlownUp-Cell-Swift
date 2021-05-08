@@ -19,11 +19,11 @@ class ScheduleListVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        initLayout()
+        initLayout()
         
-//        self.showLoading(self)
+        self.showLoading(self)
         
-//        getData()
+        getData()
     }
     
     func initLayout() {

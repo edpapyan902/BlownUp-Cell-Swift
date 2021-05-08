@@ -66,4 +66,10 @@ class API {
             completion(response)
         }
     }
+    
+    func getAllContact(completion: @escaping ( _ response: DataResponse<ContactAllRes>) -> Void) -> Void {
+        Alamofire.request(URL_CONTACT_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ContactAllRes>) in
+            completion(response)
+        }
+    }
 }
