@@ -90,7 +90,7 @@ class ScheduleAddVC: BaseVC {
         
         let date = self.datePicker.date
         let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-        let scheduled_at = selectedDate.toString("yyyy-MM-dd") + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!)
+        let scheduled_at = selectedDate.toString("yyyy-MM-dd") + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
         
         var n_id_contact = 0
         if selectedContact != nil && selectedContact?.number == number {
@@ -114,7 +114,9 @@ class ScheduleAddVC: BaseVC {
                 if scheduleAddRes.success {
                     self.showSuccess(scheduleAddRes.message)
                     
-                    let schedule = scheduleAddRes.data.schedule
+//                    let schedule = scheduleAddRes.data.schedule
+                    
+                    self.dismiss(animated: true, completion: nil)
                 } else {
                     self.showError(scheduleAddRes.message)
                 }
