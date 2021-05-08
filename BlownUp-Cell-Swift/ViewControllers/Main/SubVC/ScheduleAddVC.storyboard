@@ -26,7 +26,7 @@
                                             <constraint firstAttribute="height" constant="40" id="cnY-c1-2cj"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="NCW-mP-R68">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="NCW-mP-R68">
                                         <rect key="frame" x="15" y="18" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="24" id="WTg-Yy-ACN"/>
@@ -45,10 +45,10 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-ha-Qc9" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="324" height="60"/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="hint" value="32323232"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Number to have a call from"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_contact_add" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-uX-qeb">
+                                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_contact_add" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-uX-qeb">
                                                 <rect key="frame" x="334" y="10" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="1pp-PR-wrj"/>
@@ -140,6 +140,8 @@
                     <connections>
                         <outlet property="btnAdd" destination="s3h-3g-WLD" id="NfH-4o-34V"/>
                         <outlet property="btnPickDate" destination="VGE-Pt-65w" id="MhR-R6-hCm"/>
+                        <outlet property="datePicker" destination="Fp9-OJ-1Pr" id="4c3-Ko-Yuw"/>
+                        <outlet property="imgBack" destination="NCW-mP-R68" id="dqH-1F-qBg"/>
                         <outlet property="imgContact" destination="nDG-uX-qeb" id="zwJ-Qi-kgR"/>
                         <outlet property="txtNumber" destination="eCo-ha-Qc9" id="oBH-U1-Yn1"/>
                     </connections>

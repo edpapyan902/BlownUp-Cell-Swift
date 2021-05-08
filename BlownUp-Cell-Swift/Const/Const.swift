@@ -45,6 +45,7 @@ let VC_CONTACT_LIST = "ContactListVC"
 let VC_SETTING = "SettingVC"
 let VC_HELP = "HelpVC"
 let VC_ACCOUNT = "AccountVC"
+let VC_DIALOG_CONTACT = "DialogContactVC"
 
 //  API REQUEST HEADER
 let HEADER = [ "Content-Type": "application/json"]

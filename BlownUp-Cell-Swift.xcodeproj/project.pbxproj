@@ -48,6 +48,7 @@
 		945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B246D264059FC004C12D7 /* InvoiceRes.swift */; };
 		945B249726405B65004C12D7 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B249626405B65004C12D7 /* Invoice.swift */; };
 		945B24AF264088A3004C12D7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B24AE264088A2004C12D7 /* Date.swift */; };
+		946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946446232646F1530079BCE2 /* ScheduleAddRes.swift */; };
 		947E5A55263EE908008A0008 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A54263EE908008A0008 /* CreditCardView.swift */; };
 		947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A59263EFDBA008A0008 /* NoDataRes.swift */; };
 		947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A5E263F0059008A0008 /* SuccessVC.swift */; };
@@ -57,6 +58,8 @@
 		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
 		948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */; };
 		9497837F264371690048580C /* ScheduleAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9497837E264371690048580C /* ScheduleAllRes.swift */; };
+		94C1A7A42646BF0D00E37144 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A32646BF0D00E37144 /* UIView.swift */; };
+		94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A92646BFCC00E37144 /* Utils.swift */; };
 		94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BE82646734B00C800D2 /* DialogContactVC.swift */; };
 		94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */; };
 		94DB9BF6264674B300C800D2 /* ContactAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BF5264674B300C800D2 /* ContactAllRes.swift */; };
@@ -126,6 +129,7 @@
 		945B246D264059FC004C12D7 /* InvoiceRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceRes.swift; sourceTree = "<group>"; };
 		945B249626405B65004C12D7 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		945B24AE264088A2004C12D7 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		946446232646F1530079BCE2 /* ScheduleAddRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAddRes.swift; sourceTree = "<group>"; };
 		947E5A54263EE908008A0008 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		947E5A59263EFDBA008A0008 /* NoDataRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataRes.swift; sourceTree = "<group>"; };
 		947E5A5E263F0059008A0008 /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 		948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardRegisterVC.storyboard; sourceTree = "<group>"; };
 		948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BlownUp-Cell-Swift.entitlements"; sourceTree = "<group>"; };
 		9497837E264371690048580C /* ScheduleAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAllRes.swift; sourceTree = "<group>"; };
+		94C1A7A32646BF0D00E37144 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		94C1A7A92646BFCC00E37144 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		94DB9BE82646734B00C800D2 /* DialogContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogContactVC.swift; sourceTree = "<group>"; };
 		94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DialogContactVC.storyboard; sourceTree = "<group>"; };
 		94DB9BF5264674B300C800D2 /* ContactAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAllRes.swift; sourceTree = "<group>"; };
@@ -254,6 +260,7 @@
 		9458840A2638284000851CE6 /* BlownUp-Cell-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				94C1A7A82646BFA100E37144 /* Utils */,
 				948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */,
 				945884D626386CAB00851CE6 /* Models */,
 				945884CD263868C100851CE6 /* Store */,
@@ -320,6 +327,7 @@
 				945884E52638743E00851CE6 /* String.swift */,
 				947E5A54263EE908008A0008 /* CreditCardView.swift */,
 				945B24AE264088A2004C12D7 /* Date.swift */,
+				94C1A7A32646BF0D00E37144 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -371,8 +379,17 @@
 				940F6EFD264197AB00BC07DC /* RecentCallRes.swift */,
 				9497837E264371690048580C /* ScheduleAllRes.swift */,
 				94DB9BF5264674B300C800D2 /* ContactAllRes.swift */,
+				946446232646F1530079BCE2 /* ScheduleAddRes.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		94C1A7A82646BFA100E37144 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				94C1A7A92646BFCC00E37144 /* Utils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		94DB9BE4264672A000C800D2 /* Dialog */ = {
@@ -635,6 +652,7 @@
 				940F6F082641991D00BC07DC /* Contact.swift in Sources */,
 				945884E62638743E00851CE6 /* String.swift in Sources */,
 				9458840C2638284000851CE6 /* AppDelegate.swift in Sources */,
+				94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */,
 				9458849E2638477D00851CE6 /* TextInput.swift in Sources */,
 				94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */,
 				945884CF263868D600851CE6 /* Store.swift in Sources */,
@@ -652,6 +670,7 @@
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
+				946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */,
 				945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */,
 				947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */,
 				940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */,
@@ -662,6 +681,7 @@
 				940CA3102639441000401594 /* SubscriptionRes.swift in Sources */,
 				94587EAF263FF589004B0BCC /* ScheduleListVC.swift in Sources */,
 				94587EC2263FF5EE004B0BCC /* AccountVC.swift in Sources */,
+				94C1A7A42646BF0D00E37144 /* UIView.swift in Sources */,
 				945B24AF264088A3004C12D7 /* Date.swift in Sources */,
 				94587EBD263FF5E1004B0BCC /* HelpVC.swift in Sources */,
 				94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */,

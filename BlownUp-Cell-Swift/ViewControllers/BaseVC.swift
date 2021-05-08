@@ -43,7 +43,7 @@ class BaseVC : UIViewController {
         if isFullScreen {
             targetVC.modalPresentationStyle = .fullScreen
         }
-        self.present(targetVC, animated: false, completion: nil)
+        self.present(targetVC, animated: true, completion: nil)
     }
     
     func gotoMainVC(_ type: Int) {

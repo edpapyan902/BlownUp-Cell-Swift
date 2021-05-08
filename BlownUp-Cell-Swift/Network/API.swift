@@ -72,4 +72,10 @@ class API {
             completion(response)
         }
     }
+    
+    func addSchedule(params: [String: Any], completion: @escaping ( _ response: DataResponse<ScheduleAddRes>) -> Void) -> Void {
+        Alamofire.request(URL_SCHEDULE_ADD, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ScheduleAddRes>) in
+            completion(response)
+        }
+    }
 }
