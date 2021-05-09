@@ -45,7 +45,8 @@ class ScheduleAddVC: BaseVC {
             self.btnPickDate.setTitle(Date().string(), for: .normal)
         } else {
             self.isUpdate = true
-            self.btnPickDate.setTitle(currentSchedule?.scheduled_at, for: .normal)
+            let dateResult = currentSchedule?.scheduled_at.splite(" ")
+            self.btnPickDate.setTitle(dateResult![0], for: .normal)
             self.txtNumber.setText((currentSchedule?.contact == nil ? currentSchedule?.number : currentSchedule?.contact?.number)!)
         }
     }
