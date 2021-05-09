@@ -121,8 +121,6 @@ class ScheduleAddVC: BaseVC {
                 if scheduleAddRes.success {
                     self.showSuccess(scheduleAddRes.message)
                     
-//                    let schedule = scheduleAddRes.data.schedule
-                    
                     self.dismiss(animated: true, completion: nil)
                 } else {
                     self.showError(scheduleAddRes.message)

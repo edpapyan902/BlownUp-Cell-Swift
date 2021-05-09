@@ -93,10 +93,6 @@ extension RecentCallVC: UITableViewDataSource, UITableViewDelegate {
         return self.m_Schedules.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     }
     

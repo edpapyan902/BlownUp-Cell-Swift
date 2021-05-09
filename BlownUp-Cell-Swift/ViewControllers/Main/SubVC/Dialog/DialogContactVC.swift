@@ -82,10 +82,6 @@ extension DialogContactVC: UITableViewDataSource, UITableViewDelegate {
         return self.m_Contacts.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         ScheduleAddVC.instance.setContact(self.m_Contacts[indexPath.row])
         self.dismiss(animated: true, completion: nil)
