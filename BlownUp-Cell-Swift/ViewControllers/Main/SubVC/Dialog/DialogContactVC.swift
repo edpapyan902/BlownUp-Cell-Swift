@@ -66,13 +66,6 @@ class DialogContactVC: BaseVC {
             }
         }
     }
-    
-    @objc func onCellClicked(_ sender: UITapGestureRecognizer) {
-        if let cell = sender.view as? ContactTableViewCell {
-            ScheduleAddVC.getInstance().setContact(self.m_Contacts[cell.tag])
-            self.dismiss(animated: true, completion: nil)
-        }
-    }
 }
 
 class ContactTableViewCell: UITableViewCell {
@@ -94,6 +87,8 @@ extension DialogContactVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ScheduleAddVC.getInstance().setContact(self.m_Contacts[indexPath.row])
+        self.dismiss(animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -118,10 +113,6 @@ extension DialogContactVC: UITableViewDataSource, UITableViewDelegate {
         
         cell.backgroundColor = UIColor.clear
         cell.isOpaque = false
-        
-        print(rowIndex)
-        cell.tag = rowIndex
-        cell.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onCellClicked(_:))))
         
         return cell
     }

@@ -21,9 +21,9 @@ class RecentCallVC: BaseVC {
         
         initLayout()
         
-//        self.showLoading(self)
+        self.showLoading(self)
         
-//        initData()
+        initData()
     }
     
     func initLayout() {
@@ -109,8 +109,8 @@ extension RecentCallVC: UITableViewDataSource, UITableViewDelegate {
         let timeResult = dateResult[1].splite(":")
         
         cell.lblNumber.text = schedule.contact != nil ? schedule.contact?.number : schedule.number
-        cell.lblTime.text = dateResult[0]
-        cell.lblDate.text = timeResult[0] + ":" + timeResult[1]
+        cell.lblDate.text = dateResult[0]
+        cell.lblTime.text = timeResult[0] + ":" + timeResult[1]
         
         cell.backgroundColor = UIColor.clear
         cell.isOpaque = false

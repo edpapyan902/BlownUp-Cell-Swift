@@ -19,11 +19,11 @@ class ScheduleListVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-//        initLayout()
-//
-//        self.showLoading(self)
-//
-//        getData()
+        initLayout()
+
+        self.showLoading(self)
+
+        getData()
     }
     
     func initLayout() {
@@ -35,7 +35,7 @@ class ScheduleListVC: BaseVC {
         
         self.refreshControl = UIRefreshControl()
         self.refreshControl.backgroundColor = UIColor.clear
-        self.refreshControl.tintColor = UIColor.white
+        self.refreshControl.tintColor = UIColor.init(named: "colorPrimary")
 
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
 
@@ -70,9 +70,16 @@ class ScheduleListVC: BaseVC {
 }
 
 class ScheduleTableViewCell: UITableViewCell {
+    @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDate: UILabel!
     @IBOutlet weak var lblTime: UILabel!
     @IBOutlet weak var lblNumber: UILabel!
+    @IBOutlet weak var avatarView: UIView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    @IBOutlet weak var imgAvatar: UIImageView!
+    @IBOutlet weak var ic_delete: UIImageView!
+    @IBOutlet weak var contactView: UIView!
+    @IBOutlet weak var mainView: UIView!
 }
 
 extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
@@ -81,11 +88,8 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
         return self.m_Schedules.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 50
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -97,8 +101,31 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
         let timeResult = dateResult[1].splite(":")
         
         cell.lblNumber.text = schedule.contact != nil ? schedule.contact?.number : schedule.number
-        cell.lblTime.text = dateResult[0]
-        cell.lblDate.text = timeResult[0] + ":" + timeResult[1]
+        cell.lblDate.text = dateResult[0]
+        cell.lblTime.text = timeResult[0] + ":" + timeResult[1]
+        
+        cell.avatarView.makeRounded(35)
+        cell.loader.isHidden = false
+        cell.imgAvatar.isHidden = true
+        
+        cell.mainView.makeRounded(8)
+        cell.mainView.makeBorder(1, UIColor.init(named: "colorGrey")!)
+        
+        if schedule.contact != nil {
+            cell.lblName.text = schedule.contact!.name
+            cell.lblNumber.text = schedule.contact!.number
+            
+            getImageFromUrl(imageView: cell.imgAvatar, photoUrl: BASE_SERVER + schedule.contact!.avatar) { (image) in
+                if image != nil {
+                    cell.imgAvatar.image = image
+                    cell.imgAvatar.isHidden = false
+                    cell.loader.isHidden = true
+                }
+            }
+        } else {
+            cell.lblNumber.text = schedule.number
+            cell.contactView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+        }
         
         cell.backgroundColor = UIColor.clear
         cell.isOpaque = false
@@ -106,5 +133,3 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
 }
-
-
