@@ -89,9 +89,7 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(indexPath.row)
-        ScheduleAddVC.instance.setSchedule(self.m_Schedules[indexPath.row])
-        self.gotoModalVC(VC_SCHEDULE_ADD, true)
+        self.goScheduleAddVC(self.m_Schedules[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

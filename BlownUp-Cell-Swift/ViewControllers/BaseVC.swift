@@ -46,6 +46,14 @@ class BaseVC : UIViewController {
         self.present(targetVC, animated: true, completion: nil)
     }
     
+    func goScheduleAddVC(_ schedule: Schedule) {
+        let storyboad = UIStoryboard(name: VC_SCHEDULE_ADD, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD) as! ScheduleAddVC
+        targetVC.currentSchedule = schedule
+        targetVC.modalPresentationStyle = .fullScreen
+        self.present(targetVC, animated: true, completion: nil)
+    }
+    
     func gotoMainVC(_ type: Int) {
         let storyboad = UIStoryboard(name: VC_MAIN_TAB, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: VC_MAIN_TAB) as! MainTabVC

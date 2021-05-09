@@ -29,7 +29,8 @@ class MainTabVC: UITabBarController {
         self.tm_schedule?.invalidate()
         
         let storyboad = UIStoryboard(name: VC_SCHEDULE_ADD, bundle: nil)
-        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD) as! ScheduleAddVC
+        targetVC.currentSchedule = nil
         targetVC.modalPresentationStyle = .fullScreen
         self.present(targetVC, animated: false, completion: nil)
     }

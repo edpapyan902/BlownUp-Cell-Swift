@@ -41,9 +41,12 @@ class ScheduleAddVC: BaseVC {
         datePicker.setValue(UIColor(named: "colorBlue"), forKey: "textColor")
         
         if currentSchedule == nil {
+            self.isUpdate = false
             self.btnPickDate.setTitle(Date().string(), for: .normal)
         } else {
+            self.isUpdate = true
             self.btnPickDate.setTitle(currentSchedule?.scheduled_at, for: .normal)
+            self.txtNumber.setText((currentSchedule?.contact == nil ? currentSchedule?.number : currentSchedule?.contact?.number)!)
         }
     }
     
@@ -71,11 +74,6 @@ class ScheduleAddVC: BaseVC {
     func setContact(_ contact: Contact) {
         self.selectedContact = contact
         self.txtNumber.setText(contact.number)
-    }
-    
-    func setSchedule(_ schedule: Schedule) {
-        self.isEditing = true
-        self.currentSchedule = schedule
     }
     
     @IBAction func addupdateSchedule(_ sender: Any) {
