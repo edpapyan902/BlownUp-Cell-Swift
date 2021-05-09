@@ -12,7 +12,7 @@ struct Schedule: Codable {
     let number : String?
     let scheduled_at : String
     let alarm_identify : String
-    var contact : Contact?
+    var contact : Contact? = nil
     
     enum CodingKeys: String, CodingKey {
         case id = "id"

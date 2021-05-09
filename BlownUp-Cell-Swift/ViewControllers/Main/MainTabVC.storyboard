@@ -194,7 +194,7 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oD8-kF-qD2">
-                                                                    <rect key="frame" x="5" y="83" width="384" height="39"/>
+                                                                    <rect key="frame" x="5" y="85" width="384" height="37"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_trash" translatesAutoresizingMaskIntoConstraints="NO" id="FKg-Oy-C5j">
                                                                             <rect key="frame" x="0.0" y="10" width="20" height="25"/>
@@ -243,7 +243,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="130" id="4Fu-Af-zxh"/>
                                                                 <constraint firstAttribute="bottom" secondItem="oD8-kF-qD2" secondAttribute="bottom" constant="8" id="6PO-Dh-c2m"/>
-                                                                <constraint firstItem="oD8-kF-qD2" firstAttribute="top" secondItem="wG3-fd-ghN" secondAttribute="bottom" constant="5" id="Svq-OV-3Oz"/>
+                                                                <constraint firstItem="oD8-kF-qD2" firstAttribute="top" secondItem="wfq-hI-lOU" secondAttribute="top" constant="85" id="Svq-OV-3Oz"/>
                                                                 <constraint firstItem="wG3-fd-ghN" firstAttribute="top" secondItem="wfq-hI-lOU" secondAttribute="top" constant="8" id="Tct-0x-DrV"/>
                                                                 <constraint firstItem="oD8-kF-qD2" firstAttribute="leading" secondItem="wfq-hI-lOU" secondAttribute="leading" constant="5" id="V5p-SN-pmE"/>
                                                                 <constraint firstItem="wG3-fd-ghN" firstAttribute="leading" secondItem="wfq-hI-lOU" secondAttribute="leading" constant="8" id="X6x-e3-DHJ"/>

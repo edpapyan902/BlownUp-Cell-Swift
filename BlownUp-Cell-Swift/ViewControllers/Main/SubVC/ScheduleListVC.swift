@@ -90,6 +90,8 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print(indexPath.row)
+        ScheduleAddVC.instance.setSchedule(self.m_Schedules[indexPath.row])
+        self.gotoModalVC(VC_SCHEDULE_ADD, true)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -100,13 +102,8 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
         let dateResult = schedule.scheduled_at.splite(" ")
         let timeResult = dateResult[1].splite(":")
         
-        cell.lblNumber.text = schedule.contact != nil ? schedule.contact?.number : schedule.number
         cell.lblDate.text = dateResult[0]
         cell.lblTime.text = timeResult[0] + ":" + timeResult[1]
-        
-        cell.avatarView.makeRounded(35)
-        cell.loader.isHidden = false
-        cell.imgAvatar.isHidden = true
         
         cell.mainView.makeRounded(8)
         cell.mainView.makeBorder(1, UIColor.init(named: "colorGrey")!)
@@ -114,6 +111,10 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
         if schedule.contact != nil {
             cell.lblName.text = schedule.contact!.name
             cell.lblNumber.text = schedule.contact!.number
+            
+            cell.avatarView.makeRounded(35)
+            cell.loader.isHidden = false
+            cell.imgAvatar.isHidden = true
             
             getImageFromUrl(imageView: cell.imgAvatar, photoUrl: BASE_SERVER + schedule.contact!.avatar) { (image) in
                 if image != nil {
@@ -124,7 +125,7 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
             }
         } else {
             cell.lblNumber.text = schedule.number
-            cell.contactView.frame = CGRect(x: 0, y: 0, width: 0, height: 0)
+            cell.contactView.isHidden = true
         }
         
         cell.backgroundColor = UIColor.clear

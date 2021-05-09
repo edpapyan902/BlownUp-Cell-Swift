@@ -13,7 +13,8 @@ class ScheduleAddVC: BaseVC {
     
     var selectedContact: Contact? = nil
     var isUpdate: Bool = false
-    var selectedDate: Date = Date()
+    
+    var currentSchedule: Schedule? = nil
     
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var imgBack: UIImageView!
@@ -23,9 +24,6 @@ class ScheduleAddVC: BaseVC {
     @IBOutlet weak var txtNumber: TextInput!
     
     static var instance = ScheduleAddVC()
-    static func getInstance() -> ScheduleAddVC {
-        return instance
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,10 +38,13 @@ class ScheduleAddVC: BaseVC {
         self.imgContact.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.showContactDialog)))
         self.imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onBack)))
         
-        selectedDate = Date()
-        self.btnPickDate.setTitle(selectedDate.string(), for: .normal)
-        
         datePicker.setValue(UIColor(named: "colorBlue"), forKey: "textColor")
+        
+        if currentSchedule == nil {
+            self.btnPickDate.setTitle(Date().string(), for: .normal)
+        } else {
+            self.btnPickDate.setTitle(currentSchedule?.scheduled_at, for: .normal)
+        }
     }
     
     @objc func showContactDialog() {
@@ -62,7 +63,6 @@ class ScheduleAddVC: BaseVC {
         datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
             if selected, let selectedDate = date {
                 self.btnPickDate.setTitle(selectedDate.string(), for: .normal)
-                self.selectedDate = selectedDate
             }
         }
         datePicker.show(in: self)
@@ -71,6 +71,11 @@ class ScheduleAddVC: BaseVC {
     func setContact(_ contact: Contact) {
         self.selectedContact = contact
         self.txtNumber.setText(contact.number)
+    }
+    
+    func setSchedule(_ schedule: Schedule) {
+        self.isEditing = true
+        self.currentSchedule = schedule
     }
     
     @IBAction func addupdateSchedule(_ sender: Any) {
@@ -90,7 +95,8 @@ class ScheduleAddVC: BaseVC {
         
         let date = self.datePicker.date
         let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-        let scheduled_at = selectedDate.toString("yyyy-MM-dd") + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
+        let schedule_date: String = self.btnPickDate.title(for: .normal)!
+        let scheduled_at = schedule_date + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
         
         var n_id_contact = 0
         if selectedContact != nil && selectedContact?.number == number {
@@ -104,8 +110,9 @@ class ScheduleAddVC: BaseVC {
             "scheduled_at": scheduled_at
         ]
         
+
         self.showLoading(self)
-        
+
         API.instance.addSchedule(params: params){ (response) in
             self.hideLoading()
             
