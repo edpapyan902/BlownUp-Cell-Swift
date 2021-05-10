@@ -56,7 +56,7 @@ class SettingVC: BaseVC {
     }
     
     @objc func gotoScheduleAdd() {
-        self.gotoModalVC(VC_SCHEDULE_ADD, true)
+        self.goScheduleAddVC(nil)
     }
     
     func initHistoryData() {

@@ -46,7 +46,7 @@ class BaseVC : UIViewController {
         self.present(targetVC, animated: true, completion: nil)
     }
     
-    func goScheduleAddVC(_ schedule: Schedule) {
+    func goScheduleAddVC(_ schedule: Schedule?) {
         let storyboad = UIStoryboard(name: VC_SCHEDULE_ADD, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD) as! ScheduleAddVC
         targetVC.currentSchedule = schedule
