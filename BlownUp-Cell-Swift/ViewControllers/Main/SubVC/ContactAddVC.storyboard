@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Contact AddVC-->
+        <scene sceneID="e3F-pg-1fx">
+            <objects>
+                <viewController storyboardIdentifier="ContactAddVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="0FB-hk-48h" customClass="ContactAddVC" customModule="BlownUp_Cell_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MmA-NB-0zN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qxi-tB-fqQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="G8W-8m-i3J">
+                                        <rect key="frame" x="0.0" y="10" width="414" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="80g-pb-Bwp"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="Eue-bd-fN3">
+                                        <rect key="frame" x="15" y="18" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="24" id="Tix-PH-vI5"/>
+                                            <constraint firstAttribute="width" constant="24" id="asA-Ca-10B"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ADD A CONTACT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CC-Pf-Ots">
+                                        <rect key="frame" x="20" y="80" width="374" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <color key="textColor" name="colorBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PbA-IE-cfv">
+                                        <rect key="frame" x="87" y="254" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="5CC-Pf-Ots" firstAttribute="leading" secondItem="Qxi-tB-fqQ" secondAttribute="leading" constant="20" id="8kc-AT-5WA"/>
+                                    <constraint firstAttribute="trailing" secondItem="G8W-8m-i3J" secondAttribute="trailing" id="H4D-vs-jZa"/>
+                                    <constraint firstItem="5CC-Pf-Ots" firstAttribute="top" secondItem="G8W-8m-i3J" secondAttribute="bottom" constant="30" id="S1q-2A-cd9"/>
+                                    <constraint firstItem="G8W-8m-i3J" firstAttribute="top" secondItem="Qxi-tB-fqQ" secondAttribute="top" constant="10" id="Skh-oT-XMw"/>
+                                    <constraint firstItem="Eue-bd-fN3" firstAttribute="top" secondItem="Qxi-tB-fqQ" secondAttribute="top" constant="18" id="YEV-F2-qMF"/>
+                                    <constraint firstItem="G8W-8m-i3J" firstAttribute="leading" secondItem="Qxi-tB-fqQ" secondAttribute="leading" id="g7t-Re-ntR"/>
+                                    <constraint firstItem="Eue-bd-fN3" firstAttribute="leading" secondItem="Qxi-tB-fqQ" secondAttribute="leading" constant="15" id="lda-5z-qUI"/>
+                                    <constraint firstAttribute="trailing" secondItem="5CC-Pf-Ots" secondAttribute="trailing" constant="20" id="pB6-Aq-yLw"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ru0-WJ-gKx"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ru0-WJ-gKx" firstAttribute="trailing" secondItem="Qxi-tB-fqQ" secondAttribute="trailing" id="2WN-GM-6jM"/>
+                            <constraint firstItem="Qxi-tB-fqQ" firstAttribute="leading" secondItem="ru0-WJ-gKx" secondAttribute="leading" id="LNZ-Bf-WAY"/>
+                            <constraint firstItem="ru0-WJ-gKx" firstAttribute="bottom" secondItem="Qxi-tB-fqQ" secondAttribute="bottom" id="e8D-wf-2gX"/>
+                            <constraint firstItem="Qxi-tB-fqQ" firstAttribute="top" secondItem="ru0-WJ-gKx" secondAttribute="top" id="qlt-xQ-0cK"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5e-wL-1ar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-201" y="27"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_arrow_left" width="13" height="21"/>
+        <image name="ic_logo" width="80" height="18"/>
+        <namedColor name="colorBlue">
+            <color red="0.0" green="0.36862745098039218" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

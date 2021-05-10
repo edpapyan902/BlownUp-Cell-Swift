@@ -11,6 +11,7 @@
 		56A7286AF067C6F4CF3529A2 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7D7E689F93672753F703E74 /* Pods_BlownUp_Cell_Swift_BlownUp_Cell_SwiftUITests.framework */; };
 		9083A98A34F80F7D1D8F2779 /* Pods_BlownUp_Cell_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */; };
 		940680782648CB3A0079D42F /* ScheduleUpdateRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940680772648CB3A0079D42F /* ScheduleUpdateRes.swift */; };
+		9406807D2648D9B70079D42F /* ContactAddVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9406807C2648D9B70079D42F /* ContactAddVC.storyboard */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
@@ -87,6 +88,7 @@
 		4BCF9F9AB90C7338F89605B7 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		940680772648CB3A0079D42F /* ScheduleUpdateRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleUpdateRes.swift; sourceTree = "<group>"; };
+		9406807C2648D9B70079D42F /* ContactAddVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactAddVC.storyboard; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */,
 				94587EAE263FF589004B0BCC /* ScheduleListVC.swift */,
 				94587EB0263FF5A2004B0BCC /* ContactAddVC.swift */,
+				9406807C2648D9B70079D42F /* ContactAddVC.storyboard */,
 				94587EB5263FF5B8004B0BCC /* ContactListVC.swift */,
 				94587EBA263FF5D5004B0BCC /* SettingVC.swift */,
 				94587EBC263FF5E1004B0BCC /* HelpVC.swift */,
@@ -517,6 +520,7 @@
 				94587E97263FED62004B0BCC /* MainTabVC.storyboard in Resources */,
 				948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */,
 				947E5A64263F0095008A0008 /* SuccessVC.storyboard in Resources */,
+				9406807D2648D9B70079D42F /* ContactAddVC.storyboard in Resources */,
 				945884152638284100851CE6 /* Assets.xcassets in Resources */,
 				945884132638284000851CE6 /* Main.storyboard in Resources */,
 				94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */,

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,14 +14,14 @@
             <objects>
                 <viewController storyboardIdentifier="ScheduleAddVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="y3v-Bd-3tC" customClass="ScheduleAddVC" customModule="BlownUp_Cell_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RqL-CM-9ln">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="isH-bQ-4em">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="428" height="848"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Iv-gd-Mot">
-                                        <rect key="frame" x="10" y="10" width="394" height="40"/>
+                                        <rect key="frame" x="10" y="10" width="408" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="cnY-c1-2cj"/>
                                         </constraints>
@@ -34,22 +34,22 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCHEDULE A CALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAL-6L-9QT">
-                                        <rect key="frame" x="20" y="80" width="374" height="31.666666666666671"/>
+                                        <rect key="frame" x="20" y="80" width="388" height="31.666666666666671"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49H-nT-fwE" userLabel="addView">
-                                        <rect key="frame" x="20" y="151.66666666666666" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="151.66666666666666" width="388" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-ha-Qc9" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="324" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="338" height="60"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Number to have a call from"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_contact_add" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-uX-qeb">
-                                                <rect key="frame" x="334" y="10" width="40" height="40"/>
+                                                <rect key="frame" x="348" y="10" width="40" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="1pp-PR-wrj"/>
                                                     <constraint firstAttribute="width" constant="40" id="RTl-cO-751"/>
@@ -69,7 +69,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGE-Pt-65w">
-                                        <rect key="frame" x="50" y="241.66666666666663" width="314" height="45"/>
+                                        <rect key="frame" x="50" y="241.66666666666669" width="328" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="1s7-tn-4kM"/>
@@ -83,13 +83,13 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Fp9-OJ-1Pr">
-                                        <rect key="frame" x="20" y="306.66666666666669" width="374" height="200"/>
+                                        <rect key="frame" x="20" y="306.66666666666669" width="388" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="px0-if-nbt"/>
                                         </constraints>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3h-3g-WLD">
-                                        <rect key="frame" x="20" y="556.66666666666663" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="556.66666666666663" width="388" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Uih-MK-lvA"/>
