@@ -44,11 +44,11 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ic_default_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="PbA-IE-cfv">
-                                                <rect key="frame" x="0.0" y="0.0" width="199" height="199"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="ic_contact_add" translatesAutoresizingMaskIntoConstraints="NO" id="y42-rf-raf">
                                         <rect key="frame" x="313" y="150" width="45" height="45"/>
@@ -64,6 +64,9 @@
                                         <state key="normal" title="SAVE CONTACT">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="addupdateContact:" destination="0FB-hk-48h" eventType="touchUpInside" id="Ob0-IF-5Gy"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-iP-frq" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
                                         <rect key="frame" x="20" y="546" width="374" height="60"/>
@@ -115,6 +118,14 @@
                             <constraint firstItem="Qxi-tB-fqQ" firstAttribute="top" secondItem="ru0-WJ-gKx" secondAttribute="top" id="qlt-xQ-0cK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="avatarView" destination="Gej-aI-Qqs" id="41h-JM-zah"/>
+                        <outlet property="btnAdd" destination="UqA-t8-gd4" id="l74-B6-yoA"/>
+                        <outlet property="imgAvatar" destination="PbA-IE-cfv" id="DHr-vS-fVf"/>
+                        <outlet property="imgContactAdd" destination="y42-rf-raf" id="beJ-qL-fAS"/>
+                        <outlet property="txtName" destination="2qd-iP-frq" id="YxG-aL-G52"/>
+                        <outlet property="txtNumber" destination="tMC-3F-d6d" id="WbC-z7-JU9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5e-wL-1ar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
