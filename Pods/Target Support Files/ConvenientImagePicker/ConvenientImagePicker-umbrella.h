@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double UIImageCropperVersionNumber;
-FOUNDATION_EXPORT const unsigned char UIImageCropperVersionString[];
+FOUNDATION_EXPORT double ConvenientImagePickerVersionNumber;
+FOUNDATION_EXPORT const unsigned char ConvenientImagePickerVersionString[];
 

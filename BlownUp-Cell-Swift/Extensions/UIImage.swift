@@ -13,14 +13,14 @@ public enum ImageFormat {
     case JPEG
 }
 
-extension UIImage {
-    
-    public func base64(format: ImageFormat) -> String {
-        var imageData: NSData
-        switch format {
-        case .PNG: imageData = self.pngData() as! NSData
-        case .JPEG: imageData = UIImageJPEGRepresentation(self, compression)
-        }
-        return imageData.base64EncodedStringWithOptions(.allZeros)
-    }
-}
+//extension UIImage {
+//
+//    public func base64(format: ImageFormat) -> String {
+//        var imageData: NSData
+//        switch format {
+//        case .PNG: imageData = self.pngData() as! NSData
+//        case .JPEG: imageData = UIImageJPEGRepresentation(self, compression)
+//        }
+//        return imageData.base64EncodedStringWithOptions(.allZeros)
+//    }
+//}

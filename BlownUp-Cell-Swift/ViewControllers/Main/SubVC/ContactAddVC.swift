@@ -7,7 +7,6 @@
 
 import Foundation
 import UIKit
-import UIImageCropper
 
 class ContactAddVC: BaseVC {
 
@@ -23,10 +22,12 @@ class ContactAddVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        initLayout()
     }
     
     func initLayout() {
-        self.avatarView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.pickImage)))
+        self.imgAvatar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.pickImage)))
         self.imgContactAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.showContact)))
         
         self.avatarView.makeRounded(100)
@@ -37,26 +38,9 @@ class ContactAddVC: BaseVC {
     }
     
     @objc func pickImage() {
-        let picker = UIImagePickerController()
-        let cropper = UIImageCropper(cropRatio: 2/3)
         
-        cropper.picker = picker
-        cropper.delegate = self
-        self.present(cropper, animated: true, completion: nil)
     }
     
     @IBAction func addupdateContact(_ sender: Any) {
     }
-}
-
-extension ContactAddVC: UIImageCropperProtocol {
-    func didCropImage(originalImage: UIImage?, croppedImage: UIImage?) {
-//        imageView.image = croppedImage
-    }
-
-    //optional (if not implemented cropper will close itself and picker)
-    func didCancel() {
-//        picker.dismiss(animated: true, completion: nil)
-    }
-
 }
