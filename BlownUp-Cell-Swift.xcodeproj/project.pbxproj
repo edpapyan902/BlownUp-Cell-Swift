@@ -12,6 +12,7 @@
 		9083A98A34F80F7D1D8F2779 /* Pods_BlownUp_Cell_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8CFC6B9DC5C9D9680500EF3 /* Pods_BlownUp_Cell_Swift.framework */; };
 		940680782648CB3A0079D42F /* ScheduleUpdateRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940680772648CB3A0079D42F /* ScheduleUpdateRes.swift */; };
 		9406807D2648D9B70079D42F /* ContactAddVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9406807C2648D9B70079D42F /* ContactAddVC.storyboard */; };
+		94068085264928EF0079D42F /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94068084264928EF0079D42F /* FloatingButton.swift */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
@@ -89,6 +90,7 @@
 		7B5CD6FFF8A5C2A95F56F9A5 /* Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests/Pods-BlownUp-Cell-Swift-BlownUp-Cell-SwiftUITests.release.xcconfig"; sourceTree = "<group>"; };
 		940680772648CB3A0079D42F /* ScheduleUpdateRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleUpdateRes.swift; sourceTree = "<group>"; };
 		9406807C2648D9B70079D42F /* ContactAddVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactAddVC.storyboard; sourceTree = "<group>"; };
+		94068084264928EF0079D42F /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
@@ -333,6 +335,7 @@
 				947E5A54263EE908008A0008 /* CreditCardView.swift */,
 				945B24AE264088A2004C12D7 /* Date.swift */,
 				94C1A7A32646BF0D00E37144 /* UIView.swift */,
+				94068084264928EF0079D42F /* FloatingButton.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -677,6 +680,7 @@
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
+				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,
 				946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */,
 				945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */,
 				947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */,

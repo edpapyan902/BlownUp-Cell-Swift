@@ -153,14 +153,23 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Man-Dd-foL" customClass="FloatingButton" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="594" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="C6x-T4-hlv"/>
+                                            <constraint firstAttribute="height" constant="60" id="evv-5e-q5h"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Man-Dd-foL" secondAttribute="bottom" constant="30" id="7vO-Sp-2tH"/>
                                     <constraint firstAttribute="trailing" secondItem="anq-7h-F18" secondAttribute="trailing" id="FVy-6f-X14"/>
                                     <constraint firstItem="1lP-Yb-3WZ" firstAttribute="top" secondItem="anq-7h-F18" secondAttribute="bottom" constant="20" id="RSM-hx-WtD"/>
                                     <constraint firstItem="1lP-Yb-3WZ" firstAttribute="leading" secondItem="K4d-Y1-oVD" secondAttribute="leading" id="Th1-TX-uPD"/>
                                     <constraint firstAttribute="bottom" secondItem="1lP-Yb-3WZ" secondAttribute="bottom" constant="10" id="aqs-1W-JHA"/>
                                     <constraint firstItem="anq-7h-F18" firstAttribute="top" secondItem="K4d-Y1-oVD" secondAttribute="top" id="iTy-Nz-1BS"/>
+                                    <constraint firstAttribute="trailing" secondItem="Man-Dd-foL" secondAttribute="trailing" constant="20" id="kaR-ge-Nhk"/>
                                     <constraint firstItem="anq-7h-F18" firstAttribute="leading" secondItem="K4d-Y1-oVD" secondAttribute="leading" id="m04-Vq-PBM"/>
                                     <constraint firstAttribute="trailing" secondItem="1lP-Yb-3WZ" secondAttribute="trailing" id="srH-5I-CzF"/>
                                 </constraints>
@@ -180,6 +189,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Contact" image="ic_address_book_off" id="YxH-3u-FUV"/>
                     <connections>
+                        <outlet property="btnAdd" destination="Man-Dd-foL" id="vtf-BW-dnQ"/>
                         <outlet property="tblContact" destination="1lP-Yb-3WZ" id="5y5-53-a6N"/>
                     </connections>
                 </viewController>

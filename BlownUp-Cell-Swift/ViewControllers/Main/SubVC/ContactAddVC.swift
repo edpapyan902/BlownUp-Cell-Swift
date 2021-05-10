@@ -10,6 +10,8 @@ import UIKit
 
 class ContactAddVC: BaseVC {
 
+    var currentContact: Contact? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

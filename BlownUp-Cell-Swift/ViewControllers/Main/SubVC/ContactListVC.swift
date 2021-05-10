@@ -10,6 +10,7 @@ import UIKit
 
 class ContactListVC: BaseVC {
     
+    @IBOutlet weak var btnAdd: FloatingButton!
     @IBOutlet weak var tblContact: UITableView!
     
     var refreshControl : UIRefreshControl!
@@ -35,11 +36,17 @@ class ContactListVC: BaseVC {
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
 
         self.tblContact.addSubview(self.refreshControl)
+        
+        self.btnAdd.onClicked(self, #selector(onAddClicked))
     }
 
     @objc func onRefresh(_ refreshControl: UIRefreshControl) {
         self.refreshControl?.beginRefreshing()
         initData()
+    }
+    
+    @objc func onAddClicked() {
+        self.gotoContactAddVC(nil)
     }
     
     func loadData() {
@@ -86,7 +93,7 @@ extension ContactListVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        self.gotoContactAddVC(self.m_Contacts[indexPath.row])
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

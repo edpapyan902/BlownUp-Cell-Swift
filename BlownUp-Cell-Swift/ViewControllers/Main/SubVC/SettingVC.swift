@@ -56,7 +56,7 @@ class SettingVC: BaseVC {
     }
     
     @objc func gotoScheduleAdd() {
-        self.goScheduleAddVC(nil)
+        self.gotoScheduleAddVC(nil)
     }
     
     func initHistoryData() {

@@ -46,14 +46,6 @@ class BaseVC : UIViewController {
         self.present(targetVC, animated: true, completion: nil)
     }
     
-    func goScheduleAddVC(_ schedule: Schedule?) {
-        let storyboad = UIStoryboard(name: VC_SCHEDULE_ADD, bundle: nil)
-        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD) as! ScheduleAddVC
-        targetVC.currentSchedule = schedule
-        targetVC.modalPresentationStyle = .fullScreen
-        self.present(targetVC, animated: true, completion: nil)
-    }
-    
     func gotoMainVC(_ type: Int) {
         let storyboad = UIStoryboard(name: VC_MAIN_TAB, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: VC_MAIN_TAB) as! MainTabVC
@@ -62,6 +54,22 @@ class BaseVC : UIViewController {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = targetVC
         UIApplication.shared.keyWindow?.rootViewController = targetVC
+    }
+    
+    func gotoScheduleAddVC(_ schedule: Schedule?) {
+        let storyboad = UIStoryboard(name: VC_SCHEDULE_ADD, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_SCHEDULE_ADD) as! ScheduleAddVC
+        targetVC.currentSchedule = schedule
+        targetVC.modalPresentationStyle = .fullScreen
+        self.present(targetVC, animated: true, completion: nil)
+    }
+    
+    func gotoContactAddVC(_ contact: Contact?) {
+        let storyboad = UIStoryboard(name: VC_CONTACT_ADD, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_CONTACT_ADD) as! ContactAddVC
+        targetVC.currentContact = contact
+        targetVC.modalPresentationStyle = .fullScreen
+        self.present(targetVC, animated: true, completion: nil)
     }
 
     func showLoading(_ viewController: UIViewController) {
