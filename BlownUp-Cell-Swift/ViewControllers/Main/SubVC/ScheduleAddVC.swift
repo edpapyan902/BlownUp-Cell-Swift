@@ -12,8 +12,6 @@ import DatePicker
 class ScheduleAddVC: BaseVC {
     
     var selectedContact: Contact? = nil
-    var isUpdate: Bool = false
-    
     var currentSchedule: Schedule? = nil
     
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -41,13 +39,20 @@ class ScheduleAddVC: BaseVC {
         datePicker.setValue(UIColor(named: "colorBlue"), forKey: "textColor")
         
         if currentSchedule == nil {
-            self.isUpdate = false
             self.btnPickDate.setTitle(Date().string(), for: .normal)
+            
+            self.btnAdd.setTitle("ADD SCHEDULE", for: .normal)
         } else {
-            self.isUpdate = true
+            self.selectedContact = currentSchedule?.contact
             let dateResult = currentSchedule?.scheduled_at.splite(" ")
             self.btnPickDate.setTitle(dateResult![0], for: .normal)
             self.txtNumber.setText((currentSchedule?.contact == nil ? currentSchedule?.number : currentSchedule?.contact?.number)!)
+            
+            let timeResult = dateResult![1].splite(":")
+            let date = Calendar.current.date(bySettingHour: Int(timeResult[0])!, minute: Int(timeResult[1])!, second: 0, of: Date())!
+            self.datePicker.setDate(date, animated: true)
+            
+            self.btnAdd.setTitle("UPDATE SCHEDULE", for: .normal)
         }
     }
     
@@ -56,6 +61,9 @@ class ScheduleAddVC: BaseVC {
     }
     
     @objc func onBack() {
+        self.currentSchedule = nil
+        self.selectedContact = nil
+        
         self.dismiss(animated: true, completion: nil)
     }
     
@@ -78,7 +86,7 @@ class ScheduleAddVC: BaseVC {
     }
     
     @IBAction func addupdateSchedule(_ sender: Any) {
-        if !isUpdate {
+        if self.currentSchedule == nil {
             self.addSchedule()
         } else {
             self.updateSchedule()
@@ -88,7 +96,7 @@ class ScheduleAddVC: BaseVC {
     func addSchedule() {
         var number = self.txtNumber.getText()
         if number.isEmpty() {
-            self.showWarning("Please enter number to have a call from.")
+            self.showWarning("Please enter vaild phone number.")
             return
         }
         
@@ -109,7 +117,6 @@ class ScheduleAddVC: BaseVC {
             "scheduled_at": scheduled_at
         ]
         
-
         self.showLoading(self)
 
         API.instance.addSchedule(params: params){ (response) in
@@ -120,7 +127,8 @@ class ScheduleAddVC: BaseVC {
                 if scheduleAddRes.success {
                     self.showSuccess(scheduleAddRes.message)
                     
-                    self.dismiss(animated: true, completion: nil)
+                    ScheduleListVC.instance.loadData()
+                    self.onBack()
                 } else {
                     self.showError(scheduleAddRes.message)
                 }
@@ -129,6 +137,46 @@ class ScheduleAddVC: BaseVC {
     }
     
     func updateSchedule() {
+        var number = self.txtNumber.getText()
+        if number.isEmpty() {
+            self.showWarning("Please enter vaild phone number.")
+            return
+        }
         
+        let date = self.datePicker.date
+        let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+        let schedule_date: String = self.btnPickDate.title(for: .normal)!
+        let scheduled_at = schedule_date + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
+        
+        var n_id_contact = 0
+        if selectedContact != nil && selectedContact?.number == number {
+            n_id_contact = selectedContact!.id
+            number = ""
+        }
+        
+        let params: [String: Any] = [
+            "id": self.currentSchedule?.id,
+            "n_id_contact": n_id_contact,
+            "number": number,
+            "scheduled_at": scheduled_at
+        ]
+
+        self.showLoading(self)
+
+        API.instance.updateSchedule(params: params){ (response) in
+            self.hideLoading()
+            
+            if response.error == nil {
+                let scheduleUpdateRes: ScheduleUpdateRes = response.result.value!
+                if scheduleUpdateRes.success {
+                    self.showSuccess(scheduleUpdateRes.message)
+                    
+                    ScheduleListVC.instance.loadData()
+                    self.onBack()
+                } else {
+                    self.showError(scheduleUpdateRes.message)
+                }
+            }
+        }
     }
 }

@@ -15,15 +15,16 @@ class ScheduleListVC: BaseVC {
     
     var m_Schedules = [Schedule]()
     
+    static var instance = ScheduleListVC()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        ScheduleListVC.instance = self
+        
         initLayout()
-
-        self.showLoading(self)
-
-        getData()
+        loadData()
     }
     
     func initLayout() {
@@ -44,6 +45,11 @@ class ScheduleListVC: BaseVC {
     
     @objc func onRefresh(_ refreshControl: UIRefreshControl) {
         self.refreshControl?.beginRefreshing()
+        getData()
+    }
+    
+    func loadData() {
+        self.showLoading(self)
         getData()
     }
     
