@@ -387,8 +387,8 @@
                                                 <connections>
                                                     <outlet property="avatarView" destination="ZBu-se-bvY" id="tO9-Qe-xTn"/>
                                                     <outlet property="contactView" destination="wG3-fd-ghN" id="iTO-pB-Qtv"/>
-                                                    <outlet property="ic_delete" destination="FKg-Oy-C5j" id="FjN-78-0md"/>
                                                     <outlet property="imgAvatar" destination="9Q7-FH-xv4" id="OTz-Xu-ecP"/>
+                                                    <outlet property="imgDelete" destination="FKg-Oy-C5j" id="RW2-Vm-P5P"/>
                                                     <outlet property="lblDate" destination="CvL-Bt-Nwz" id="tie-5Z-Qjw"/>
                                                     <outlet property="lblName" destination="ll2-LN-45k" id="lhD-vV-3Ss"/>
                                                     <outlet property="lblNumber" destination="HXl-v1-M5j" id="dib-Li-JiU"/>

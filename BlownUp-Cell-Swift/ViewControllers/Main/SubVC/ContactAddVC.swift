@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import ContactsUI
 
 class ContactAddVC: BaseVC {
 
@@ -62,7 +63,9 @@ class ContactAddVC: BaseVC {
     }
     
     @objc func showContact() {
-        
+        let contacVC = CNContactPickerViewController()
+        contacVC.delegate = self
+        self.present(contacVC, animated: true, completion: nil)
     }
     
     @objc func pickImage() {
@@ -158,8 +161,28 @@ extension ContactAddVC: ImagePickerDelegate {
         if image != nil {
             self.avatarBase64 = image!.getBase64()
             self.imgAvatar.image = image
-        } else {
-            self.showWarning("This image can't use. Please select another one.")
         }
+    }
+}
+
+extension ContactAddVC: CNContactPickerDelegate {
+    func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
+        let name = contact.givenName + " " + contact.familyName
+        let numbers = contact.phoneNumbers.first
+        let imageDataAvailable = contact.imageDataAvailable
+        let imageData = contact.imageData
+        
+        self.txtName.setText(name)
+        self.txtNumber.setText((numbers?.value)?.stringValue ?? "")
+        
+        if imageDataAvailable {
+            let avatar = UIImage.init(data: imageData!)
+            self.imgAvatar.image = avatar!
+            self.avatarBase64 = avatar!.getBase64()
+        }
+    }
+
+    func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
+        self.dismiss(animated: true, completion: nil)
     }
 }

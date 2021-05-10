@@ -50,7 +50,7 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="ic_contact_add" translatesAutoresizingMaskIntoConstraints="NO" id="y42-rf-raf">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="ic_contact_add" translatesAutoresizingMaskIntoConstraints="NO" id="y42-rf-raf">
                                         <rect key="frame" x="313" y="150" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>

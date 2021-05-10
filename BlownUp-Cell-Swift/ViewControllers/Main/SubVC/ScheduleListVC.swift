@@ -30,8 +30,6 @@ class ScheduleListVC: BaseVC {
     }
     
     func initLayout() {
-        self.setStatusBarStyle(true)
-        
         self.tblSchedule.delegate = self
         self.tblSchedule.dataSource = self
         self.tblSchedule.backgroundColor = UIColor.clear
@@ -83,6 +81,31 @@ class ScheduleListVC: BaseVC {
             }
         }
     }
+    
+    @objc func onItemDelete(_ sender: UITapGestureRecognizer) {
+        let imgAvatar = sender.view as! UIImageView
+        let params: [String: Any] = [
+            "id": self.m_Schedules[imgAvatar.tag].id
+        ]
+        
+        self.showLoading(self)
+        
+        API.instance.deleteSchedule(params: params){ (response) in
+            self.hideLoading()
+            
+            if response.error == nil {
+                let noDataRes: NoDataRes = response.result.value!
+                if noDataRes.success {
+                    self.showSuccess(noDataRes.message)
+                    
+                    self.m_Schedules.remove(at: imgAvatar.tag)
+                    self.tblSchedule.reloadData()
+                } else {
+                    self.showError(noDataRes.message)
+                }
+            }
+        }
+    }
 }
 
 class ScheduleTableViewCell: UITableViewCell {
@@ -93,7 +116,7 @@ class ScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var avatarView: UIView!
     @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var imgAvatar: UIImageView!
-    @IBOutlet weak var ic_delete: UIImageView!
+    @IBOutlet weak var imgDelete: UIImageView!
     @IBOutlet weak var contactView: UIView!
     @IBOutlet weak var mainView: UIView!
 }
@@ -141,6 +164,10 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
             cell.lblNumber.text = schedule.number
             cell.contactView.isHidden = true
         }
+        
+        cell.imgDelete.tag = rowIndex
+        
+        cell.imgDelete.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onItemDelete(_:))))
         
         cell.backgroundColor = UIColor.clear
         cell.isOpaque = false
