@@ -16,9 +16,13 @@ class ContactListVC: BaseVC {
     var refreshControl : UIRefreshControl!
     var m_Contacts = [Contact]()
     
+    static var instance = ContactListVC()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        ContactListVC.instance = self
         
         initLayout()
         loadData()

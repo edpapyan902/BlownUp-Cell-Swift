@@ -14,6 +14,7 @@
 		9406807D2648D9B70079D42F /* ContactAddVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9406807C2648D9B70079D42F /* ContactAddVC.storyboard */; };
 		94068085264928EF0079D42F /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94068084264928EF0079D42F /* FloatingButton.swift */; };
 		9406808A264936C70079D42F /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94068089264936C70079D42F /* UIImage.swift */; };
+		9406811026497F870079D42F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9406810F26497F870079D42F /* ImagePicker.swift */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
@@ -93,6 +94,7 @@
 		9406807C2648D9B70079D42F /* ContactAddVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ContactAddVC.storyboard; sourceTree = "<group>"; };
 		94068084264928EF0079D42F /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		94068089264936C70079D42F /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		9406810F26497F870079D42F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				94C1A7A32646BF0D00E37144 /* UIView.swift */,
 				94068084264928EF0079D42F /* FloatingButton.swift */,
 				94068089264936C70079D42F /* UIImage.swift */,
+				9406810F26497F870079D42F /* ImagePicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */,
 				940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */,
 				94587EB1263FF5A2004B0BCC /* ContactAddVC.swift in Sources */,
+				9406811026497F870079D42F /* ImagePicker.swift in Sources */,
 				9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */,
 				940F6F03264197CD00BC07DC /* Schedule.swift in Sources */,
 				945884B026385E6100851CE6 /* Const.swift in Sources */,

@@ -65,11 +65,11 @@ class CardRegisterVC: BaseVC {
             if response.error == nil {
                 let noDataRes: NoDataRes = response.result.value!
                 
-                if noDataRes.success! {
-                    self.showSuccess(noDataRes.message!)
+                if noDataRes.success {
+                    self.showSuccess(noDataRes.message)
                     self.gotoPageVC(VC_SUCCESS)
                 } else {
-                    self.showWarning(noDataRes.message!)
+                    self.showWarning(noDataRes.message)
                 }
             }
         }

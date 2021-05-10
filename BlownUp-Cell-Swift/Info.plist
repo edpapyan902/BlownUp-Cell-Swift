@@ -56,6 +56,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+    <key>NSCameraUsageDescription</key>
+    <string>BlownUp want to take picture for new contact avatar.</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>BlownUp want to use your photo for new contact avatar.</string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleDarkContent</string>
 	<key>UISupportedInterfaceOrientations</key>

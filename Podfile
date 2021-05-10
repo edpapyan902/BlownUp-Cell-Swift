@@ -20,7 +20,6 @@ pod 'SDDownloadManager', '~> 1.1.0'
 pod 'PDFReader'
 pod 'DatePicker'
 pod 'LSDialogViewController', '~> 4.0'
-pod 'ConvenientImagePicker'
 
   target 'BlownUp-Cell-SwiftTests' do
     inherit! :search_paths

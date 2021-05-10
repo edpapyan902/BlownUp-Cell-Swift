@@ -67,12 +67,6 @@ class API {
         }
     }
     
-    func getAllContact(completion: @escaping ( _ response: DataResponse<ContactAllRes>) -> Void) -> Void {
-        Alamofire.request(URL_CONTACT_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ContactAllRes>) in
-            completion(response)
-        }
-    }
-    
     func addSchedule(params: [String: Any], completion: @escaping ( _ response: DataResponse<ScheduleAddRes>) -> Void) -> Void {
         Alamofire.request(URL_SCHEDULE_ADD, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ScheduleAddRes>) in
             completion(response)
@@ -81,6 +75,36 @@ class API {
     
     func updateSchedule(params: [String: Any], completion: @escaping ( _ response: DataResponse<ScheduleUpdateRes>) -> Void) -> Void {
         Alamofire.request(URL_SCHEDULE_UPDATE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ScheduleUpdateRes>) in
+            completion(response)
+        }
+    }
+    
+    func deleteSchedule(params: [String: Any], completion: @escaping ( _ response: DataResponse<ScheduleUpdateRes>) -> Void) -> Void {
+        Alamofire.request(URL_SCHEDULE_DELETE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ScheduleUpdateRes>) in
+            completion(response)
+        }
+    }
+    
+    func getAllContact(completion: @escaping ( _ response: DataResponse<ContactAllRes>) -> Void) -> Void {
+        Alamofire.request(URL_CONTACT_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ContactAllRes>) in
+            completion(response)
+        }
+    }
+    
+    func addContact(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
+        Alamofire.request(URL_CONTACT_ADD, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
+            completion(response)
+        }
+    }
+    
+    func updateContact(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
+        Alamofire.request(URL_CONTACT_UPDATE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
+            completion(response)
+        }
+    }
+    
+    func deleteContact(params: [String: Any], completion: @escaping ( _ response: DataResponse<ScheduleUpdateRes>) -> Void) -> Void {
+        Alamofire.request(URL_CONTACT_DELETE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ScheduleUpdateRes>) in
             completion(response)
         }
     }
