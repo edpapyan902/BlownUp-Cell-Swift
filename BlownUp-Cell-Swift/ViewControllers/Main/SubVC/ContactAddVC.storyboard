@@ -26,7 +26,7 @@
                                             <constraint firstAttribute="height" constant="40" id="80g-pb-Bwp"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="Eue-bd-fN3">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="Eue-bd-fN3">
                                         <rect key="frame" x="15" y="18" width="24" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="24" id="Tix-PH-vI5"/>
@@ -122,6 +122,7 @@
                         <outlet property="avatarView" destination="Gej-aI-Qqs" id="41h-JM-zah"/>
                         <outlet property="btnAdd" destination="UqA-t8-gd4" id="l74-B6-yoA"/>
                         <outlet property="imgAvatar" destination="PbA-IE-cfv" id="DHr-vS-fVf"/>
+                        <outlet property="imgBack" destination="Eue-bd-fN3" id="o8I-OZ-KAq"/>
                         <outlet property="imgContactAdd" destination="y42-rf-raf" id="beJ-qL-fAS"/>
                         <outlet property="txtName" destination="2qd-iP-frq" id="YxG-aL-G52"/>
                         <outlet property="txtNumber" destination="tMC-3F-d6d" id="WbC-z7-JU9"/>

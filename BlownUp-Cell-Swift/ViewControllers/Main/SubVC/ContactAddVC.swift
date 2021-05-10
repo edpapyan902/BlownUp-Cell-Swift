@@ -10,6 +10,7 @@ import UIKit
 
 class ContactAddVC: BaseVC {
 
+    @IBOutlet weak var imgBack: UIImageView!
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var txtNumber: TextInput!
     @IBOutlet weak var txtName: TextInput!
@@ -33,17 +34,24 @@ class ContactAddVC: BaseVC {
     func initLayout() {
         self.imgAvatar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.pickImage)))
         self.imgContactAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.showContact)))
+        self.imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onBack)))
         
         self.avatarView.makeRounded(100)
         
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         
         if currentContact != nil {
+            self.btnAdd.setTitle("UPDATE CONTACT", for: .normal)
+            
+            self.txtName.setText(currentContact!.name)
+            self.txtNumber.setText(currentContact!.number)
             getImageFromUrl(imageView: self.imgAvatar, photoUrl: BASE_SERVER + currentContact!.avatar) { (image) in
                 if image != nil {
                     self.imgAvatar.image = image
                 }
             }
+        } else {
+            self.btnAdd.setTitle("ADD CONTACT", for: .normal)
         }
     }
     
