@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,35 +14,42 @@
             <objects>
                 <viewController storyboardIdentifier="DialogContactVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ima-BC-lwc" customClass="DialogContactVC" customModule="BlownUp_Cell_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1YD-kM-sCu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d0r-zP-lCo">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY CONTACTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKm-km-spp">
-                                        <rect key="frame" x="20" y="20" width="374" height="31.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <rect key="frame" x="20" y="19.999999999999996" width="335" height="33.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_arrow_left" translatesAutoresizingMaskIntoConstraints="NO" id="ytE-eD-9BY">
+                                        <rect key="frame" x="15" y="24" width="24" height="24"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="24" id="XGJ-9m-JMq"/>
+                                            <constraint firstAttribute="height" constant="24" id="eIw-9u-TkK"/>
+                                        </constraints>
+                                    </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yHT-MA-OAl">
-                                        <rect key="frame" x="20" y="81.5" width="374" height="726.5"/>
+                                        <rect key="frame" x="20" y="83.666666666666686" width="335" height="640.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ContactTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactItemID" id="egn-J2-7aa" customClass="ContactTableViewCell" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="28" width="374" height="80"/>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DialogContactTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DialogContactItemID" id="egn-J2-7aa" customClass="DialogContactTableViewCell" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="335" height="80"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="egn-J2-7aa" id="MTG-mM-wTC">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="80"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ynv-T1-aT9">
-                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="70"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="335" height="70"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww0-H8-z1g" userLabel="avatarView">
-                                                                    <rect key="frame" x="304" y="0.0" width="70" height="70"/>
+                                                                    <rect key="frame" x="265" y="0.0" width="70" height="70"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gcn-er-dGL" userLabel="imgAvatar">
                                                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
@@ -67,13 +74,13 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Niemis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdy-XP-zgV">
-                                                                    <rect key="frame" x="0.0" y="10" width="294" height="21.5"/>
+                                                                    <rect key="frame" x="0.0" y="10.000000000000002" width="255" height="21.666666666666671"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                                     <color key="textColor" name="colorBlue"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(813) 444-3859" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kak-xG-TV5">
-                                                                    <rect key="frame" x="0.0" y="36.5" width="294" height="25.5"/>
+                                                                    <rect key="frame" x="0.0" y="36.666666666666664" width="255" height="25.333333333333336"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                     <color key="textColor" name="colorPrimary"/>
                                                                     <nil key="highlightedColor"/>
@@ -115,9 +122,11 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstItem="ytE-eD-9BY" firstAttribute="leading" secondItem="d0r-zP-lCo" secondAttribute="leading" constant="15" id="1ZN-0m-SpY"/>
                                     <constraint firstItem="pKm-km-spp" firstAttribute="leading" secondItem="d0r-zP-lCo" secondAttribute="leading" constant="20" id="4CK-xf-l3p"/>
                                     <constraint firstAttribute="trailing" secondItem="pKm-km-spp" secondAttribute="trailing" constant="20" id="BEf-7b-PpL"/>
                                     <constraint firstAttribute="bottom" secondItem="yHT-MA-OAl" secondAttribute="bottom" constant="10" id="Bj4-Ia-kG0"/>
+                                    <constraint firstItem="ytE-eD-9BY" firstAttribute="top" secondItem="d0r-zP-lCo" secondAttribute="top" constant="24" id="Fw3-2Y-m22"/>
                                     <constraint firstItem="pKm-km-spp" firstAttribute="top" secondItem="d0r-zP-lCo" secondAttribute="top" constant="20" id="Gku-IC-4ff"/>
                                     <constraint firstItem="yHT-MA-OAl" firstAttribute="leading" secondItem="d0r-zP-lCo" secondAttribute="leading" constant="20" id="J6u-Vb-FTY"/>
                                     <constraint firstAttribute="trailing" secondItem="yHT-MA-OAl" secondAttribute="trailing" constant="20" id="Y59-Pa-gc5"/>
@@ -135,6 +144,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imgBack" destination="ytE-eD-9BY" id="o8K-9z-zAX"/>
                         <outlet property="tblContact" destination="yHT-MA-OAl" id="kNw-ml-Mnr"/>
                     </connections>
                 </viewController>
@@ -144,6 +154,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="ic_arrow_left" width="13" height="21.333333969116211"/>
         <namedColor name="colorBlue">
             <color red="0.0" green="0.36862745098039218" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

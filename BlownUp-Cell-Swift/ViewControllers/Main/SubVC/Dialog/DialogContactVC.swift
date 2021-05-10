@@ -11,8 +11,9 @@ import UIKit
 class DialogContactVC: BaseVC {
     
     @IBOutlet weak var tblContact: UITableView!
+    @IBOutlet weak var imgBack: UIImageView!
+    
     var refreshControl : UIRefreshControl!
-
     var m_Contacts = [Contact]()
     
     override func viewDidLoad() {
@@ -38,6 +39,12 @@ class DialogContactVC: BaseVC {
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
 
         self.tblContact.addSubview(self.refreshControl)
+        
+        self.imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onBack)))
+    }
+    
+    @objc func onBack() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func onRefresh(_ refreshControl: UIRefreshControl) {
@@ -68,7 +75,7 @@ class DialogContactVC: BaseVC {
     }
 }
 
-class ContactTableViewCell: UITableViewCell {
+class DialogContactTableViewCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblNumber: UILabel!
     @IBOutlet weak var avatarView: UIView!
@@ -88,13 +95,13 @@ extension DialogContactVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ContactItemID", for: indexPath) as! ContactTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DialogContactItemID", for: indexPath) as! DialogContactTableViewCell
         let rowIndex = indexPath.row
         let contact = self.m_Contacts[rowIndex]
         
         cell.lblName.text = contact.name
         cell.lblNumber.text = contact.number
-        cell.avatarView.makeRounded(40)
+        cell.avatarView.makeRounded(35)
         
         cell.loader.isHidden = false
         cell.imgAvatar.isHidden = true
