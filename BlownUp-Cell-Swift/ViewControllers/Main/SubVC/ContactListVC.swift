@@ -10,6 +10,7 @@ import UIKit
 
 class ContactListVC: BaseVC {
     
+    @IBOutlet weak var imgAdd: UIImageView!
     @IBOutlet weak var btnAdd: FloatingButton!
     @IBOutlet weak var tblContact: UITableView!
     
@@ -42,11 +43,17 @@ class ContactListVC: BaseVC {
         self.tblContact.addSubview(self.refreshControl)
         
         self.btnAdd.onClicked(self, #selector(onAddClicked))
+        
+        self.imgAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.goScheduleAdd)))
     }
 
     @objc func onRefresh(_ refreshControl: UIRefreshControl) {
         self.refreshControl?.beginRefreshing()
         initData()
+    }
+    
+    @objc func goScheduleAdd() {
+        self.gotoScheduleAddVC(nil)
     }
     
     @objc func onAddClicked() {

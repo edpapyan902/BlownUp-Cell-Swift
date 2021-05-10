@@ -39,7 +39,7 @@
                                             <constraint firstAttribute="height" constant="65" id="icJ-UX-Wmy"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="dbT-yC-004">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="dbT-yC-004">
                                         <rect key="frame" x="354" y="20" width="40" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="1Pl-zz-79F"/>
@@ -108,13 +108,13 @@
                                                                     </constraints>
                                                                 </view>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Michael Niemis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKh-dj-TjG">
-                                                                    <rect key="frame" x="5" y="12.999999999999998" width="304" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="10" y="12.999999999999998" width="299" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <color key="textColor" name="colorBlue"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(813) 444-3859" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEd-7a-xPv">
-                                                                    <rect key="frame" x="5" y="40.333333333333336" width="304" height="25.333333333333336"/>
+                                                                    <rect key="frame" x="10" y="41.333333333333336" width="299" height="25.333333333333336"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
                                                                     <color key="textColor" name="colorPrimary"/>
                                                                     <nil key="highlightedColor"/>
@@ -122,12 +122,12 @@
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstItem="dEd-7a-xPv" firstAttribute="leading" secondItem="lRz-Cc-orX" secondAttribute="leading" constant="5" id="6Wg-yQ-IQP"/>
+                                                                <constraint firstItem="dEd-7a-xPv" firstAttribute="leading" secondItem="lRz-Cc-orX" secondAttribute="leading" constant="10" id="6Wg-yQ-IQP"/>
                                                                 <constraint firstItem="pmE-Qz-Byw" firstAttribute="leading" secondItem="pKh-dj-TjG" secondAttribute="trailing" constant="10" id="8yR-0A-QZo"/>
-                                                                <constraint firstItem="pKh-dj-TjG" firstAttribute="leading" secondItem="lRz-Cc-orX" secondAttribute="leading" constant="5" id="Vbl-oW-Khx"/>
+                                                                <constraint firstItem="pKh-dj-TjG" firstAttribute="leading" secondItem="lRz-Cc-orX" secondAttribute="leading" constant="10" id="Vbl-oW-Khx"/>
                                                                 <constraint firstItem="pKh-dj-TjG" firstAttribute="top" secondItem="lRz-Cc-orX" secondAttribute="top" constant="13" id="fg4-2E-46E"/>
                                                                 <constraint firstItem="pmE-Qz-Byw" firstAttribute="leading" secondItem="dEd-7a-xPv" secondAttribute="trailing" constant="10" id="g0y-VW-XzC"/>
-                                                                <constraint firstItem="dEd-7a-xPv" firstAttribute="top" secondItem="pKh-dj-TjG" secondAttribute="bottom" constant="7" id="oJB-2Z-CZT"/>
+                                                                <constraint firstItem="dEd-7a-xPv" firstAttribute="top" secondItem="pKh-dj-TjG" secondAttribute="bottom" constant="8" id="oJB-2Z-CZT"/>
                                                                 <constraint firstItem="pmE-Qz-Byw" firstAttribute="top" secondItem="lRz-Cc-orX" secondAttribute="top" constant="5" id="pI4-Cy-5fo"/>
                                                                 <constraint firstAttribute="trailing" secondItem="pmE-Qz-Byw" secondAttribute="trailing" constant="5" id="rIq-te-lTp"/>
                                                                 <constraint firstAttribute="bottom" secondItem="pmE-Qz-Byw" secondAttribute="bottom" constant="5" id="sQo-50-qAw"/>
@@ -190,6 +190,7 @@
                     <tabBarItem key="tabBarItem" title="Contact" image="ic_address_book_off" id="YxH-3u-FUV"/>
                     <connections>
                         <outlet property="btnAdd" destination="Man-Dd-foL" id="vtf-BW-dnQ"/>
+                        <outlet property="imgAdd" destination="dbT-yC-004" id="cqY-dg-y2w"/>
                         <outlet property="tblContact" destination="1lP-Yb-3WZ" id="5y5-53-a6N"/>
                     </connections>
                 </viewController>
@@ -227,7 +228,7 @@
                                             <constraint firstAttribute="height" constant="65" id="pIr-Wb-EPP"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="mqZ-j6-762">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="mqZ-j6-762">
                                         <rect key="frame" x="354" y="20" width="40" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="Dyu-KB-NKy"/>
@@ -398,12 +399,21 @@
                                             </tableViewCell>
                                         </prototypes>
                                     </tableView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJB-yt-m6e" customClass="FloatingButton" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="314" y="594" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="CNO-BX-82d"/>
+                                            <constraint firstAttribute="width" constant="60" id="evV-1t-eNc"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="XZU-dD-rmX" secondAttribute="trailing" id="1P9-vA-Jkp"/>
                                     <constraint firstAttribute="trailing" secondItem="yvN-CZ-FDD" secondAttribute="trailing" id="QOG-LS-34e"/>
                                     <constraint firstItem="yvN-CZ-FDD" firstAttribute="leading" secondItem="CYJ-CE-Okl" secondAttribute="leading" id="RZM-gA-VgF"/>
+                                    <constraint firstAttribute="trailing" secondItem="sJB-yt-m6e" secondAttribute="trailing" constant="20" id="WYZ-kj-S2P"/>
+                                    <constraint firstAttribute="bottom" secondItem="sJB-yt-m6e" secondAttribute="bottom" constant="30" id="WcT-PF-B9e"/>
                                     <constraint firstItem="yvN-CZ-FDD" firstAttribute="top" secondItem="XZU-dD-rmX" secondAttribute="bottom" constant="20" id="Wje-B4-nVb"/>
                                     <constraint firstItem="XZU-dD-rmX" firstAttribute="leading" secondItem="CYJ-CE-Okl" secondAttribute="leading" id="dYy-g2-aub"/>
                                     <constraint firstItem="XZU-dD-rmX" firstAttribute="top" secondItem="CYJ-CE-Okl" secondAttribute="top" id="ds5-Ur-CK5"/>
@@ -425,6 +435,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Schedule" image="ic_calendar_off" id="f1w-Y8-ala"/>
                     <connections>
+                        <outlet property="btnAdd" destination="sJB-yt-m6e" id="SfP-eg-hG2"/>
+                        <outlet property="imgAdd" destination="mqZ-j6-762" id="U2K-zx-dbz"/>
                         <outlet property="tblSchedule" destination="yvN-CZ-FDD" id="rLs-08-RSx"/>
                     </connections>
                 </viewController>
@@ -728,7 +740,7 @@
                                             <constraint firstAttribute="bottom" secondItem="AtB-jh-IzM" secondAttribute="bottom" id="fBO-2D-Fp1"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="fZf-wz-pxu">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="fZf-wz-pxu">
                                         <rect key="frame" x="354" y="20" width="40" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="dD0-T2-bMa"/>
@@ -793,7 +805,7 @@
                                             <constraint firstAttribute="bottom" secondItem="qGD-Wu-Jgs" secondAttribute="bottom" id="qbM-uQ-WXF"/>
                                         </constraints>
                                     </view>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="nAo-WE-JNX">
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_add" translatesAutoresizingMaskIntoConstraints="NO" id="nAo-WE-JNX">
                                         <rect key="frame" x="354" y="20" width="40" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="3WG-Il-woG"/>

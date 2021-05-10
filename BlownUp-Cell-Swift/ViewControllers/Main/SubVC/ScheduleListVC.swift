@@ -10,6 +10,8 @@ import UIKit
 
 class ScheduleListVC: BaseVC {
 
+    @IBOutlet weak var imgAdd: UIImageView!
+    @IBOutlet weak var btnAdd: FloatingButton!
     @IBOutlet weak var tblSchedule: UITableView!
     var refreshControl : UIRefreshControl!
     
@@ -41,6 +43,14 @@ class ScheduleListVC: BaseVC {
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
 
         self.tblSchedule.addSubview(self.refreshControl)
+        
+        self.btnAdd.onClicked(self, #selector(onAddClicked))
+        
+        self.imgAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onAddClicked)))
+    }
+    
+    @objc func onAddClicked() {
+        self.gotoScheduleAddVC(nil)
     }
     
     @objc func onRefresh(_ refreshControl: UIRefreshControl) {
