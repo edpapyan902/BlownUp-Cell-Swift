@@ -771,7 +771,7 @@
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-dW-2N5">
+                                    <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-dW-2N5">
                                         <rect key="frame" x="30" y="55" width="354" height="200"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -848,6 +848,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Help" image="ic_help_off" id="6f4-s4-ctx"/>
                     <connections>
+                        <outlet property="imgScheduleAdd" destination="fZf-wz-pxu" id="fio-xj-ned"/>
                         <outlet property="tblHelp" destination="fRR-y4-ahN" id="gHE-I9-Wzt"/>
                         <outlet property="videoView" destination="CmQ-dW-2N5" id="pB1-aL-H8P"/>
                     </connections>

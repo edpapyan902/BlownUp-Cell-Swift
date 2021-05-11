@@ -13,6 +13,7 @@ import BMPlayer
 
 class HelpVC: BaseVC {
 
+    @IBOutlet weak var imgScheduleAdd: UIImageView!
     @IBOutlet weak var tblHelp: UITableView!
     @IBOutlet weak var videoView: UIView!
     
@@ -34,14 +35,15 @@ class HelpVC: BaseVC {
         self.tblHelp.dataSource = self
         self.tblHelp.backgroundColor = UIColor.clear
         
-        self.videoView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.playVideo)))
+        self.imgScheduleAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onScheduleAddClicked)))
+        
         self.videoView.makeRounded(10)
     }
- 
-    @objc func playVideo() {
-        player.play()
-    }
     
+    @objc func onScheduleAddClicked() {
+        self.gotoScheduleAddVC(nil)
+    }
+
     func setHelpVideo(_ url: String) {
         let asset = BMPlayerResource(url: URL(string: url)!, name: "How to use BlownUp")
         player.setVideo(resource: asset)
