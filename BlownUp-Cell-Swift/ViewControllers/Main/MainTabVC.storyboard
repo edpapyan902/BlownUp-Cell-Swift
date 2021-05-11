@@ -321,7 +321,7 @@
                                                                     <rect key="frame" x="5" y="85" width="384" height="37"/>
                                                                     <subviews>
                                                                         <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_trash" translatesAutoresizingMaskIntoConstraints="NO" id="FKg-Oy-C5j">
-                                                                            <rect key="frame" x="0.0" y="10" width="20" height="25"/>
+                                                                            <rect key="frame" x="0.0" y="4" width="20" height="25"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="25" id="9gV-tJ-EKf"/>
                                                                                 <constraint firstAttribute="width" constant="20" id="KkD-6Z-r88"/>
@@ -343,7 +343,7 @@
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HXl-v1-M5j">
-                                                                            <rect key="frame" x="30" y="12" width="244" height="23"/>
+                                                                            <rect key="frame" x="30" y="7" width="244" height="23"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
                                                                             <color key="textColor" name="colorPrimary"/>
                                                                             <nil key="highlightedColor"/>
@@ -353,8 +353,8 @@
                                                                     <constraints>
                                                                         <constraint firstItem="CvL-Bt-Nwz" firstAttribute="top" secondItem="oD8-kF-qD2" secondAttribute="top" id="2Wk-xD-tvO"/>
                                                                         <constraint firstItem="FKg-Oy-C5j" firstAttribute="leading" secondItem="oD8-kF-qD2" secondAttribute="leading" id="Hus-Mn-coY"/>
-                                                                        <constraint firstItem="FKg-Oy-C5j" firstAttribute="top" secondItem="oD8-kF-qD2" secondAttribute="top" constant="10" id="Nk3-6X-g7w"/>
-                                                                        <constraint firstItem="HXl-v1-M5j" firstAttribute="top" secondItem="oD8-kF-qD2" secondAttribute="top" constant="12" id="XG9-pp-xhx"/>
+                                                                        <constraint firstItem="FKg-Oy-C5j" firstAttribute="top" secondItem="oD8-kF-qD2" secondAttribute="top" constant="4" id="Nk3-6X-g7w"/>
+                                                                        <constraint firstItem="HXl-v1-M5j" firstAttribute="top" secondItem="oD8-kF-qD2" secondAttribute="top" constant="7" id="XG9-pp-xhx"/>
                                                                         <constraint firstAttribute="trailing" secondItem="5Ft-Km-mjd" secondAttribute="trailing" id="dYq-1c-0lY"/>
                                                                         <constraint firstItem="CvL-Bt-Nwz" firstAttribute="leading" secondItem="HXl-v1-M5j" secondAttribute="trailing" constant="10" id="gKy-as-pZa"/>
                                                                         <constraint firstAttribute="trailing" secondItem="CvL-Bt-Nwz" secondAttribute="trailing" id="i6g-92-69q"/>
@@ -395,6 +395,8 @@
                                                     <outlet property="lblTime" destination="5Ft-Km-mjd" id="V64-sx-GA7"/>
                                                     <outlet property="loader" destination="L7j-vG-DZz" id="HYx-HQ-SRP"/>
                                                     <outlet property="mainView" destination="wfq-hI-lOU" id="3ps-Q4-hLP"/>
+                                                    <outlet property="mainViewHeightConstraints" destination="4Fu-Af-zxh" id="4S6-JM-Up8"/>
+                                                    <outlet property="timeViewTopConstraints" destination="Svq-OV-3Oz" id="DnF-YV-oG4"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>

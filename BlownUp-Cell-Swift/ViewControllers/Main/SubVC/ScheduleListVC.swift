@@ -119,6 +119,8 @@ class ScheduleTableViewCell: UITableViewCell {
     @IBOutlet weak var imgDelete: UIImageView!
     @IBOutlet weak var contactView: UIView!
     @IBOutlet weak var mainView: UIView!
+    @IBOutlet weak var timeViewTopConstraints: NSLayoutConstraint!
+    @IBOutlet weak var mainViewHeightConstraints: NSLayoutConstraint!
 }
 
 extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
@@ -160,9 +162,18 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
                     cell.loader.isHidden = true
                 }
             }
+            
+            cell.contactView.isHidden = false
+            cell.mainViewHeightConstraints.constant = 130
+            cell.timeViewTopConstraints.constant = 85
+            cell.mainView.layoutIfNeeded()
         } else {
             cell.lblNumber.text = schedule.number
+            
             cell.contactView.isHidden = true
+            cell.mainViewHeightConstraints.constant = 60
+            cell.timeViewTopConstraints.constant = 12
+            cell.mainView.layoutIfNeeded()
         }
         
         cell.imgDelete.tag = rowIndex

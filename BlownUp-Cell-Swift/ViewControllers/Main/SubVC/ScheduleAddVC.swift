@@ -39,7 +39,7 @@ class ScheduleAddVC: BaseVC {
         datePicker.setValue(UIColor(named: "colorBlue"), forKey: "textColor")
         
         if currentSchedule == nil {
-            self.btnPickDate.setTitle(Date().string(), for: .normal)
+            self.btnPickDate.setTitle(Date().toString("yyyy-MM-dd"), for: .normal)
             
             self.btnAdd.setTitle("ADD SCHEDULE", for: .normal)
         } else {
@@ -68,13 +68,13 @@ class ScheduleAddVC: BaseVC {
     }
     
     @IBAction func pickDate(_ sender: UIButton) {
-        let minDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 1990)!
-        let maxDate = DatePickerHelper.shared.dateFrom(day: 18, month: 08, year: 2030)!
+        let minDate = DatePickerHelper.shared.dateFrom(day: 01, month: 01, year: 1970)!
+        let maxDate = DatePickerHelper.shared.dateFrom(day: 31, month: 12, year: 2050)!
         let today = Date()
         let datePicker = DatePicker()
         datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
             if selected, let selectedDate = date {
-                self.btnPickDate.setTitle(selectedDate.string(), for: .normal)
+                self.btnPickDate.setTitle(selectedDate.toString("yyyy-MM-dd"), for: .normal)
             }
         }
         datePicker.show(in: self)
