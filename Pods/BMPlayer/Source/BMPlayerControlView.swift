@@ -522,6 +522,9 @@ open class BMPlayerControlView: UIView {
         mainMaskView.clipsToBounds = true
         mainMaskView.backgroundColor = UIColor(white: 0, alpha: 0.4 )
         
+        backButton.isHidden = true
+        fullscreenButton.isHidden = true
+        
         // Top views
         topMaskView.addSubview(topWrapperView)
         topWrapperView.addSubview(backButton)
