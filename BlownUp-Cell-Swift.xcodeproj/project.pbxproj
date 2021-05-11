@@ -68,6 +68,8 @@
 		94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BE82646734B00C800D2 /* DialogContactVC.swift */; };
 		94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */; };
 		94DB9BF6264674B300C800D2 /* ContactAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BF5264674B300C800D2 /* ContactAllRes.swift */; };
+		94F6B593264A21FC00BE60A9 /* HelpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6B592264A21FB00BE60A9 /* HelpRes.swift */; };
+		94F6B5A0264A28C800BE60A9 /* Help.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F6B59F264A28C800BE60A9 /* Help.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +157,8 @@
 		94DB9BE82646734B00C800D2 /* DialogContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogContactVC.swift; sourceTree = "<group>"; };
 		94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DialogContactVC.storyboard; sourceTree = "<group>"; };
 		94DB9BF5264674B300C800D2 /* ContactAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAllRes.swift; sourceTree = "<group>"; };
+		94F6B592264A21FB00BE60A9 /* HelpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpRes.swift; sourceTree = "<group>"; };
+		94F6B59F264A28C800BE60A9 /* Help.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Help.swift; sourceTree = "<group>"; };
 		AE8FA6C73300614F3ADCA6AF /* Pods-BlownUp-Cell-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-Swift/Pods-BlownUp-Cell-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		E379857A4456B1AACE6843C9 /* Pods_BlownUp_Cell_SwiftTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BlownUp_Cell_SwiftTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEA5EFD96D55BA2E979CE5BA /* Pods-BlownUp-Cell-SwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-BlownUp-Cell-SwiftTests/Pods-BlownUp-Cell-SwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -378,6 +382,7 @@
 				940F6F072641991D00BC07DC /* Contact.swift */,
 				945B249626405B65004C12D7 /* Invoice.swift */,
 				940F6F02264197CD00BC07DC /* Schedule.swift */,
+				94F6B59F264A28C800BE60A9 /* Help.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -395,6 +400,7 @@
 				94DB9BF5264674B300C800D2 /* ContactAllRes.swift */,
 				946446232646F1530079BCE2 /* ScheduleAddRes.swift */,
 				940680772648CB3A0079D42F /* ScheduleUpdateRes.swift */,
+				94F6B592264A21FB00BE60A9 /* HelpRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -678,12 +684,14 @@
 				945884E126386D3000851CE6 /* LoginRes.swift in Sources */,
 				94587EAA263FF575004B0BCC /* ScheduleAddVC.swift in Sources */,
 				9458847426383A9E00851CE6 /* LoginVC.swift in Sources */,
+				94F6B593264A21FC00BE60A9 /* HelpRes.swift in Sources */,
 				947E5A55263EE908008A0008 /* CreditCardView.swift in Sources */,
 				940CA3152639473C00401594 /* RecentCallVC.swift in Sources */,
 				940CA3012639422300401594 /* CardRegisterVC.swift in Sources */,
 				945884D826386CC500851CE6 /* User.swift in Sources */,
 				948CE685263B9D5300A27790 /* BaseVC.swift in Sources */,
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
+				94F6B5A0264A28C800BE60A9 /* Help.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
 				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,

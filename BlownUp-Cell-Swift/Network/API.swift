@@ -108,4 +108,10 @@ class API {
             completion(response)
         }
     }
+    
+    func getAllHelp(completion: @escaping ( _ response: DataResponse<HelpRes>) -> Void) -> Void {
+        Alamofire.request(URL_HELP_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<HelpRes>) in
+            completion(response)
+        }
+    }
 }

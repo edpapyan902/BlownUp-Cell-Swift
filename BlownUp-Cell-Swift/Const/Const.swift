@@ -84,3 +84,6 @@ let URL_CONTACT_GET = "\(BASE_SERVER)/api/contact"
 let URL_CONTACT_ADD = "\(BASE_SERVER)/api/contact/add"
 let URL_CONTACT_UPDATE = "\(BASE_SERVER)/api/contact/update"
 let URL_CONTACT_DELETE = "\(BASE_SERVER)/api/contact/delete"
+
+//  Help
+let URL_HELP_GET = "\(BASE_SERVER)/api/help"
