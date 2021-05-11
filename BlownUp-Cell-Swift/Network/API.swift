@@ -103,8 +103,8 @@ class API {
         }
     }
     
-    func deleteContact(params: [String: Any], completion: @escaping ( _ response: DataResponse<ScheduleUpdateRes>) -> Void) -> Void {
-        Alamofire.request(URL_CONTACT_DELETE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ScheduleUpdateRes>) in
+    func deleteContact(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
+        Alamofire.request(URL_CONTACT_DELETE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
             completion(response)
         }
     }

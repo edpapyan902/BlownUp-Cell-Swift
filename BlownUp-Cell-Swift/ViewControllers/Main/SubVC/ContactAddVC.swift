@@ -18,6 +18,7 @@ class ContactAddVC: BaseVC {
     @IBOutlet weak var imgContactAdd: UIImageView!
     @IBOutlet weak var imgAvatar: UIImageView!
     @IBOutlet weak var avatarView: UIView!
+    @IBOutlet weak var btnDelete: UIButton!
     
     var currentContact: Contact? = nil
     
@@ -44,6 +45,8 @@ class ContactAddVC: BaseVC {
         if currentContact != nil {
             self.btnAdd.setTitle("UPDATE CONTACT", for: .normal)
             
+            self.btnDelete.isHidden = false
+            
             self.txtName.setText(currentContact!.name)
             self.txtNumber.setText(currentContact!.number)
             getImageFromUrl(imageView: self.imgAvatar, photoUrl: BASE_SERVER + currentContact!.avatar) { (image) in
@@ -52,6 +55,7 @@ class ContactAddVC: BaseVC {
                 }
             }
         } else {
+            self.btnDelete.isHidden = true
             self.btnAdd.setTitle("ADD CONTACT", for: .normal)
         }
     }
@@ -139,6 +143,30 @@ class ContactAddVC: BaseVC {
         self.showLoading(self)
         
         API.instance.updateContact(params: params){ (response) in
+            self.hideLoading()
+            
+            if response.error == nil {
+                let noDataRes: NoDataRes = response.result.value!
+                if noDataRes.success {
+                    self.showSuccess(noDataRes.message)
+                    
+                    ContactListVC.instance.loadData()
+                    self.onBack()
+                } else {
+                    self.showError(noDataRes.message)
+                }
+            }
+        }
+    }
+    
+    @IBAction func deleteContact(_ sender: Any) {
+        let params: [String: Any] = [
+            "id": currentContact!.id
+        ]
+        
+        self.showLoading(self)
+        
+        API.instance.deleteContact(params: params){ (response) in
             self.hideLoading()
             
             if response.error == nil {
