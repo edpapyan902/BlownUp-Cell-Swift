@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import AVFoundation
 import AVKit
+import BMPlayer
 
 class HelpVC: BaseVC {
 
@@ -17,7 +18,7 @@ class HelpVC: BaseVC {
     
     var m_Helps = [Help]()
     
-    var video_url = ""
+    let player = BMPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,23 +33,24 @@ class HelpVC: BaseVC {
         self.tblHelp.delegate = self
         self.tblHelp.dataSource = self
         self.tblHelp.backgroundColor = UIColor.clear
+        
+        self.videoView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.playVideo)))
+        self.videoView.makeRounded(10)
     }
  
-    func playVideo() {
-        guard let url = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_adv_example_hevc/master.m3u8") else {
-                return
-            }
-            // Create an AVPlayer, passing it the HTTP Live Streaming URL.
-            let player = AVPlayer(url: url)
-
-            // Create a new AVPlayerViewController and pass it a reference to the player.
-            let controller = AVPlayerViewController()
-            controller.player = player
-
-            // Modally present the player and call the player's play() method when complete.
-            present(controller, animated: true) {
-                player.play()
-            }
+    @objc func playVideo() {
+        player.play()
+    }
+    
+    func setHelpVideo(_ url: String) {
+        let asset = BMPlayerResource(url: URL(string: url)!, name: "How to use BlownUp")
+        player.setVideo(resource: asset)
+        self.videoView.addSubview(player)
+        player.snp.makeConstraints { (make) in
+            make.top.equalTo(self.videoView)
+            make.left.right.equalTo(self.videoView)
+            make.height.equalTo(self.videoView)
+        }
     }
     
     func initData() {
@@ -64,13 +66,20 @@ class HelpVC: BaseVC {
                 let helpRes: HelpRes = response.result.value!
                 
                 if helpRes.success {
-                    self.m_Helps = helpRes.data.helps!
+                    let helps = helpRes.data.helps!
                     
-                    if self.m_Helps.count > 0 {
+                    if helps.count > 0 {
+                        for help in helps {
+                            if help.type == 1 {
+                                self.m_Helps.append(help)
+                            } else {
+                                if !help.content.isEmpty() {
+                                    let url = BASE_SERVER + help.content
+                                    self.setHelpVideo(url.replace("\\", "/"))
+                                }
+                            }
+                        }
                         
-                        self.video_url = self.m_Helps[0].content
-                        
-                        self.m_Helps.remove(at: 0)
                         self.tblHelp.reloadData()
                     }
                 }
