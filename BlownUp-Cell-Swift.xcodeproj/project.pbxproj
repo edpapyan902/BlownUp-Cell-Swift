@@ -345,7 +345,6 @@
 				94C1A7A32646BF0D00E37144 /* UIView.swift */,
 				94068084264928EF0079D42F /* FloatingButton.swift */,
 				94068089264936C70079D42F /* UIImage.swift */,
-				9406810F26497F870079D42F /* ImagePicker.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -408,6 +407,7 @@
 		94C1A7A82646BFA100E37144 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				9406810F26497F870079D42F /* ImagePicker.swift */,
 				94C1A7A92646BFCC00E37144 /* Utils.swift */,
 			);
 			path = Utils;

@@ -7,8 +7,6 @@
 
 import Foundation
 import UIKit
-import AVFoundation
-import AVKit
 import BMPlayer
 
 class HelpVC: BaseVC {

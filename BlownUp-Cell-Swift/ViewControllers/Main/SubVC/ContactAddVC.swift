@@ -35,7 +35,7 @@ class ContactAddVC: BaseVC {
     
     func initLayout() {
         self.imgAvatar.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.pickImage)))
-        self.imgContactAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.showContact)))
+        self.imgContactAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onClickContactAdd)))
         self.imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onBack)))
         
         self.avatarView.makeRounded(100)
@@ -66,10 +66,37 @@ class ContactAddVC: BaseVC {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @objc func showContact() {
-        let contacVC = CNContactPickerViewController()
-        contacVC.delegate = self
-        self.present(contacVC, animated: true, completion: nil)
+    @objc func onClickContactAdd() {
+        self.checkContactPermission()
+    }
+    
+    func checkContactPermission() {
+        switch CNContactStore.authorizationStatus(for: CNEntityType.contacts) {
+            case .authorized:
+                self.openContact()
+                break
+            case .denied, .notDetermined:
+                self.requestContactPermission()
+                break
+            default: break
+        }
+    }
+    
+    func requestContactPermission() {
+        let contactStore = CNContactStore()
+        contactStore.requestAccess(for: CNEntityType.contacts, completionHandler: { (allowed, error) -> Void in
+            if allowed && error == nil {
+                self.openContact()
+            }
+        })
+    }
+    
+    func openContact() {
+        DispatchQueue.main.async {
+            let contacVC = CNContactPickerViewController()
+            contacVC.delegate = self
+            self.present(contacVC, animated: true, completion: nil)
+        }
     }
     
     @objc func pickImage() {

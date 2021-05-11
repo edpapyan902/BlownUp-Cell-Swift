@@ -8,7 +8,6 @@
 import UIKit
 import IQKeyboardManagerSwift
 import Stripe
-import AVFoundation
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,15 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         //  Stripe Init
         StripeAPI.defaultPublishableKey = STRIPE_KEY
-        
-        //  Audio Session Setting
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(.playback, mode: .moviePlayback)
-        }
-        catch {
-            print("Setting category to AVAudioSessionCategoryPlayback failed.")
-        }
         
         return true
     }
