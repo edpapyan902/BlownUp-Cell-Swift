@@ -54,6 +54,26 @@
                                         <rect key="frame" x="325" y="186" width="45" height="45"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMC-3F-d6d" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="563" width="388" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="RUo-zC-G74"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Contact Name"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-iP-frq" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="638" width="388" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="aue-xH-uW1"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="phone_number"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Number to Call"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPhoneNumber" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UqA-t8-gd4">
                                         <rect key="frame" x="20" y="728" width="388" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
@@ -68,24 +88,6 @@
                                             <action selector="addupdateContact:" destination="0FB-hk-48h" eventType="touchUpInside" id="Ob0-IF-5Gy"/>
                                         </connections>
                                     </button>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qd-iP-frq" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="638" width="388" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="aue-xH-uW1"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Number to Call"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tMC-3F-d6d" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="563" width="388" height="60"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="RUo-zC-G74"/>
-                                        </constraints>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Contact Name"/>
-                                        </userDefinedRuntimeAttributes>
-                                    </stackView>
                                     <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Z2-KH-SJK">
                                         <rect key="frame" x="20" y="788" width="388" height="50"/>
                                         <color key="backgroundColor" name="colorDelete"/>
@@ -142,8 +144,8 @@
                         <outlet property="imgAvatar" destination="PbA-IE-cfv" id="DHr-vS-fVf"/>
                         <outlet property="imgBack" destination="Eue-bd-fN3" id="o8I-OZ-KAq"/>
                         <outlet property="imgContactAdd" destination="y42-rf-raf" id="beJ-qL-fAS"/>
-                        <outlet property="txtName" destination="2qd-iP-frq" id="YxG-aL-G52"/>
-                        <outlet property="txtNumber" destination="tMC-3F-d6d" id="WbC-z7-JU9"/>
+                        <outlet property="txtName" destination="tMC-3F-d6d" id="t4B-2U-xJm"/>
+                        <outlet property="txtNumber" destination="2qd-iP-frq" id="rSd-VT-g8W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5e-wL-1ar" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

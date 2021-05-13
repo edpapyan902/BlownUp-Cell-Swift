@@ -55,7 +55,7 @@ class SignUpVC: BaseVC {
             self.showWarning("Please enter correct confirm password")
             return
         }
-        if spoof_phone_number.isEmpty() {
+        if !spoof_phone_number.isValidePhone() {
             self.showWarning("Please enter valid phone number")
             return
         }

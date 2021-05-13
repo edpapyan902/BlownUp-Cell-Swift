@@ -29,8 +29,7 @@ extension String {
             return false
         }
         
-        let REGEX: String
-        REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        let REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
         return NSPredicate(format: "SELF MATCHES %@", REGEX).evaluate(with: self)
     }
     
@@ -39,9 +38,13 @@ extension String {
             return false
         }
         
-        let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
-        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-        return phoneTest.evaluate(with: self)
+        let phonePattern = #"^\(?\d{3}\)?[ -]?\d{3}[ -]?\d{4}$"#
+        let result = self.range(
+            of: phonePattern,
+            options: .regularExpression
+        )
+
+        return result != nil
     }
     
     func replace(_ to: String, _ by: String) -> String {

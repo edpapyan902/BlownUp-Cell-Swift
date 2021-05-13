@@ -49,6 +49,7 @@
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="password"/>
                                             <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Password"/>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SK3-52-Fu4" userLabel="rememberMeView">

@@ -118,8 +118,8 @@ class ContactAddVC: BaseVC {
             self.showWarning("Please enter contact name")
             return
         }
-        if number.isEmpty() {
-            self.showWarning("Please enter contact number")
+        if !number.isValidePhone() {
+            self.showWarning("Please enter valid contact number")
             return
         }
         
@@ -155,8 +155,8 @@ class ContactAddVC: BaseVC {
             self.showWarning("Please enter contact name")
             return
         }
-        if number.isEmpty() {
-            self.showWarning("Please enter contact number")
+        if !number.isValidePhone() {
+            self.showWarning("Please enter valid contact number")
             return
         }
         

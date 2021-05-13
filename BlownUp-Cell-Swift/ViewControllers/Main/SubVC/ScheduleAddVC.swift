@@ -95,7 +95,7 @@ class ScheduleAddVC: BaseVC {
     
     func addSchedule() {
         var number = self.txtNumber.getText()
-        if number.isEmpty() {
+        if !number.isValidePhone() {
             self.showWarning("Please enter vaild phone number.")
             return
         }
@@ -138,7 +138,7 @@ class ScheduleAddVC: BaseVC {
     
     func updateSchedule() {
         var number = self.txtNumber.getText()
-        if number.isEmpty() {
+        if !number.isValidePhone() {
             self.showWarning("Please enter vaild phone number.")
             return
         }

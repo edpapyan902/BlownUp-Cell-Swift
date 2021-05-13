@@ -11,14 +11,17 @@ import MaterialComponents.MaterialTextControls_OutlinedTextFields
 
 @IBDesignable
 class TextInput: UIStackView {
+    
     var textField: MDCOutlinedTextField!
     
     @IBInspectable var text: String!
     @IBInspectable var placeHolder: String!
     @IBInspectable var hint: String!
-    @IBInspectable var inputMode: String! = "text"
     @IBInspectable var outlineActiveColor: UIColor! = UIColor.init(named: "colorPrimary")
     @IBInspectable var outlineNormalColor: UIColor! = UIColor.init(named: "colorHeavyGrey")
+    
+    @IBInspectable var isPassword: Bool = false
+    @IBInspectable var isPhoneNumber: Bool = false
     
     open override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,11 +30,11 @@ class TextInput: UIStackView {
         textField.text = text
         textField.placeholder = placeHolder
         textField.label.text = hint
-        textField.isSecureTextEntry = inputMode == "password"
+        textField.isSecureTextEntry = isPassword
         textField.setOutlineColor(outlineNormalColor, for: MDCTextControlState.normal)
         textField.setOutlineColor(outlineActiveColor, for: MDCTextControlState.editing)
         
-        if inputMode == "phone_number" {
+        if isPhoneNumber {
             textField.delegate = self
         }
         

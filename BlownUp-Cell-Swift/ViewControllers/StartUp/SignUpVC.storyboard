@@ -52,6 +52,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Password"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyZ-cn-hab" userLabel="txtConPwd" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
@@ -62,6 +63,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Retype Password"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="password"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPassword" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5xw-sq-XEg" userLabel="txtSpoofPhone" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
@@ -72,6 +74,7 @@
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="My Call To Phone"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="phone_number"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPhoneNumber" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10e-IA-Xv1" userLabel="termsView">

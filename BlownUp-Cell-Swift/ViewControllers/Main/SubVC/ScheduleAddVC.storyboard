@@ -46,6 +46,8 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="60"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="Number to have a call from"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="phone_number"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isPhoneNumber" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" image="ic_contact_add" translatesAutoresizingMaskIntoConstraints="NO" id="nDG-uX-qeb">
