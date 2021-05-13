@@ -285,10 +285,10 @@
 		9458840A2638284000851CE6 /* BlownUp-Cell-Swift */ = {
 			isa = PBXGroup;
 			children = (
-				94437041264D08BF00E3BE32 /* Components */,
 				948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */,
-				94C1A7A82646BFA100E37144 /* Utils */,
 				94588499263846CC00851CE6 /* Extensions */,
+				94437041264D08BF00E3BE32 /* Components */,
+				94C1A7A82646BFA100E37144 /* Utils */,
 				945884CD263868C100851CE6 /* Store */,
 				945884AE26385E3000851CE6 /* Const */,
 				945884D626386CAB00851CE6 /* Models */,
