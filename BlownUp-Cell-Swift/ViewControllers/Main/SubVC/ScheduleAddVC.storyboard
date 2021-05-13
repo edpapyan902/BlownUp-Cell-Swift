@@ -75,7 +75,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="1s7-tn-4kM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                         <state key="normal" title="Select Date">
                                             <color key="titleColor" name="colorBlue"/>
                                         </state>

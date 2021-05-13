@@ -31,6 +31,16 @@ class TextInput: UIStackView {
         textField.placeholder = placeHolder
         textField.label.text = hint
         textField.isSecureTextEntry = isPassword
+        
+        textField.setTextColor(UIColor.black, for: MDCTextControlState.normal)
+        textField.setTextColor(UIColor.black, for: MDCTextControlState.editing)
+        
+        textField.setNormalLabelColor(outlineNormalColor, for: MDCTextControlState.normal)
+        textField.setNormalLabelColor(outlineNormalColor, for: MDCTextControlState.editing)
+        
+        textField.setFloatingLabelColor(outlineNormalColor, for: MDCTextControlState.normal)
+        textField.setFloatingLabelColor(outlineActiveColor, for: MDCTextControlState.editing)
+        
         textField.setOutlineColor(outlineNormalColor, for: MDCTextControlState.normal)
         textField.setOutlineColor(outlineActiveColor, for: MDCTextControlState.editing)
         
