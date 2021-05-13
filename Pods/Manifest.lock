@@ -5,13 +5,6 @@ PODS:
   - AlamofireObjectMapper (5.2.1):
     - Alamofire (~> 4.7)
     - ObjectMapper (~> 3.4)
-  - BMPlayer (1.3.2):
-    - BMPlayer/Full (= 1.3.2)
-  - BMPlayer/Core (1.3.2)
-  - BMPlayer/Full (1.3.2):
-    - BMPlayer/Core
-    - NVActivityIndicatorView (~> 4.7.0)
-    - SnapKit (~> 5.0.0)
   - DatePicker (1.3.1):
     - Extended
   - Extended (1.0.5)
@@ -666,13 +659,9 @@ PODS:
   - MotionAnimator (4.0.1):
     - MotionInterchange (~> 3.0)
   - MotionInterchange (3.0.0)
-  - NVActivityIndicatorView (4.7.0):
-    - NVActivityIndicatorView/Presenter (= 4.7.0)
-  - NVActivityIndicatorView/Presenter (4.7.0)
   - ObjectMapper (3.5.3)
   - PDFReader (2.5.1)
   - SDDownloadManager (1.1.0)
-  - SnapKit (5.0.1)
   - Stripe (21.4.0):
     - Stripe/Stripe3DS2 (= 21.4.0)
   - Stripe/Stripe3DS2 (21.4.0)
@@ -684,7 +673,6 @@ DEPENDENCIES:
   - Alamofire (~> 4.9.1)
   - AlamofireMapper (~> 1.0.0)
   - AlamofireObjectMapper (~> 5.2.1)
-  - BMPlayer
   - DatePicker
   - IQKeyboardManagerSwift (~> 6.5.6)
   - Kingfisher (~> 6.1.1)
@@ -701,7 +689,6 @@ SPEC REPOS:
     - Alamofire
     - AlamofireMapper
     - AlamofireObjectMapper
-    - BMPlayer
     - DatePicker
     - Extended
     - IQKeyboardManagerSwift
@@ -714,11 +701,9 @@ SPEC REPOS:
     - MDFTextAccessibility
     - MotionAnimator
     - MotionInterchange
-    - NVActivityIndicatorView
     - ObjectMapper
     - PDFReader
     - SDDownloadManager
-    - SnapKit
     - Stripe
     - SwiftMessages
 
@@ -726,7 +711,6 @@ SPEC CHECKSUMS:
   Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   AlamofireMapper: bdcd94eb53ab63ec9a12e4685bba73e3d0072f36
   AlamofireObjectMapper: 1989f690e982b71921b9253f53a4f33a9bc00d88
-  BMPlayer: e4b241bd088644d7b89d991a1a65d1b1615d19b3
   DatePicker: 05ddbd2b57d00ce6f44c1f0611ced32f948d33a6
   Extended: c463225e0c29b2823847866c1b106827772ac678
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
@@ -739,14 +723,12 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   MotionAnimator: 5f99d7c9592928c0f28a66283eda9c3b657dc480
   MotionInterchange: 13adae439b377e31d1674cc165539d50e1d1566a
-  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
   ObjectMapper: 97111c97e054a6ee25917662106689f0b4127b37
   PDFReader: 2c4a845d0560f33221cf911516e3b700967680f6
   SDDownloadManager: 62a9339c03ea27606effefd9aa1800e4127e3a52
-  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Stripe: 7c594b943abb65cf7bc28e37fd5124e65db3ce9e
   SwiftMessages: 77b847d1405f99046ffbd0d856bc7d73e6892686
 
-PODFILE CHECKSUM: f48843f4be11d8bc221cf781ae4f27efeb2e3b99
+PODFILE CHECKSUM: c4aa9fe068249706c57506e3454d73701f1d4c52
 
 COCOAPODS: 1.10.1

@@ -7,7 +7,9 @@
 
 import Foundation
 import UIKit
-import BMPlayer
+import AVFoundation
+import MediaPlayer
+import AVKit
 
 class HelpVC: BaseVC {
 
@@ -16,8 +18,6 @@ class HelpVC: BaseVC {
     @IBOutlet weak var videoView: UIView!
     
     var m_Helps = [Help]()
-    
-    let player = BMPlayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,14 +43,13 @@ class HelpVC: BaseVC {
     }
 
     func setHelpVideo(_ url: String) {
-        let asset = BMPlayerResource(url: URL(string: url)!, name: "How to use BlownUp")
-        player.setVideo(resource: asset)
-        self.videoView.addSubview(player)
-        player.snp.makeConstraints { (make) in
-            make.top.equalTo(self.videoView)
-            make.left.right.equalTo(self.videoView)
-            make.height.equalTo(self.videoView)
-        }
+        let player = AVPlayer(url: URL.init(string: url)!)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.view.frame = self.videoView.bounds
+        playerViewController.player = player
+        self.addChild(playerViewController)
+        self.videoView.addSubview(playerViewController.view)
+        player.play()
     }
     
     func initData() {
