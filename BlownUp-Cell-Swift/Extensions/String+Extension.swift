@@ -25,15 +25,23 @@ extension String {
     }
     
     func isValidEmail() -> Bool {
+        if self.isEmpty() {
+            return false
+        }
+        
         let REGEX: String
         REGEX = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
         return NSPredicate(format: "SELF MATCHES %@", REGEX).evaluate(with: self)
     }
     
     func isValidePhone() -> Bool {
-       let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
-       let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
-       return phoneTest.evaluate(with: self)
+        if self.isEmpty() {
+            return false
+        }
+        
+        let PHONE_REGEX = "^\\d{3}-\\d{3}-\\d{4}$"
+        let phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        return phoneTest.evaluate(with: self)
     }
     
     func replace(_ to: String, _ by: String) -> String {

@@ -31,6 +31,10 @@ class TextInput: UIStackView {
         textField.setOutlineColor(outlineNormalColor, for: MDCTextControlState.normal)
         textField.setOutlineColor(outlineActiveColor, for: MDCTextControlState.editing)
         
+        if inputMode == "phone_number" {
+            textField.delegate = self
+        }
+        
         self.addArrangedSubview(textField)
     }
     
@@ -40,5 +44,29 @@ class TextInput: UIStackView {
     
     func setText(_ text: String) {
         textField.text = text
+    }
+    
+    func checkEnglishPhoneNumberFormat(_ string: String?, _ str: String?) -> Bool {
+        if string == "" {
+            return true
+        } else if str!.count < 3 {
+            if str!.count == 1 {
+                textField.text = "("
+            }
+        } else if str!.count == 5 {
+            textField.text = textField.text! + ") "
+        } else if str!.count == 10 {
+            textField.text = textField.text! + "-"
+        } else if str!.count > 14 {
+            return false
+        }
+        return true
+    }
+}
+
+extension TextInput: UITextFieldDelegate {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let str = (textField.text! as NSString).replacingCharacters(in: range, with: string)
+        return checkEnglishPhoneNumberFormat(string, str)
     }
 }

@@ -71,6 +71,7 @@
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="hint" value="My Call To Phone"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="phone_number"/>
                                                 </userDefinedRuntimeAttributes>
                                             </stackView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10e-IA-Xv1" userLabel="termsView">
