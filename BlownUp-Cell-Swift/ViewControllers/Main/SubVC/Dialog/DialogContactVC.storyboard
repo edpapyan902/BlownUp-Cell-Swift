@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,8 +20,8 @@
                                 <rect key="frame" x="0.0" y="44" width="375" height="734"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY CONTACTS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pKm-km-spp">
-                                        <rect key="frame" x="20" y="19.999999999999996" width="335" height="33.666666666666657"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                        <rect key="frame" x="20" y="19.999999999999996" width="335" height="34.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -34,7 +33,7 @@
                                         </constraints>
                                     </imageView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yHT-MA-OAl">
-                                        <rect key="frame" x="20" y="83.666666666666686" width="335" height="640.33333333333326"/>
+                                        <rect key="frame" x="20" y="84.666666666666686" width="335" height="639.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <prototypes>
@@ -51,7 +50,7 @@
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ww0-H8-z1g" userLabel="avatarView">
                                                                     <rect key="frame" x="265" y="0.0" width="70" height="70"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gcn-er-dGL" userLabel="imgAvatar">
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gcn-er-dGL" userLabel="imgAvatar">
                                                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                                         </imageView>
                                                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ycS-0H-tHQ" userLabel="imgLoader">
@@ -59,7 +58,7 @@
                                                                             <color key="color" name="colorPrimary"/>
                                                                         </activityIndicatorView>
                                                                     </subviews>
-                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="trailing" secondItem="ycS-0H-tHQ" secondAttribute="trailing" constant="25" id="3o4-pa-eZh"/>
                                                                         <constraint firstAttribute="height" constant="70" id="LO5-rG-Mvk"/>
@@ -120,7 +119,7 @@
                                         </prototypes>
                                     </tableView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="ytE-eD-9BY" firstAttribute="leading" secondItem="d0r-zP-lCo" secondAttribute="leading" constant="15" id="1ZN-0m-SpY"/>
                                     <constraint firstItem="pKm-km-spp" firstAttribute="leading" secondItem="d0r-zP-lCo" secondAttribute="leading" constant="20" id="4CK-xf-l3p"/>
@@ -135,7 +134,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sno-Q7-qMH"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="sno-Q7-qMH" firstAttribute="trailing" secondItem="d0r-zP-lCo" secondAttribute="trailing" id="2dq-tc-swH"/>
                             <constraint firstItem="d0r-zP-lCo" firstAttribute="leading" secondItem="sno-Q7-qMH" secondAttribute="leading" id="gUq-rP-cyO"/>
@@ -161,8 +160,5 @@
         <namedColor name="colorPrimary">
             <color red="0.44313725490196076" green="0.72156862745098038" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

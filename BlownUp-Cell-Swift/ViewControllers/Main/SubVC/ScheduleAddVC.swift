@@ -14,6 +14,8 @@ class ScheduleAddVC: BaseVC {
     var selectedContact: Contact? = nil
     var currentSchedule: Schedule? = nil
     
+    var selectedDate: String = ""
+    
     @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var imgBack: UIImageView!
     @IBOutlet weak var btnPickDate: UIButton!
@@ -39,13 +41,17 @@ class ScheduleAddVC: BaseVC {
         datePicker.setValue(UIColor(named: "colorBlue"), forKey: "textColor")
         
         if currentSchedule == nil {
-            self.btnPickDate.setTitle(Date().toString("yyyy-MM-dd"), for: .normal)
+            let today = Date()
+            self.selectedDate = today.toString("yyyy-MM-dd")
+            self.btnPickDate.setTitle(today.toString("MM/dd/yyyy"), for: .normal)
             
             self.btnAdd.setTitle("ADD SCHEDULE", for: .normal)
         } else {
             self.selectedContact = currentSchedule?.contact
             let dateResult = currentSchedule?.scheduled_at.splite(" ")
-            self.btnPickDate.setTitle(dateResult![0], for: .normal)
+            self.selectedDate = dateResult![0]
+            
+            self.btnPickDate.setTitle(selectedDate.toUSDateFormat(), for: .normal)
             self.txtNumber.setText((currentSchedule?.contact == nil ? currentSchedule?.number : currentSchedule?.contact?.number)!)
             
             let timeResult = dateResult![1].splite(":")
@@ -74,7 +80,8 @@ class ScheduleAddVC: BaseVC {
         let datePicker = DatePicker()
         datePicker.setup(beginWith: today, min: minDate, max: maxDate) { (selected, date) in
             if selected, let selectedDate = date {
-                self.btnPickDate.setTitle(selectedDate.toString("yyyy-MM-dd"), for: .normal)
+                self.selectedDate = selectedDate.toString("yyyy-MM-dd")
+                self.btnPickDate.setTitle(selectedDate.toString("MM/dd/yyyy"), for: .normal)
             }
         }
         datePicker.show(in: self)
@@ -102,8 +109,7 @@ class ScheduleAddVC: BaseVC {
         
         let date = self.datePicker.date
         let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-        let schedule_date: String = self.btnPickDate.title(for: .normal)!
-        let scheduled_at = schedule_date + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
+        let scheduled_at = selectedDate + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
         
         var n_id_contact = 0
         if selectedContact != nil && selectedContact?.number == number {
@@ -145,8 +151,7 @@ class ScheduleAddVC: BaseVC {
         
         let date = self.datePicker.date
         let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-        let schedule_date: String = self.btnPickDate.title(for: .normal)!
-        let scheduled_at = schedule_date + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
+        let scheduled_at = selectedDate + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
         
         var n_id_contact = 0
         if selectedContact != nil && selectedContact?.number == number {

@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -55,7 +54,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="oiZ-4m-xW0" firstAttribute="top" secondItem="Zqu-r7-7uq" secondAttribute="top" id="2Jc-Np-bii"/>
                                             <constraint firstItem="oYL-dQ-3R7" firstAttribute="top" secondItem="Zqu-r7-7uq" secondAttribute="top" constant="5" id="3PI-Kx-mQr"/>
@@ -82,7 +81,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="0hO-9r-OiU" firstAttribute="leading" secondItem="ChI-zK-5Xv" secondAttribute="trailing" constant="10" id="9wX-aI-MX3"/>
                                             <constraint firstItem="ChI-zK-5Xv" firstAttribute="leading" secondItem="Rcj-FH-59Q" secondAttribute="leading" id="JzL-qT-VIf"/>
@@ -109,7 +108,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="tEh-Oe-NoQ" firstAttribute="leading" secondItem="9iW-v0-d0H" secondAttribute="trailing" constant="10" id="AKV-LH-8fl"/>
                                             <constraint firstAttribute="height" constant="25" id="RWs-hx-eWE"/>
@@ -136,7 +135,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="Bo9-pe-SBY" firstAttribute="top" secondItem="opR-tb-RuD" secondAttribute="top" id="8Yf-iN-obs"/>
                                             <constraint firstItem="9IZ-OH-lHY" firstAttribute="leading" secondItem="opR-tb-RuD" secondAttribute="leading" id="Ebw-HM-POE"/>
@@ -167,7 +166,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="OrF-ub-Mgi" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="2zY-N7-pJP"/>
                                     <constraint firstItem="e6X-fL-iJP" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="5Ea-Vc-46r"/>
@@ -229,8 +228,5 @@
         <namedColor name="colorPrimary">
             <color red="0.44313725490196076" green="0.72156862745098038" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

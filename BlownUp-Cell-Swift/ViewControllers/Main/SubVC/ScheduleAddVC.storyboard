@@ -5,7 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -34,13 +33,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SCHEDULE A CALL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAL-6L-9QT">
-                                        <rect key="frame" x="20" y="80" width="388" height="31.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <rect key="frame" x="20" y="80" width="388" height="34.666666666666657"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49H-nT-fwE" userLabel="addView">
-                                        <rect key="frame" x="20" y="151.66666666666666" width="388" height="60"/>
+                                        <rect key="frame" x="20" y="154.66666666666666" width="388" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eCo-ha-Qc9" customClass="TextInput" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="338" height="60"/>
@@ -58,7 +57,7 @@
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="eCo-ha-Qc9" firstAttribute="leading" secondItem="49H-nT-fwE" secondAttribute="leading" id="3Jn-dH-YOK"/>
                                             <constraint firstAttribute="bottom" secondItem="eCo-ha-Qc9" secondAttribute="bottom" id="5Vz-Nc-mTb"/>
@@ -71,7 +70,7 @@
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VGE-Pt-65w">
-                                        <rect key="frame" x="50" y="241.66666666666669" width="328" height="45"/>
+                                        <rect key="frame" x="50" y="244.66666666666669" width="328" height="45"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="45" id="1s7-tn-4kM"/>
@@ -85,13 +84,13 @@
                                         </connections>
                                     </button>
                                     <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Fp9-OJ-1Pr">
-                                        <rect key="frame" x="20" y="306.66666666666669" width="388" height="200"/>
+                                        <rect key="frame" x="20" y="309.66666666666669" width="388" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="px0-if-nbt"/>
                                         </constraints>
                                     </datePicker>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s3h-3g-WLD">
-                                        <rect key="frame" x="20" y="556.66666666666663" width="388" height="50"/>
+                                        <rect key="frame" x="20" y="559.66666666666663" width="388" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Uih-MK-lvA"/>
@@ -163,8 +162,5 @@
         <namedColor name="colorPrimary">
             <color red="0.44313725490196076" green="0.72156862745098038" blue="0.46274509803921571" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

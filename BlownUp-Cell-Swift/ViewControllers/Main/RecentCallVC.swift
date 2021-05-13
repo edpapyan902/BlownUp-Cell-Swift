@@ -104,9 +104,11 @@ extension RecentCallVC: UITableViewDataSource, UITableViewDelegate {
         let dateResult = schedule.scheduled_at.splite(" ")
         let timeResult = dateResult[1].splite(":")
         
+        let date = Calendar.current.date(bySettingHour: Int(timeResult[0])!, minute: Int(timeResult[1])!, second: 0, of: Date())!
+        
+        cell.lblDate.text = dateResult[0].toUSDateFormat()
+        cell.lblTime.text = date.toString("h:mm a")
         cell.lblNumber.text = schedule.contact != nil ? schedule.contact?.number : schedule.number
-        cell.lblDate.text = dateResult[0]
-        cell.lblTime.text = timeResult[0] + ":" + timeResult[1]
         
         cell.backgroundColor = UIColor.clear
         cell.isOpaque = false

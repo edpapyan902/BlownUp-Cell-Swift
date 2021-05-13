@@ -50,4 +50,9 @@ extension String {
     func replace(_ to: String, _ by: String) -> String {
         return self.replacingOccurrences(of: to, with: by)
     }
+    
+    func toUSDateFormat() -> String {
+        let result = self.splite("-")
+        return result[1] + "/" + result[2] + "/" + result[0]
+    }
 }
