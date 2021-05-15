@@ -907,13 +907,43 @@
                                     <constraint firstAttribute="bottom" secondItem="nAo-WE-JNX" secondAttribute="bottom" id="y38-yw-xy7"/>
                                 </constraints>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5V-qcl">
+                                <rect key="frame" x="0.0" y="85" width="414" height="602"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI0-xm-e6i">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="34.666666666666664"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="29"/>
+                                        <color key="textColor" name="colorBlue"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="branislav.karan.1979@gmail.com" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEr-gG-20J">
+                                        <rect key="frame" x="10" y="54.666666666666657" width="394" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <color key="textColor" name="colorPrimary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="aI0-xm-e6i" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" id="3Wd-fs-mIo"/>
+                                    <constraint firstItem="XEr-gG-20J" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="5Je-L7-P1I"/>
+                                    <constraint firstItem="aI0-xm-e6i" firstAttribute="top" secondItem="aGR-5V-qcl" secondAttribute="top" id="RuN-Mb-YJj"/>
+                                    <constraint firstAttribute="trailing" secondItem="aI0-xm-e6i" secondAttribute="trailing" id="ZcW-P8-SIF"/>
+                                    <constraint firstItem="XEr-gG-20J" firstAttribute="top" secondItem="aI0-xm-e6i" secondAttribute="bottom" constant="20" id="mlA-Oq-2YM"/>
+                                    <constraint firstAttribute="trailing" secondItem="XEr-gG-20J" secondAttribute="trailing" constant="10" id="y8K-DU-b0w"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sWp-FX-gKr"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="sWp-FX-gKr" firstAttribute="bottom" secondItem="aGR-5V-qcl" secondAttribute="bottom" id="FVl-Oj-JRB"/>
                             <constraint firstItem="fnL-qV-iCc" firstAttribute="top" secondItem="sWp-FX-gKr" secondAttribute="top" id="Vsg-py-JLj"/>
                             <constraint firstItem="fnL-qV-iCc" firstAttribute="leading" secondItem="DcP-oX-U6r" secondAttribute="leading" id="bNK-o8-bSa"/>
+                            <constraint firstItem="aGR-5V-qcl" firstAttribute="leading" secondItem="sWp-FX-gKr" secondAttribute="leading" id="e5A-Ru-VVm"/>
                             <constraint firstItem="sWp-FX-gKr" firstAttribute="trailing" secondItem="fnL-qV-iCc" secondAttribute="trailing" id="eCM-Vr-fww"/>
+                            <constraint firstItem="aGR-5V-qcl" firstAttribute="top" secondItem="fnL-qV-iCc" secondAttribute="bottom" constant="20" id="rCa-iz-jMk"/>
+                            <constraint firstItem="sWp-FX-gKr" firstAttribute="trailing" secondItem="aGR-5V-qcl" secondAttribute="trailing" id="tIg-kR-ezi"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="ic_account_off" id="TdV-II-nOm"/>
