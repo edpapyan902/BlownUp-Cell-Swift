@@ -12,10 +12,16 @@ import Stripe
 class CreditCardView: UIStackView {
     var paymentCardTextField: STPPaymentCardTextField!
     
+    var colorPrimary: UIColor! = UIColor.init(named: "colorPrimary")
+    
     open override func awakeFromNib() {
         super.awakeFromNib()
         
         paymentCardTextField = STPPaymentCardTextField(frame: CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.width))
+        
+        paymentCardTextField.textColor = .black
+        paymentCardTextField.cursorColor = colorPrimary
+        
         self.addArrangedSubview(paymentCardTextField)
     }
     
@@ -29,5 +35,13 @@ class CreditCardView: UIStackView {
     
     func isEnabled() -> Bool {
         return paymentCardTextField.isEnabled
+    }
+    
+    func clear() {
+        paymentCardTextField.clear()
+    }
+    
+    func clearFocus() {
+        paymentCardTextField.endEditing(true)
     }
 }

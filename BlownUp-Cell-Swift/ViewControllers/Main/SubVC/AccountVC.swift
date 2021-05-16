@@ -159,6 +159,9 @@ class AccountVC: BaseVC {
             totalParams["spoof_phone_number"] = m_SpoofPhoneNumber
         }
         
+        self.txtPhone.clearFocus()
+        self.txtPassword.clearFocus()
+        
         self.showLoading(self)
         
         API.instance.updateAccount(params: totalParams) { (response) in
@@ -180,6 +183,8 @@ class AccountVC: BaseVC {
                     self.lblCardExp.text = "Expired at: " + PLUS0(Int(self.m_CreditCard!.card_expire_month)) + "/" + String(self.m_CreditCard!.card_expire_year)
                 
                     self.swtActiveCardForm.isOn = false
+                    self.creditCardProvider.clear()
+                    self.creditCardProvider.clearFocus()
                 }
                 if accountUpdateRes.password_success {
                     var user = accountUpdateRes.data.user

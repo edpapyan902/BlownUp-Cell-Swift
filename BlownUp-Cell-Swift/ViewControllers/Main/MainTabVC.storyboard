@@ -964,37 +964,37 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX XXXX XXXX XXXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eG-Lt-hwc">
-                                        <rect key="frame" x="10" y="336.66666666666669" width="394" height="22"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                        <rect key="frame" x="10" y="336.66666666666669" width="394" height="23"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                                         <color key="textColor" name="colorPrimary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/2026" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-nn-Mkl">
-                                        <rect key="frame" x="10" y="363.66666666666669" width="394" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="10" y="364.66666666666669" width="394" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPDATE BILLING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkP-Nf-v8S">
-                                        <rect key="frame" x="10" y="399.66666666666669" width="394" height="27.333333333333314"/>
+                                        <rect key="frame" x="10" y="397.66666666666669" width="394" height="27.333333333333314"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-WO-aP0">
-                                        <rect key="frame" x="10" y="437" width="51" height="31"/>
+                                        <rect key="frame" x="10" y="435" width="51" height="31"/>
                                         <connections>
                                             <action selector="onSwtichValueChanged:" destination="Tey-Ag-QYk" eventType="valueChanged" id="XFI-Wu-ICj"/>
                                         </connections>
                                     </switch>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSh-0J-HLh" customClass="CreditCardView" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="483" width="394" height="50"/>
+                                        <rect key="frame" x="10" y="481" width="394" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="gOH-hP-I0H"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3c-MF-Aeb">
-                                        <rect key="frame" x="10" y="548" width="394" height="50"/>
+                                        <rect key="frame" x="10" y="546" width="394" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="V5h-0G-67c"/>
@@ -1008,7 +1008,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="gJC-sX-bPy" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="0SM-Lr-2dI"/>
                                     <constraint firstItem="1eG-Lt-hwc" firstAttribute="top" secondItem="pr9-mA-VDX" secondAttribute="bottom" constant="10" id="0Sk-f3-Kbo"/>
@@ -1061,7 +1061,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="ic_account_off" id="TdV-II-nOm"/>
                     <connections>
-                        <outlet property="creditCardView" destination="BSh-0J-HLh" id="rmQ-Mh-Iyh"/>
+                        <outlet property="creditCardProvider" destination="BSh-0J-HLh" id="DfH-Oe-zco"/>
                         <outlet property="lblCardExp" destination="zTn-nn-Mkl" id="hGd-NC-bDm"/>
                         <outlet property="lblCardNumber" destination="1eG-Lt-hwc" id="AfP-Dk-0X4"/>
                         <outlet property="lblEmail" destination="XEr-gG-20J" id="mYf-2w-C8R"/>

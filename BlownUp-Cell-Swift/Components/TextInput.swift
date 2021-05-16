@@ -63,6 +63,10 @@ class TextInput: UIStackView {
         textField.isEnabled = enabled
     }
     
+    func clearFocus() {
+        textField.endEditing(true)
+    }
+    
     func checkEnglishPhoneNumberFormat(_ string: String?, _ str: String?) -> Bool {
         if string == "" {
             return true
