@@ -103,7 +103,7 @@ class SignUpVC: BaseVC {
                     let data = signUpRes.data
                     
                     Store.instance.apiToken = (data?.user?.token)!
-                    Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
+                    Store.instance.user = (data?.user)!
                     Store.instance.rememberMe = true
                     
                     self.gotoPageVC(VC_CARD_REGISTER)

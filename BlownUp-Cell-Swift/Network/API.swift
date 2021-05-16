@@ -31,6 +31,12 @@ class API {
         }
     }
     
+    func getCard(completion: @escaping ( _ response: DataResponse<CreditCardRes>) -> Void) -> Void {
+        Alamofire.request(URL_CARD_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<CreditCardRes>) in
+            completion(response)
+        }
+    }
+    
     func addCard(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
         Alamofire.request(URL_CARD_ADD, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
             completion(response)
@@ -111,6 +117,12 @@ class API {
     
     func getAllHelp(completion: @escaping ( _ response: DataResponse<HelpRes>) -> Void) -> Void {
         Alamofire.request(URL_HELP_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<HelpRes>) in
+            completion(response)
+        }
+    }
+    
+    func updateAccount(params: [String: Any], completion: @escaping ( _ response: DataResponse<AccountUpdateRes>) -> Void) -> Void {
+        Alamofire.request(URL_ACCOUNT_UPDATE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<AccountUpdateRes>) in
             completion(response)
         }
     }

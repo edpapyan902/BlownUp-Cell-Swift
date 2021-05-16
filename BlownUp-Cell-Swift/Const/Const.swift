@@ -59,6 +59,9 @@ func BEARER_HEADER() -> HTTPHeaders {
 let URL_LOGIN = "\(BASE_SERVER)/api/login"
 let URL_SIGN_UP = "\(BASE_SERVER)/api/signup"
 
+//  Account
+let URL_ACCOUNT_UPDATE = "\(BASE_SERVER)/api/account/update"
+
 //  Credit Card
 let URL_CARD_GET = "\(BASE_SERVER)/api/card"
 let URL_CARD_ADD = "\(BASE_SERVER)/api/card/add"

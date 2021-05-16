@@ -22,27 +22,28 @@ class Store {
         }
     }
     
-    func getUser(key: String) -> User? {
-        if let data = defaults.data(forKey: key) {
-            do {
-                let decoder = JSONDecoder()
-                let user = try decoder.decode(User.self, from: data)
-                return user
-            } catch {
-                print("Unable to Decode User Profile (\(error))")
-                return nil
+    var user: User? {
+        get {
+            if let data = defaults.data(forKey: USER_PROFILE) {
+                do {
+                    let decoder = JSONDecoder()
+                    let user = try decoder.decode(User.self, from: data)
+                    return user
+                } catch {
+                    print("Unable to Decode User Profile (\(error))")
+                    return nil
+                }
             }
+            return nil
         }
-        return nil
-    }
-    
-    func setUser(key: String, data: User) {
-        do {
-            let encoder = JSONEncoder()
-            let data = try encoder.encode(data)
-            defaults.set(data, forKey: key)
-        } catch {
-            print("Unable to Encode User Profile (\(error))")
+        set {
+            do {
+                let encoder = JSONEncoder()
+                let data = try encoder.encode(newValue)
+                defaults.set(data, forKey: USER_PROFILE)
+            } catch {
+                print("Unable to Encode User Profile (\(error))")
+            }
         }
     }
     

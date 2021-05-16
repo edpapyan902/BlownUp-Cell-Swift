@@ -22,4 +22,12 @@ class CreditCardView: UIStackView {
     func getCardView() -> STPPaymentCardTextField {
         return paymentCardTextField
     }
+    
+    func setEnabled(_ enabled: Bool) {
+        paymentCardTextField.isEnabled = enabled
+    }
+    
+    func isEnabled() -> Bool {
+        return paymentCardTextField.isEnabled
+    }
 }

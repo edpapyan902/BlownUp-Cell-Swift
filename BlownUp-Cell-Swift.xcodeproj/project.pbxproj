@@ -63,6 +63,9 @@
 		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
 		948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */; };
 		9497837F264371690048580C /* ScheduleAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9497837E264371690048580C /* ScheduleAllRes.swift */; };
+		94BABBDA26509E6F002FF91E /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBD926509E6F002FF91E /* CreditCard.swift */; };
+		94BABBDF26509F88002FF91E /* CreditCardRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBDE26509F88002FF91E /* CreditCardRes.swift */; };
+		94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */; };
 		94C1A7A42646BF0D00E37144 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */; };
 		94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A92646BFCC00E37144 /* Utils.swift */; };
 		94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BE82646734B00C800D2 /* DialogContactVC.swift */; };
@@ -152,6 +155,9 @@
 		948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardRegisterVC.storyboard; sourceTree = "<group>"; };
 		948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BlownUp-Cell-Swift.entitlements"; sourceTree = "<group>"; };
 		9497837E264371690048580C /* ScheduleAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAllRes.swift; sourceTree = "<group>"; };
+		94BABBD926509E6F002FF91E /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
+		94BABBDE26509F88002FF91E /* CreditCardRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRes.swift; sourceTree = "<group>"; };
+		94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUpdateRes.swift; sourceTree = "<group>"; };
 		94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		94C1A7A92646BFCC00E37144 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		94DB9BE82646734B00C800D2 /* DialogContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogContactVC.swift; sourceTree = "<group>"; };
@@ -390,6 +396,7 @@
 				945B249626405B65004C12D7 /* Invoice.swift */,
 				940F6F02264197CD00BC07DC /* Schedule.swift */,
 				94F6B59F264A28C800BE60A9 /* Help.swift */,
+				94BABBD926509E6F002FF91E /* CreditCard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -408,6 +415,8 @@
 				946446232646F1530079BCE2 /* ScheduleAddRes.swift */,
 				940680772648CB3A0079D42F /* ScheduleUpdateRes.swift */,
 				94F6B592264A21FB00BE60A9 /* HelpRes.swift */,
+				94BABBDE26509F88002FF91E /* CreditCardRes.swift */,
+				94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -699,12 +708,15 @@
 				945884D826386CC500851CE6 /* User.swift in Sources */,
 				948CE685263B9D5300A27790 /* BaseVC.swift in Sources */,
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
+				94BABBDA26509E6F002FF91E /* CreditCard.swift in Sources */,
 				94F6B5A0264A28C800BE60A9 /* Help.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
 				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,
+				94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */,
 				946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */,
 				945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */,
+				94BABBDF26509F88002FF91E /* CreditCardRes.swift in Sources */,
 				947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */,
 				940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */,
 				94587EB1263FF5A2004B0BCC /* ContactAddVC.swift in Sources */,

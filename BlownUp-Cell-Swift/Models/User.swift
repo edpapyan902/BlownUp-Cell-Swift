@@ -18,7 +18,7 @@ struct User: Codable {
     let terms : Int?
     let active : Int?
     let is_social : Int?
-    let token : String?
+    var token : String?
     
     enum CodingKeys: String, CodingKey {
         case id = "id"

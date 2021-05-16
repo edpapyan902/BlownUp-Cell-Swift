@@ -82,7 +82,7 @@ class LoginVC: BaseVC {
                     let data = loginRes.data
                     
                     Store.instance.apiToken = (data?.user?.token)!
-                    Store.instance.setUser(key: USER_PROFILE, data: (data?.user)!)
+                    Store.instance.user = (data?.user)!
                     Store.instance.rememberMe = self.swtRememberMe.isOn
                     
                     if (data?.is_subscribed)! {
