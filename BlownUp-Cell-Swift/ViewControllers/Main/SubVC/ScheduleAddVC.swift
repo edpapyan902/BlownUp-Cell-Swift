@@ -11,6 +11,8 @@ import DatePicker
 
 class ScheduleAddVC: BaseVC {
     
+    var appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     var selectedContact: Contact? = nil
     var currentSchedule: Schedule? = nil
     
@@ -125,7 +127,7 @@ class ScheduleAddVC: BaseVC {
         
         self.showLoading(self)
 
-        API.instance.addSchedule(params: params){ (response) in
+        API.instance.addSchedule(params: params){ [self] (response) in
             self.hideLoading()
             
             if response.error == nil {
@@ -133,7 +135,10 @@ class ScheduleAddVC: BaseVC {
                 if scheduleAddRes.success {
                     self.showSuccess(scheduleAddRes.message)
                     
+                    self.appDelegate!.scheduleIncomingCall(scheduleAddRes.data.schedule!)
+                    
                     ScheduleListVC.instance.loadData()
+                    
                     self.onBack()
                 } else {
                     self.showError(scheduleAddRes.message)
@@ -175,6 +180,12 @@ class ScheduleAddVC: BaseVC {
                 let scheduleUpdateRes: ScheduleUpdateRes = response.result.value!
                 if scheduleUpdateRes.success {
                     self.showSuccess(scheduleUpdateRes.message)
+                    
+                    var identifiers = [String]()
+                    identifiers.append(self.currentSchedule!.alarm_identify)
+                    self.appDelegate!.cancelNotifications(identifiers: identifiers)
+                    
+                    self.appDelegate!.scheduleIncomingCall(scheduleUpdateRes.data.schedule!)
                     
                     ScheduleListVC.instance.loadData()
                     self.onBack()

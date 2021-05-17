@@ -55,4 +55,36 @@ extension String {
         let result = self.splite("-")
         return result[1] + "/" + result[2] + "/" + result[0]
     }
+    
+    func ToDictionary() -> [String:Any]? {
+        var dictonary:[String:Any]?
+        if let data = self.data(using: .utf8) {
+            do {
+                dictonary = try JSONSerialization.jsonObject(with: data, options: []) as? [String : Any]
+                if let myDictionary = dictonary {
+                  return myDictionary;
+                }
+            } catch let error as NSError {
+                print(error)
+            }
+        }
+        return dictonary;
+    }
+    
+    func TimeStamp2DateComponents() -> DateComponents {
+        let result = self.splite(" ")
+        let dayResult = result[0].splite("-")
+        let hourResult = result[1].splite(":")
+        
+        var components = DateComponents()
+        components.year = Int(dayResult[0])
+        components.month = Int(dayResult[1])
+        components.day = Int(dayResult[2])
+        components.hour = Int(hourResult[0])
+        components.minute = Int(hourResult[1])
+        components.second = Int(hourResult[2])
+        components.timeZone = .current
+        
+        return components
+    }
 }
