@@ -83,6 +83,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         
         incomingCall()
         
+        //  Cancel Scheduled Call
+        var identifiers = [String]()
+        identifiers.append(notification.request.identifier)
+        cancelNotifications(identifiers: identifiers)
+        
         completionHandler([.sound])
     }
     
@@ -90,6 +95,11 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
         incomingCall()
+        
+        //  Cancel Scheduled Call
+        var identifiers = [String]()
+        identifiers.append(response.notification.request.identifier)
+        cancelNotifications(identifiers: identifiers)
         
         completionHandler()
     }
@@ -110,7 +120,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         provider.setDelegate(self, queue: nil)
         let update = CXCallUpdate()
         update.remoteHandle = CXHandle(type: .generic, value: "BlownUp")
-        update.hasVideo = true
+        update.hasVideo = false
         provider.reportNewIncomingCall(with: UUID(), update: update, completion: { error in })
     }
     
