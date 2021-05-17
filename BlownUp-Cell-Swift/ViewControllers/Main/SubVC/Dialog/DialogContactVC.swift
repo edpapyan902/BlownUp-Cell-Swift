@@ -35,9 +35,9 @@ class DialogContactVC: BaseVC {
         self.refreshControl = UIRefreshControl()
         self.refreshControl.backgroundColor = UIColor.clear
         self.refreshControl.tintColor = UIColor.init(named: "colorPrimary")
-
+        
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
-
+        
         self.tblContact.addSubview(self.refreshControl)
         
         self.imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onBack)))
@@ -84,7 +84,7 @@ class DialogContactTableViewCell: UITableViewCell {
 }
 
 extension DialogContactVC: UITableViewDataSource, UITableViewDelegate {
- 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.m_Contacts.count
     }

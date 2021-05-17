@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class RecentCallVC: BaseVC {
-
+    
     @IBOutlet weak var tblRecentCall: UITableView!
     var refreshControl : UIRefreshControl!
     
@@ -36,9 +36,9 @@ class RecentCallVC: BaseVC {
         self.refreshControl = UIRefreshControl()
         self.refreshControl.backgroundColor = UIColor.clear
         self.refreshControl.tintColor = UIColor.white
-
+        
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
-
+        
         self.tblRecentCall.addSubview(self.refreshControl)
     }
     
@@ -88,7 +88,7 @@ class RecentCallTableViewCell: UITableViewCell {
 }
 
 extension RecentCallVC: UITableViewDataSource, UITableViewDelegate {
- 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.m_Schedules.count
     }

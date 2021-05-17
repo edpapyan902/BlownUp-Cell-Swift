@@ -31,7 +31,7 @@ class BaseVC : UIViewController {
     func gotoPageVC(_ name: String) {
         let storyboad = UIStoryboard(name: name, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: name)
-
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = targetVC
         UIApplication.shared.keyWindow?.rootViewController = targetVC
@@ -50,7 +50,7 @@ class BaseVC : UIViewController {
         let storyboad = UIStoryboard(name: VC_MAIN_TAB, bundle: nil)
         let targetVC = storyboad.instantiateViewController(withIdentifier: VC_MAIN_TAB) as! MainTabVC
         targetVC.type = type
-
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = targetVC
         UIApplication.shared.keyWindow?.rootViewController = targetVC
@@ -71,7 +71,7 @@ class BaseVC : UIViewController {
         targetVC.modalPresentationStyle = .fullScreen
         self.present(targetVC, animated: true, completion: nil)
     }
-
+    
     func showLoading(_ viewController: UIViewController) {
         let primaryColor = UIColor.init(named: "colorPrimary")
         let styles : KRProgressHUDStyle = .custom (background: .white,text : primaryColor!, icon: primaryColor! )

@@ -11,7 +11,7 @@ import SDDownloadManager
 import PDFReader
 
 class SettingVC: BaseVC {
-
+    
     @IBOutlet weak var imgHeaderScheduleAdd: UIImageView!
     @IBOutlet weak var btnCancelSubscription: UIButton!
     @IBOutlet weak var tblInvoice: UITableView!
@@ -22,7 +22,7 @@ class SettingVC: BaseVC {
     var m_Invoices = [Invoice]()
     
     let APP_INVOICE_DIR: URL = (FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first as URL?)!.appendingPathComponent("BlownUp/Invoices")
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -42,11 +42,11 @@ class SettingVC: BaseVC {
         self.refreshControl = UIRefreshControl()
         self.refreshControl.backgroundColor = UIColor.clear
         self.refreshControl.tintColor = UIColor.init(named: "colorPrimary")
-
+        
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
-
+        
         self.tblInvoice.addSubview(self.refreshControl)
-
+        
         self.imgHeaderScheduleAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.gotoScheduleAdd)))
     }
     
@@ -197,7 +197,7 @@ class InvoiceTableViewCell: UITableViewCell {
 }
 
 extension SettingVC: UITableViewDataSource, UITableViewDelegate {
- 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.m_Invoices.count
     }

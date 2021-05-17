@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 
 class ScheduleListVC: BaseVC {
-
+    
     @IBOutlet weak var imgAdd: UIImageView!
     @IBOutlet weak var btnAdd: FloatingButton!
     @IBOutlet weak var tblSchedule: UITableView!
@@ -37,9 +37,9 @@ class ScheduleListVC: BaseVC {
         self.refreshControl = UIRefreshControl()
         self.refreshControl.backgroundColor = UIColor.clear
         self.refreshControl.tintColor = UIColor.init(named: "colorPrimary")
-
+        
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
-
+        
         self.tblSchedule.addSubview(self.refreshControl)
         
         self.btnAdd.onClicked(self, #selector(onAddClicked))
@@ -124,7 +124,7 @@ class ScheduleTableViewCell: UITableViewCell {
 }
 
 extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
- 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.m_Schedules.count
     }

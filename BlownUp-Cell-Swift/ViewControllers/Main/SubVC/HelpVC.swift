@@ -12,7 +12,7 @@ import MediaPlayer
 import AVKit
 
 class HelpVC: BaseVC {
-
+    
     @IBOutlet weak var imgScheduleAdd: UIImageView!
     @IBOutlet weak var tblHelp: UITableView!
     @IBOutlet weak var videoView: UIView!
@@ -41,7 +41,7 @@ class HelpVC: BaseVC {
     @objc func onScheduleAddClicked() {
         self.gotoScheduleAddVC(nil)
     }
-
+    
     func setHelpVideo(_ url: String) {
         let player = AVPlayer(url: URL.init(string: url)!)
         let playerViewController = AVPlayerViewController()
@@ -92,7 +92,7 @@ class HelpTableViewCell: UITableViewCell {
 }
 
 extension HelpVC: UITableViewDataSource, UITableViewDelegate {
- 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.m_Helps.count
     }

@@ -10,7 +10,7 @@ import UIKit
 import AuthenticationServices
 
 class LoginVC: BaseVC {
-
+    
     @IBOutlet weak var appleAuthProviderView: UIStackView!
     @IBOutlet weak var swtRememberMe: UISwitch!
     @IBOutlet weak var txtPassword: TextInput!

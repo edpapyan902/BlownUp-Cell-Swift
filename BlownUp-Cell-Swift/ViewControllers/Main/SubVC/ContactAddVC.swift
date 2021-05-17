@@ -10,7 +10,7 @@ import UIKit
 import ContactsUI
 
 class ContactAddVC: BaseVC {
-
+    
     @IBOutlet weak var imgBack: UIImageView!
     @IBOutlet weak var btnAdd: UIButton!
     @IBOutlet weak var txtNumber: TextInput!
@@ -72,13 +72,13 @@ class ContactAddVC: BaseVC {
     
     func checkContactPermission() {
         switch CNContactStore.authorizationStatus(for: CNEntityType.contacts) {
-            case .authorized:
-                self.openContact()
-                break
-            case .denied, .notDetermined:
-                self.requestContactPermission()
-                break
-            default: break
+        case .authorized:
+            self.openContact()
+            break
+        case .denied, .notDetermined:
+            self.requestContactPermission()
+            break
+        default: break
         }
     }
     
@@ -236,7 +236,7 @@ extension ContactAddVC: CNContactPickerDelegate {
             self.avatarBase64 = avatar!.getBase64()
         }
     }
-
+    
     func contactPickerDidCancel(_ picker: CNContactPickerViewController) {
         self.dismiss(animated: true, completion: nil)
     }

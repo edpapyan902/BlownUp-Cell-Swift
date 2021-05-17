@@ -37,16 +37,16 @@ class ContactListVC: BaseVC {
         self.refreshControl = UIRefreshControl()
         self.refreshControl.backgroundColor = UIColor.clear
         self.refreshControl.tintColor = UIColor.init(named: "colorPrimary")
-
+        
         self.refreshControl.addTarget(self, action: #selector(onRefresh(_:)), for: UIControl.Event.valueChanged)
-
+        
         self.tblContact.addSubview(self.refreshControl)
         
         self.btnAdd.onClicked(self, #selector(onAddClicked))
         
         self.imgAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.goScheduleAdd)))
     }
-
+    
     @objc func onRefresh(_ refreshControl: UIRefreshControl) {
         self.refreshControl?.beginRefreshing()
         initData()
@@ -98,7 +98,7 @@ class ContactTableViewCell: UITableViewCell {
 }
 
 extension ContactListVC: UITableViewDataSource, UITableViewDelegate {
- 
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.m_Contacts.count
     }

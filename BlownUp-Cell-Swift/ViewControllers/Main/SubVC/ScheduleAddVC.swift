@@ -126,7 +126,7 @@ class ScheduleAddVC: BaseVC {
         ]
         
         self.showLoading(self)
-
+        
         API.instance.addSchedule(params: params){ [self] (response) in
             self.hideLoading()
             
@@ -170,9 +170,9 @@ class ScheduleAddVC: BaseVC {
             "number": number,
             "scheduled_at": scheduled_at
         ]
-
+        
         self.showLoading(self)
-
+        
         API.instance.updateSchedule(params: params){ (response) in
             self.hideLoading()
             

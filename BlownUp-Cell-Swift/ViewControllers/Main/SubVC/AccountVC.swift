@@ -11,7 +11,7 @@ import UIKit
 import Stripe
 
 class AccountVC: BaseVC {
-
+    
     @IBOutlet weak var swtActiveCardForm: UISwitch!
     @IBOutlet weak var creditCardProvider: CreditCardView!
     @IBOutlet weak var lblCardExp: UILabel!
@@ -27,7 +27,7 @@ class AccountVC: BaseVC {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    
+        
         initLayout()
         initData()
     }
@@ -133,7 +133,7 @@ class AccountVC: BaseVC {
                         self.hideLoading()
                     }
                 }
-        })
+            })
     }
     
     func updateCard(paymentMethod: String, isApplePay: Bool) {
@@ -181,7 +181,7 @@ class AccountVC: BaseVC {
                     
                     self.lblCardNumber.text = "XXXX XXXX XXXX " + (self.m_CreditCard?.card_number)!.subString(12, 4)
                     self.lblCardExp.text = "Expired at: " + PLUS0(Int(self.m_CreditCard!.card_expire_month)) + "/" + String(self.m_CreditCard!.card_expire_year)
-                
+                    
                     self.swtActiveCardForm.isOn = false
                     self.creditCardProvider.clear()
                     self.creditCardProvider.clearFocus()

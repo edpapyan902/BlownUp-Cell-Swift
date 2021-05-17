@@ -10,7 +10,7 @@ import UIKit
 import Stripe
 
 class CardRegisterVC: BaseVC {
-
+    
     @IBOutlet weak var creditCardProvider: CreditCardView!
     
     override func viewDidLoad() {
@@ -45,7 +45,7 @@ class CardRegisterVC: BaseVC {
                         self.hideLoading()
                     }
                 }
-        })
+            })
     }
     
     func processRegisterCard(paymentMethod: String, isApplePay: Bool) {
