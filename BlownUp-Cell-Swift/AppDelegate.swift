@@ -37,7 +37,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //  Notification Permission
         notificationCenter.delegate = self
-        let options: UNAuthorizationOptions = [.alert, .sound]
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
         notificationCenter.requestAuthorization(options: options) {
             (granted, error) in
             if granted {
@@ -81,7 +81,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         
-        incomingCall()
+        handleIncomingCall()
         
         //  Cancel Scheduled Call
         var identifiers = [String]()
@@ -94,7 +94,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 didReceive response: UNNotificationResponse,
                                 withCompletionHandler completionHandler: @escaping () -> Void) {
-        incomingCall()
+        handleIncomingCall()
         
         //  Cancel Scheduled Call
         var identifiers = [String]()
@@ -115,7 +115,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         return config
     }
     
-    func incomingCall() {
+    func handleIncomingCall() {
         let provider = CXProvider(configuration: self.defaultConfig())
         provider.setDelegate(self, queue: nil)
         let update = CXCallUpdate()
