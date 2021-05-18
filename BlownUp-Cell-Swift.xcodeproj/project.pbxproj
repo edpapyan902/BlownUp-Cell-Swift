@@ -15,9 +15,9 @@
 		94068085264928EF0079D42F /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94068084264928EF0079D42F /* FloatingButton.swift */; };
 		9406808A264936C70079D42F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94068089264936C70079D42F /* UIImage+Extension.swift */; };
 		9406811026497F870079D42F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9406810F26497F870079D42F /* ImagePicker.swift */; };
-		9409E65526534B8C00E60FAB /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */; };
 		9409E65A26534C0D00E60FAB /* ResetPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */; };
 		9409E68A265362A300E60FAB /* ResetPasswordRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409E689265362A300E60FAB /* ResetPasswordRes.swift */; };
+		940C50E02653674F0083256D /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940C50DF2653674F0083256D /* ResetPasswordVC.swift */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
@@ -108,9 +108,9 @@
 		94068084264928EF0079D42F /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		94068089264936C70079D42F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9406810F26497F870079D42F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordVC.swift; path = ../../../../../ResetPasswordVC.swift; sourceTree = "<group>"; };
 		9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPasswordVC.storyboard; sourceTree = "<group>"; };
 		9409E689265362A300E60FAB /* ResetPasswordRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRes.swift; sourceTree = "<group>"; };
+		940C50DF2653674F0083256D /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordVC.swift; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
@@ -368,8 +368,8 @@
 				946ECE452653352100220BDF /* ForgetPasswordVC.storyboard */,
 				946ECE4F26533AB500220BDF /* VerifyCodeVC.swift */,
 				946ECE5426533B2900220BDF /* VerifyCodeVC.storyboard */,
-				9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */,
 				9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */,
+				940C50DF2653674F0083256D /* ResetPasswordVC.swift */,
 			);
 			path = StartUp;
 			sourceTree = "<group>";
@@ -718,6 +718,7 @@
 				940F6F082641991D00BC07DC /* Contact.swift in Sources */,
 				945884E62638743E00851CE6 /* String+Extension.swift in Sources */,
 				9458840C2638284000851CE6 /* AppDelegate.swift in Sources */,
+				940C50E02653674F0083256D /* ResetPasswordVC.swift in Sources */,
 				94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */,
 				9458849E2638477D00851CE6 /* TextInput.swift in Sources */,
 				94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */,
@@ -758,7 +759,6 @@
 				9406808A264936C70079D42F /* UIImage+Extension.swift in Sources */,
 				946ECE5026533AB500220BDF /* VerifyCodeVC.swift in Sources */,
 				94587EAF263FF589004B0BCC /* ScheduleListVC.swift in Sources */,
-				9409E65526534B8C00E60FAB /* ResetPasswordVC.swift in Sources */,
 				94587EC2263FF5EE004B0BCC /* AccountVC.swift in Sources */,
 				94C1A7A42646BF0D00E37144 /* UIView+Extension.swift in Sources */,
 				945B24AF264088A3004C12D7 /* Date+Extension.swift in Sources */,
