@@ -13,6 +13,7 @@ PODS:
   - KRActivityIndicatorView (3.0.7)
   - KRProgressHUD (3.4.7):
     - KRActivityIndicatorView (= 3.0.7)
+  - KWVerificationCodeView (0.4.0)
   - LSDialogViewController (4.0)
   - MaterialComponents (124.2.0):
     - MaterialComponents/ActionSheet (= 124.2.0)
@@ -677,6 +678,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift (~> 6.5.6)
   - Kingfisher (~> 6.1.1)
   - KRProgressHUD (~> 3.4.7)
+  - KWVerificationCodeView
   - LSDialogViewController (~> 4.0)
   - MaterialComponents (~> 124.2.0)
   - PDFReader
@@ -695,6 +697,7 @@ SPEC REPOS:
     - Kingfisher
     - KRActivityIndicatorView
     - KRProgressHUD
+    - KWVerificationCodeView
     - LSDialogViewController
     - MaterialComponents
     - MDFInternationalization
@@ -717,6 +720,7 @@ SPEC CHECKSUMS:
   Kingfisher: 676d63307fbef6ed5d5ed400bff36983480d7500
   KRActivityIndicatorView: ad69e89c4ce40c986cf580595be4829dcad0e35a
   KRProgressHUD: a248f0bc6c9c2aed40a37b76e03ffecc7f85c887
+  KWVerificationCodeView: 92cca6ad028546d3232fa75cda3a40d00109a1a2
   LSDialogViewController: ab7dd9a3e3facf95b386b7209401ac96bbdc3514
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
@@ -729,6 +733,6 @@ SPEC CHECKSUMS:
   Stripe: 7c594b943abb65cf7bc28e37fd5124e65db3ce9e
   SwiftMessages: 77b847d1405f99046ffbd0d856bc7d73e6892686
 
-PODFILE CHECKSUM: c4aa9fe068249706c57506e3454d73701f1d4c52
+PODFILE CHECKSUM: 9718880accce560e1a64f8c583899f088adb0c44
 
 COCOAPODS: 1.10.1

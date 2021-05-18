@@ -72,6 +72,17 @@ class BaseVC : UIViewController {
         self.present(targetVC, animated: true, completion: nil)
     }
     
+    func gotoVerifyCodeVC(email: String, verify_code: String) {
+        let storyboad = UIStoryboard(name: VC_VERIFY_CODE, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_VERIFY_CODE) as! VerifyCodeVC
+        targetVC.email = email
+        targetVC.m_VerifyCode = verify_code
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = targetVC
+        UIApplication.shared.keyWindow?.rootViewController = targetVC
+    }
+    
     func showLoading(_ viewController: UIViewController) {
         let primaryColor = UIColor.init(named: "colorPrimary")
         let styles : KRProgressHUDStyle = .custom (background: .white,text : primaryColor!, icon: primaryColor! )

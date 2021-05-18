@@ -15,6 +15,8 @@
 		94068085264928EF0079D42F /* FloatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94068084264928EF0079D42F /* FloatingButton.swift */; };
 		9406808A264936C70079D42F /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94068089264936C70079D42F /* UIImage+Extension.swift */; };
 		9406811026497F870079D42F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9406810F26497F870079D42F /* ImagePicker.swift */; };
+		9409E65526534B8C00E60FAB /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */; };
+		9409E65A26534C0D00E60FAB /* ResetPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
@@ -54,6 +56,11 @@
 		945B249726405B65004C12D7 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B249626405B65004C12D7 /* Invoice.swift */; };
 		945B24AF264088A3004C12D7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B24AE264088A2004C12D7 /* Date+Extension.swift */; };
 		946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946446232646F1530079BCE2 /* ScheduleAddRes.swift */; };
+		946ECE41265334F800220BDF /* ForgetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECE40265334F800220BDF /* ForgetPasswordVC.swift */; };
+		946ECE462653352100220BDF /* ForgetPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946ECE452653352100220BDF /* ForgetPasswordVC.storyboard */; };
+		946ECE4B2653389800220BDF /* ForgetPasswordRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECE4A2653389800220BDF /* ForgetPasswordRes.swift */; };
+		946ECE5026533AB500220BDF /* VerifyCodeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946ECE4F26533AB500220BDF /* VerifyCodeVC.swift */; };
+		946ECE5526533B2900220BDF /* VerifyCodeVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 946ECE5426533B2900220BDF /* VerifyCodeVC.storyboard */; };
 		947E5A55263EE908008A0008 /* CreditCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A54263EE908008A0008 /* CreditCardView.swift */; };
 		947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A59263EFDBA008A0008 /* NoDataRes.swift */; };
 		947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A5E263F0059008A0008 /* SuccessVC.swift */; };
@@ -100,6 +107,8 @@
 		94068084264928EF0079D42F /* FloatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingButton.swift; sourceTree = "<group>"; };
 		94068089264936C70079D42F /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		9406810F26497F870079D42F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordVC.swift; path = ../../../../../ResetPasswordVC.swift; sourceTree = "<group>"; };
+		9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPasswordVC.storyboard; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
@@ -145,6 +154,11 @@
 		945B249626405B65004C12D7 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		945B24AE264088A2004C12D7 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		946446232646F1530079BCE2 /* ScheduleAddRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAddRes.swift; sourceTree = "<group>"; };
+		946ECE40265334F800220BDF /* ForgetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordVC.swift; sourceTree = "<group>"; };
+		946ECE452653352100220BDF /* ForgetPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ForgetPasswordVC.storyboard; sourceTree = "<group>"; };
+		946ECE4A2653389800220BDF /* ForgetPasswordRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgetPasswordRes.swift; sourceTree = "<group>"; };
+		946ECE4F26533AB500220BDF /* VerifyCodeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyCodeVC.swift; sourceTree = "<group>"; };
+		946ECE5426533B2900220BDF /* VerifyCodeVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VerifyCodeVC.storyboard; sourceTree = "<group>"; };
 		947E5A54263EE908008A0008 /* CreditCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardView.swift; sourceTree = "<group>"; };
 		947E5A59263EFDBA008A0008 /* NoDataRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataRes.swift; sourceTree = "<group>"; };
 		947E5A5E263F0059008A0008 /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
@@ -348,6 +362,12 @@
 				948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */,
 				940CA3002639422300401594 /* CardRegisterVC.swift */,
 				948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */,
+				946ECE40265334F800220BDF /* ForgetPasswordVC.swift */,
+				946ECE452653352100220BDF /* ForgetPasswordVC.storyboard */,
+				946ECE4F26533AB500220BDF /* VerifyCodeVC.swift */,
+				946ECE5426533B2900220BDF /* VerifyCodeVC.storyboard */,
+				9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */,
+				9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */,
 			);
 			path = StartUp;
 			sourceTree = "<group>";
@@ -417,6 +437,7 @@
 				94F6B592264A21FB00BE60A9 /* HelpRes.swift */,
 				94BABBDE26509F88002FF91E /* CreditCardRes.swift */,
 				94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */,
+				946ECE4A2653389800220BDF /* ForgetPasswordRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -549,6 +570,7 @@
 			files = (
 				948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */,
 				945884182638284100851CE6 /* LaunchScreen.storyboard in Resources */,
+				9409E65A26534C0D00E60FAB /* ResetPasswordVC.storyboard in Resources */,
 				94587E97263FED62004B0BCC /* MainTabVC.storyboard in Resources */,
 				948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */,
 				947E5A64263F0095008A0008 /* SuccessVC.storyboard in Resources */,
@@ -558,7 +580,9 @@
 				94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */,
 				940F6EED2641808D00BC07DC /* ScheduleAddVC.storyboard in Resources */,
 				94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */,
+				946ECE5526533B2900220BDF /* VerifyCodeVC.storyboard in Resources */,
 				948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */,
+				946ECE462653352100220BDF /* ForgetPasswordVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -694,6 +718,7 @@
 				94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */,
 				9458849E2638477D00851CE6 /* TextInput.swift in Sources */,
 				94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */,
+				946ECE41265334F800220BDF /* ForgetPasswordVC.swift in Sources */,
 				945884CF263868D600851CE6 /* Store.swift in Sources */,
 				94DB9BF6264674B300C800D2 /* ContactAllRes.swift in Sources */,
 				945B249726405B65004C12D7 /* Invoice.swift in Sources */,
@@ -710,6 +735,7 @@
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
 				94BABBDA26509E6F002FF91E /* CreditCard.swift in Sources */,
 				94F6B5A0264A28C800BE60A9 /* Help.swift in Sources */,
+				946ECE4B2653389800220BDF /* ForgetPasswordRes.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
 				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,
@@ -726,7 +752,9 @@
 				945884B026385E6100851CE6 /* Const.swift in Sources */,
 				940CA3102639441000401594 /* SubscriptionRes.swift in Sources */,
 				9406808A264936C70079D42F /* UIImage+Extension.swift in Sources */,
+				946ECE5026533AB500220BDF /* VerifyCodeVC.swift in Sources */,
 				94587EAF263FF589004B0BCC /* ScheduleListVC.swift in Sources */,
+				9409E65526534B8C00E60FAB /* ResetPasswordVC.swift in Sources */,
 				94587EC2263FF5EE004B0BCC /* AccountVC.swift in Sources */,
 				94C1A7A42646BF0D00E37144 /* UIView+Extension.swift in Sources */,
 				945B24AF264088A3004C12D7 /* Date+Extension.swift in Sources */,

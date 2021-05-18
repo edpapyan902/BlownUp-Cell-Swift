@@ -34,6 +34,9 @@ let APPLE_USER_EMAIL = "APPLE_USER_EMAIL"
 //  ViewControllers
 let VC_LOGIN = "LoginVC"
 let VC_SIGN_UP = "SignUpVC"
+let VC_FORGET_PASSWORD = "ForgetPasswordVC"
+let VC_VERIFY_CODE = "VerifyCodeVC"
+let VC_RESET_PASSWORD = "ResetPasswordVC"
 let VC_CARD_REGISTER = "CardRegisterVC"
 let VC_SUCCESS = "SuccessVC"
 let VC_RECENT_CALL = "RecentCallVC"
@@ -58,6 +61,10 @@ func BEARER_HEADER() -> HTTPHeaders {
 //  Sign In/Up
 let URL_LOGIN = "\(BASE_SERVER)/api/login"
 let URL_SIGN_UP = "\(BASE_SERVER)/api/signup"
+
+//  Forget Password
+let URL_FORGET_PASSWORD = "\(BASE_SERVER)/api/password/forget"
+let URL_RESET_PASSWORD = "\(BASE_SERVER)/api/password/reset"
 
 //  Account
 let URL_ACCOUNT_UPDATE = "\(BASE_SERVER)/api/account/update"
