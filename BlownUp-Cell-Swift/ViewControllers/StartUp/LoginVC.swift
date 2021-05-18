@@ -34,6 +34,10 @@ class LoginVC: BaseVC {
         self.gotoPageVC(VC_SIGN_UP)
     }
     
+    @IBAction func goForgetPassword(_ sender: Any) {
+        self.gotoPageVC(VC_FORGET_PASSWORD)
+    }
+    
     @IBAction func login(_ sender: Any) {
         let email = txtEmail.getText()
         let password = txtPassword.getText()

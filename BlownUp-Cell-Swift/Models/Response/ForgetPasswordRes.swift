@@ -26,7 +26,7 @@ struct ForgetPasswordRes: Codable {
     }
     
     struct Data: Codable {
-        let verify_code: String
+        let verify_code: Int
         
         enum CodingKeys: String, CodingKey {
             case verify_code = "verify_code"
@@ -34,7 +34,7 @@ struct ForgetPasswordRes: Codable {
         
         init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
-            verify_code = try values.decodeIfPresent(String.self, forKey: .verify_code)!
+            verify_code = try values.decodeIfPresent(Int.self, forKey: .verify_code)!
         }
     }
 }

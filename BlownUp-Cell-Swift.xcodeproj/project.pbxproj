@@ -17,6 +17,7 @@
 		9406811026497F870079D42F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9406810F26497F870079D42F /* ImagePicker.swift */; };
 		9409E65526534B8C00E60FAB /* ResetPasswordVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */; };
 		9409E65A26534C0D00E60FAB /* ResetPasswordVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */; };
+		9409E68A265362A300E60FAB /* ResetPasswordRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9409E689265362A300E60FAB /* ResetPasswordRes.swift */; };
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
@@ -109,6 +110,7 @@
 		9406810F26497F870079D42F /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		9409E65426534B8C00E60FAB /* ResetPasswordVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ResetPasswordVC.swift; path = ../../../../../ResetPasswordVC.swift; sourceTree = "<group>"; };
 		9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ResetPasswordVC.storyboard; sourceTree = "<group>"; };
+		9409E689265362A300E60FAB /* ResetPasswordRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordRes.swift; sourceTree = "<group>"; };
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
@@ -438,6 +440,7 @@
 				94BABBDE26509F88002FF91E /* CreditCardRes.swift */,
 				94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */,
 				946ECE4A2653389800220BDF /* ForgetPasswordRes.swift */,
+				9409E689265362A300E60FAB /* ResetPasswordRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -737,6 +740,7 @@
 				94F6B5A0264A28C800BE60A9 /* Help.swift in Sources */,
 				946ECE4B2653389800220BDF /* ForgetPasswordRes.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
+				9409E68A265362A300E60FAB /* ResetPasswordRes.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
 				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,
 				94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */,
