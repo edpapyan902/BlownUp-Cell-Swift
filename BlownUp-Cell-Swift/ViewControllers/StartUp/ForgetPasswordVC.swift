@@ -36,6 +36,8 @@ class ForgetPasswordVC: BaseVC {
                 if forgetPasswordRes.success {
                     self.showSuccess(forgetPasswordRes.message)
                     
+                    print("verify code", forgetPasswordRes.data.verify_code)
+                    
                     self.gotoVerifyCodeVC(email: email, verify_code: forgetPasswordRes.data.verify_code)
                 } else {
                     self.showError(forgetPasswordRes.message)
