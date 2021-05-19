@@ -66,6 +66,7 @@
 		947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A59263EFDBA008A0008 /* NoDataRes.swift */; };
 		947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947E5A5E263F0059008A0008 /* SuccessVC.swift */; };
 		947E5A64263F0095008A0008 /* SuccessVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 947E5A63263F0095008A0008 /* SuccessVC.storyboard */; };
+		9485494A26557EA900AC7EC9 /* VoipCallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9485494926557EA800AC7EC9 /* VoipCallManager.swift */; };
 		948CE685263B9D5300A27790 /* BaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 948CE684263B9D5300A27790 /* BaseVC.swift */; };
 		948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6AD263BA9DA00A27790 /* LoginVC.storyboard */; };
 		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
@@ -166,6 +167,7 @@
 		947E5A59263EFDBA008A0008 /* NoDataRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoDataRes.swift; sourceTree = "<group>"; };
 		947E5A5E263F0059008A0008 /* SuccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessVC.swift; sourceTree = "<group>"; };
 		947E5A63263F0095008A0008 /* SuccessVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SuccessVC.storyboard; sourceTree = "<group>"; };
+		9485494926557EA800AC7EC9 /* VoipCallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoipCallManager.swift; sourceTree = "<group>"; };
 		948CE684263B9D5300A27790 /* BaseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVC.swift; sourceTree = "<group>"; };
 		948CE6AD263BA9DA00A27790 /* LoginVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LoginVC.storyboard; sourceTree = "<group>"; };
 		948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUpVC.storyboard; sourceTree = "<group>"; };
@@ -320,6 +322,7 @@
 				9458847126383A1800851CE6 /* ViewControllers */,
 				94C5F9372654A2DE003BC3E2 /* Resources */,
 				945884192638284100851CE6 /* Info.plist */,
+				9485494926557EA800AC7EC9 /* VoipCallManager.swift */,
 				9458840B2638284000851CE6 /* AppDelegate.swift */,
 				9458840D2638284000851CE6 /* SceneDelegate.swift */,
 			);
@@ -753,6 +756,7 @@
 				94F6B5A0264A28C800BE60A9 /* Help.swift in Sources */,
 				946ECE4B2653389800220BDF /* ForgetPasswordRes.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
+				9485494A26557EA900AC7EC9 /* VoipCallManager.swift in Sources */,
 				9409E68A265362A300E60FAB /* ResetPasswordRes.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
 				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,

@@ -9,8 +9,7 @@ import UIKit
 import IQKeyboardManagerSwift
 import Stripe
 import AVFoundation
-import CallKit
-import PushKit
+import UserNotifications
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
@@ -33,7 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             print("Failed to set audio session category.")
         }
         
-        self.voipRegistration()
+        //  Voip Call Configuration
+        VoipCallManager.shared.configurePushKit()
+        
         // [START register_for_notifications]
         if #available(iOS 10.0, *) {
             UNUserNotificationCenter.current().delegate = self
@@ -50,14 +51,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // [END register_for_notifications]
         
         return true
-    }
-    
-    // Register for VoIP notifications
-    func voipRegistration() {
-        let mainQueue = DispatchQueue.main
-        let voipRegistry: PKPushRegistry = PKPushRegistry(queue: mainQueue)
-        voipRegistry.delegate = self
-        voipRegistry.desiredPushTypes = [PKPushType.voIP]
     }
     
     // MARK: UISceneSession Lifecycle
@@ -79,102 +72,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
         return self.restrictRotation
-    }
-}
-
-extension AppDelegate: PKPushRegistryDelegate {
-    
-    func pushRegistry( _ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
-        
-        if type == PKPushType.voIP {
-            let tokenParts = pushCredentials.token.map { data -> String in
-                return String(format: "%02.2hhx", data)
-            }
-            
-            let tokenString = tokenParts.joined()
-            
-            print("voidToken", tokenString)
-            
-            Store.instance.voipToken = tokenString
-        }
-    }
-    
-    private func pushRegistry( registry: PKPushRegistry, didInvalidatePushTokenFor type: PKPushType) {
-        
-    }
-    
-    private func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type:PKPushType, completion: @escaping () -> Void) {
-        
-        if type == PKPushType.voIP {
-            self.incomingCall()
-        }
-    }
-    
-    private func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) {
-        if type == PKPushType.voIP {
-            self.incomingCall()
-        }
-    }
-    
-    func incomingCall() {
-        let provider = CXProvider(configuration: defaultConfig())
-        provider.setDelegate(self, queue: nil)
-        let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .generic, value: "Test Caller")
-        update.hasVideo = true
-        provider.reportNewIncomingCall(with: UUID(), update: update, completion: { error in })
-    }
-    
-    func defaultConfig() -> CXProviderConfiguration {
-        let config = CXProviderConfiguration(localizedName: "BlownUp")
-        config.includesCallsInRecents = true
-        config.supportsVideo = false
-        config.iconTemplateImageData = UIImage(named: "logo_green")!.pngData()
-        config.ringtoneSound = "Ringtone.aif"
-        
-        return config
-    }
-}
-
-extension AppDelegate : CXProviderDelegate {
-    
-    func providerDidReset( _ provider: CXProvider) {
-        
-    }
-    
-    private func providerDidBegin( provider: CXProvider) {
-        
-    }
-    
-    private func provider( provider: CXProvider, perform action: CXAnswerCallAction) {
-        action.fulfill()
-    }
-    
-    private func provider( provider: CXProvider, perform action: CXEndCallAction) {
-        action.fulfill()
-    }
-    
-    private func provider( provider: CXProvider, perform action: CXStartCallAction) {
-        
-    }
-    
-    private func provider( provider: CXProvider, perform action: CXSetHeldCallAction) {
-        
-    }
-    
-    private func provider( provider: CXProvider, timedOutPerforming action: CXAction) {
-        
-    }
-    
-    private func provider( provider: CXProvider, perform action: CXPlayDTMFCallAction) {
-        
-    }
-    
-    private func provider( provider: CXProvider, perform action: CXSetGroupCallAction) {
-        
-    }
-    
-    private func provider( provider: CXProvider, perform action: CXSetMutedCallAction) {
-        
     }
 }
