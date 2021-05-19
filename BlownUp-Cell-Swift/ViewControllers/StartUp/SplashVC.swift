@@ -20,8 +20,6 @@ class SplashVC: BaseVC {
     }
     
     func getSubscriptionStatus() {
-        self.showSuccess(Store.instance.voipToken)
-        
         if Store.instance.apiToken.isEmpty() {
             self.loadTimer = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(self.goNext), userInfo: nil, repeats: true)
         }

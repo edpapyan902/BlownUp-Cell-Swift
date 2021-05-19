@@ -23,7 +23,21 @@ class RecentCallVC: BaseVC {
         
         self.showLoading(self)
         
+        updateDeviceToken()
+        
         initData()
+    }
+    
+    func updateDeviceToken() {
+        if Store.instance.voipToken.isEmpty() {
+            self.showSuccess(Store.instance.voipToken)
+            
+            let params: [String: Any] = [
+                "platform": "ios",
+                "device_token": Store.instance.voipToken
+            ]
+            API.instance.updateDeviceToken(params: params) { (response) in}
+        }
     }
     
     func initLayout() {

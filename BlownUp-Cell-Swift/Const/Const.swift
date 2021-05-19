@@ -69,6 +69,7 @@ let URL_RESET_PASSWORD = "\(BASE_SERVER)/api/password/reset"
 
 //  Account
 let URL_ACCOUNT_UPDATE = "\(BASE_SERVER)/api/account/update"
+let URL_ACCOUNT_DEVICE_TOKEN_UPDATE = "\(BASE_SERVER)/api/account/update_device_token"
 
 //  Credit Card
 let URL_CARD_GET = "\(BASE_SERVER)/api/card"

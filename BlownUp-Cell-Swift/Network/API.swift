@@ -43,6 +43,12 @@ class API {
         }
     }
     
+    func updateDeviceToken(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
+        Alamofire.request(URL_ACCOUNT_DEVICE_TOKEN_UPDATE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
+            completion(response)
+        }
+    }
+    
     func getCard(completion: @escaping ( _ response: DataResponse<CreditCardRes>) -> Void) -> Void {
         Alamofire.request(URL_CARD_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<CreditCardRes>) in
             completion(response)
