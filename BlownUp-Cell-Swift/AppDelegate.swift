@@ -13,7 +13,7 @@ import CallKit
 import PushKit
 
 @main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate {
     
     var window: UIWindow?
     
@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: PKPushRegistryDelegate {
     
-    func pushRegistry( registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
+    func pushRegistry( _ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
         
         if type == PKPushType.voIP {
             let tokenParts = pushCredentials.token.map { data -> String in
@@ -99,18 +99,18 @@ extension AppDelegate: PKPushRegistryDelegate {
         }
     }
     
-    func pushRegistry( registry: PKPushRegistry, didInvalidatePushTokenFor type: PKPushType) {
+    private func pushRegistry( registry: PKPushRegistry, didInvalidatePushTokenFor type: PKPushType) {
         
     }
     
-    func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type:PKPushType, completion: @escaping () -> Void) {
+    private func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type:PKPushType, completion: @escaping () -> Void) {
         
         if type == PKPushType.voIP {
             self.incomingCall()
         }
     }
     
-    func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) {
+    private func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) {
         if type == PKPushType.voIP {
             self.incomingCall()
         }
@@ -129,7 +129,7 @@ extension AppDelegate: PKPushRegistryDelegate {
         let config = CXProviderConfiguration(localizedName: "BlownUp")
         config.includesCallsInRecents = true
         config.supportsVideo = false
-        config.iconTemplateImageData = UIImagePNGRepresentation(UIImage(named: "logo_green")!)
+        config.iconTemplateImageData = UIImage(named: "logo_green")!.pngData()
         config.ringtoneSound = "Ringtone.aif"
         
         return config
@@ -138,43 +138,43 @@ extension AppDelegate: PKPushRegistryDelegate {
 
 extension AppDelegate : CXProviderDelegate {
     
-    func providerDidReset( provider: CXProvider) {
+    func providerDidReset( _ provider: CXProvider) {
         
     }
     
-    func providerDidBegin( provider: CXProvider) {
+    private func providerDidBegin( provider: CXProvider) {
         
     }
     
-    func provider( provider: CXProvider, perform action: CXAnswerCallAction) {
+    private func provider( provider: CXProvider, perform action: CXAnswerCallAction) {
         action.fulfill()
     }
     
-    func provider( provider: CXProvider, perform action: CXEndCallAction) {
+    private func provider( provider: CXProvider, perform action: CXEndCallAction) {
         action.fulfill()
     }
     
-    func provider( provider: CXProvider, perform action: CXStartCallAction) {
+    private func provider( provider: CXProvider, perform action: CXStartCallAction) {
         
     }
     
-    func provider( provider: CXProvider, perform action: CXSetHeldCallAction) {
+    private func provider( provider: CXProvider, perform action: CXSetHeldCallAction) {
         
     }
     
-    func provider( provider: CXProvider, timedOutPerforming action: CXAction) {
+    private func provider( provider: CXProvider, timedOutPerforming action: CXAction) {
         
     }
     
-    func provider( provider: CXProvider, perform action: CXPlayDTMFCallAction) {
+    private func provider( provider: CXProvider, perform action: CXPlayDTMFCallAction) {
         
     }
     
-    func provider( provider: CXProvider, perform action: CXSetGroupCallAction) {
+    private func provider( provider: CXProvider, perform action: CXSetGroupCallAction) {
         
     }
     
-    func provider( provider: CXProvider, perform action: CXSetMutedCallAction) {
+    private func provider( provider: CXProvider, perform action: CXSetMutedCallAction) {
         
     }
 }
