@@ -29,7 +29,7 @@ class RecentCallVC: BaseVC {
     }
     
     func updateDeviceToken() {
-        if Store.instance.voipToken.isEmpty() {
+        if !Store.instance.voipToken.isEmpty() {
             self.showSuccess(Store.instance.voipToken)
             
             let params: [String: Any] = [
