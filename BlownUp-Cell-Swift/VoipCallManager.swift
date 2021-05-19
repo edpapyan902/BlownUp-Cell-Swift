@@ -20,13 +20,14 @@ class VoipCallManager: NSObject {
     
     private override init() {
         super.init()
+        
         self.configureProvider()
     }
     
     private func configureProvider() {
-        let config = CXProviderConfiguration(localizedName: "BlownUp Call")
+        let config = CXProviderConfiguration()
         config.supportsVideo = false
-        config.supportedHandleTypes = [.generic]
+        config.supportedHandleTypes = [.generic, .phoneNumber]
         config.iconTemplateImageData = UIImage(named: "logo_green")!.pngData()
         config.ringtoneSound = "Ringtone.aif"
         
@@ -39,34 +40,24 @@ class VoipCallManager: NSObject {
         voipRegistry.desiredPushTypes = [.voIP]
     }
     
-    public func incommingCall(from: String) {
-        incommingCall(from: from, delay: 0)
-    }
-    
-    public func incommingCall(from: String, delay: TimeInterval) {
+    public func incommingCall(name: String) {
         let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .generic, value: from)
+        update.remoteHandle = CXHandle(type: .generic, value: name)
         
         let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + delay) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
             self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
             UIApplication.shared.endBackgroundTask(bgTaskID)
         }
     }
     
-    public func outgoingCall(from: String, connectAfter: TimeInterval) {
-        let controller = CXCallController()
-        let fromHandle = CXHandle(type: .generic, value: from)
-        let startCallAction = CXStartCallAction(call: UUID(), handle: fromHandle)
-        startCallAction.isVideo = true
-        let startCallTransaction = CXTransaction(action: startCallAction)
-        controller.request(startCallTransaction) { (error) in }
-        
-        self.provider?.reportOutgoingCall(with: startCallAction.callUUID, startedConnectingAt: nil)
+    public func incommingCall(phoneNumber: String) {
+        let update = CXCallUpdate()
+        update.remoteHandle = CXHandle(type: .phoneNumber, value: phoneNumber)
         
         let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + connectAfter) {
-            self.provider?.reportOutgoingCall(with: startCallAction.callUUID, connectedAt: nil)
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+            self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
             UIApplication.shared.endBackgroundTask(bgTaskID)
         }
     }
@@ -74,21 +65,17 @@ class VoipCallManager: NSObject {
 
 extension VoipCallManager: CXProviderDelegate {
     func providerDidReset(_ provider: CXProvider) {
-        print("provider did reset")
     }
     
     func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
-        print("call answered")
         action.fulfill()
     }
     
     func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
-        print("call ended")
         action.fulfill()
     }
     
     func provider(_ provider: CXProvider, perform action: CXStartCallAction) {
-        print("call started")
         action.fulfill()
     }
 }
@@ -97,7 +84,6 @@ extension VoipCallManager: PKPushRegistryDelegate {
     func pushRegistry(_ registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
         let parts = pushCredentials.token.map { String(format: "%02.2hhx", $0) }
         let token = parts.joined()
-        print("did update push credentials with token: \(token)")
         
         Store.instance.voipToken = token
     }
@@ -106,8 +92,8 @@ extension VoipCallManager: PKPushRegistryDelegate {
         if type == .voIP {
             self.incommingCall(from: "Test Caller")
         }
-//        if let callerID = payload.dictionaryPayload["callerID"] as? String {
-//            self.incommingCall(from: callerID)
-//        }
+        //        if let callerID = payload.dictionaryPayload["callerID"] as? String {
+        //            self.incommingCall(from: callerID)
+        //        }
     }
 }
