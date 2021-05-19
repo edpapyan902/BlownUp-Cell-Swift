@@ -907,7 +907,7 @@
                                     <constraint firstAttribute="bottom" secondItem="nAo-WE-JNX" secondAttribute="bottom" id="y38-yw-xy7"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5V-qcl">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aGR-5V-qcl">
                                 <rect key="frame" x="0.0" y="85" width="414" height="602"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aI0-xm-e6i">
@@ -1062,6 +1062,7 @@
                     <tabBarItem key="tabBarItem" title="Account" image="ic_account_off" id="TdV-II-nOm"/>
                     <connections>
                         <outlet property="creditCardProvider" destination="BSh-0J-HLh" id="DfH-Oe-zco"/>
+                        <outlet property="imgScheduleAdd" destination="nAo-WE-JNX" id="g0Z-DZ-3U9"/>
                         <outlet property="lblCardExp" destination="zTn-nn-Mkl" id="hGd-NC-bDm"/>
                         <outlet property="lblCardNumber" destination="1eG-Lt-hwc" id="AfP-Dk-0X4"/>
                         <outlet property="lblEmail" destination="XEr-gG-20J" id="mYf-2w-C8R"/>

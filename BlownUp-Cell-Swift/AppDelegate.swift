@@ -88,7 +88,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         identifiers.append(notification.request.identifier)
         cancelNotifications(identifiers: identifiers)
         
-        completionHandler([.sound])
+//        completionHandler([.sound])
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter,
@@ -101,7 +101,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
         identifiers.append(response.notification.request.identifier)
         cancelNotifications(identifiers: identifiers)
         
-        completionHandler()
+//        completionHandler()
     }
     
     func defaultConfig() -> CXProviderConfiguration {

@@ -12,6 +12,7 @@ import Stripe
 
 class AccountVC: BaseVC {
     
+    @IBOutlet weak var imgScheduleAdd: UIImageView!
     @IBOutlet weak var swtActiveCardForm: UISwitch!
     @IBOutlet weak var creditCardProvider: CreditCardView!
     @IBOutlet weak var lblCardExp: UILabel!
@@ -29,11 +30,17 @@ class AccountVC: BaseVC {
         // Do any additional setup after loading the view.
         
         initLayout()
-        initData()
+//        initData()
     }
     
     func initLayout() {
         creditCardProvider.setEnabled(false)
+        
+        self.imgScheduleAdd.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onScheduleAddClicked)))
+    }
+    
+    @objc func onScheduleAddClicked() {
+        self.gotoScheduleAddVC(nil)
     }
     
     func initData() {
