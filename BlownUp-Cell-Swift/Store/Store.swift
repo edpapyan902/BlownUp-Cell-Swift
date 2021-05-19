@@ -22,6 +22,15 @@ class Store {
         }
     }
     
+    var voipToken: String {
+        get {
+            return defaults.value(forKey: VOIP_TOKEN) as? String ?? ""
+        }
+        set {
+            defaults.set(newValue, forKey: VOIP_TOKEN)
+        }
+    }
+    
     var user: User? {
         get {
             if let data = defaults.data(forKey: USER_PROFILE) {

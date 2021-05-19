@@ -9,15 +9,13 @@ import UIKit
 import IQKeyboardManagerSwift
 import Stripe
 import AVFoundation
-import UserNotifications
 import CallKit
+import PushKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    
-    let notificationCenter = UNUserNotificationCenter.current()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -35,22 +33,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Failed to set audio session category.")
         }
         
-        //  Notification Permission
-        notificationCenter.delegate = self
-        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
-        notificationCenter.requestAuthorization(options: options) {
-            (granted, error) in
-            if granted {
-                DispatchQueue.main.async(execute: {
-                    application.registerForRemoteNotifications()
-                })
-            }
-            else {
-                print("Notification permission denied")
-            }
+        self.voipRegistration()
+        // [START register_for_notifications]
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
         }
+        application.registerForRemoteNotifications()
+        // [END register_for_notifications]
         
         return true
+    }
+    
+    // Register for VoIP notifications
+    func voipRegistration() {
+        let mainQueue = DispatchQueue.main
+        let voipRegistry: PKPushRegistry = PKPushRegistry(queue: mainQueue)
+        voipRegistry.delegate = self
+        voipRegistry.desiredPushTypes = [PKPushType.voIP]
     }
     
     // MARK: UISceneSession Lifecycle
@@ -75,113 +82,99 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 }
 
-extension AppDelegate: UNUserNotificationCenterDelegate {
+extension AppDelegate: PKPushRegistryDelegate {
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                willPresent notification: UNNotification,
-                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+    func pushRegistry( registry: PKPushRegistry, didUpdate pushCredentials: PKPushCredentials, for type: PKPushType) {
         
-        handleIncomingCall()
-        
-        //  Cancel Scheduled Call
-        var identifiers = [String]()
-        identifiers.append(notification.request.identifier)
-        cancelNotifications(identifiers: identifiers)
-        
-//        completionHandler([.sound])
+        if type == PKPushType.voIP {
+            let tokenParts = pushCredentials.token.map { data -> String in
+                return String(format: "%02.2hhx", data)
+            }
+            
+            let tokenString = tokenParts.joined()
+            
+            print("voidToken", tokenString)
+            
+            Store.instance.voipToken = tokenString
+        }
     }
     
-    func userNotificationCenter(_ center: UNUserNotificationCenter,
-                                didReceive response: UNNotificationResponse,
-                                withCompletionHandler completionHandler: @escaping () -> Void) {
-        handleIncomingCall()
+    func pushRegistry( registry: PKPushRegistry, didInvalidatePushTokenFor type: PKPushType) {
         
-        //  Cancel Scheduled Call
-        var identifiers = [String]()
-        identifiers.append(response.notification.request.identifier)
-        cancelNotifications(identifiers: identifiers)
-        
-//        completionHandler()
     }
     
-    func defaultConfig() -> CXProviderConfiguration {
-        let config = CXProviderConfiguration()
-        config.includesCallsInRecents = true
-        config.supportsVideo = false
-        config.maximumCallGroups = 1
-        config.maximumCallsPerCallGroup = 1
-        config.iconTemplateImageData = UIImage(named: "logo_green")!.pngData()
-
-        return config
+    func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type:PKPushType, completion: @escaping () -> Void) {
+        
+        if type == PKPushType.voIP {
+            self.incomingCall()
+        }
     }
     
-    func handleIncomingCall() {
-        let provider = CXProvider(configuration: self.defaultConfig())
+    func pushRegistry( registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) {
+        if type == PKPushType.voIP {
+            self.incomingCall()
+        }
+    }
+    
+    func incomingCall() {
+        let provider = CXProvider(configuration: defaultConfig())
         provider.setDelegate(self, queue: nil)
         let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .generic, value: "BlownUp")
-        update.hasVideo = false
+        update.remoteHandle = CXHandle(type: .generic, value: "Test Caller")
+        update.hasVideo = true
         provider.reportNewIncomingCall(with: UUID(), update: update, completion: { error in })
     }
     
-    func scheduleIncomingCall(_ schedule: Schedule) {
-        let trigger = UNCalendarNotificationTrigger(dateMatching: schedule.scheduled_at.TimeStamp2DateComponents(), repeats: false)
-
-        let content = UNMutableNotificationContent()
-        content.title = "Incoming Call"
-        content.body = (schedule.contact == nil ? schedule.number : schedule.contact?.number)!
-        content.sound = UNNotificationSound.default
-
-        let request = UNNotificationRequest(identifier: schedule.alarm_identify, content: content, trigger: trigger)
-
-        notificationCenter.delegate = self
-        notificationCenter.add(request) {(error) in
-            if let error = error {
-                print("Notify set error: \(error)")
-            }
-        }
-    }
-
-    func cancelNotifications(identifiers: [String]) {
-        notificationCenter.removeDeliveredNotifications(withIdentifiers: identifiers)
-        notificationCenter.removePendingNotificationRequests(withIdentifiers: identifiers)
+    func defaultConfig() -> CXProviderConfiguration {
+        let config = CXProviderConfiguration(localizedName: "BlownUp")
+        config.includesCallsInRecents = true
+        config.supportsVideo = false
+        config.iconTemplateImageData = UIImagePNGRepresentation(UIImage(named: "logo_green")!)
+        config.ringtoneSound = "Ringtone.aif"
+        
+        return config
     }
 }
 
 extension AppDelegate : CXProviderDelegate {
-    func providerDidReset(_ provider: CXProvider) {
+    
+    func providerDidReset( provider: CXProvider) {
         
     }
     
-    private func provider( provider: CXProvider, perform action: CXAnswerCallAction) {
+    func providerDidBegin( provider: CXProvider) {
+        
+    }
+    
+    func provider( provider: CXProvider, perform action: CXAnswerCallAction) {
         action.fulfill()
     }
-
-    private func provider( provider: CXProvider, perform action: CXEndCallAction) {
+    
+    func provider( provider: CXProvider, perform action: CXEndCallAction) {
         action.fulfill()
     }
-
-    private func provider( provider: CXProvider, perform action: CXStartCallAction) {
-
+    
+    func provider( provider: CXProvider, perform action: CXStartCallAction) {
+        
     }
-
-    private func provider( provider: CXProvider, perform action: CXSetHeldCallAction) {
-
+    
+    func provider( provider: CXProvider, perform action: CXSetHeldCallAction) {
+        
     }
-
-    private func provider( provider: CXProvider, timedOutPerforming action: CXAction) {
-
+    
+    func provider( provider: CXProvider, timedOutPerforming action: CXAction) {
+        
     }
-
-    private func provider( provider: CXProvider, perform action: CXPlayDTMFCallAction) {
-
+    
+    func provider( provider: CXProvider, perform action: CXPlayDTMFCallAction) {
+        
     }
-
-    private func provider( provider: CXProvider, perform action: CXSetGroupCallAction) {
-
+    
+    func provider( provider: CXProvider, perform action: CXSetGroupCallAction) {
+        
     }
-
-    private func provider( provider: CXProvider, perform action: CXSetMutedCallAction) {
-
+    
+    func provider( provider: CXProvider, perform action: CXSetMutedCallAction) {
+        
     }
 }

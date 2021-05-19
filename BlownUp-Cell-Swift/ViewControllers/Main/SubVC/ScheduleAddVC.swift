@@ -135,8 +135,6 @@ class ScheduleAddVC: BaseVC {
                 if scheduleAddRes.success {
                     self.showSuccess(scheduleAddRes.message)
                     
-                    self.appDelegate!.scheduleIncomingCall(scheduleAddRes.data.schedule!)
-                    
                     ScheduleListVC.instance.loadData()
                     
                     self.onBack()
@@ -180,13 +178,7 @@ class ScheduleAddVC: BaseVC {
                 let scheduleUpdateRes: ScheduleUpdateRes = response.result.value!
                 if scheduleUpdateRes.success {
                     self.showSuccess(scheduleUpdateRes.message)
-                    
-                    var identifiers = [String]()
-                    identifiers.append(self.currentSchedule!.alarm_identify)
-                    self.appDelegate!.cancelNotifications(identifiers: identifiers)
-                    
-                    self.appDelegate!.scheduleIncomingCall(scheduleUpdateRes.data.schedule!)
-                    
+
                     ScheduleListVC.instance.loadData()
                     self.onBack()
                 } else {
