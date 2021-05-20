@@ -11,8 +11,6 @@ import DatePicker
 
 class ScheduleAddVC: BaseVC {
     
-    var appDelegate = UIApplication.shared.delegate as? AppDelegate
-    
     var selectedContact: Contact? = nil
     var currentSchedule: Schedule? = nil
     

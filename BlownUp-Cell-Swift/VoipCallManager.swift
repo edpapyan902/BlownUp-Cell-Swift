@@ -20,8 +20,27 @@ class VoipCallManager: NSObject {
     
     private override init() {
         super.init()
-        
+    }
+    
+    public func configureCall() {
+        self.registerForRemoteNotification()
         self.configureProvider()
+        self.configurePushKit()
+    }
+    
+    private func registerForRemoteNotification() {
+        if #available(iOS 10.0, *) {
+            UNUserNotificationCenter.current().delegate = self
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+        }
+        UIApplication.shared.registerForRemoteNotifications()
     }
     
     private func configureProvider() {
@@ -35,7 +54,7 @@ class VoipCallManager: NSObject {
         provider?.setDelegate(self, queue: DispatchQueue.main)
     }
     
-    public func configurePushKit() {
+    private func configurePushKit() {
         voipRegistry.delegate = self
         voipRegistry.desiredPushTypes = [.voIP]
     }
