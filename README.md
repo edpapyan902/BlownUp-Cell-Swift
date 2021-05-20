@@ -2,4 +2,3 @@
 
 //Pod change
 - PDFView
-- BMPlayer
