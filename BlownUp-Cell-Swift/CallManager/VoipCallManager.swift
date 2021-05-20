@@ -63,22 +63,24 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         let update = CXCallUpdate()
         update.remoteHandle = CXHandle(type: .generic, value: name)
         
-        let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-            self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
-            UIApplication.shared.endBackgroundTask(bgTaskID)
-        }
+        //        let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
+        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+        //            self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
+        //            UIApplication.shared.endBackgroundTask(bgTaskID)
+        //        }
+        self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
     }
     
     public func incommingCall(phoneNumber: String) {
         let update = CXCallUpdate()
         update.remoteHandle = CXHandle(type: .phoneNumber, value: phoneNumber)
         
-        let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-            self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
-            UIApplication.shared.endBackgroundTask(bgTaskID)
-        }
+        //        let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
+        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
+        //            self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
+        //            UIApplication.shared.endBackgroundTask(bgTaskID)
+        //        }
+        self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
     }
 }
 
