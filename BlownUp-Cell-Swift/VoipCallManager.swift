@@ -10,7 +10,7 @@ import UIKit
 import CallKit
 import PushKit
 
-class VoipCallManager: NSObject {
+class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
     
     static let shared: VoipCallManager = VoipCallManager()
     
@@ -109,7 +109,7 @@ extension VoipCallManager: PKPushRegistryDelegate {
     
     func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
         if type == .voIP {
-            self.incommingCall(from: "Test Caller")
+            self.incommingCall(name: "Test Caller")
         }
         //        if let callerID = payload.dictionaryPayload["callerID"] as? String {
         //            self.incommingCall(from: callerID)
