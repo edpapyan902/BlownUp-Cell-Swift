@@ -312,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */,
+				9472A1702656F595004B7C4A /* CallManager */,
 				94588499263846CC00851CE6 /* Extensions */,
 				94437041264D08BF00E3BE32 /* Components */,
 				94C1A7A82646BFA100E37144 /* Utils */,
@@ -322,7 +323,6 @@
 				9458847126383A1800851CE6 /* ViewControllers */,
 				94C5F9372654A2DE003BC3E2 /* Resources */,
 				945884192638284100851CE6 /* Info.plist */,
-				9485494926557EA800AC7EC9 /* VoipCallManager.swift */,
 				9458840B2638284000851CE6 /* AppDelegate.swift */,
 				9458840D2638284000851CE6 /* SceneDelegate.swift */,
 			);
@@ -446,6 +446,14 @@
 				9409E689265362A300E60FAB /* ResetPasswordRes.swift */,
 			);
 			path = Response;
+			sourceTree = "<group>";
+		};
+		9472A1702656F595004B7C4A /* CallManager */ = {
+			isa = PBXGroup;
+			children = (
+				9485494926557EA800AC7EC9 /* VoipCallManager.swift */,
+			);
+			path = CallManager;
 			sourceTree = "<group>";
 		};
 		94C1A7A82646BFA100E37144 /* Utils */ = {

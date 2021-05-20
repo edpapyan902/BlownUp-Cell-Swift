@@ -109,10 +109,13 @@ extension VoipCallManager: PKPushRegistryDelegate {
     
     func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
         if type == .voIP {
-            self.incommingCall(name: "Test Caller")
+            if let callData = payload.dictionaryPayload as? [String : Any], let name = callData["name"] as? String, let phoneNumber = callData["phoneNumber"] as? String {
+                if name.isEmpty() {
+                    self.incommingCall(phoneNumber: phoneNumber)
+                } else {
+                    self.incommingCall(name: name)
+                }
+            }
         }
-        //        if let callerID = payload.dictionaryPayload["callerID"] as? String {
-        //            self.incommingCall(from: callerID)
-        //        }
     }
 }
