@@ -28,13 +28,13 @@
 		<true/>
 	</dict>
 	<key>NSCameraUsageDescription</key>
-	<string>BlownUp want to take picture to pick new contact avatar.</string>
+	<string>Mobile Phone want to take picture to pick new contact avatar.</string>
 	<key>NSContactsUsageDescription</key>
-	<string>BlowUp want to use your contacts for adding new app contact from your phone contacts automatically.</string>
+	<string>Mobile Phone want to use your contacts for adding new app contact from your phone contacts list automatically.</string>
 	<key>NSMicrophoneUsageDescription</key>
-	<string>BlownUp want to use your microphone to pick new contact avatar.</string>
+	<string>Mobile Phone want to use your microphone to pick new contact avatar.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>BlownUp want to use your photos to pick new contact avatar.</string>
+	<string>Mobile Phone want to use your photos to pick new contact avatar.</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
