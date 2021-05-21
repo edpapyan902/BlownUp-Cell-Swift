@@ -48,7 +48,7 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         config.supportsVideo = false
         config.supportedHandleTypes = [.generic, .phoneNumber]
         config.iconTemplateImageData = UIImage(named: "logo_green")!.pngData()
-        config.ringtoneSound = "Ringtone.aif"
+        config.ringtoneSound = "Ringtone.mp3"
         
         provider = CXProvider(configuration: config)
         provider?.setDelegate(self, queue: DispatchQueue.main)

@@ -27,6 +27,7 @@
 		940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6EFD264197AB00BC07DC /* RecentCallRes.swift */; };
 		940F6F03264197CD00BC07DC /* Schedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6F02264197CD00BC07DC /* Schedule.swift */; };
 		940F6F082641991D00BC07DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6F072641991D00BC07DC /* Contact.swift */; };
+		942ED4952657EAB500192C07 /* Ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 942ED4942657EAB500192C07 /* Ringtone.mp3 */; };
 		94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420DC02638FFE0005E2121 /* SignUpVC.swift */; };
 		94587E97263FED62004B0BCC /* MainTabVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E96263FED62004B0BCC /* MainTabVC.storyboard */; };
 		94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */; };
@@ -77,7 +78,6 @@
 		94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */; };
 		94C1A7A42646BF0D00E37144 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */; };
 		94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A92646BFCC00E37144 /* Utils.swift */; };
-		94C5F9392654A37F003BC3E2 /* Ringtone.aif in Resources */ = {isa = PBXBuildFile; fileRef = 94C5F9382654A37F003BC3E2 /* Ringtone.aif */; };
 		94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BE82646734B00C800D2 /* DialogContactVC.swift */; };
 		94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */; };
 		94DB9BF6264674B300C800D2 /* ContactAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BF5264674B300C800D2 /* ContactAllRes.swift */; };
@@ -122,6 +122,7 @@
 		940F6EFD264197AB00BC07DC /* RecentCallRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallRes.swift; sourceTree = "<group>"; };
 		940F6F02264197CD00BC07DC /* Schedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Schedule.swift; sourceTree = "<group>"; };
 		940F6F072641991D00BC07DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		942ED4942657EAB500192C07 /* Ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ringtone.mp3; sourceTree = "<group>"; };
 		94420DC02638FFE0005E2121 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		94587E96263FED62004B0BCC /* MainTabVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabVC.storyboard; sourceTree = "<group>"; };
 		94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentCallVC.storyboard; sourceTree = "<group>"; };
@@ -179,7 +180,6 @@
 		94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUpdateRes.swift; sourceTree = "<group>"; };
 		94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		94C1A7A92646BFCC00E37144 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		94C5F9382654A37F003BC3E2 /* Ringtone.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ringtone.aif; sourceTree = "<group>"; };
 		94DB9BE82646734B00C800D2 /* DialogContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogContactVC.swift; sourceTree = "<group>"; };
 		94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DialogContactVC.storyboard; sourceTree = "<group>"; };
 		94DB9BF5264674B300C800D2 /* ContactAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAllRes.swift; sourceTree = "<group>"; };
@@ -468,7 +468,7 @@
 		94C5F9372654A2DE003BC3E2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				94C5F9382654A37F003BC3E2 /* Ringtone.aif */,
+				942ED4942657EAB500192C07 /* Ringtone.mp3 */,
 				945884142638284100851CE6 /* Assets.xcassets */,
 				945884112638284000851CE6 /* Main.storyboard */,
 				945884162638284100851CE6 /* LaunchScreen.storyboard */,
@@ -593,7 +593,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94C5F9392654A37F003BC3E2 /* Ringtone.aif in Resources */,
 				948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */,
 				945884182638284100851CE6 /* LaunchScreen.storyboard in Resources */,
 				9409E65A26534C0D00E60FAB /* ResetPasswordVC.storyboard in Resources */,
@@ -607,6 +606,7 @@
 				940F6EED2641808D00BC07DC /* ScheduleAddVC.storyboard in Resources */,
 				94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */,
 				946ECE5526533B2900220BDF /* VerifyCodeVC.storyboard in Resources */,
+				942ED4952657EAB500192C07 /* Ringtone.mp3 in Resources */,
 				948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */,
 				946ECE462653352100220BDF /* ForgetPasswordVC.storyboard in Resources */,
 			);
