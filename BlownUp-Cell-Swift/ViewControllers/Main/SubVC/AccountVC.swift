@@ -30,7 +30,7 @@ class AccountVC: BaseVC {
         // Do any additional setup after loading the view.
         
         initLayout()
-//        initData()
+        initData()
     }
     
     func initLayout() {
