@@ -59,27 +59,10 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         voipRegistry.desiredPushTypes = [.voIP]
     }
     
-    public func incommingCall(name: String) {
+    public func handleIncomingCall(name: String, phoneNumber: String) {
         let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .generic, value: name)
+        update.remoteHandle = CXHandle(type: !name.isEmpty() ? .generic : .phoneNumber, value: !name.isEmpty() ? name : phoneNumber)
         
-        //        let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
-        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-        //            self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
-        //            UIApplication.shared.endBackgroundTask(bgTaskID)
-        //        }
-        self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
-    }
-    
-    public func incommingCall(phoneNumber: String) {
-        let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: .phoneNumber, value: phoneNumber)
-        
-        //        let bgTaskID = UIApplication.shared.beginBackgroundTask(expirationHandler: nil)
-        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()) {
-        //            self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
-        //            UIApplication.shared.endBackgroundTask(bgTaskID)
-        //        }
         self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
     }
 }
@@ -112,11 +95,9 @@ extension VoipCallManager: PKPushRegistryDelegate {
     func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
         if type == .voIP {
             if let callData = payload.dictionaryPayload as? [String : Any], let name = callData["name"] as? String, let phoneNumber = callData["phoneNumber"] as? String {
-                if name.isEmpty() {
-                    self.incommingCall(phoneNumber: phoneNumber)
-                } else {
-                    self.incommingCall(name: name)
-                }
+                self.handleIncomingCall(name: name, phoneNumber: phoneNumber)
+                
+                completion()
             }
         }
     }

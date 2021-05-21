@@ -13,15 +13,21 @@ import AVKit
 
 class HelpVC: BaseVC {
     
+    static var instance: HelpVC? = nil
+    
     @IBOutlet weak var imgScheduleAdd: UIImageView!
     @IBOutlet weak var tblHelp: UITableView!
     @IBOutlet weak var videoView: UIView!
     
     var m_Helps = [Help]()
     
+    var avPlayer: AVPlayer? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        HelpVC.instance = self
         
         initLayout()
         
@@ -39,17 +45,20 @@ class HelpVC: BaseVC {
     }
     
     @objc func onScheduleAddClicked() {
+        if avPlayer != nil {
+            avPlayer!.pause()
+        }
         self.gotoScheduleAddVC(nil)
     }
     
     func setHelpVideo(_ url: String) {
-        let player = AVPlayer(url: URL.init(string: url)!)
+        avPlayer = AVPlayer(url: URL.init(string: url)!)
         let playerViewController = AVPlayerViewController()
         playerViewController.view.frame = self.videoView.bounds
-        playerViewController.player = player
+        playerViewController.player = avPlayer
         self.addChild(playerViewController)
         self.videoView.addSubview(playerViewController.view)
-        player.play()
+        avPlayer!.pause()
     }
     
     func initData() {
@@ -71,7 +80,7 @@ class HelpVC: BaseVC {
                         for help in helps {
                             if help.type == 1 {
                                 self.m_Helps.append(help)
-                            } else {
+                            } else if help.type == 0 {
                                 if !help.content.isEmpty() {
                                     let url = BASE_SERVER + help.content
                                     self.setHelpVideo(url.replace("\\", "/"))
