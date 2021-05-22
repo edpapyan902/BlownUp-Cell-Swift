@@ -59,11 +59,24 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         voipRegistry.desiredPushTypes = [.voIP]
     }
     
-    public func handleIncomingCall(name: String, phoneNumber: String) {
+    public func handleIncomingCall(name: String, phoneNumber: String, avatar: String) {
         let update = CXCallUpdate()
         update.remoteHandle = CXHandle(type: !name.isEmpty() ? .generic : .phoneNumber, value: !name.isEmpty() ? name : phoneNumber)
         
         self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
+    }
+    
+    public func gotoIncomingCallVC(name: String, phoneNumber: String, avatar: String) {
+        let storyboad = UIStoryboard(name: VC_INCOMING_CALL, bundle: nil)
+        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_INCOMING_CALL) as! IncomingCallVC
+        
+        targetVC.name = name
+        targetVC.phoneNumber = phoneNumber
+        targetVC.avatar = avatar
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.window?.rootViewController = targetVC
+        UIApplication.shared.keyWindow?.rootViewController = targetVC
     }
 }
 
@@ -94,8 +107,9 @@ extension VoipCallManager: PKPushRegistryDelegate {
     
     func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType, completion: @escaping () -> Void) {
         if type == .voIP {
-            if let callData = payload.dictionaryPayload as? [String : Any], let name = callData["name"] as? String, let phoneNumber = callData["phoneNumber"] as? String {
-                self.handleIncomingCall(name: name, phoneNumber: phoneNumber)
+            if let callData = payload.dictionaryPayload as? [String : Any], let name = callData["name"] as? String, let phoneNumber = callData["phoneNumber"] as? String, let avatar = callData["avatar"] as? String {
+                
+                self.handleIncomingCall(name: name, phoneNumber: phoneNumber, avatar: avatar)
                 
                 completion()
             }
