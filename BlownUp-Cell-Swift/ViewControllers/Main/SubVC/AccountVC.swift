@@ -71,9 +71,6 @@ class AccountVC: BaseVC {
         }
     }
     
-    @IBAction func onBtnRingtoneClicked(_ sender: Any) {
-    }
-    
     @IBAction func onSwtichValueChanged(_ sender: UISwitch) {
         creditCardProvider.setEnabled(sender.isOn)
     }
