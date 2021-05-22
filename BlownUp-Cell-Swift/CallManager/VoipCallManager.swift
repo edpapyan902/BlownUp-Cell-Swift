@@ -61,7 +61,7 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
     
     public func handleIncomingCall(name: String, phoneNumber: String, avatar: String) {
         let update = CXCallUpdate()
-        update.remoteHandle = CXHandle(type: !name.isEmpty() ? .generic : .phoneNumber, value: !name.isEmpty() ? name : phoneNumber)
+        update.remoteHandle = CXHandle(type: .phoneNumber, value: phoneNumber)
         
         self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
     }
