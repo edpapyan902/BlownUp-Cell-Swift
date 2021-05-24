@@ -24,7 +24,7 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
     
     public func configureCall() {
         self.registerForRemoteNotification()
-        self.configureProvider()
+        self.configureSystemCallProvider()
         self.configurePushKit()
     }
     
@@ -43,7 +43,7 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         UIApplication.shared.registerForRemoteNotifications()
     }
     
-    private func configureProvider() {
+    private func configureSystemCallProvider() {
         let config = CXProviderConfiguration()
         config.supportsVideo = false
         config.supportedHandleTypes = [.generic, .phoneNumber]
