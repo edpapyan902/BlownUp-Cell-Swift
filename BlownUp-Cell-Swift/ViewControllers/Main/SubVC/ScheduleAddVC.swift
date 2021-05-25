@@ -125,7 +125,7 @@ class ScheduleAddVC: BaseVC {
         
         let params: [String: Any] = [
             "n_id_contact": n_id_contact,
-            "number": number,
+            "number": number.formatPhoneNumber(),
             "scheduled_at": scheduled_at
         ]
         
@@ -169,7 +169,7 @@ class ScheduleAddVC: BaseVC {
         let params: [String: Any] = [
             "id": self.currentSchedule?.id,
             "n_id_contact": n_id_contact,
-            "number": number,
+            "number": number.formatPhoneNumber(),
             "scheduled_at": scheduled_at
         ]
         

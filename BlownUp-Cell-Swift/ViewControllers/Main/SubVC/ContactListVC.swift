@@ -114,7 +114,9 @@ extension ContactListVC: UITableViewDataSource, UITableViewDelegate {
         
         cell.lblName.text = contact.name
         cell.lblNumber.text = contact.number
+        
         cell.avatarView.makeRounded(35)
+        cell.avatarView.makeBorder(1, UIColor.init(named: "colorPrimary")!)
         
         cell.loader.isHidden = false
         cell.imgAvatar.isHidden = true

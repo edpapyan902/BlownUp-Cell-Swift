@@ -90,7 +90,7 @@ class AccountVC: BaseVC {
         
         let phone_number = self.txtPhone.getText()
         if phone_number.isValidePhone() && Store.instance.user?.spoof_phone_number != phone_number {
-            m_SpoofPhoneNumber = phone_number
+            m_SpoofPhoneNumber = phone_number.formatPhoneNumber()
             isSavePhone = true
         }
         

@@ -48,6 +48,10 @@ extension String {
     }
     
     func formatPhoneNumber() -> String {
+        if self.isEmpty() {
+            return ""
+        }
+        
         var phoneNumber = self
         phoneNumber = phoneNumber.replace("(", "")
         phoneNumber = phoneNumber.replace(")", "")

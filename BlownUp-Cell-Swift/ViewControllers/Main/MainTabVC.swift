@@ -38,7 +38,7 @@ class MainTabVC: UITabBarController {
 
 extension MainTabVC: UITabBarControllerDelegate {
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        if item.title != "Help" && HelpVC.instance != nil {
+        if item.title != "Help" && HelpVC.instance != nil && HelpVC.instance!.avPlayer != nil {
             HelpVC.instance!.avPlayer!.pause()
         }
     }

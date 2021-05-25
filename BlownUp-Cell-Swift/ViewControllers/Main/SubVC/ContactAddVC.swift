@@ -39,6 +39,7 @@ class ContactAddVC: BaseVC {
         self.imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onBack)))
         
         self.avatarView.makeRounded(100)
+        self.avatarView.makeBorder(1, UIColor.init(named: "colorPrimary")!)
         
         self.imagePicker = ImagePicker(presentationController: self, delegate: self)
         

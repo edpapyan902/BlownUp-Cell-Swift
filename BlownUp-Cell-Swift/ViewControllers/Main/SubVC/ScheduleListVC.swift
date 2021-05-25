@@ -154,6 +154,7 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
             cell.lblNumber.text = schedule.contact!.number
             
             cell.avatarView.makeRounded(35)
+            cell.avatarView.makeBorder(1, UIColor.init(named: "colorPrimary")!)
             cell.loader.isHidden = false
             cell.imgAvatar.isHidden = true
             
