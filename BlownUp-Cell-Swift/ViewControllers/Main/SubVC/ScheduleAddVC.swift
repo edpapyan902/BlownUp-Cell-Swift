@@ -52,7 +52,11 @@ class ScheduleAddVC: BaseVC {
             self.selectedDate = dateResult![0]
             
             self.btnPickDate.setTitle(selectedDate.toUSDateFormat(), for: .normal)
-            self.txtNumber.setText((currentSchedule?.contact == nil ? currentSchedule?.number : currentSchedule?.contact?.number)!)
+            
+            let phoneNumber = (currentSchedule?.contact == nil ? currentSchedule?.number : currentSchedule?.contact?.number)!
+            if phoneNumber.isValidePhone() {
+                self.txtNumber.setText(phoneNumber.formatPhoneNumber())
+            }
             
             let timeResult = dateResult![1].splite(":")
             let date = Calendar.current.date(bySettingHour: Int(timeResult[0])!, minute: Int(timeResult[1])!, second: 0, of: Date())!
@@ -89,7 +93,9 @@ class ScheduleAddVC: BaseVC {
     
     func setContact(_ contact: Contact) {
         self.selectedContact = contact
-        self.txtNumber.setText(contact.number)
+        if contact.number.isValidePhone() {
+            self.txtNumber.setText(contact.number.formatPhoneNumber())
+        }
     }
     
     @IBAction func addupdateSchedule(_ sender: Any) {

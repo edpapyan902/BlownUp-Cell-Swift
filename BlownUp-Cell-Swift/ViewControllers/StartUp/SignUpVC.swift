@@ -63,7 +63,7 @@ class SignUpVC: BaseVC {
         let params: [String: Any] = [
             "email": email.lowercased(),
             "password": password,
-            "spoof_phone_number": spoof_phone_number,
+            "spoof_phone_number": spoof_phone_number.formatPhoneNumber(),
             "term": self.swtTerm.isOn,
             "is_social": 0
         ]

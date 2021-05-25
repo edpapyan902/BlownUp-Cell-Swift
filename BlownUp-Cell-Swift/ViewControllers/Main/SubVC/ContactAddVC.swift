@@ -125,7 +125,7 @@ class ContactAddVC: BaseVC {
         
         let params: [String: Any] = [
             "name": name,
-            "number": number,
+            "number": number.formatPhoneNumber(),
             "avatar": avatarBase64
         ]
         
@@ -163,7 +163,7 @@ class ContactAddVC: BaseVC {
         let params: [String: Any] = [
             "id": currentContact!.id,
             "name": name,
-            "number": number,
+            "number": number.formatPhoneNumber(),
             "avatar": avatarBase64
         ]
         
@@ -224,11 +224,15 @@ extension ContactAddVC: CNContactPickerDelegate {
     func contactPicker(_ picker: CNContactPickerViewController, didSelect contact: CNContact) {
         let name = contact.givenName + " " + contact.familyName
         let numbers = contact.phoneNumbers.first
+        let phoneNumber = (numbers?.value)?.stringValue ?? ""
         let imageDataAvailable = contact.imageDataAvailable
         let imageData = contact.imageData
         
         self.txtName.setText(name)
-        self.txtNumber.setText((numbers?.value)?.stringValue ?? "")
+        
+        if phoneNumber.isValidePhone() {
+            self.txtNumber.setText(phoneNumber.formatPhoneNumber())
+        }
         
         if imageDataAvailable {
             let avatar = UIImage.init(data: imageData!)

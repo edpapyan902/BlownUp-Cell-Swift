@@ -47,6 +47,23 @@ extension String {
         return result != nil
     }
     
+    func formatPhoneNumber() -> String {
+        var phoneNumber = self
+        phoneNumber = phoneNumber.replace("(", "")
+        phoneNumber = phoneNumber.replace(")", "")
+        phoneNumber = phoneNumber.replace("-", "")
+        phoneNumber = phoneNumber.replace(" ", "")
+        
+        var formattedNumber = "("
+        formattedNumber = formattedNumber + phoneNumber.subString(0, 3)
+        formattedNumber = formattedNumber + ") "
+        formattedNumber = formattedNumber + phoneNumber.subString(3, 3)
+        formattedNumber = formattedNumber + "-"
+        formattedNumber = formattedNumber + phoneNumber.subString(6, 4)
+        
+        return formattedNumber
+    }
+    
     func replace(_ to: String, _ by: String) -> String {
         return self.replacingOccurrences(of: to, with: by)
     }
