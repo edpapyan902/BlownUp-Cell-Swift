@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class ForgetPasswordVC: BaseVC {
     
@@ -38,7 +39,12 @@ class ForgetPasswordVC: BaseVC {
                     
                     print("verify code", forgetPasswordRes.data.verify_code)
                     
-                    self.gotoVerifyCodeVC(email: email, verify_code: forgetPasswordRes.data.verify_code)
+                    let alert = UIAlertController(title: "Check Verification Code", message: "Be sure to check your Spam Folder for your verification code. It might be going to there.", preferredStyle: .alert)
+                    alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                        self.gotoVerifyCodeVC(email: email, verify_code: forgetPasswordRes.data.verify_code)
+                    }))
+                    self.present(alert, animated: true, completion: nil)
+                    
                 } else {
                     self.showError(forgetPasswordRes.message)
                 }
