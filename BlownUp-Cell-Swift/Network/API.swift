@@ -37,44 +37,20 @@ class API {
         }
     }
     
-    func getSubscriptionStatus(completion: @escaping ( _ response: DataResponse<SubscriptionRes>) -> Void) -> Void {
-        Alamofire.request(URL_SUBSCRIPTION_STATUS, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<SubscriptionRes>) in
+    func getChargeStatus(completion: @escaping ( _ response: DataResponse<ChargeStatusRes>) -> Void) -> Void {
+        Alamofire.request(URL_CHARGE_STATUS, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ChargeStatusRes>) in
+            completion(response)
+        }
+    }
+    
+    func charge(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
+        Alamofire.request(URL_CHARGE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
             completion(response)
         }
     }
     
     func updateDeviceToken(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
         Alamofire.request(URL_ACCOUNT_DEVICE_TOKEN_UPDATE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
-            completion(response)
-        }
-    }
-    
-    func getCard(completion: @escaping ( _ response: DataResponse<CreditCardRes>) -> Void) -> Void {
-        Alamofire.request(URL_CARD_GET, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<CreditCardRes>) in
-            completion(response)
-        }
-    }
-    
-    func addCard(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
-        Alamofire.request(URL_CARD_ADD, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
-            completion(response)
-        }
-    }
-    
-    func getBillingHistory(completion: @escaping ( _ response: DataResponse<InvoiceRes>) -> Void) -> Void {
-        Alamofire.request(URL_BILLING_HISTORY, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<InvoiceRes>) in
-            completion(response)
-        }
-    }
-    
-    func cancelSubscription(completion: @escaping ( _ response: DataResponse<SubscriptionRes>) -> Void) -> Void {
-        Alamofire.request(URL_SUBSCRIPTION_CANCEL, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<SubscriptionRes>) in
-            completion(response)
-        }
-    }
-    
-    func resumeSubscription(completion: @escaping ( _ response: DataResponse<SubscriptionRes>) -> Void) -> Void {
-        Alamofire.request(URL_SUBSCRIPTION_RESUME, method: .get, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<SubscriptionRes>) in
             completion(response)
         }
     }

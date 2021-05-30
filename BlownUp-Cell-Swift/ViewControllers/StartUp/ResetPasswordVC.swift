@@ -53,22 +53,13 @@ class ResetPasswordVC: BaseVC {
                     Store.instance.user = (data?.user)!
                     Store.instance.rememberMe = false
                     
-                    if (data?.is_subscribed)! {
-                        if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
-                            Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
-                        }
-                        Store.instance.isSubscriptionEnded = (data?.is_ended)!
-                        Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
-                        
-                        if (data?.is_ended)! && Store.instance.subscriptionUpcomingDate != 0 {
-                            self.gotoPageVC(VC_CARD_REGISTER)
-                        }
-                        else {
-                            self.gotoPageVC(VC_RECENT_CALL)
-                        }
+                    Store.instance.charged = (data?.charged)!
+                    
+                    if !Store.instance.charged {
+                        self.gotoPageVC(VC_CARD_REGISTER)
                     }
                     else {
-                        self.gotoPageVC(VC_CARD_REGISTER)
+                        self.gotoPageVC(VC_RECENT_CALL)
                     }
                 } else {
                     self.showError(resetPasswordRes.message!)

@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 //  API URLS
-let DEV_MODE = false
+let DEV_MODE = true
 let PUBLISH_MODE = false
 let LIVE_PAYMENT = false
 let DEV_SERVER = "http://192.168.109.72"
@@ -25,9 +25,7 @@ let STRIPE_KEY = LIVE_PAYMENT ? STRIPE_PK_LIVE : STRIPE_PK_TEST
 let API_TOKEN = "API_TOKEN"
 let USER_PROFILE = "USER_PROFILE"
 let REMEMBER_ME = "REMEMBER_ME"
-let SUBSCRIPTION_UPCOMING_DATE = "SUBSCRIPTION_UPCOMING_DATE"
-let IS_SUBSCRIPTION_ENDED = "IS_SUBSCRIPTION_ENDED"
-let IS_SUBSCRIPTION_CANCELLED = "IS_SUBSCRIPTION_CANCELLED"
+let CHARGED = "CHARGED"
 let APPLE_USER_ID = "APPLE_USER_ID"
 let APPLE_USER_EMAIL = "APPLE_USER_EMAIL"
 let VOIP_TOKEN = "VOIP_TOKEN"
@@ -72,15 +70,9 @@ let URL_RESET_PASSWORD = "\(BASE_SERVER)/api/password/reset"
 let URL_ACCOUNT_UPDATE = "\(BASE_SERVER)/api/account/update"
 let URL_ACCOUNT_DEVICE_TOKEN_UPDATE = "\(BASE_SERVER)/api/account/update_device_token"
 
-//  Credit Card
-let URL_CARD_GET = "\(BASE_SERVER)/api/card"
-let URL_CARD_ADD = "\(BASE_SERVER)/api/card/add"
-
-//  Subscription
-let URL_SUBSCRIPTION_STATUS = "\(BASE_SERVER)/api/subscription/status"
-let URL_BILLING_HISTORY = "\(BASE_SERVER)/api/invoice/all"
-let URL_SUBSCRIPTION_CANCEL = "\(BASE_SERVER)/api/subscription/cancel"
-let URL_SUBSCRIPTION_RESUME = "\(BASE_SERVER)/api/subscription/resume"
+//  Checkout
+let URL_CHARGE = "\(BASE_SERVER)/api/charge"
+let URL_CHARGE_STATUS = "\(BASE_SERVER)/api/charge/status"
 
 //  Recent Call
 let URL_RECENT_CALL_GET = "\(BASE_SERVER)/api/recent_call"

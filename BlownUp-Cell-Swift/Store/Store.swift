@@ -69,30 +69,12 @@ class Store {
         }
     }
     
-    var subscriptionUpcomingDate: Int64 {
+    var charged: Bool {
         get {
-            return defaults.value(forKey: SUBSCRIPTION_UPCOMING_DATE) as? Int64 ?? 0
+            return defaults.value(forKey: CHARGED) as? Bool ?? false
         }
         set {
-            defaults.set(newValue, forKey: SUBSCRIPTION_UPCOMING_DATE)
-        }
-    }
-    
-    var isSubscriptionEnded: Bool {
-        get {
-            return defaults.value(forKey: IS_SUBSCRIPTION_ENDED) as? Bool ?? false
-        }
-        set {
-            defaults.set(newValue, forKey: IS_SUBSCRIPTION_ENDED)
-        }
-    }
-    
-    var isSubscriptionCancelled: Bool {
-        get {
-            return defaults.value(forKey: IS_SUBSCRIPTION_CANCELLED) as? Bool ?? false
-        }
-        set {
-            defaults.set(newValue, forKey: IS_SUBSCRIPTION_CANCELLED)
+            defaults.set(newValue, forKey: CHARGED)
         }
     }
     

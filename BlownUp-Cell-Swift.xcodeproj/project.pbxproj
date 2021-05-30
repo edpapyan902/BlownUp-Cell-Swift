@@ -21,7 +21,7 @@
 		940CA2FC26393A9900401594 /* SignUpRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA2FB26393A9900401594 /* SignUpRes.swift */; };
 		940CA3012639422300401594 /* CardRegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3002639422300401594 /* CardRegisterVC.swift */; };
 		940CA3082639429300401594 /* MainTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3072639429300401594 /* MainTabVC.swift */; };
-		940CA3102639441000401594 /* SubscriptionRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA30F2639441000401594 /* SubscriptionRes.swift */; };
+		940CA3102639441000401594 /* ChargeStatusRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA30F2639441000401594 /* ChargeStatusRes.swift */; };
 		940CA3152639473C00401594 /* RecentCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940CA3142639473C00401594 /* RecentCallVC.swift */; };
 		940F6EED2641808D00BC07DC /* ScheduleAddVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */; };
 		940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6EFD264197AB00BC07DC /* RecentCallRes.swift */; };
@@ -54,7 +54,6 @@
 		945884D826386CC500851CE6 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884D726386CC500851CE6 /* User.swift */; };
 		945884E126386D3000851CE6 /* LoginRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884E026386D3000851CE6 /* LoginRes.swift */; };
 		945884E62638743E00851CE6 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945884E52638743E00851CE6 /* String+Extension.swift */; };
-		945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B246D264059FC004C12D7 /* InvoiceRes.swift */; };
 		945B249726405B65004C12D7 /* Invoice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B249626405B65004C12D7 /* Invoice.swift */; };
 		945B24AF264088A3004C12D7 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945B24AE264088A2004C12D7 /* Date+Extension.swift */; };
 		946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 946446232646F1530079BCE2 /* ScheduleAddRes.swift */; };
@@ -73,8 +72,6 @@
 		948CE6B3263BAA5F00A27790 /* SignUpVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B2263BAA5F00A27790 /* SignUpVC.storyboard */; };
 		948CE6B8263BAA9800A27790 /* CardRegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */; };
 		9497837F264371690048580C /* ScheduleAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9497837E264371690048580C /* ScheduleAllRes.swift */; };
-		94BABBDA26509E6F002FF91E /* CreditCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBD926509E6F002FF91E /* CreditCard.swift */; };
-		94BABBDF26509F88002FF91E /* CreditCardRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBDE26509F88002FF91E /* CreditCardRes.swift */; };
 		94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */; };
 		94C1A7A42646BF0D00E37144 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */; };
 		94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A92646BFCC00E37144 /* Utils.swift */; };
@@ -118,7 +115,7 @@
 		940CA2FB26393A9900401594 /* SignUpRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRes.swift; sourceTree = "<group>"; };
 		940CA3002639422300401594 /* CardRegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterVC.swift; sourceTree = "<group>"; };
 		940CA3072639429300401594 /* MainTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabVC.swift; sourceTree = "<group>"; };
-		940CA30F2639441000401594 /* SubscriptionRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionRes.swift; sourceTree = "<group>"; };
+		940CA30F2639441000401594 /* ChargeStatusRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeStatusRes.swift; sourceTree = "<group>"; };
 		940CA3142639473C00401594 /* RecentCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallVC.swift; sourceTree = "<group>"; };
 		940F6EEC2641808D00BC07DC /* ScheduleAddVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScheduleAddVC.storyboard; sourceTree = "<group>"; };
 		940F6EFD264197AB00BC07DC /* RecentCallRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallRes.swift; sourceTree = "<group>"; };
@@ -157,7 +154,6 @@
 		945884D726386CC500851CE6 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		945884E026386D3000851CE6 /* LoginRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRes.swift; sourceTree = "<group>"; };
 		945884E52638743E00851CE6 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
-		945B246D264059FC004C12D7 /* InvoiceRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvoiceRes.swift; sourceTree = "<group>"; };
 		945B249626405B65004C12D7 /* Invoice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Invoice.swift; sourceTree = "<group>"; };
 		945B24AE264088A2004C12D7 /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		946446232646F1530079BCE2 /* ScheduleAddRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAddRes.swift; sourceTree = "<group>"; };
@@ -177,8 +173,6 @@
 		948CE6B7263BAA9800A27790 /* CardRegisterVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CardRegisterVC.storyboard; sourceTree = "<group>"; };
 		948D77A1263A543500F4A14C /* BlownUp-Cell-Swift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "BlownUp-Cell-Swift.entitlements"; sourceTree = "<group>"; };
 		9497837E264371690048580C /* ScheduleAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAllRes.swift; sourceTree = "<group>"; };
-		94BABBD926509E6F002FF91E /* CreditCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCard.swift; sourceTree = "<group>"; };
-		94BABBDE26509F88002FF91E /* CreditCardRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditCardRes.swift; sourceTree = "<group>"; };
 		94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUpdateRes.swift; sourceTree = "<group>"; };
 		94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		94C1A7A92646BFCC00E37144 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -375,8 +369,8 @@
 				946ECE452653352100220BDF /* ForgetPasswordVC.storyboard */,
 				946ECE4F26533AB500220BDF /* VerifyCodeVC.swift */,
 				946ECE5426533B2900220BDF /* VerifyCodeVC.storyboard */,
-				9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */,
 				940C50DF2653674F0083256D /* ResetPasswordVC.swift */,
+				9409E65926534C0D00E60FAB /* ResetPasswordVC.storyboard */,
 			);
 			path = StartUp;
 			sourceTree = "<group>";
@@ -425,7 +419,6 @@
 				945B249626405B65004C12D7 /* Invoice.swift */,
 				940F6F02264197CD00BC07DC /* Schedule.swift */,
 				94F6B59F264A28C800BE60A9 /* Help.swift */,
-				94BABBD926509E6F002FF91E /* CreditCard.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -435,16 +428,14 @@
 			children = (
 				945884E026386D3000851CE6 /* LoginRes.swift */,
 				940CA2FB26393A9900401594 /* SignUpRes.swift */,
-				940CA30F2639441000401594 /* SubscriptionRes.swift */,
+				940CA30F2639441000401594 /* ChargeStatusRes.swift */,
 				947E5A59263EFDBA008A0008 /* NoDataRes.swift */,
-				945B246D264059FC004C12D7 /* InvoiceRes.swift */,
 				940F6EFD264197AB00BC07DC /* RecentCallRes.swift */,
 				9497837E264371690048580C /* ScheduleAllRes.swift */,
 				94DB9BF5264674B300C800D2 /* ContactAllRes.swift */,
 				946446232646F1530079BCE2 /* ScheduleAddRes.swift */,
 				940680772648CB3A0079D42F /* ScheduleUpdateRes.swift */,
 				94F6B592264A21FB00BE60A9 /* HelpRes.swift */,
-				94BABBDE26509F88002FF91E /* CreditCardRes.swift */,
 				94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */,
 				946ECE4A2653389800220BDF /* ForgetPasswordRes.swift */,
 				9409E689265362A300E60FAB /* ResetPasswordRes.swift */,
@@ -767,7 +758,6 @@
 				945884D826386CC500851CE6 /* User.swift in Sources */,
 				948CE685263B9D5300A27790 /* BaseVC.swift in Sources */,
 				945884AA26385E2600851CE6 /* API.swift in Sources */,
-				94BABBDA26509E6F002FF91E /* CreditCard.swift in Sources */,
 				94F6B5A0264A28C800BE60A9 /* Help.swift in Sources */,
 				946ECE4B2653389800220BDF /* ForgetPasswordRes.swift in Sources */,
 				947E5A5F263F0059008A0008 /* SuccessVC.swift in Sources */,
@@ -777,8 +767,6 @@
 				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,
 				94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */,
 				946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */,
-				945B246E264059FD004C12D7 /* InvoiceRes.swift in Sources */,
-				94BABBDF26509F88002FF91E /* CreditCardRes.swift in Sources */,
 				947E5A5A263EFDBA008A0008 /* NoDataRes.swift in Sources */,
 				940F6EFE264197AB00BC07DC /* RecentCallRes.swift in Sources */,
 				94587EB1263FF5A2004B0BCC /* ContactAddVC.swift in Sources */,
@@ -786,7 +774,7 @@
 				9458840E2638284000851CE6 /* SceneDelegate.swift in Sources */,
 				940F6F03264197CD00BC07DC /* Schedule.swift in Sources */,
 				945884B026385E6100851CE6 /* Const.swift in Sources */,
-				940CA3102639441000401594 /* SubscriptionRes.swift in Sources */,
+				940CA3102639441000401594 /* ChargeStatusRes.swift in Sources */,
 				9406808A264936C70079D42F /* UIImage+Extension.swift in Sources */,
 				946ECE5026533AB500220BDF /* VerifyCodeVC.swift in Sources */,
 				94587EAF263FF589004B0BCC /* ScheduleListVC.swift in Sources */,

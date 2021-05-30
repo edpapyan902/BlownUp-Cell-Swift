@@ -40,7 +40,7 @@ class CardRegisterVC: BaseVC {
             completion: { paymentMethod, error in
                 DispatchQueue.main.async {
                     if paymentMethod != nil {
-                        self.processRegisterCard(paymentMethod: (paymentMethod?.stripeId)!, isApplePay: isApplePay)
+                        self.processCharge(paymentMethod: (paymentMethod?.stripeId)!)
                     } else {
                         self.hideLoading()
                     }
@@ -48,18 +48,12 @@ class CardRegisterVC: BaseVC {
             })
     }
     
-    func processRegisterCard(paymentMethod: String, isApplePay: Bool) {
-        let creditCardView = creditCardProvider.getCardView()
+    func processCharge(paymentMethod: String) {
         let params: [String: Any] = [
-            "payment_method": paymentMethod,
-            "card_zip_code": creditCardView.postalCode!,
-            "card_number": creditCardView.cardNumber!,
-            "card_expire_month": creditCardView.expirationMonth,
-            "card_expire_year": creditCardView.expirationYear,
-            "card_cvv": creditCardView.cvc!,
+            "payment_method": paymentMethod
         ]
         
-        API.instance.addCard(params: params) { (response) in
+        API.instance.charge(params: params) { (response) in
             self.hideLoading()
             
             if response.error == nil {

@@ -27,26 +27,17 @@ struct ResetPasswordRes : Codable {
     
     struct Data: Codable {
         let user: User?
-        let is_subscribed: Bool?
-        let is_ended: Bool?
-        let is_cancelled: Bool?
-        let upcoming_invoice: Int64?
+        let charged: Bool?
         
         enum CodingKeys: String, CodingKey {
             case user = "user"
-            case is_subscribed = "is_subscribed"
-            case is_ended = "is_ended"
-            case is_cancelled = "is_cancelled"
-            case upcoming_invoice = "upcoming_invoice"
+            case charged = "charged"
         }
         
         init(from decoder: Decoder) throws {
             let values = try decoder.container(keyedBy: CodingKeys.self)
             user = try values.decodeIfPresent(User.self, forKey: .user)
-            is_subscribed = try values.decodeIfPresent(Bool.self, forKey: .is_subscribed)
-            is_ended = try values.decodeIfPresent(Bool.self, forKey: .is_ended)
-            is_cancelled = try values.decodeIfPresent(Bool.self, forKey: .is_cancelled)
-            upcoming_invoice = try values.decodeIfPresent(Int64.self, forKey: .upcoming_invoice)
+            charged = try values.decodeIfPresent(Bool.self, forKey: .charged)
         }
     }
 }

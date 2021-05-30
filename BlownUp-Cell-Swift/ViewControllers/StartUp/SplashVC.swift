@@ -16,26 +16,22 @@ class SplashVC: BaseVC {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        getSubscriptionStatus()
+        getChargeStatus()
     }
     
-    func getSubscriptionStatus() {
+    func getChargeStatus() {
         if Store.instance.apiToken.isEmpty() {
             self.loadTimer = Timer.scheduledTimer(timeInterval: 0.0, target: self, selector: #selector(self.goNext), userInfo: nil, repeats: true)
         }
         else {
-            API.instance.getSubscriptionStatus() { (response) in
+            API.instance.getChargeStatus() { (response) in
                 if response.error == nil {
-                    let subscriptionRes: SubscriptionRes = response.result.value!
+                    let subscriptionRes: ChargeStatusRes = response.result.value!
                     
                     if subscriptionRes.success! {
                         let data = subscriptionRes.data
                         
-                        if !((data?.is_ended)!) && !((data?.is_cancelled)!) {
-                            Store.instance.subscriptionUpcomingDate = (data?.upcoming_invoice)!
-                        }
-                        Store.instance.isSubscriptionEnded = (data?.is_ended)!
-                        Store.instance.isSubscriptionCancelled = (data?.is_cancelled)!
+                        Store.instance.charged = (data?.charged)!
                     }
                 }
                 
@@ -51,16 +47,10 @@ class SplashVC: BaseVC {
         
         let rememberMe = Store.instance.rememberMe
         let apiToken = Store.instance.apiToken
-        let isEnded = Store.instance.isSubscriptionEnded
-        let isCancelled = Store.instance.isSubscriptionCancelled
-        let upcoming_date = Store.instance.subscriptionUpcomingDate
+        let charged = Store.instance.charged
         
         if !apiToken.isEmpty() && rememberMe {
-            if !isCancelled && upcoming_date == 0 {
-                self.gotoPageVC(VC_CARD_REGISTER)
-            }
-            else if isEnded && upcoming_date != 0 {
-                self.showWarning("Your subscription plan ended. Please subscribe new plan.")
+            if !charged {
                 self.gotoPageVC(VC_CARD_REGISTER)
             }
             else {
