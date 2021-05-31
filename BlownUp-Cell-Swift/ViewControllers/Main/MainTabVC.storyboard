@@ -459,7 +459,6 @@
                     <connections>
                         <segue destination="dXE-46-1zO" kind="relationship" relationship="viewControllers" id="17n-uo-lQG"/>
                         <segue destination="TAK-kg-g1R" kind="relationship" relationship="viewControllers" id="8xP-fo-2Nh"/>
-                        <segue destination="Imc-XW-dJy" kind="relationship" relationship="viewControllers" id="vZI-fx-aJa"/>
                         <segue destination="kr8-7B-BQp" kind="relationship" relationship="viewControllers" id="P67-Oc-Gy7"/>
                         <segue destination="Tey-Ag-QYk" kind="relationship" relationship="viewControllers" id="Czt-zc-Adt"/>
                     </connections>
@@ -767,44 +766,8 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="hint" value="My Call To Phone"/>
                                         </userDefinedRuntimeAttributes>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY BILLING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pr9-mA-VDX">
-                                        <rect key="frame" x="10" y="259" width="394" height="27.666666666666686"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                        <color key="textColor" name="colorBlue"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="XXXX XXXX XXXX XXXX" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1eG-Lt-hwc">
-                                        <rect key="frame" x="10" y="296.66666666666669" width="394" height="23"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                        <color key="textColor" name="colorPrimary"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="08/2026" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTn-nn-Mkl">
-                                        <rect key="frame" x="10" y="324.66666666666669" width="394" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPDATE BILLING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkP-Nf-v8S">
-                                        <rect key="frame" x="10" y="362.66666666666669" width="394" height="27.333333333333314"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="23"/>
-                                        <color key="textColor" name="colorBlue"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vl3-WO-aP0">
-                                        <rect key="frame" x="10" y="400" width="51" height="31"/>
-                                        <connections>
-                                            <action selector="onSwtichValueChanged:" destination="Tey-Ag-QYk" eventType="valueChanged" id="XFI-Wu-ICj"/>
-                                        </connections>
-                                    </switch>
-                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BSh-0J-HLh" customClass="CreditCardView" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="446" width="394" height="50"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="gOH-hP-I0H"/>
-                                        </constraints>
-                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X3c-MF-Aeb">
-                                        <rect key="frame" x="10" y="511" width="394" height="50"/>
+                                        <rect key="frame" x="10" y="279" width="394" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="V5h-0G-67c"/>
@@ -821,35 +784,18 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="gJC-sX-bPy" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="0SM-Lr-2dI"/>
-                                    <constraint firstItem="1eG-Lt-hwc" firstAttribute="top" secondItem="pr9-mA-VDX" secondAttribute="bottom" constant="10" id="0Sk-f3-Kbo"/>
                                     <constraint firstItem="aI0-xm-e6i" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" id="3Wd-fs-mIo"/>
                                     <constraint firstItem="XEr-gG-20J" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="5Je-L7-P1I"/>
                                     <constraint firstItem="gJC-sX-bPy" firstAttribute="top" secondItem="XEr-gG-20J" secondAttribute="bottom" constant="15" id="5KF-HM-knQ"/>
                                     <constraint firstAttribute="trailing" secondItem="gJC-sX-bPy" secondAttribute="trailing" constant="10" id="7tp-Rt-po6"/>
-                                    <constraint firstItem="X3c-MF-Aeb" firstAttribute="top" secondItem="BSh-0J-HLh" secondAttribute="bottom" constant="15" id="9pi-Z0-mlZ"/>
-                                    <constraint firstItem="TkP-Nf-v8S" firstAttribute="top" secondItem="zTn-nn-Mkl" secondAttribute="bottom" constant="20" id="Ah4-br-Hp4"/>
-                                    <constraint firstItem="BSh-0J-HLh" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="EfZ-Oi-tSe"/>
-                                    <constraint firstItem="zTn-nn-Mkl" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="Gjm-oI-cix"/>
-                                    <constraint firstItem="zTn-nn-Mkl" firstAttribute="top" secondItem="1eG-Lt-hwc" secondAttribute="bottom" constant="5" id="JTk-az-NcE"/>
-                                    <constraint firstAttribute="trailing" secondItem="TkP-Nf-v8S" secondAttribute="trailing" constant="10" id="Kha-XT-76f"/>
-                                    <constraint firstItem="TkP-Nf-v8S" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="Lzr-Xx-Gzf"/>
-                                    <constraint firstAttribute="trailing" secondItem="pr9-mA-VDX" secondAttribute="trailing" constant="10" id="M74-dh-wGd"/>
-                                    <constraint firstAttribute="trailing" secondItem="BSh-0J-HLh" secondAttribute="trailing" constant="10" id="Owb-YF-D6n"/>
-                                    <constraint firstItem="Vl3-WO-aP0" firstAttribute="top" secondItem="TkP-Nf-v8S" secondAttribute="bottom" constant="10" id="RgX-CW-2cp"/>
                                     <constraint firstItem="aI0-xm-e6i" firstAttribute="top" secondItem="aGR-5V-qcl" secondAttribute="top" id="RuN-Mb-YJj"/>
-                                    <constraint firstItem="pr9-mA-VDX" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="WMQ-qI-jPp"/>
-                                    <constraint firstItem="pr9-mA-VDX" firstAttribute="top" secondItem="aOg-NM-Wud" secondAttribute="bottom" constant="30" id="X4t-Rk-FUF"/>
                                     <constraint firstAttribute="trailing" secondItem="X3c-MF-Aeb" secondAttribute="trailing" constant="10" id="YIR-8k-8dk"/>
-                                    <constraint firstItem="1eG-Lt-hwc" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="ZTU-ne-GW1"/>
                                     <constraint firstAttribute="trailing" secondItem="aI0-xm-e6i" secondAttribute="trailing" id="ZcW-P8-SIF"/>
                                     <constraint firstItem="X3c-MF-Aeb" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="a3j-rg-6BU"/>
-                                    <constraint firstAttribute="trailing" secondItem="zTn-nn-Mkl" secondAttribute="trailing" constant="10" id="exH-6U-24S"/>
                                     <constraint firstAttribute="trailing" secondItem="aOg-NM-Wud" secondAttribute="trailing" constant="10" id="jrr-EE-EhM"/>
-                                    <constraint firstAttribute="trailing" secondItem="1eG-Lt-hwc" secondAttribute="trailing" constant="10" id="lGz-9h-ktH"/>
                                     <constraint firstItem="aOg-NM-Wud" firstAttribute="top" secondItem="gJC-sX-bPy" secondAttribute="bottom" constant="15" id="lXn-3j-grY"/>
                                     <constraint firstItem="XEr-gG-20J" firstAttribute="top" secondItem="aI0-xm-e6i" secondAttribute="bottom" constant="20" id="mlA-Oq-2YM"/>
-                                    <constraint firstItem="Vl3-WO-aP0" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="msy-Kj-7md"/>
-                                    <constraint firstItem="BSh-0J-HLh" firstAttribute="top" secondItem="Vl3-WO-aP0" secondAttribute="bottom" constant="15" id="qV0-gS-kaK"/>
+                                    <constraint firstItem="X3c-MF-Aeb" firstAttribute="top" secondItem="aOg-NM-Wud" secondAttribute="bottom" constant="50" id="nL5-E4-ffh"/>
                                     <constraint firstItem="aOg-NM-Wud" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="uYA-8e-7f9"/>
                                     <constraint firstAttribute="trailing" secondItem="XEr-gG-20J" secondAttribute="trailing" constant="10" id="y8K-DU-b0w"/>
                                 </constraints>
@@ -869,12 +815,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Account" image="ic_account_off" id="TdV-II-nOm"/>
                     <connections>
-                        <outlet property="creditCardProvider" destination="BSh-0J-HLh" id="DfH-Oe-zco"/>
                         <outlet property="imgScheduleAdd" destination="nAo-WE-JNX" id="g0Z-DZ-3U9"/>
-                        <outlet property="lblCardExp" destination="zTn-nn-Mkl" id="hGd-NC-bDm"/>
-                        <outlet property="lblCardNumber" destination="1eG-Lt-hwc" id="AfP-Dk-0X4"/>
                         <outlet property="lblEmail" destination="XEr-gG-20J" id="mYf-2w-C8R"/>
-                        <outlet property="swtActiveCardForm" destination="Vl3-WO-aP0" id="fhg-Uq-aUU"/>
                         <outlet property="txtPassword" destination="gJC-sX-bPy" id="TY0-SP-VVQ"/>
                         <outlet property="txtPhone" destination="aOg-NM-Wud" id="X1R-wc-xPE"/>
                     </connections>

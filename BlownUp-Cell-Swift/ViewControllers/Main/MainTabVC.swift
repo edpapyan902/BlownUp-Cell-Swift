@@ -21,7 +21,7 @@ class MainTabVC: UITabBarController {
         } else if type == 0 || type == 2 {
             self.selectedIndex = 0
         } else if type == 3 {
-            self.selectedIndex = 4
+            self.selectedIndex = 3
         }
     }
     

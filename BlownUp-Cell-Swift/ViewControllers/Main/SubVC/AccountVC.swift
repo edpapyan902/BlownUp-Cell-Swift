@@ -42,6 +42,8 @@ class AccountVC: BaseVC {
         if (Store.instance.user?.is_social)! > 0 {
             self.txtPassword.setEnabled(false)
         }
+        
+        self.txtPhone.setText((Store.instance.user?.spoof_phone_number)!)
     }
     
     @IBAction func onBtnUpdateClicked(_ sender: Any) {
@@ -108,7 +110,6 @@ class AccountVC: BaseVC {
                     
                     Store.instance.user = user
                     
-                    self.txtPhone.setText("")
                     self.m_SpoofPhoneNumber = ""
                 }
                 

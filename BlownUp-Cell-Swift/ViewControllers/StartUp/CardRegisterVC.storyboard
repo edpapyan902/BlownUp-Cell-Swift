@@ -25,20 +25,14 @@
                                             <constraint firstAttribute="height" constant="130" id="csa-JB-7wZ"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 4.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-fL-iJP">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 9.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-fL-iJP">
                                         <rect key="frame" x="20" y="190" width="374" height="72"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
                                         <color key="textColor" name="colorGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PER MONTH YOU GET" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrF-ub-Mgi">
-                                        <rect key="frame" x="20" y="262" width="374" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" name="colorGrey"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqu-r7-7uq" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="293" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="282" width="374" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="oYL-dQ-3R7">
                                                 <rect key="frame" x="0.0" y="5" width="20" height="20"/>
@@ -65,7 +59,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rcj-FH-59Q" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="358" width="374" height="40"/>
+                                        <rect key="frame" x="20" y="347" width="374" height="40"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="ChI-zK-5Xv">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -92,7 +86,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noo-9s-sDM" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="403" width="374" height="25"/>
+                                        <rect key="frame" x="20" y="392" width="374" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="9iW-v0-d0H">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -119,7 +113,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opR-tb-RuD" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="433" width="374" height="25"/>
+                                        <rect key="frame" x="20" y="422" width="374" height="25"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="9IZ-OH-lHY">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -146,55 +140,61 @@
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abh-ic-uFt" userLabel="creditCardForm" customClass="CreditCardView" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="488" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="477" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="jDK-Xs-D9r"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzy-rK-qMD">
-                                        <rect key="frame" x="20" y="568" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="557" width="374" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="CI0-Qu-c8s"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Register Card">
+                                        <state key="normal" title="Pay">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <action selector="registerCard:" destination="s73-22-GoQ" eventType="touchUpInside" id="yWT-4c-bCl"/>
                                         </connections>
                                     </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l9-vn-qSt" userLabel="applePayProvider">
+                                        <rect key="frame" x="20" y="617" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Sln-Lv-NG8"/>
+                                        </constraints>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="OrF-ub-Mgi" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="2zY-N7-pJP"/>
                                     <constraint firstItem="e6X-fL-iJP" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="5Ea-Vc-46r"/>
                                     <constraint firstAttribute="trailing" secondItem="pzy-rK-qMD" secondAttribute="trailing" constant="20" id="6bx-dM-2Rt"/>
                                     <constraint firstAttribute="trailing" secondItem="Zqu-r7-7uq" secondAttribute="trailing" constant="20" id="Df1-pj-GEg"/>
                                     <constraint firstItem="noo-9s-sDM" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="DtD-0A-j1I"/>
                                     <constraint firstAttribute="trailing" secondItem="2Cm-Wf-RWC" secondAttribute="trailing" constant="20" id="GP8-gy-MD8"/>
-                                    <constraint firstAttribute="trailing" secondItem="OrF-ub-Mgi" secondAttribute="trailing" constant="20" id="M5b-zO-Ov3"/>
                                     <constraint firstItem="abh-ic-uFt" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="NGD-56-9Sp"/>
                                     <constraint firstAttribute="trailing" secondItem="opR-tb-RuD" secondAttribute="trailing" constant="20" id="NcS-hT-muY"/>
                                     <constraint firstItem="abh-ic-uFt" firstAttribute="top" secondItem="opR-tb-RuD" secondAttribute="bottom" constant="30" id="RfE-lZ-kV4"/>
                                     <constraint firstItem="2Cm-Wf-RWC" firstAttribute="top" secondItem="ORm-vq-rlz" secondAttribute="top" constant="50" id="Sb2-FF-7oI"/>
                                     <constraint firstItem="pzy-rK-qMD" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="SkM-uY-FUv"/>
-                                    <constraint firstItem="OrF-ub-Mgi" firstAttribute="top" secondItem="e6X-fL-iJP" secondAttribute="bottom" id="UuX-tr-7SI"/>
                                     <constraint firstItem="opR-tb-RuD" firstAttribute="top" secondItem="noo-9s-sDM" secondAttribute="bottom" constant="5" id="Z9c-xv-WSo"/>
                                     <constraint firstItem="noo-9s-sDM" firstAttribute="top" secondItem="Rcj-FH-59Q" secondAttribute="bottom" constant="5" id="ZjT-Hf-hYv"/>
                                     <constraint firstAttribute="trailing" secondItem="Rcj-FH-59Q" secondAttribute="trailing" constant="20" id="aQ2-pg-maq"/>
                                     <constraint firstItem="Rcj-FH-59Q" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="aZz-9F-2Yf"/>
+                                    <constraint firstItem="5l9-vn-qSt" firstAttribute="top" secondItem="pzy-rK-qMD" secondAttribute="bottom" constant="10" id="dL3-X7-aGa"/>
+                                    <constraint firstAttribute="trailing" secondItem="5l9-vn-qSt" secondAttribute="trailing" constant="20" id="daZ-eW-L4U"/>
                                     <constraint firstItem="pzy-rK-qMD" firstAttribute="top" secondItem="abh-ic-uFt" secondAttribute="bottom" constant="30" id="e0a-Qn-vSy"/>
                                     <constraint firstAttribute="trailing" secondItem="noo-9s-sDM" secondAttribute="trailing" constant="20" id="g4D-5Z-dFp"/>
                                     <constraint firstItem="e6X-fL-iJP" firstAttribute="top" secondItem="2Cm-Wf-RWC" secondAttribute="bottom" constant="10" id="g5X-0l-0WE"/>
                                     <constraint firstAttribute="trailing" secondItem="abh-ic-uFt" secondAttribute="trailing" constant="20" id="gEC-mQ-Rlc"/>
+                                    <constraint firstItem="Zqu-r7-7uq" firstAttribute="top" secondItem="e6X-fL-iJP" secondAttribute="bottom" constant="20" id="gwp-Uo-Bj8"/>
                                     <constraint firstItem="Zqu-r7-7uq" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="gzF-hP-PHJ"/>
                                     <constraint firstAttribute="trailing" secondItem="e6X-fL-iJP" secondAttribute="trailing" constant="20" id="hIE-Ve-5W0"/>
                                     <constraint firstItem="Rcj-FH-59Q" firstAttribute="top" secondItem="Zqu-r7-7uq" secondAttribute="bottom" constant="5" id="mum-ly-TYc"/>
+                                    <constraint firstItem="5l9-vn-qSt" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="okM-Cx-azS"/>
                                     <constraint firstItem="opR-tb-RuD" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="qSU-Pa-d4t"/>
                                     <constraint firstItem="2Cm-Wf-RWC" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="ubO-Mg-JTG"/>
-                                    <constraint firstItem="Zqu-r7-7uq" firstAttribute="top" secondItem="OrF-ub-Mgi" secondAttribute="bottom" constant="10" id="zar-ht-t02"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -208,6 +208,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="applePayProvider" destination="5l9-vn-qSt" id="U0h-f2-hid"/>
                         <outlet property="creditCardProvider" destination="abh-ic-uFt" id="Njd-AL-imE"/>
                     </connections>
                 </viewController>
