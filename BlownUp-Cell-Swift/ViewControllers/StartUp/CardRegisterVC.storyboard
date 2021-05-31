@@ -152,7 +152,7 @@
                                             <constraint firstAttribute="height" constant="50" id="CI0-Qu-c8s"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Pay">
+                                        <state key="normal" title="Pay 9.99$">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>

@@ -122,7 +122,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bpi-gn-wK7">
                                                 <rect key="frame" x="100" y="638.66666666666663" width="214" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <state key="normal" title="Forget Password">
+                                                <state key="normal" title="Forgot Password">
                                                     <color key="titleColor" name="colorPrimary"/>
                                                 </state>
                                                 <connections>

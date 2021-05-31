@@ -34,7 +34,7 @@ class CardRegisterVC: BaseVC {
         
         // Configure the line items on the payment request
         paymentRequest.paymentSummaryItems = [
-            PKPaymentSummaryItem(label: "First Charge for BlownUp", amount: 9.99),
+            PKPaymentSummaryItem(label: "Blow Yourself UP", amount: 9.99),
         ]
         
         // Initialize an STPApplePayContext instance
@@ -121,8 +121,8 @@ extension CardRegisterVC: STPApplePayContextDelegate {
         case .userCancellation:
             // User cancelled the payment
             break
-        @unknown default:
-            fatalError()
+        default:
+            break
         }
     }
 }

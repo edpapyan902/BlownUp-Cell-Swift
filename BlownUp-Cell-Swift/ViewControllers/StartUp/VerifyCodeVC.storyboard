@@ -69,14 +69,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't get an email?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gqS-BH-guz">
-                                        <rect key="frame" x="10" y="548" width="394" height="18"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Send a new code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cLr-Dq-8jH">
-                                        <rect key="frame" x="100" y="576" width="214" height="21"/>
+                                        <rect key="frame" x="100" y="548" width="214" height="21"/>
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
@@ -89,16 +83,13 @@
                                     <constraint firstItem="cLr-Dq-8jH" firstAttribute="leading" secondItem="i0D-kw-I75" secondAttribute="leading" constant="100" id="EbI-Ou-Jtu"/>
                                     <constraint firstItem="AsV-qi-ORd" firstAttribute="leading" secondItem="i0D-kw-I75" secondAttribute="leading" constant="20" id="Ftm-tW-GOf"/>
                                     <constraint firstAttribute="trailing" secondItem="AsV-qi-ORd" secondAttribute="trailing" constant="20" id="Gap-k9-AZz"/>
-                                    <constraint firstAttribute="trailing" secondItem="gqS-BH-guz" secondAttribute="trailing" constant="10" id="IT9-Nt-04g"/>
                                     <constraint firstAttribute="trailing" secondItem="cLr-Dq-8jH" secondAttribute="trailing" constant="100" id="NJF-Bs-I4v"/>
-                                    <constraint firstItem="gqS-BH-guz" firstAttribute="leading" secondItem="i0D-kw-I75" secondAttribute="leading" constant="10" id="RTF-ft-wcH"/>
-                                    <constraint firstItem="gqS-BH-guz" firstAttribute="top" secondItem="L4F-HJ-zno" secondAttribute="bottom" constant="20" id="WdA-xZ-7vv"/>
+                                    <constraint firstItem="cLr-Dq-8jH" firstAttribute="top" secondItem="L4F-HJ-zno" secondAttribute="bottom" constant="20" id="Td1-Za-IpW"/>
                                     <constraint firstItem="vDL-k3-3y7" firstAttribute="leading" secondItem="i0D-kw-I75" secondAttribute="leading" constant="20" id="ZiV-Xk-tOx"/>
                                     <constraint firstItem="vDL-k3-3y7" firstAttribute="top" secondItem="zPZ-Kb-d0F" secondAttribute="bottom" constant="50" id="Zwh-V6-kDq"/>
                                     <constraint firstAttribute="trailing" secondItem="L4F-HJ-zno" secondAttribute="trailing" constant="20" id="gFL-nd-cAN"/>
                                     <constraint firstItem="L4F-HJ-zno" firstAttribute="top" secondItem="vDL-k3-3y7" secondAttribute="bottom" constant="50" id="ghz-AJ-v36"/>
                                     <constraint firstItem="L4F-HJ-zno" firstAttribute="leading" secondItem="i0D-kw-I75" secondAttribute="leading" constant="20" id="hd4-Fw-868"/>
-                                    <constraint firstItem="cLr-Dq-8jH" firstAttribute="top" secondItem="gqS-BH-guz" secondAttribute="bottom" constant="10" id="hli-kx-sqB"/>
                                     <constraint firstItem="AsV-qi-ORd" firstAttribute="top" secondItem="i0D-kw-I75" secondAttribute="top" constant="50" id="hue-Bs-RCv"/>
                                     <constraint firstAttribute="trailing" secondItem="vDL-k3-3y7" secondAttribute="trailing" constant="20" id="m8F-QT-SA2"/>
                                     <constraint firstItem="zPZ-Kb-d0F" firstAttribute="top" secondItem="AsV-qi-ORd" secondAttribute="bottom" constant="50" id="uAP-FN-QgQ"/>
