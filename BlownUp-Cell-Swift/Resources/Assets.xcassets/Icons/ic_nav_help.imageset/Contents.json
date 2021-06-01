@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_setting_off.png",
+      "filename" : "ic_nav_help.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ic_setting_off@2x.png",
+      "filename" : "ic_nav_help@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ic_setting_off@3x.png",
+      "filename" : "ic_nav_help@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

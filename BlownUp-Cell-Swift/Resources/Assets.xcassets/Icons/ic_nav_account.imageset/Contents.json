@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "ic_account_off.png",
+      "filename" : "ic_nav_account.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "ic_account_off@2x.png",
+      "filename" : "ic_nav_account@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "ic_account_off@3x.png",
+      "filename" : "ic_nav_account@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -187,7 +187,7 @@
                             <constraint firstItem="Ytw-zg-nJ4" firstAttribute="trailing" secondItem="Tso-Bq-uII" secondAttribute="trailing" id="zsl-7r-eo3"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Contact" image="ic_address_book_off" id="YxH-3u-FUV"/>
+                    <tabBarItem key="tabBarItem" title="Contact" image="ic_nav_address_book" id="YxH-3u-FUV"/>
                     <connections>
                         <outlet property="btnAdd" destination="Man-Dd-foL" id="vtf-BW-dnQ"/>
                         <outlet property="imgAdd" destination="dbT-yC-004" id="cqY-dg-y2w"/>
@@ -435,7 +435,7 @@
                             <constraint firstItem="syK-We-m7F" firstAttribute="bottom" secondItem="CYJ-CE-Okl" secondAttribute="bottom" id="rO5-Fm-CPv"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Schedule" image="ic_calendar_off" id="f1w-Y8-ala"/>
+                    <tabBarItem key="tabBarItem" title="Schedule" image="ic_nav_calendar" id="f1w-Y8-ala"/>
                     <connections>
                         <outlet property="btnAdd" destination="sJB-yt-m6e" id="SfP-eg-hG2"/>
                         <outlet property="imgAdd" destination="mqZ-j6-762" id="U2K-zx-dbz"/>
@@ -526,7 +526,7 @@
                             <constraint firstItem="eQL-4s-2Yp" firstAttribute="top" secondItem="Gta-JH-1X7" secondAttribute="top" id="hgb-Bd-23b"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Setting" image="ic_setting_off" id="7eS-sd-dcI"/>
+                    <tabBarItem key="tabBarItem" title="Setting" image="ic_nav_setting" id="7eS-sd-dcI"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imgHeaderScheduleAdd" destination="6ge-YT-Czs" id="4Iy-ft-CsL"/>
@@ -670,7 +670,7 @@
                             <constraint firstItem="Koz-vr-wc2" firstAttribute="leading" secondItem="rSo-5J-t5C" secondAttribute="leading" id="j7G-2F-me9"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Help" image="ic_help_off" id="6f4-s4-ctx"/>
+                    <tabBarItem key="tabBarItem" title="Help" image="ic_nav_help" id="6f4-s4-ctx"/>
                     <connections>
                         <outlet property="imgScheduleAdd" destination="fZf-wz-pxu" id="fio-xj-ned"/>
                         <outlet property="tblHelp" destination="fRR-y4-ahN" id="gHE-I9-Wzt"/>
@@ -813,7 +813,7 @@
                             <constraint firstItem="sWp-FX-gKr" firstAttribute="trailing" secondItem="aGR-5V-qcl" secondAttribute="trailing" id="tIg-kR-ezi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Account" image="ic_account_off" id="TdV-II-nOm"/>
+                    <tabBarItem key="tabBarItem" title="Account" image="ic_nav_account" id="TdV-II-nOm"/>
                     <connections>
                         <outlet property="imgScheduleAdd" destination="nAo-WE-JNX" id="g0Z-DZ-3U9"/>
                         <outlet property="lblEmail" destination="XEr-gG-20J" id="mYf-2w-C8R"/>
@@ -827,14 +827,14 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_account_off" width="15.666666984558105" height="15.666666984558105"/>
         <image name="ic_add" width="20.333333969116211" height="23.333333969116211"/>
-        <image name="ic_address_book_off" width="13.333333015441895" height="15.333333015441895"/>
-        <image name="ic_calendar_off" width="13.666666984558105" height="15.666666984558105"/>
         <image name="ic_comment" width="5.6666665077209473" height="6.3333334922790527"/>
-        <image name="ic_help_off" width="13.333333015441895" height="15.666666984558105"/>
         <image name="ic_logo" width="80" height="18.333333969116211"/>
-        <image name="ic_setting_off" width="15.666666984558105" height="15.666666984558105"/>
+        <image name="ic_nav_account" width="15.666666984558105" height="15.666666984558105"/>
+        <image name="ic_nav_address_book" width="13.333333015441895" height="15.333333015441895"/>
+        <image name="ic_nav_calendar" width="13.666666984558105" height="15.666666984558105"/>
+        <image name="ic_nav_help" width="13.333333015441895" height="15.666666984558105"/>
+        <image name="ic_nav_setting" width="15.666666984558105" height="15.666666984558105"/>
         <image name="ic_trash" width="10.666666984558105" height="10.666666984558105"/>
         <namedColor name="colorBlue">
             <color red="0.0" green="0.36862745098039218" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
