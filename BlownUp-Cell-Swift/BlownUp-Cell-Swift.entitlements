@@ -10,7 +10,7 @@
 	</array>
 	<key>com.apple.developer.in-app-payments</key>
 	<array>
-		<string>merchant.com.blownup.co</string>
+		<string>merchant.piexec.blownup.co</string>
 	</array>
 </dict>
 </plist>

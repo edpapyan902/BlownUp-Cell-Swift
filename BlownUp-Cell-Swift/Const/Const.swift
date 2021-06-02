@@ -21,7 +21,7 @@ let STRIPE_PK_TEST = "pk_test_51IVQTuFmwQHroLNotyVUdfmRP83uYbtaecmidNUa1JdtnLUpy
 let STRIPE_PK_LIVE = "pk_live_51IVQTuFmwQHroLNo5y9JhLuPnnbpMC2aG0PKGiNqAiuVjN5B4SCzURwetu4ZFNZzix6SV5XLTfp4O3THStK7OyGo002pHFXAxT"
 let STRIPE_KEY = LIVE_PAYMENT ? STRIPE_PK_LIVE : STRIPE_PK_TEST
 
-let APPLE_MERCHANT_ID = "merchant.com.blownup.co"
+let APPLE_MERCHANT_ID = "merchant.piexec.blownup.co"
 
 //  STORE KEYS
 let API_TOKEN = "API_TOKEN"
