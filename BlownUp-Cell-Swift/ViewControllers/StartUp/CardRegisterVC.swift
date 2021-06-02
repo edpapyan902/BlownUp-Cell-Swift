@@ -34,7 +34,7 @@ class CardRegisterVC: BaseVC {
         
         // Configure the line items on the payment request
         paymentRequest.paymentSummaryItems = [
-            PKPaymentSummaryItem(label: "Blow Yourself UP", amount: 9.99),
+            PKPaymentSummaryItem(label: "Get Blow Yourself UP", amount: 9.99),
         ]
         
         // Initialize an STPApplePayContext instance
@@ -86,16 +86,33 @@ class CardRegisterVC: BaseVC {
             self.hideLoading()
             
             if response.error == nil {
-                let noDataRes: NoDataRes = response.result.value!
+                let chargeRes: ChargeRes = response.result.value!
                 
-                if noDataRes.success {
-                    self.showSuccess(noDataRes.message)
-                    
+                if chargeRes.success {
                     Store.instance.charged = true
-                    
+                    self.showSuccess(chargeRes.message)
                     self.gotoPageVC(VC_SUCCESS)
                 } else {
-                    self.showWarning(noDataRes.message)
+                    self.showWarning(chargeRes.message)
+                }
+            }
+        }
+    }
+    
+    func processChargeWithApple(paymentMethod: String, completion: @escaping STPIntentClientSecretCompletionBlock) {
+        let params: [String: Any] = [
+            "payment_method": paymentMethod
+        ]
+        
+        API.instance.charge(params: params) { (response) in
+            if response.error == nil {
+                let chargeRes: ChargeRes = response.result.value!
+                
+                if chargeRes.success {
+                    Store.instance.charged = true
+                    completion(chargeRes.data.client_secret, nil)
+                } else {
+                    self.showWarning(chargeRes.message)
                 }
             }
         }
@@ -105,15 +122,14 @@ class CardRegisterVC: BaseVC {
 extension CardRegisterVC: STPApplePayContextDelegate {
     func applePayContext(_ context: STPApplePayContext, didCreatePaymentMethod paymentMethod: STPPaymentMethod, paymentInformation: PKPayment, completion: @escaping STPIntentClientSecretCompletionBlock) {
         
-        self.showLoading(self)
-        
-        self.processCharge(paymentMethod: paymentMethod.stripeId)
+        self.processChargeWithApple(paymentMethod: paymentMethod.stripeId, completion: completion)
     }
     
     func applePayContext(_ context: STPApplePayContext, didCompleteWith status: STPPaymentStatus, error: Error?) {
         switch status {
         case .success:
             // Payment succeeded, show a receipt view
+            self.gotoPageVC(VC_SUCCESS)
             break
         case .error:
             // Payment failed, show the error

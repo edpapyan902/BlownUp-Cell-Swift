@@ -23,6 +23,8 @@ class MainTabVC: UITabBarController {
         } else if type == 3 {
             self.selectedIndex = 3
         }
+        
+        self.tabBar.unselectedItemTintColor = .white
     }
     
     @objc func gotoScheduleAdd() {

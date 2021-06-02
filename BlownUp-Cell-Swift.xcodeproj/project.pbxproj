@@ -29,6 +29,7 @@
 		940F6F082641991D00BC07DC /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940F6F072641991D00BC07DC /* Contact.swift */; };
 		942ED4952657EAB500192C07 /* Ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 942ED4942657EAB500192C07 /* Ringtone.mp3 */; };
 		94420DC12638FFE0005E2121 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94420DC02638FFE0005E2121 /* SignUpVC.swift */; };
+		9446804A2667C99F004A3DF8 /* ChargeRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 944680492667C99F004A3DF8 /* ChargeRes.swift */; };
 		94587E97263FED62004B0BCC /* MainTabVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E96263FED62004B0BCC /* MainTabVC.storyboard */; };
 		94587E9C263FEE65004B0BCC /* RecentCallVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */; };
 		94587EAA263FF575004B0BCC /* ScheduleAddVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94587EA9263FF575004B0BCC /* ScheduleAddVC.swift */; };
@@ -123,6 +124,7 @@
 		940F6F072641991D00BC07DC /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		942ED4942657EAB500192C07 /* Ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Ringtone.mp3; sourceTree = "<group>"; };
 		94420DC02638FFE0005E2121 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		944680492667C99F004A3DF8 /* ChargeRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChargeRes.swift; sourceTree = "<group>"; };
 		94587E96263FED62004B0BCC /* MainTabVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainTabVC.storyboard; sourceTree = "<group>"; };
 		94587E9B263FEE65004B0BCC /* RecentCallVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecentCallVC.storyboard; sourceTree = "<group>"; };
 		94587EA9263FF575004B0BCC /* ScheduleAddVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleAddVC.swift; sourceTree = "<group>"; };
@@ -439,6 +441,7 @@
 				94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */,
 				946ECE4A2653389800220BDF /* ForgetPasswordRes.swift */,
 				9409E689265362A300E60FAB /* ResetPasswordRes.swift */,
+				944680492667C99F004A3DF8 /* ChargeRes.swift */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -764,6 +767,7 @@
 				9485494A26557EA900AC7EC9 /* VoipCallManager.swift in Sources */,
 				9409E68A265362A300E60FAB /* ResetPasswordRes.swift in Sources */,
 				9497837F264371690048580C /* ScheduleAllRes.swift in Sources */,
+				9446804A2667C99F004A3DF8 /* ChargeRes.swift in Sources */,
 				94068085264928EF0079D42F /* FloatingButton.swift in Sources */,
 				94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */,
 				946446242646F1530079BCE2 /* ScheduleAddRes.swift in Sources */,

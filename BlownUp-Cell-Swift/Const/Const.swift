@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 //  API URLS
-let DEV_MODE = true
+let DEV_MODE = false
 let PUBLISH_MODE = false
 let LIVE_PAYMENT = false
 let DEV_SERVER = "http://192.168.109.72"

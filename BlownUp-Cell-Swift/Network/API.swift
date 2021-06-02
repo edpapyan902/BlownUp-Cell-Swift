@@ -43,8 +43,8 @@ class API {
         }
     }
     
-    func charge(params: [String: Any], completion: @escaping ( _ response: DataResponse<NoDataRes>) -> Void) -> Void {
-        Alamofire.request(URL_CHARGE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<NoDataRes>) in
+    func charge(params: [String: Any], completion: @escaping ( _ response: DataResponse<ChargeRes>) -> Void) -> Void {
+        Alamofire.request(URL_CHARGE, method: .post, parameters: params, encoding: JSONEncoding.default, headers: BEARER_HEADER()).responseObject { (response: DataResponse<ChargeRes>) in
             completion(response)
         }
     }
