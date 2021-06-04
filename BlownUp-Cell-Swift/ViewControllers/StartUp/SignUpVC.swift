@@ -37,6 +37,12 @@ class SignUpVC: BaseVC {
         self.gotoPageVC(VC_LOGIN)
     }
     
+    @IBAction func goTermsLink(_ sender: Any) {
+        if let url = URL(string: TERMS_CONDITIONS_URL), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
     @IBAction func signUp(_ sender: Any) {
         let email = txtEmail.getText()
         let password = txtPwd.getText()

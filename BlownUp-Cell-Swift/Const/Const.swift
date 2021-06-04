@@ -8,10 +8,12 @@
 import Foundation
 import Alamofire
 
-//  API URLS
+//  ENV
 let DEV_MODE = false
 let PUBLISH_MODE = false
 let LIVE_PAYMENT = false
+
+//  API URLS
 let DEV_SERVER = "http://192.168.109.72"
 let PRODUCT_SERVER = PUBLISH_MODE ? "https://panel.blownup.co" : "http://dev-panel.blownup.co"
 let BASE_SERVER = DEV_MODE ? DEV_SERVER : PRODUCT_SERVER
@@ -21,7 +23,12 @@ let STRIPE_PK_TEST = "pk_test_51IVQTuFmwQHroLNotyVUdfmRP83uYbtaecmidNUa1JdtnLUpy
 let STRIPE_PK_LIVE = "pk_live_51IVQTuFmwQHroLNo5y9JhLuPnnbpMC2aG0PKGiNqAiuVjN5B4SCzURwetu4ZFNZzix6SV5XLTfp4O3THStK7OyGo002pHFXAxT"
 let STRIPE_KEY = LIVE_PAYMENT ? STRIPE_PK_LIVE : STRIPE_PK_TEST
 
+//  APPLE MERCHANT ID
 let APPLE_MERCHANT_ID = "merchant.piexec.blownup.co"
+
+//TERMS AND CONDITIONS
+let TERMS_CONDITIONS_URL = "https://blownup.co/terms-and-conditions";
+let PRIVACY_POLICY_URL = "https://blownup.co/privacy-policy";
 
 //  STORE KEYS
 let API_TOKEN = "API_TOKEN"

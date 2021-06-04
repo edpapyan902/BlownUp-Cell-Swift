@@ -87,6 +87,9 @@
                                                         <state key="normal" title="I agree with the terms &amp; conditions">
                                                             <color key="titleColor" name="colorPrimary"/>
                                                         </state>
+                                                        <connections>
+                                                            <action selector="goTermsLink:" destination="wqN-gb-tDW" eventType="touchUpInside" id="mXG-6b-ztK"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

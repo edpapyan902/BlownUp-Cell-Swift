@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -13,11 +13,11 @@
             <objects>
                 <viewController storyboardIdentifier="CardRegisterVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="s73-22-GoQ" customClass="CardRegisterVC" customModule="BlownUp_Cell_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wPv-9w-5gF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ORm-vq-rlz" userLabel="mainView">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo_green" translatesAutoresizingMaskIntoConstraints="NO" id="2Cm-Wf-RWC">
                                         <rect key="frame" x="20" y="50" width="374" height="130"/>
@@ -26,13 +26,13 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 9.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-fL-iJP">
-                                        <rect key="frame" x="20" y="190" width="374" height="72"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="60"/>
+                                        <rect key="frame" x="20" y="190" width="374" height="66"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="55"/>
                                         <color key="textColor" name="colorGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zqu-r7-7uq" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="282" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="276" width="374" height="60"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="oYL-dQ-3R7">
                                                 <rect key="frame" x="0.0" y="5" width="20" height="20"/>
@@ -42,7 +42,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unlimited Calls Directed to Yourself from whatever Phone Number you Choose" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oiZ-4m-xW0">
-                                                <rect key="frame" x="30" y="0.0" width="344" height="40.666666666666664"/>
+                                                <rect key="frame" x="30" y="0.0" width="344" height="41"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="colorBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -59,7 +59,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rcj-FH-59Q" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="347" width="374" height="40"/>
+                                        <rect key="frame" x="20" y="341" width="374" height="40"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="ChI-zK-5Xv">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -69,7 +69,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schedule Calls to be whenever You Want" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hO-9r-OiU">
-                                                <rect key="frame" x="30" y="0.0" width="344" height="20.333333333333332"/>
+                                                <rect key="frame" x="30" y="0.0" width="344" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="colorBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -86,7 +86,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noo-9s-sDM" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="392" width="374" height="25"/>
+                                        <rect key="frame" x="20" y="386" width="374" height="40"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="9iW-v0-d0H">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -96,7 +96,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose any Number to Have Calls From" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tEh-Oe-NoQ">
-                                                <rect key="frame" x="30" y="0.0" width="344" height="20.333333333333332"/>
+                                                <rect key="frame" x="30" y="0.0" width="344" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="colorBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -105,7 +105,7 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="tEh-Oe-NoQ" firstAttribute="leading" secondItem="9iW-v0-d0H" secondAttribute="trailing" constant="10" id="AKV-LH-8fl"/>
-                                            <constraint firstAttribute="height" constant="25" id="RWs-hx-eWE"/>
+                                            <constraint firstAttribute="height" constant="40" id="RWs-hx-eWE"/>
                                             <constraint firstAttribute="trailing" secondItem="tEh-Oe-NoQ" secondAttribute="trailing" id="lTg-he-9LV"/>
                                             <constraint firstItem="9iW-v0-d0H" firstAttribute="leading" secondItem="noo-9s-sDM" secondAttribute="leading" id="lgZ-Va-Thj"/>
                                             <constraint firstItem="9iW-v0-d0H" firstAttribute="top" secondItem="noo-9s-sDM" secondAttribute="top" id="tUt-8T-dKh"/>
@@ -113,7 +113,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="opR-tb-RuD" userLabel="itemComment">
-                                        <rect key="frame" x="20" y="422" width="374" height="25"/>
+                                        <rect key="frame" x="20" y="431" width="374" height="40"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="ic_comment" translatesAutoresizingMaskIntoConstraints="NO" id="9IZ-OH-lHY">
                                                 <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
@@ -123,7 +123,7 @@
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Recurring Calls at any Time of Day" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bo9-pe-SBY">
-                                                <rect key="frame" x="30" y="0.0" width="344" height="20.333333333333332"/>
+                                                <rect key="frame" x="30" y="0.0" width="344" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="colorBlue"/>
                                                 <nil key="highlightedColor"/>
@@ -134,19 +134,19 @@
                                             <constraint firstItem="Bo9-pe-SBY" firstAttribute="top" secondItem="opR-tb-RuD" secondAttribute="top" id="8Yf-iN-obs"/>
                                             <constraint firstItem="9IZ-OH-lHY" firstAttribute="leading" secondItem="opR-tb-RuD" secondAttribute="leading" id="Ebw-HM-POE"/>
                                             <constraint firstItem="Bo9-pe-SBY" firstAttribute="leading" secondItem="9IZ-OH-lHY" secondAttribute="trailing" constant="10" id="FqZ-OL-a02"/>
-                                            <constraint firstAttribute="height" constant="25" id="VqV-sy-T3V"/>
+                                            <constraint firstAttribute="height" constant="40" id="VqV-sy-T3V"/>
                                             <constraint firstItem="9IZ-OH-lHY" firstAttribute="top" secondItem="opR-tb-RuD" secondAttribute="top" id="Y5C-eB-O1M"/>
                                             <constraint firstAttribute="trailing" secondItem="Bo9-pe-SBY" secondAttribute="trailing" id="rX1-nv-6oz"/>
                                         </constraints>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abh-ic-uFt" userLabel="creditCardForm" customClass="CreditCardView" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="477" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="491" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="jDK-Xs-D9r"/>
                                         </constraints>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzy-rK-qMD">
-                                        <rect key="frame" x="20" y="557" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="571" width="374" height="50"/>
                                         <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="CI0-Qu-c8s"/>
@@ -160,7 +160,7 @@
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5l9-vn-qSt" userLabel="applePayProvider">
-                                        <rect key="frame" x="20" y="617" width="374" height="50"/>
+                                        <rect key="frame" x="20" y="631" width="374" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Sln-Lv-NG8"/>
                                         </constraints>
@@ -175,7 +175,7 @@
                                     <constraint firstAttribute="trailing" secondItem="2Cm-Wf-RWC" secondAttribute="trailing" constant="20" id="GP8-gy-MD8"/>
                                     <constraint firstItem="abh-ic-uFt" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="NGD-56-9Sp"/>
                                     <constraint firstAttribute="trailing" secondItem="opR-tb-RuD" secondAttribute="trailing" constant="20" id="NcS-hT-muY"/>
-                                    <constraint firstItem="abh-ic-uFt" firstAttribute="top" secondItem="opR-tb-RuD" secondAttribute="bottom" constant="30" id="RfE-lZ-kV4"/>
+                                    <constraint firstItem="abh-ic-uFt" firstAttribute="top" secondItem="opR-tb-RuD" secondAttribute="bottom" constant="20" id="RfE-lZ-kV4"/>
                                     <constraint firstItem="2Cm-Wf-RWC" firstAttribute="top" secondItem="ORm-vq-rlz" secondAttribute="top" constant="50" id="Sb2-FF-7oI"/>
                                     <constraint firstItem="pzy-rK-qMD" firstAttribute="leading" secondItem="ORm-vq-rlz" secondAttribute="leading" constant="20" id="SkM-uY-FUv"/>
                                     <constraint firstItem="opR-tb-RuD" firstAttribute="top" secondItem="noo-9s-sDM" secondAttribute="bottom" constant="5" id="Z9c-xv-WSo"/>
@@ -218,8 +218,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_comment" width="5.6666665077209473" height="6.3333334922790527"/>
-        <image name="logo_green" width="66" height="57.333332061767578"/>
+        <image name="ic_comment" width="5.5" height="6"/>
+        <image name="logo_green" width="66" height="57"/>
         <namedColor name="colorBlue">
             <color red="0.0" green="0.36862745098039218" blue="0.48627450980392156" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -10,10 +10,21 @@ import UIKit
 
 class ForgetPasswordVC: BaseVC {
     
+    @IBOutlet weak var imgBack: UIImageView!
     @IBOutlet weak var txtEmail: TextInput!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        initLayout()
+    }
+    
+    func initLayout() {
+        self.imgBack.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.onBack)))
+    }
+    
+    @objc func onBack() {
+        self.gotoPageVC(VC_LOGIN)
     }
     
     @IBAction func sendMail(_ sender: Any) {
