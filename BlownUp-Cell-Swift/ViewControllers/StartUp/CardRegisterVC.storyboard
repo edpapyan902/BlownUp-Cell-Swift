@@ -27,7 +27,7 @@
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$ 9.99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e6X-fL-iJP">
                                         <rect key="frame" x="20" y="190" width="374" height="66"/>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="55"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="55"/>
                                         <color key="textColor" name="colorGrey"/>
                                         <nil key="highlightedColor"/>
                                     </label>

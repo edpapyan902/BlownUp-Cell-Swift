@@ -71,6 +71,7 @@ class CardRegisterVC: BaseVC {
                     if paymentMethod != nil {
                         self.processCharge(paymentMethod: (paymentMethod?.stripeId)!)
                     } else {
+                        self.showWarning("This payment method can't use for charging. Please try again with vaild card.")
                         self.hideLoading()
                     }
                 }

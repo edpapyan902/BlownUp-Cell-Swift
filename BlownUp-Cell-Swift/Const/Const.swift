@@ -10,8 +10,8 @@ import Alamofire
 
 //  ENV
 let DEV_MODE = false
-let PUBLISH_MODE = false
-let LIVE_PAYMENT = false
+let PUBLISH_MODE = true
+let LIVE_PAYMENT = true
 
 //  API URLS
 let DEV_SERVER = "http://192.168.109.72"
