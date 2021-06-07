@@ -2,6 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.BlownUp.app.VoipCall.Audio.play</string>
+		<string>com.BlownUp.app.VoipCall.fetch.data.from.server</string>
+		<string>com.BlownUp.app.VoipCall.process.data.from.Notification</string>
+		<string>com.BlownUp.app.VoipCall</string>
+		<string>com.BlownUp.app.GetPushNotification</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
