@@ -27,6 +27,7 @@ let STRIPE_KEY = LIVE_PAYMENT ? STRIPE_PK_LIVE : STRIPE_PK_TEST
 let APPLE_MERCHANT_ID = "merchant.piexec.blownup.co"
 
 //TERMS AND CONDITIONS
+let APP_LANDING_URL = "https://blownup.co";
 let TERMS_CONDITIONS_URL = "https://blownup.co/terms-and-conditions";
 let PRIVACY_POLICY_URL = "https://blownup.co/privacy-policy";
 
@@ -82,10 +83,6 @@ let URL_ACCOUNT_DEVICE_TOKEN_UPDATE = "\(BASE_SERVER)/api/account/update_device_
 //  Checkout
 let URL_CHARGE = "\(BASE_SERVER)/api/charge"
 let URL_CHARGE_STATUS = "\(BASE_SERVER)/api/charge/status"
-
-//  Recent Call
-let URL_RECENT_CALL_GET = "\(BASE_SERVER)/api/recent_call"
-let URL_RECENT_CALL_ADD = "\(BASE_SERVER)/api/recent_call/add"
 
 //  Schedule
 let URL_SCHEDULE_GET = "\(BASE_SERVER)/api/schedule"

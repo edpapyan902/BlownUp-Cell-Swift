@@ -595,15 +595,22 @@
                                         <color key="textColor" name="colorBlue"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CmQ-dW-2N5">
-                                        <rect key="frame" x="30" y="55" width="354" height="200"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZv-DE-gxV">
+                                        <rect key="frame" x="20" y="65" width="374" height="50"/>
+                                        <color key="backgroundColor" name="colorPrimary"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="dvi-Qn-fha"/>
+                                            <constraint firstAttribute="height" constant="50" id="Kiz-63-DNC"/>
                                         </constraints>
-                                    </view>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="Visit Website for More">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="visitWebsite:" destination="kr8-7B-BQp" eventType="touchUpInside" id="gaY-G5-uuJ"/>
+                                        </connections>
+                                    </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fRR-y4-ahN">
-                                        <rect key="frame" x="20" y="285" width="374" height="307"/>
+                                        <rect key="frame" x="20" y="135" width="374" height="457"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HelpItemID" id="mH4-WS-P7F" customClass="HelpTableViewCell" customModule="BlownUp_Cell_Swift" customModuleProvider="target">
@@ -647,14 +654,14 @@
                                 <constraints>
                                     <constraint firstItem="rLY-dv-KyP" firstAttribute="leading" secondItem="slg-8g-A3e" secondAttribute="leading" id="0ob-5f-Qze"/>
                                     <constraint firstAttribute="bottom" secondItem="fRR-y4-ahN" secondAttribute="bottom" constant="10" id="3Cw-4w-i8z"/>
-                                    <constraint firstAttribute="trailing" secondItem="CmQ-dW-2N5" secondAttribute="trailing" constant="30" id="AZa-Q1-ZPE"/>
+                                    <constraint firstItem="EZv-DE-gxV" firstAttribute="leading" secondItem="slg-8g-A3e" secondAttribute="leading" constant="20" id="DWF-X9-s0p"/>
                                     <constraint firstItem="rLY-dv-KyP" firstAttribute="top" secondItem="slg-8g-A3e" secondAttribute="top" id="DbL-by-WBn"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZv-DE-gxV" secondAttribute="trailing" constant="20" id="MNi-2e-z7b"/>
                                     <constraint firstAttribute="trailing" secondItem="rLY-dv-KyP" secondAttribute="trailing" id="MVg-9v-lzB"/>
-                                    <constraint firstItem="CmQ-dW-2N5" firstAttribute="top" secondItem="rLY-dv-KyP" secondAttribute="bottom" constant="20" id="Rug-at-BRc"/>
+                                    <constraint firstItem="fRR-y4-ahN" firstAttribute="top" secondItem="EZv-DE-gxV" secondAttribute="bottom" constant="20" id="PPJ-2z-HGh"/>
                                     <constraint firstItem="fRR-y4-ahN" firstAttribute="leading" secondItem="slg-8g-A3e" secondAttribute="leading" constant="20" id="SCI-ke-s6A"/>
-                                    <constraint firstItem="fRR-y4-ahN" firstAttribute="top" secondItem="CmQ-dW-2N5" secondAttribute="bottom" constant="30" id="VNf-YT-Dt3"/>
+                                    <constraint firstItem="EZv-DE-gxV" firstAttribute="top" secondItem="rLY-dv-KyP" secondAttribute="bottom" constant="30" id="dlR-Pm-1jA"/>
                                     <constraint firstAttribute="trailing" secondItem="fRR-y4-ahN" secondAttribute="trailing" constant="20" id="fpJ-3U-I71"/>
-                                    <constraint firstItem="CmQ-dW-2N5" firstAttribute="leading" secondItem="slg-8g-A3e" secondAttribute="leading" constant="30" id="w70-zg-upb"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -674,7 +681,6 @@
                     <connections>
                         <outlet property="imgScheduleAdd" destination="fZf-wz-pxu" id="fio-xj-ned"/>
                         <outlet property="tblHelp" destination="fRR-y4-ahN" id="gHE-I9-Wzt"/>
-                        <outlet property="videoView" destination="CmQ-dW-2N5" id="pB1-aL-H8P"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8H-0U-HgV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
