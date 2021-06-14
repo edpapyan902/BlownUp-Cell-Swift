@@ -46,6 +46,15 @@ class AccountVC: BaseVC {
         self.txtPhone.setText((Store.instance.user?.spoof_phone_number)!)
     }
     
+    @IBAction func onBtnLogoutClicked(_ sender: Any) {
+        Store.instance.rememberMe = false
+        Store.instance.apiToken = ""
+        Store.instance.charged = false
+        Store.instance.user = nil
+        
+        self.gotoPageVC(VC_LOGIN)
+    }
+    
     @IBAction func onBtnUpdateClicked(_ sender: Any) {
         var isSavePwd = false, isSavePhone = false
         

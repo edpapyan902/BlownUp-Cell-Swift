@@ -786,6 +786,20 @@
                                             <action selector="onBtnUpdateClicked:" destination="Tey-Ag-QYk" eventType="touchUpInside" id="CZZ-o8-JXc"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHl-Rx-rXY">
+                                        <rect key="frame" x="10" y="339" width="394" height="50"/>
+                                        <color key="backgroundColor" name="colorPrimary"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="wfZ-4l-LRM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                                        <state key="normal" title="LOGOUT">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onBtnLogoutClicked:" destination="Tey-Ag-QYk" eventType="touchUpInside" id="Eqd-Ck-OBo"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -794,14 +808,17 @@
                                     <constraint firstItem="XEr-gG-20J" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="5Je-L7-P1I"/>
                                     <constraint firstItem="gJC-sX-bPy" firstAttribute="top" secondItem="XEr-gG-20J" secondAttribute="bottom" constant="15" id="5KF-HM-knQ"/>
                                     <constraint firstAttribute="trailing" secondItem="gJC-sX-bPy" secondAttribute="trailing" constant="10" id="7tp-Rt-po6"/>
+                                    <constraint firstAttribute="trailing" secondItem="YHl-Rx-rXY" secondAttribute="trailing" constant="10" id="8XT-k7-xsB"/>
                                     <constraint firstItem="aI0-xm-e6i" firstAttribute="top" secondItem="aGR-5V-qcl" secondAttribute="top" id="RuN-Mb-YJj"/>
                                     <constraint firstAttribute="trailing" secondItem="X3c-MF-Aeb" secondAttribute="trailing" constant="10" id="YIR-8k-8dk"/>
+                                    <constraint firstItem="YHl-Rx-rXY" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="Yaz-Wc-YNQ"/>
                                     <constraint firstAttribute="trailing" secondItem="aI0-xm-e6i" secondAttribute="trailing" id="ZcW-P8-SIF"/>
                                     <constraint firstItem="X3c-MF-Aeb" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="a3j-rg-6BU"/>
                                     <constraint firstAttribute="trailing" secondItem="aOg-NM-Wud" secondAttribute="trailing" constant="10" id="jrr-EE-EhM"/>
                                     <constraint firstItem="aOg-NM-Wud" firstAttribute="top" secondItem="gJC-sX-bPy" secondAttribute="bottom" constant="15" id="lXn-3j-grY"/>
                                     <constraint firstItem="XEr-gG-20J" firstAttribute="top" secondItem="aI0-xm-e6i" secondAttribute="bottom" constant="20" id="mlA-Oq-2YM"/>
                                     <constraint firstItem="X3c-MF-Aeb" firstAttribute="top" secondItem="aOg-NM-Wud" secondAttribute="bottom" constant="50" id="nL5-E4-ffh"/>
+                                    <constraint firstItem="YHl-Rx-rXY" firstAttribute="top" secondItem="X3c-MF-Aeb" secondAttribute="bottom" constant="10" id="uVI-HS-Y6g"/>
                                     <constraint firstItem="aOg-NM-Wud" firstAttribute="leading" secondItem="aGR-5V-qcl" secondAttribute="leading" constant="10" id="uYA-8e-7f9"/>
                                     <constraint firstAttribute="trailing" secondItem="XEr-gG-20J" secondAttribute="trailing" constant="10" id="y8K-DU-b0w"/>
                                 </constraints>
