@@ -71,7 +71,7 @@
                                                     <constraint firstAttribute="height" constant="60" id="lJx-ii-VMA"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="hint" value="My Call To Phone"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="hint" value="My Cell Phone Number"/>
                                                     <userDefinedRuntimeAttribute type="string" keyPath="inputMode" value="phone_number"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isPhoneNumber" value="YES"/>
                                                 </userDefinedRuntimeAttributes>

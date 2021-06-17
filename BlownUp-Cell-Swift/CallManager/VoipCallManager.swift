@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 import CallKit
 import PushKit
+import AVFoundation
 
 class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
     
     static let shared: VoipCallManager = VoipCallManager()
-    
     private var provider: CXProvider?
-    
     private let voipRegistry = PKPushRegistry(queue: nil)
+    private var avplayer = AVAudioPlayer()
     
     private override init() {
         super.init()
@@ -48,7 +48,7 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         config.supportsVideo = false
         config.supportedHandleTypes = [.generic, .phoneNumber]
         config.iconTemplateImageData = UIImage(named: "logo_green")!.pngData()
-        config.ringtoneSound = "Ringtone.mp3"
+        //        config.ringtoneSound = "Ringtone.mp3"
         
         provider = CXProvider(configuration: config)
         provider?.setDelegate(self, queue: DispatchQueue.main)
@@ -64,6 +64,8 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         update.remoteHandle = CXHandle(type: .phoneNumber, value: phoneNumber)
         
         self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
+        
+        playRingtone()
     }
     
     public func gotoIncomingCallVC(name: String, phoneNumber: String, avatar: String) {
@@ -78,6 +80,16 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         appDelegate.window?.rootViewController = targetVC
         UIApplication.shared.keyWindow?.rootViewController = targetVC
     }
+    
+    private func playRingtone() {
+        if avplayer.isPlaying {
+            avplayer.stop()
+        }
+        let url = Bundle.main.url(forResource: "Ringtone", withExtension: "mp3")!
+        try? avplayer = AVAudioPlayer.init(contentsOf: url)
+        avplayer.numberOfLoops = 4
+        avplayer.play()
+    }
 }
 
 extension VoipCallManager: CXProviderDelegate {
@@ -85,10 +97,16 @@ extension VoipCallManager: CXProviderDelegate {
     }
     
     func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
+        if avplayer.isPlaying {
+            avplayer.stop()
+        }
         action.fulfill()
     }
     
     func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
+        if avplayer.isPlaying {
+            avplayer.stop()
+        }
         action.fulfill()
     }
     
