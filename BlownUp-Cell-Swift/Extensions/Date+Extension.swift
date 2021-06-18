@@ -19,6 +19,10 @@ extension Date {
         return Calendar.current.date(byAdding: .day, value: value, to: self)!
     }
     
+    func addSecond(_ value: Int) -> Date {
+        return Calendar.current.date(byAdding: .second, value: value, to: self)!
+    }
+    
     func int2date(milliseconds: Int64) -> Date {
         return Date(timeIntervalSince1970: TimeInterval(milliseconds))
     }

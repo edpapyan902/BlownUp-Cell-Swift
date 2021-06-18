@@ -76,8 +76,6 @@
 		94BABBE42650ABBC002FF91E /* AccountUpdateRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */; };
 		94C1A7A42646BF0D00E37144 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */; };
 		94C1A7AA2646BFCC00E37144 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94C1A7A92646BFCC00E37144 /* Utils.swift */; };
-		94CF56B92658A7EF0006F03D /* IncomingCallVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CF56B82658A7EF0006F03D /* IncomingCallVC.swift */; };
-		94CF56BE2658A8000006F03D /* IncomingCallVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94CF56BD2658A8000006F03D /* IncomingCallVC.storyboard */; };
 		94DB9BE92646734B00C800D2 /* DialogContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BE82646734B00C800D2 /* DialogContactVC.swift */; };
 		94DB9BF12646740800C800D2 /* DialogContactVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */; };
 		94DB9BF6264674B300C800D2 /* ContactAllRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94DB9BF5264674B300C800D2 /* ContactAllRes.swift */; };
@@ -178,8 +176,6 @@
 		94BABBE32650ABBC002FF91E /* AccountUpdateRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountUpdateRes.swift; sourceTree = "<group>"; };
 		94C1A7A32646BF0D00E37144 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		94C1A7A92646BFCC00E37144 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		94CF56B82658A7EF0006F03D /* IncomingCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingCallVC.swift; sourceTree = "<group>"; };
-		94CF56BD2658A8000006F03D /* IncomingCallVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IncomingCallVC.storyboard; sourceTree = "<group>"; };
 		94DB9BE82646734B00C800D2 /* DialogContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DialogContactVC.swift; sourceTree = "<group>"; };
 		94DB9BF02646740800C800D2 /* DialogContactVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DialogContactVC.storyboard; sourceTree = "<group>"; };
 		94DB9BF5264674B300C800D2 /* ContactAllRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactAllRes.swift; sourceTree = "<group>"; };
@@ -450,8 +446,6 @@
 			isa = PBXGroup;
 			children = (
 				9485494926557EA800AC7EC9 /* VoipCallManager.swift */,
-				94CF56B82658A7EF0006F03D /* IncomingCallVC.swift */,
-				94CF56BD2658A8000006F03D /* IncomingCallVC.storyboard */,
 			);
 			path = CallManager;
 			sourceTree = "<group>";
@@ -608,7 +602,6 @@
 				946ECE5526533B2900220BDF /* VerifyCodeVC.storyboard in Resources */,
 				942ED4952657EAB500192C07 /* Ringtone.mp3 in Resources */,
 				948CE6AE263BA9DA00A27790 /* LoginVC.storyboard in Resources */,
-				94CF56BE2658A8000006F03D /* IncomingCallVC.storyboard in Resources */,
 				946ECE462653352100220BDF /* ForgetPasswordVC.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -783,7 +776,6 @@
 				946ECE5026533AB500220BDF /* VerifyCodeVC.swift in Sources */,
 				94587EAF263FF589004B0BCC /* ScheduleListVC.swift in Sources */,
 				94587EC2263FF5EE004B0BCC /* AccountVC.swift in Sources */,
-				94CF56B92658A7EF0006F03D /* IncomingCallVC.swift in Sources */,
 				94C1A7A42646BF0D00E37144 /* UIView+Extension.swift in Sources */,
 				945B24AF264088A3004C12D7 /* Date+Extension.swift in Sources */,
 				94587EBD263FF5E1004B0BCC /* HelpVC.swift in Sources */,

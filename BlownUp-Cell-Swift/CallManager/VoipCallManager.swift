@@ -9,14 +9,14 @@ import Foundation
 import UIKit
 import CallKit
 import PushKit
-import AVFoundation
 
 class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
     
-    static let shared: VoipCallManager = VoipCallManager()
+    static let shared = VoipCallManager()
     private var provider: CXProvider?
     private let voipRegistry = PKPushRegistry(queue: nil)
-    private var avplayer = AVAudioPlayer()
+    private var endCall_timer: Timer? = nil
+    private var incoming_uuid = UUID()
     
     private override init() {
         super.init()
@@ -48,7 +48,7 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
         config.supportsVideo = false
         config.supportedHandleTypes = [.generic, .phoneNumber]
         config.iconTemplateImageData = UIImage(named: "logo_green")!.pngData()
-        //        config.ringtoneSound = "Ringtone.mp3"
+        config.ringtoneSound = "Ringtone.mp3"
         
         provider = CXProvider(configuration: config)
         provider?.setDelegate(self, queue: DispatchQueue.main)
@@ -60,35 +60,22 @@ class VoipCallManager: NSObject, UNUserNotificationCenterDelegate {
     }
     
     public func handleIncomingCall(name: String, phoneNumber: String, avatar: String) {
+        if self.endCall_timer != nil {
+            self.endCall_timer?.invalidate()
+        }
+        
         let update = CXCallUpdate()
         update.remoteHandle = CXHandle(type: .phoneNumber, value: phoneNumber)
         
-        self.provider?.reportNewIncomingCall(with: UUID(), update: update, completion: { (_) in })
+        self.incoming_uuid = UUID()
+        self.provider?.reportNewIncomingCall(with: self.incoming_uuid, update: update) { error in }
         
-        playRingtone()
+        self.endCall_timer = Timer.scheduledTimer(timeInterval: 20, target: self, selector: #selector(self.endCall), userInfo: nil, repeats: false)
     }
     
-    public func gotoIncomingCallVC(name: String, phoneNumber: String, avatar: String) {
-        let storyboad = UIStoryboard(name: VC_INCOMING_CALL, bundle: nil)
-        let targetVC = storyboad.instantiateViewController(withIdentifier: VC_INCOMING_CALL) as! IncomingCallVC
-        
-        targetVC.name = name
-        targetVC.phoneNumber = phoneNumber
-        targetVC.avatar = avatar
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.window?.rootViewController = targetVC
-        UIApplication.shared.keyWindow?.rootViewController = targetVC
-    }
-    
-    private func playRingtone() {
-        if avplayer.isPlaying {
-            avplayer.stop()
-        }
-        let url = Bundle.main.url(forResource: "Ringtone", withExtension: "mp3")!
-        try? avplayer = AVAudioPlayer.init(contentsOf: url)
-        avplayer.numberOfLoops = 4
-        avplayer.play()
+    @objc private func endCall() {
+        self.endCall_timer?.invalidate()
+        self.provider?.reportCall(with: self.incoming_uuid, endedAt: Date(), reason: .unanswered)
     }
 }
 
@@ -97,15 +84,15 @@ extension VoipCallManager: CXProviderDelegate {
     }
     
     func provider(_ provider: CXProvider, perform action: CXAnswerCallAction) {
-        if avplayer.isPlaying {
-            avplayer.stop()
+        if self.endCall_timer != nil {
+            self.endCall_timer?.invalidate()
         }
         action.fulfill()
     }
     
     func provider(_ provider: CXProvider, perform action: CXEndCallAction) {
-        if avplayer.isPlaying {
-            avplayer.stop()
+        if self.endCall_timer != nil {
+            self.endCall_timer?.invalidate()
         }
         action.fulfill()
     }
