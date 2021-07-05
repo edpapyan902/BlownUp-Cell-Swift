@@ -34,3 +34,9 @@ func getImageFromUrl(imageView: UIImageView, photoUrl: String, completion: @esca
 func PLUS0(_ value: Int) -> String {
     return value < 10 ? "0" + String(value) : String (value)
 }
+
+func STR2DATE(dateString: String) -> Date {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
+    return dateFormatter.date(from: dateString)!
+}
