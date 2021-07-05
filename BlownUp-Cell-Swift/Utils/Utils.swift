@@ -37,6 +37,9 @@ func PLUS0(_ value: Int) -> String {
 
 func STR2DATE(dateString: String) -> Date {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd hh:mm:ss"
-    return dateFormatter.date(from: dateString)!
+    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+    if let date = dateFormatter.date(from: dateString) {
+        return date
+    }
+    return Date()
 }
