@@ -43,3 +43,14 @@ func STR2DATE(dateString: String) -> Date {
     }
     return Date()
 }
+
+func getRelativeTime(_ scheduled_at: String, _ isServer: Bool) -> String {
+    //  Convert time by EST
+    let timezoneOffset = SERVER_TIME_OFFSET_BY_GMT - TimeZone.current.secondsFromGMT()
+    var timezoneEpochOffset = (STR2DATE(dateString: scheduled_at).timeIntervalSince1970 + Double(timezoneOffset))
+    if !isServer {
+        timezoneEpochOffset = (STR2DATE(dateString: scheduled_at).timeIntervalSince1970 - Double(timezoneOffset))
+    }
+    let timeZoneOffsetDate = Date(timeIntervalSince1970: timezoneEpochOffset)
+    return timeZoneOffsetDate.toString("yyyy-MM-dd hh:mm:ss")
+}

@@ -106,15 +106,6 @@ class ScheduleAddVC: BaseVC {
         }
     }
     
-    func getScheduleAt(_ scheduled_at: String) -> String {
-        //  Convert time by EST
-        let estOffest = -5 * 3600 // EST offest in seconds from GMT
-        let timezoneOffset = estOffest - TimeZone.current.secondsFromGMT()
-        let timezoneEpochOffset = (STR2DATE(dateString: scheduled_at).timeIntervalSince1970 + Double(timezoneOffset))
-        let timeZoneOffsetDate = Date(timeIntervalSince1970: timezoneEpochOffset)
-        return timeZoneOffsetDate.toString("yyyy-MM-dd hh:mm:ss")
-    }
-    
     func addSchedule() {
         var number = self.txtNumber.getText()
         if !number.isValidePhone() {
@@ -124,7 +115,7 @@ class ScheduleAddVC: BaseVC {
         
         let date = self.datePicker.date
         let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-        var scheduled_at = selectedDate + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
+        let scheduled_at = selectedDate + " " + PLUS0(components.hour!) + ":" + PLUS0(components.minute!) + ":00"
         
         var n_id_contact = 0
         if selectedContact != nil && selectedContact?.number == number {
@@ -135,7 +126,7 @@ class ScheduleAddVC: BaseVC {
         let params: [String: Any] = [
             "n_id_contact": n_id_contact,
             "number": number.formatPhoneNumber(),
-            "scheduled_at": getScheduleAt(scheduled_at)
+            "scheduled_at": getRelativeTime(scheduled_at, true)
         ]
         
         self.showLoading(self)
@@ -179,7 +170,7 @@ class ScheduleAddVC: BaseVC {
             "id": self.currentSchedule?.id,
             "n_id_contact": n_id_contact,
             "number": number.formatPhoneNumber(),
-            "scheduled_at": getScheduleAt(scheduled_at)
+            "scheduled_at": getRelativeTime(scheduled_at, true)
         ]
         
         self.showLoading(self)
