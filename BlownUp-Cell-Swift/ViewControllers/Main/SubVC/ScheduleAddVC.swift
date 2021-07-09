@@ -126,7 +126,7 @@ class ScheduleAddVC: BaseVC {
         let params: [String: Any] = [
             "n_id_contact": n_id_contact,
             "number": number.formatPhoneNumber(),
-            "scheduled_at": getRelativeTime(scheduled_at, true)
+            "scheduled_at": localToEST(scheduled_at)
         ]
         
         self.showLoading(self)

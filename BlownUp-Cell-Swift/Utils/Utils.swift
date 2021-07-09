@@ -35,22 +35,34 @@ func PLUS0(_ value: Int) -> String {
     return value < 10 ? "0" + String(value) : String (value)
 }
 
-func STR2DATE(dateString: String) -> Date {
+func localToEST(_ dateStr: String) -> String {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
-    if let date = dateFormatter.date(from: dateString) {
-        return date
+    dateFormatter.dateFormat = "yyyy-MM-dd H:mm:ss"
+    dateFormatter.calendar = Calendar.current
+    dateFormatter.timeZone = TimeZone.current
+    
+    if let date = dateFormatter.date(from: dateStr) {
+        dateFormatter.timeZone = TimeZone(abbreviation: "EST")
+        dateFormatter.dateFormat = "yyyy-MM-dd H:mm:ss"
+        
+        return dateFormatter.string(from: date)
     }
-    return Date()
+    
+    return ""
 }
 
-func getRelativeTime(_ scheduled_at: String, _ isServer: Bool) -> String {
-    //  Convert time by EST
-    let timezoneOffset = SERVER_TIME_OFFSET_BY_GMT - TimeZone.current.secondsFromGMT()
-    var timezoneEpochOffset = (STR2DATE(dateString: scheduled_at).timeIntervalSince1970 + Double(timezoneOffset))
-    if !isServer {
-        timezoneEpochOffset = (STR2DATE(dateString: scheduled_at).timeIntervalSince1970 - Double(timezoneOffset))
+func estToLocal(_ dateStr: String) -> String {
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "yyyy-MM-dd H:mm:ss"
+    dateFormatter.calendar = Calendar.current
+    dateFormatter.timeZone = TimeZone(abbreviation: "EST")
+    
+    if let date = dateFormatter.date(from: dateStr) {
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.dateFormat = "yyyy-MM-dd H:mm:ss"
+        
+        return dateFormatter.string(from: date)
     }
-    let timeZoneOffsetDate = Date(timeIntervalSince1970: timezoneEpochOffset)
-    return timeZoneOffsetDate.toString("yyyy-MM-dd hh:mm:ss")
+    
+    return ""
 }

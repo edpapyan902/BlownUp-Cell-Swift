@@ -138,7 +138,7 @@ extension ScheduleListVC: UITableViewDataSource, UITableViewDelegate {
         let rowIndex = indexPath.row
         let schedule = self.m_Schedules[rowIndex]
         
-        let scheduled_at = getRelativeTime(schedule.scheduled_at, false)
+        let scheduled_at = estToLocal(schedule.scheduled_at)
         let dateResult = scheduled_at.splite(" ")
         let timeResult = dateResult[1].splite(":")
         
